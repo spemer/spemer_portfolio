@@ -13,32 +13,20 @@
    <meta property="og:title" content="Spemer" />
    <meta property="og:description" content="Hyouk Seo (Spemer) - 404 Not Found" />
    <meta property="og:image" content="http://spemer.com/img/ogimg.jpg" />
-
-   <link rel="stylesheet" type="text/css" href="http://spemer.com/css/stylesheet.css">
-   <link rel="stylesheet" type="text/css" href="http://spemer.com/css/animate.css">
-   <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
    <link rel="shortcut icon" href="http://spemer.com/img/favicon.png">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 
    <title>Spemer - 404 Not Found</title>
+
+   <style>
+        @import "css/stylesheet.css";
+        @import "css/animate.css";
+    </style>
 </head>
 
 
-
-
 <body class="animated fadeInUp">
-
-   <!--Google Analytics-->
-   <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-96234376-1', 'auto');
-      ga('send', 'pageview');
-   </script>
-   <!--Google Analytics-->
 
    <header>
       <div>
@@ -121,10 +109,14 @@
 
    <footer>
       <div>
-         <p>&copy;2017 Spemer, Hyouk SEO</p>
+         <p>&copy;2017 Hyouk Seo (Spemer)</p>
          <nav>
             <div id="snsIcon">
-               <a href="https://facebook.com/ghsspower" target="_blank" title="Instagram">
+               <a href="https://github.com/spemer" target="_blank" title="Github">
+                  <i id="ghIcon" class="fa fa-github"></i>
+               </a>
+
+               <a href="https://facebook.com/ghsspower" target="_blank" title="Facebook">
                   <i id="fbIcon" class="fa fa-facebook"></i>
                </a>
 
@@ -148,6 +140,10 @@
       </div>
    </footer>
 
+   <style>
+      @import "http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+   </style>
+
     <script src="http://spemer.com/js/jquery-3.0.0.min.js"></script>
     <script src="http://spemer.com/js/smooth.scroll.js"></script>
     <script src="http://spemer.com/js/anchor.scroll.js"></script>
@@ -161,34 +157,18 @@
       });
    </script>
 
+   <script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+   </script>
+
    <script>
-      $('.siteMapBtn').click(function(e){
-         e.preventDefault();
-         $('.siteMapNav').toggle("display");
-      });
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-   //hamburger menu ui
-      (function() {
-
-      "use strict";
-
-         var toggles = document.querySelectorAll(".c-hamburger");
-
-         for (var i = toggles.length - 1; i >= 0; i--) {
-            var toggle = toggles[i];
-            toggleHandler(toggle);
-         };
-
-         function toggleHandler(toggle) {
-            toggle.addEventListener( "click", function(e) {
-            e.preventDefault();
-            (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-         });
-      }
-
-      })();
+      ga('create', 'UA-96234376-1', 'auto');
+      ga('send', 'pageview');
    </script>
 
 </body>
-
 </html>
