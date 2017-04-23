@@ -312,7 +312,7 @@ footer p {
 	opacity: .5;
 	color: #999;
 	font-size: 1.1em;
-	margin-left: 25px;
+	margin-left: 20px;
 	transition: all .25s ease;
 	-o-transition: all .25s ease;
 	-ms-transition: all .25s ease;
@@ -414,6 +414,10 @@ footer p {
 
 #liIcon:hover {
 	color: #0077b5;
+}
+
+#ghIcon:hover {
+	color: #333333;
 }
 
 #fbIcon:hover {
@@ -1054,8 +1058,47 @@ footer p {
 		margin-bottom: 25px;
 	}
 
-	#fbIcon, #liIcon {
+	#inIcon, #liIcon, #fbIcon {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	#snsIcon {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		transform: translate(-25%, -50%);
+		-o-transform: translate(-25%, -50%);
+		-ms-transform: translate(-25%, -50%);
+		-moz-transform: translate(-25%, -50%);
+		-webkit-transform: translate(-25%, -50%);
+	}
+
+	#snsIcon i {
+		margin: 0 auto;
+		margin-left: 5.5%;
+		margin-right: 5.5%;
+	}
+
+	footer {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	footer div {
+		width: 100%;
+		clear: both;
+		display: block;
+	}
+
+	footer div p {
+		padding: 0px 0px 10px;
+		position: relative;
+		text-align: center;
+		display: block;
+		margin: auto;
+		width: 100%;
 	}
 }
 
@@ -1103,43 +1146,6 @@ footer p {
 		-ms-transform: translate(-50%, -50%);
 		-moz-transform: translate(-50%, -50%);
 		-webkit-transform: translate(-50%, -50%);
-	}
-
-	footer {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	footer div {
-		width: 100%;
-		clear: both;
-		display: block;
-	}
-
-	footer div p {
-		padding: 0px 0px 10px;
-		position: relative;
-		text-align: center;
-		display: block;
-		margin: auto;
-		width: 100%;
-	}
-
-	#snsIcon {
-		display: block;
-		width: 100%;
-		margin: 0 auto;
-		transform: translate(-25%, -50%);
-		-o-transform: translate(-25%, -50%);
-		-ms-transform: translate(-25%, -50%);
-		-moz-transform: translate(-25%, -50%);
-		-webkit-transform: translate(-25%, -50%);
-	}
-
-	#snsIcon i {
-		margin: 0 auto;
-		margin-left: 5.5%;
-		margin-right: 5.5%;
 	}
 
 	#ytIcon, #liIcon {
