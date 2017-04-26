@@ -48,7 +48,7 @@ img::-moz-selection {
 
 body {
 	width: 75%;
-	max-width: 1080px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
@@ -282,6 +282,17 @@ header nav li a:hover {
 	font-weight: lighter;
 	text-align: center;
 	font-size: .9em;
+}
+
+.artImgBoxEach .text {
+	position:relative;
+	bottom:30px;
+	left:0px;
+	visibility:hidden;
+}
+
+.artImgBoxEach:hover .text {
+	visibility:visible;
 }
 
 .imgTextHover {
