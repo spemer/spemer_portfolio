@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
 * {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
 	list-style: none;
-	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
-	-ms-font-family: 'Open Sans', sans-serif;
-	-webkit-font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+	-ms-font-family: 'Roboto', sans-serif;
+	-webkit-font-family: 'Roboto', sans-serif;
     list-style: none;
     letter-spacing: 1.25px;
     line-height: 2em;
@@ -14,7 +16,6 @@
     font-variant-ligatures: common-ligatures;
 }
 
-/*scroller*/
 body::-webkit-scrollbar {
 	width: 10px;
 	background-color: #fff;
@@ -27,7 +28,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background-color: rgba(0,0,0,0.25);
 }
-/*scroller*/
 
 ::selection {
 	background: rgba(0,0,0,0.25);
@@ -51,7 +51,7 @@ img::-moz-selection {
 	float: left;
 	display: block;
 	font-weight: 100;
-	font-size: 24px;
+	font-size: 1.5rem;
 	color: #999999;
 }
 
@@ -80,14 +80,14 @@ body {
 .everyTxtEnd h3,
 .everyTxtEnd2 h3,
 .everyTxtEnd3 h3 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	color: rgba(0,0,0,0.6);
 }
 
 .everyTxtEnd p,
 .everyTxtEnd2 p,
 .everyTxtEnd3 p {
-	font-size: 1em;
+	font-size: 1rem;
 	color: #999;
 }
 
@@ -97,12 +97,12 @@ body {
 
 .everyTxtEndEnd p {
 	color: #999;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 .everyTxtEndEnd a {
 	color: #999;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 #prevNext {
@@ -114,7 +114,7 @@ body {
 .prevNextTop {
 	float: left;
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 	transition: color .25s ease;
 	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
@@ -130,7 +130,7 @@ body {
 .prevNext {
 	float: right;
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 	transition: color .25s ease;
 	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
@@ -157,7 +157,7 @@ header {
 }
 
 #headerLogo h1 {
-	font-size: 2.5em;
+	font-size: 2.5rem;
 	color: #999;
 	font-weight: normal;
 	transition: all .25s ease;
@@ -192,7 +192,7 @@ header nav li a {
 	padding-bottom: 1px;
 	padding-top: 1px;
 	font-weight: 100;
-	font-size: 1em;
+	font-size: 1rem;
 	border-bottom: 1px solid transparent;
 	color: #999;
 	transition: all .25s ease;
@@ -272,7 +272,7 @@ header nav li a:hover {
 	color: #999;
 	font-weight: lighter;
 	text-align: center;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .artImgBoxEach .text {
@@ -303,7 +303,7 @@ footer {
 footer p {
 	float: left;
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 #snsIcon i {
@@ -313,7 +313,7 @@ footer p {
 	float: right;
 	opacity: .5;
 	color: #999;
-	font-size: 1.1em;
+	font-size: 1.1rem;
 	margin-left: 20px;
 	transition: all .25s ease;
 	-ms-transition: all .25s ease;
@@ -417,7 +417,7 @@ footer p {
 
 .aboutTxtBox h3 {
 	color: rgba(0,0,0,0.6);
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 
 
@@ -481,12 +481,12 @@ footer p {
 
 .aboutTxtBox p {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .aboutTxtBox p a {
 	color: #999;
-	font-size: 1em;
+	font-size: 1rem;
 	transition: color .5s ease;
 	-ms-transition: color .5s ease;
 	-webkit-transition: color .5s ease;
@@ -539,7 +539,7 @@ footer p {
 }
 
 .triBox figcaption {
-	font-size: .9em;
+	font-size: .9rem;
 	color: #999;
 }
 
@@ -570,7 +570,7 @@ footer p {
 
 .tri2dH3, .tri3dH3,
 .triOutputH3, .triOthersH3 {
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	color: rgba(0,0,0,0.6);
 }
 
@@ -583,7 +583,7 @@ footer p {
 @media screen and (max-width: 768px) {
 	.tri2dH3, .tri3dH3,
 	.triOutputH3, .triOthersH3 {
-		font-size: 1.25em;
+		font-size: 1.25rem;
 		color: rgba(0,0,0,0.6);
 	}
 }
@@ -604,7 +604,7 @@ footer p {
 
 .brandBox figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .brandContents {
@@ -685,7 +685,7 @@ footer p {
 .soriImg2Each figcaption,
 .soriColorEach figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .soriImg2 div:first-child {
@@ -742,7 +742,7 @@ footer p {
 
 .soriMidTitle {
 	color: rgba(0,0,0,0.6);
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	padding: 25px 0px;
 }
 
@@ -802,7 +802,7 @@ footer p {
 
 .hugImg2 figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .flatIconBox {
@@ -831,7 +831,7 @@ footer p {
 
 .flatIconBoxEach figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .flatIconBox img {
@@ -855,7 +855,7 @@ footer p {
 
 .pckIconBoxEach figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 }
 
 .guiIconBox {
@@ -876,7 +876,7 @@ footer p {
 
 .guiIconBoxEach figcaption {
 	color: #999;
-	font-size: .9em;
+	font-size: .9rem;
 	position: relative;
 	bottom: 50px;
 }
@@ -903,14 +903,14 @@ footer p {
 .musicEachBox p {
 	margin-top: 5px;
 	color: #999;
-	font-size: .9em;
+	font-size: .9erm;
 	line-height: 1.5em;
 }
 
 .musicEachBox a {
 	display: inline-block;
 	color: #999;
-	font-size: .85em;
+	font-size: .85rem;
 	transition: color .5s ease;
 }
 
@@ -962,7 +962,7 @@ footer p {
 	#headerNav nav ul li {
 		display: inline-block;
 		margin-left: 15px;
-		font-size: 14px;
+		font-size: 0.875rem;
 	}
 
 	#headerNav nav ul li:first-child {
