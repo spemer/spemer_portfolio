@@ -3,17 +3,17 @@
 * {
 	margin: 0;
 	padding: 0;
-	text-decoration: none;
-	list-style: none;
+	outline: none;
 	font-size: 1rem;
-	font-family: 'Roboto', sans-serif;
-	-ms-font-family: 'Roboto', sans-serif;
+	line-height: 2em;
+	list-style: none;
+	list-style: none;
+	text-decoration: none;
+	letter-spacing: 1.25px;
 	-webkit-font-family: 'Roboto', sans-serif;
-    list-style: none;
-    letter-spacing: 1.25px;
-    line-height: 2em;
-    outline: none;
-    font-variant-ligatures: common-ligatures;
+			font-family: 'Roboto', sans-serif;
+	-webkit-font-variant-ligatures: common-ligatures;
+			font-variant-ligatures: common-ligatures;
 }
 
 body::-webkit-scrollbar {
@@ -29,6 +29,11 @@ body::-webkit-scrollbar-thumb {
 	background-color: rgba(0,0,0,0.25);
 }
 
+::-moz-selection {
+	background: rgba(0,0,0,0.25);
+	color: white;
+}
+
 ::selection {
 	background: rgba(0,0,0,0.25);
 	color: white;
@@ -36,6 +41,11 @@ body::-webkit-scrollbar-thumb {
 ::-moz-selection {
 	background: rgba(0,0,0,0.25);
 	color: white;
+}
+
+img::-moz-selection {
+	background: transparent;
+	visibility: hidden;
 }
 
 img::selection {
@@ -115,32 +125,28 @@ body {
 	float: left;
 	color: #999;
 	font-size: .9rem;
-	transition: color .25s ease;
-	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
+			transition: color .25s ease;
 }
 
 .prevNextTop:hover {
 	color: #000;
-	transition: color .25s ease;
-	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
+			transition: color .25s ease;
 }
 
 .prevNext {
 	float: right;
 	color: #999;
 	font-size: .9rem;
-	transition: color .25s ease;
-	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
+			transition: color .25s ease;
 }
 
 .prevNext:hover {
 	color: #000;
-	transition: color .25s ease;
-	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
+			transition: color .25s ease;
 }
 
 header {
@@ -160,16 +166,14 @@ header {
 	font-size: 2.5rem;
 	color: #999;
 	font-weight: normal;
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 
 #headerLogo h1:hover {
 	color: #000;
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 
 #headerNav nav {
@@ -195,17 +199,15 @@ header nav li a {
 	font-size: 1rem;
 	border-bottom: 1px solid transparent;
 	color: #999;
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 
 header nav li a:hover {
 	border-bottom: 1px solid #999;
 	color: #000;
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 
 .aboutHover {
@@ -253,19 +255,17 @@ header nav li a:hover {
 .artImgBoxEach img {
 	width: 100%;
 	opacity: 1;
-	transition: all, .5s ease;
-	-ms-transition: all, .5s ease;
 	-webkit-transition: all, .5s ease;
+			transition: all, .5s ease;
 }
 
 .artImgBoxEach img:hover {
-	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
-	transform: translateY(-10px);
-	-ms-transform: translateY(-10px);
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
+	        box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
 	-webkit-transform: translateY(-10px);
-	transition: all .35s ease;
-	-ms-transition: all .35s ease;
+			transform: translateY(-10px);
 	-webkit-transition: all .35s ease;
+			transition: all .35s ease;
 }
 
 .artImgBoxEach figcaption {
@@ -315,73 +315,76 @@ footer p {
 	color: #999;
 	font-size: 1.1rem;
 	margin-left: 20px;
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 /* ===== */
 .topUp {
 	transform: translateY(-5px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateY(-5px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateY(-5px);
 	-webkit-transition: transform .25s ease;
 }
 
 .topUp2 {
 	transform: translateY(0px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateY(0px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateY(0px);
 	-webkit-transition: transform .25s ease;
 }
 
 .nextRight {
 	transform: translateX(5px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateX(5px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateX(5px);
 	-webkit-transition: transform .25s ease;
 }
 
 .nextRight2 {
 	transform: translateX(0px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateX(0px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateX(0px);
 	-webkit-transition: transform .25s ease;
 }
 
 .nextLeft {
 	transform: translateX(-5px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateX(-5px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateX(-5px);
 	-webkit-transition: transform .25s ease;
 }
 
 .nextLeft2 {
 	transform: translateX(0px);
+	-webkit-transition: -webkit-transform .25s ease;
+	transition: -webkit-transform .25s ease;
 	transition: transform .25s ease;
-	-ms-transform: translateX(0px);
-	-ms-transition: transform .25s ease;
+	transition: transform .25s ease, -webkit-transform .25s ease;
 	-webkit-transform: translateX(0px);
 	-webkit-transition: transform .25s ease;
 }
 /* ===== */
 #snsIcon i:hover {
 	opacity: 1;
-	transform: translateY(-2.5px);
-	-ms-transform: translateY(-2.5px);
 	-webkit-transform: translateY(-2.5px);
-	transition: all .25s ease;
-	-ms-transition: all .25s ease;
+	        transform: translateY(-2.5px);
 	-webkit-transition: all .25s ease;
+			transition: all .25s ease;
 }
 
 #twIcon:hover {
@@ -489,16 +492,14 @@ footer p {
 .aboutTxtBox p a {
 	color: #999;
 	font-size: 1rem;
-	transition: color .5s ease;
-	-ms-transition: color .5s ease;
 	-webkit-transition: color .5s ease;
+			transition: color .5s ease;
 }
 
 .aboutTxtBox p a:hover {
 	color: #000;
-	transition: color .5s ease;
-	-ms-transition: color .5s ease;
 	-webkit-transition: color .5s ease;
+			transition: color .5s ease;
 }
 
 /*=====*/
@@ -913,12 +914,14 @@ footer p {
 	display: inline-block;
 	color: #999;
 	font-size: .85rem;
-	transition: color .5s ease;
+	-webkit-transition: color .5s ease;
+			transition: color .5s ease;
 }
 
 .musicEachBox a:hover {
 	color: #000;
-	transition: color .5s ease;
+	-webkit-transition: color .5s ease;
+			transition: color .5s ease;
 }
 
 .musicEachBox a i {
@@ -1040,11 +1043,8 @@ footer p {
 		display: block;
 		width: 100%;
 		margin: 0 auto;
-		transform: translate(-25%, -50%);
-		-o-transform: translate(-25%, -50%);
-		-ms-transform: translate(-25%, -50%);
-		-moz-transform: translate(-25%, -50%);
 		-webkit-transform: translate(-25%, -50%);
+				transform: translate(-25%, -50%);
 	}
 
 	#snsIcon i {
@@ -1096,11 +1096,8 @@ footer p {
 		display: block;
 		margin: auto;
 		margin-top: 50px;
-		transform: translate(-50%, -50%);
-		-o-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		-moz-transform: translate(-50%, -50%);
 		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 	}
 
 	#headerNav nav {
@@ -1113,9 +1110,8 @@ footer p {
 		width: 100%;
 		right: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
 		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 	}
 
 	#ytIcon, #liIcon {
@@ -1167,16 +1163,14 @@ footer p {
 
 #siteMap a {
 	color: #999;
-	transition: color .25s ease;
-	-ms-transition: color .25s ease;
 	-webkit-transition: color .25s ease;
+			transition: color .25s ease;
 }
 
 #siteMap a:hover {
 	color: #000;
-	transition: color .5s ease;
-	-ms-transition: color .5s ease;
 	-webkit-transition: color .5s ease;
+			transition: color .5s ease;
 }
 
 #siteMap li {
@@ -1207,19 +1201,25 @@ footer p {
 	height: 40px;
 	font-size: 0;
 	text-indent: -9999px;
-	appearance: none;
-	box-shadow: none;
-	border-radius: none;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+	-webkit-box-shadow: none;
+			box-shadow: none;
 	border: none;
 	cursor: pointer;
-	transition: background .3s;
+	border-radius: none;
+	-webkit-transition: background .3s;
+			transition: background .3s;
 	opacity: .25;
-	transition: opacity ease .5s;
+	-webkit-transition: opacity ease .5s;
+			transition: opacity ease .5s;
 }
 
 .c-hamburger:hover {
 	opacity: .75;
-	transition: opacity ease .5s;
+	-webkit-transition: opacity ease .5s;
+			transition: opacity ease .5s;
 }
 
 .c-hamburger:focus {
@@ -1260,21 +1260,30 @@ footer p {
 }
 
 .c-hamburger--htx span {
-	transition: background 0s 0.3s;
+	-webkit-transition: background 0s 0.3s;
+			transition: background 0s 0.3s;
 }
 
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
-	transition-duration: 0.3s, 0.3s;
-	transition-delay: 0.3s, 0s;
+	-webkit-transition-duration: 0.3s, 0.3s;
+			transition-duration: 0.3s, 0.3s;
+	-webkit-transition-delay: 0.3s, 0s;
+			transition-delay: 0.3s, 0s;
 }
 
 .c-hamburger--htx span::before {
+	-webkit-transition-property: top, -webkit-transform;
+	transition-property: top, -webkit-transform;
 	transition-property: top, transform;
+	transition-property: top, transform, -webkit-transform;
 }
 
 .c-hamburger--htx span::after {
+	-webkit-transition-property: bottom, -webkit-transform;
+	transition-property: bottom, -webkit-transform;
 	transition-property: bottom, transform;
+	transition-property: bottom, transform, -webkit-transform;
 }
 
 .c-hamburger--htx.is-active {
@@ -1287,15 +1296,18 @@ footer p {
 
 .c-hamburger--htx.is-active span::before {
 	top: 0;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
 }
 
 .c-hamburger--htx.is-active span::after {
 	bottom: 0;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
 }
 
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
-	transition-delay: 0s, 0.3s;
+	-webkit-transition-delay: 0s, 0.3s;
+			transition-delay: 0s, 0.3s;
 }
