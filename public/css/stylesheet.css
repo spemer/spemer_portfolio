@@ -7,7 +7,6 @@
 	font-size: 1rem;
 	line-height: 2em;
 	list-style: none;
-	list-style: none;
 	text-decoration: none;
 	letter-spacing: 1.25px;
 	-webkit-font-family: 'Roboto', sans-serif;
@@ -29,29 +28,21 @@ body::-webkit-scrollbar-thumb {
 	background-color: rgba(0,0,0,0.25);
 }
 
-::-moz-selection {
-	background: rgba(0,0,0,0.25);
-	color: white;
-}
-
 ::selection {
 	background: rgba(0,0,0,0.25);
 	color: white;
 }
+
 ::-moz-selection {
 	background: rgba(0,0,0,0.25);
 	color: white;
-}
-
-img::-moz-selection {
-	background: transparent;
-	visibility: hidden;
 }
 
 img::selection {
 	background: transparent;
 	visibility: hidden;
 }
+
 img::-moz-selection {
 	background: transparent;
 	visibility: hidden;
@@ -949,9 +940,37 @@ footer p {
 	}
 }
 
+@media screen and (max-width: 600px) {
+	#headerNav nav {
+		text-align: center;
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 25px;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		right: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+	}
+
+	#headerLogo {
+		position: relative;
+		right: 50%;
+		left: 50%;
+		display: block;
+		margin: 0 auto;
+		margin-top: 50px;
+		-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+	}
+}
+
 @media screen and (max-width: 768px) {
 	body {
-		width: 80%;
+		width: 90%;
 	}
 
 	figcaption {
@@ -1087,31 +1106,6 @@ footer p {
 		width: 100%;
 		padding: 0px;
 		text-align: center;
-	}
-
-	#headerLogo {
-		position: relative;
-		right: 50%;
-		left: 50%;
-		display: block;
-		margin: auto;
-		margin-top: 50px;
-		-webkit-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
-	}
-
-	#headerNav nav {
-		margin-top: 0;
-		padding-top: 0;
-		padding-bottom: 25px;
-		position: relative;
-		display: block;
-		margin: auto;
-		width: 100%;
-		right: 50%;
-		left: 50%;
-		-webkit-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
 	}
 
 	#ytIcon, #liIcon {
@@ -1310,4 +1304,44 @@ footer p {
 .c-hamburger--htx.is-active span::after {
 	-webkit-transition-delay: 0s, 0.3s;
 			transition-delay: 0s, 0.3s;
+}
+
+.articleImgSize {
+	text-align: center;
+	margin: 25px 0px;
+}
+
+.articleImg img {
+	width: 100%;
+}
+
+.articleImg75 img {
+	width: 75%;
+}
+
+.articleImg50 img {
+	width: 50%;
+}
+
+.articleImg40 img {
+	width: 49.5%;
+	display: inline-block;
+}
+
+.articleFig figcaption {
+	text-align: center;
+}
+
+@media screen and (max-width: 767px){
+	.articleImg40 img,
+	.articleImg75 img,
+	.articleImg50 img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	figcaption {
+		display: inline-block;
+	}
 }

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Spemer" />
+	<meta name="robots" content="index,follow" />
+	<meta name="description" content="Hyouk Seo (Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)" />
+	<meta name="keywords" content="firebase, google, domain, url, node, node.js, cpi, http, https, protocol, ssl, chrome, firebase, medium, github" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+
+	<meta name="og:type" content="website" />
+	<meta name="og:url" content="connecting-domain-with-google-firebase.html" />
+	<meta name="og:title" content="Connecting your domain by using Google Firebase(w/ Node.js)" />
+	<meta name="og:description" content="Connecting your domain by using Google Firebase(w/ Node.js)" />
+	<meta name="og:image" content="https://spemer.com/img/works/firebase/firebase_logo.jpg" />
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:domain" content="spemer.com">
+	<meta name="twitter:title" content="Connecting your domain by using Google Firebase(w/ Node.js)">
+	<meta name="twitter:site" content="@OfficialSpemer">
+	<meta name="twitter:creator" content="@OfficialSpemer">
+	<meta name="twitter:description" content="Connecting your domain by using Google Firebase(w/ Node.js)">
+	<meta name="twitter:image" content="https://spemer.com/img/works/firebase/firebase_logo.jpg">
+
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="canonical" href="https://www.spemer.com/article/connecting-domain-with-google-firebase.html">
+
+	<title>Spemer - Connecting your domain by using Google Firebase(w/ Node.js)</title>
+
+	<style>
+		@import "../css/stylesheet.css";
+		@import "https://spemer.com/css/animate.css";
+    </style>
+</head>
+
+<body class="animated fadeInUp">
+	<header>
+		<div>
+			<div id="headerLogo">
+				<a href="../index.html"><h1>Spemer</h1></a>
+			</div>
+			<div id="headerNav">
+				<nav>
+					<ul>
+						<li><a href="https://www.spemer.com/index.html" class="ready readyHide" onmouseover="lineDel()" onmouseleave="lineLive()">PORTFOLIO</a></li>
+
+						<li><a href="https://www.spemer.com/article/connecting-domain-with-google-firebase.html" class="ready2 aboutHover">ARTICLE</a></li>
+
+						<li><a href="https://www.spemer.com/about-spemer.html" class="ready3 readyHide3" onmouseover="lineDel3()" onmouseleave="lineLive3()">ABOUT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<script>
+		function lineLive(){
+			$('.ready').removeClass('aboutHover');
+		}
+		function lineDel(){
+			$('.ready').addClass('aboutHover');
+		}
+
+		function lineLive3(){
+			$('.ready3').removeClass('aboutHover3');
+		}
+		function lineDel3(){
+			$('.ready3').addClass('aboutHover3');
+		}
+	</script>
+
+	<article class="clearfix article animated fadeInUp">
+		<div class="triBox">
+			<div class="triBoxMain">
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Connecting your domain by using Google Firebase(w/ Node.js)</h3>
+					<p>
+						Google Chrome announced that they are going to show “Not secure” message on their address bar from this October, if Chrome trying to enter URL with ‘HTTP’. Most of the major websites, such as Google, Twitter, Facebook — were already move their protocol to HTTPS.
+						<br /><br />
+						However, with Firebase, you can get your own SSL certificate(for free!), and you don’t need to worry about ‘Not secure’ message even if you don’t have your own SSL certificate right now. With your Google account, you can create a Firebase project at Google Firebase.
+					</p>
+				</div>
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Create a new project</h3>
+
+					<figure class="articleImg articleFig articleImgSize">
+						<img src="../img/works/firebase/main.png" alt="Main page of Google Firebase" title="Main page of Google Firebase" />
+						<figcaption>Main page of Firebase — You can add new project by clicking the”Add project(Red box)” button.</figcaption>
+					</figure><br />
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/newProject.JPG" alt="Create a new project" title="Create a new project" />
+						<figcaption>Create a new project</figcaption>
+					</figure><br />
+
+					<p>
+						Dialog shows up after you click “Add project” button. You can name your new project and select your country here. I selected “South Korea”, But I recommend you to select the country which has the best CDN server located(and of course, the nearest country!)
+					</p><br />
+				</div>
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Start Google Firebase</h3>
+
+					<figure class="articleImg40 articleFig articleImgSize">
+						<img src="../img/works/firebase/afterSignIn.png" alt="Go to Hosting tab" title="Go to Hosting tab" />
+						<img src="../img/works/firebase/hostingStart.png" alt="Hosting start" title="Hosting start" />
+						<figcaption>Go straight to “Hosting” tab on the left navigation bar and click “Start” button on the “Hosting” page.</figcaption>
+					</figure><br />
+
+					<figure class="articleImg40 articleFig articleImgSize">
+						<img src="../img/works/firebase/hostingSetting.JPG" alt="Hosting setting(1)" title="Hosting setting(1)" />
+						<img src="../img/works/firebase/hostingSetting2.JPG" alt="Hosting setting(2)" title="Hosting setting(2)" />
+						<figcaption>You have to setup your local directory first — and open Terminal by Hold down the Shift key while right-clicking in your directory. Just copy and paste the npm code — Install code, Google sign in, Start project and Publish website.</figcaption>
+					</figure><br />
+
+					<p>
+						You must setup your local directory first, because it’s based on Commend Line Interface of Node.js, not like a FTP server or Web hosting manager. Just make sure you installed Node.js on your computer!
+					</p><br />
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/npm.JPG" alt="Login and initialize Firebase" title="Login and initialize Firebase" />
+						<figcaption>Open Terminal by Hold down the Shift key while right-clicking</figcaption>
+					</figure>
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/public.png" alt="Set directory" title="Set directory" />
+						<figcaption>You may set your new directory for yoursef, or just leave it like this.</figcaption>
+					</figure><br />
+				</div>
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Connect your domain</h3>
+
+					<p>
+						After this, click the “Connect domain” button to start connecting your domain to Firebase. In this step, you need your own domain, or domain to redirection.
+					</p><br />
+
+					<figure class="articleImg articleFig articleImgSize">
+						<img src="../img/works/firebase/connectingDomainBTN.png" alt="Connect domain" title="Connect domain" />
+						<figcaption>Click the “Connect domain” button</figcaption>
+					</figure><br />
+
+					<figure class="articleImg40 articleFig articleImgSize">
+						<img src="../img/works/firebase/connectingDomain.png" alt="Hosting setting(1)" title="Hosting setting(1)" />
+						<img src="../img/works/firebase/confirmOwnership.png" alt="Hosting setting(2)" title="Hosting setting(2)" />
+						<figcaption>Type your domain, and confirm your domain’s ownership by adding TXT record to your DNS provider or service.</figcaption>
+					</figure><br />
+
+					<p>
+						In my case, my DNS provider is “GoDaddy”. So I added the TXT record on my DNS provider’s DNS setting.
+					</p><br />
+
+					<figure class="articleImg75 articleFig articleImgSize">
+						<img src="../img/works/firebase/addTXT.JPG" alt="Change TXT value" title="Change TXT value" />
+						<figcaption>Type is TXT, Host is your domain. And just copy and paste the TXT value on TXT field.</figcaption>
+					</figure><br />
+
+					<figure class="articleImg75 articleFig articleImgSize">
+						<img src="../img/works/firebase/key.JPG" alt="Change A value" title="Change A value" />
+						<figcaption>Next, you’ll get some “A” values, add them to your service provider in the same way, just like you did for TXT value.
+						</figcaption>
+					</figure><br />
+
+					<figure class="articleImg75 articleFig articleImgSize">
+						<img src="../img/works/firebase/godaddy.JPG" alt="Changed A value" title="Changed A value" />
+						<figcaption>Changed “A” values on my service provider(GoDaddy)</figcaption>
+					</figure><br />
+				</div>
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Upload your files</h3>
+
+					<p>
+						Next thing to do is bringing your assets into your directory, which you’ve setup on terminal. In my case, I set my public directory as “public” folder(default). And then, on your Terminal, type a line of commend below.
+					</p><br />
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/deployOnly.JPG" alt="Create a new project" title="Create a new project" />
+						<figcaption>Type this line…</figcaption>
+					</figure>
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/deploy.JPG" alt="Create a new project" title="Create a new project" />
+						<figcaption>Files uploading… Done!</figcaption>
+					</figure><br />
+				</div>
+
+				<div class="everyTxtEnd" style="padding-bottom: 25px;">
+					<h3>Get 'https'</h3>
+
+					<p>
+						That’s it! Now you have to wait for 5 mins to 2 hours for Firebase to applying your domain’s settings. Before that, uncomfortable screen may come across to you — when you’re trying to enter your domain, like
+					</p><br/>
+
+					<figure class="articleImg75 articleFig articleImgSize">
+						<img src="../img/works/firebase/warning.JPG" alt="Changed A value" title="Changed A value" />
+						<figcaption>This!</figcaption>
+					</figure><br />
+
+					<p>
+						I did this for my design portfolio website, cause I don’t want to make my visitors get scared by “Not Secure” message on Chrome.(seriously...!)<br/>
+						And after 30 mins...
+					</p><br />
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/spemer.JPG" alt="'http' to 'https'" title="'http' to 'https'" />
+						<figcaption>Finally I got it!</figcaption>
+					</figure>
+
+					<figure class="articleImg50 articleFig articleImgSize">
+						<img src="../img/works/firebase/certificate.JPG" alt="Certificate" title="Certificate" />
+						<figcaption>Certificate for my website — Spemer.com</figcaption>
+					</figure><br />
+
+					<p>
+						Hope this can help you, especially for people who are ‘non-professional’ in programming fields like me. Thanks!<br />
+					</p>
+				</div>
+
+
+
+				<div class="everyTxtEndEnd">
+					<p>
+						Connecting your domain by using Google Firebase(w/ Node.js)<br />
+						<strong><a href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e" target="_blank" title="Medium (New Tab)">Click Here to Watch on Medium</a></strong><br /><br />
+
+						<strong>Title :</strong> <a href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e" target="_blank" title="Behance (New Tab)">Connecting your domain by using Google Firebase(w/ Node.js)</a><br />
+
+						<strong>Date :</strong> May 19, 2017<br />
+
+						<strong>Writer :</strong> Hyouk SEO (Spemer)<br />
+
+						<br /><br />
+					</p>
+				</div>
+
+			</div>
+
+			<nav>
+				<div id="prevNext">
+					<a data-scroll href="body" class="prevNextTop" onmouseover="topUp()" onmouseleave="topDn()"><b><i class="fa fa-angle-up"></i>&nbsp;Top</b></a>
+
+					<a href="../index.html" class="prevNext" title="Main"><b>Home &nbsp;</b></a>
+				</div>
+			</nav>
+		</div>
+	</article>
+
+	<script>
+		function topUp(){
+			$('.fa-angle-up').addClass('topUp');
+			$('.fa-angle-up').removeClass('topUp2');
+		}
+		function topDn(){
+			$('.fa-angle-up').addClass('topUp2');
+			$('.fa-angle-up').removeClass('topUp');
+		}
+
+		function nextRight(){
+			$('.fa-angle-double-right').addClass('nextRight');
+			$('.fa-angle-double-right').removeClass('nextRight2');
+		}
+		function nextRightDel(){
+			$('.fa-angle-double-right').addClass('nextRight2');
+			$('.fa-angle-double-right').removeClass('nextRight');
+		}
+
+		function nextLeft(){
+			$('.fa-angle-double-left').addClass('nextLeft');
+			$('.fa-angle-double-left').removeClass('nextLeft2');
+		}
+		function nextLeftDel(){
+			$('.fa-angle-double-left').addClass('nextLeft2');
+			$('.fa-angle-double-left').removeClass('nextLeft');
+		}
+	</script>
+
+	<div id="siteMap">
+		<p class="siteMapBtn" title="Site Map">
+			<button class="c-hamburger c-hamburger--htx"><span></span></button>
+		</p>
+
+		<nav class="siteMapNav">
+			<ul>
+				<li><a href="https://spemer.com/portfolio/suhyup-mobile-banking-ui-ux-renewal.html" title="Suhyup Mobile Banking UI/UX Renewal">Suhyup</a></li>
+
+				<li><a href="https://spemer.com/portfolio/iloom-website-redesign-concept-design.html" title="Iloom Website Redesign Concept">Iloom</a></li>
+
+				<li><a href="https://spemer.com/portfolio/ktng-website-redesign-concept-design.html" title="KT&G Website Redesign Concept">KT&amp;G</a></li>
+
+				<li><a href="https://spemer.com/portfolio/fujifilm-website-redesign-concept-design.html" title="Fujifilm Website Redesign Concept">Fujifilm</a></li>
+
+				<li><a href="https://spemer.com/portfolio/audio-technica-concept-renewal-design.html" title="Audio Technica Concept Renewal Design">A Tech</a></li>
+
+				<li><a href="https://spemer.com/portfolio/logitech-mobile-application-concept-design.html" title="Logitech - Mobile Application Concept Design">Logitech</a></li>
+
+				<li><a href="https://spemer.com/portfolio/tricam-3d-printing-application-concept-design.html" title="Tricam - 3D Printing Application Concept Design">Tricam</a></li>
+
+				<li><a href="https://spemer.com/portfolio/branding-onestopnature-bi-design.html" title="Branding - ONE Stop Nature BI Design">Branding</a></li>
+
+				<li><a href="https://spemer.com/portfolio/theseety-album-coverart-design-production.html" title="The Seety - Album Cover Art Design &amp; Production">Cover Art</a></li>
+
+				<li><a href="https://spemer.com/portfolio/soribox-music-share-application-concept-design.html" title="SoriBox - Music Share Application Concept Design">SoriBox</a></li>
+
+				<li><a href="https://spemer.com/portfolio/hugdog-pet-care-application-concept-design.html" title="HUGDOG - Pet Care Application Concept Design">HUGDOG</a></li>
+
+				<li><a href="https://spemer.com/portfolio/flaticon-vector-graphic-illustration-design.html" title="Flat Icon - Vector Graphic Illustration Design">Flat Icon</a></li>
+
+				<li><a href="https://spemer.com/portfolio/spemer-music.html" title="Musics">Musics</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<footer class="clearfix">
+		<div>
+			<p>&copy;2017 Hyouk Seo (Spemer)</p>
+			<nav>
+				<div id="snsIcon">
+					<a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">
+						<i id="twIcon" class="fa fa-twitter"></i>
+					</a>
+
+					<a href="https://github.com/spemer" target="_blank" title="Github">
+						<i id="ghIcon" class="fa fa-github"></i>
+					</a>
+
+					<a href="https://facebook.com/ghsspower" target="_blank" title="Facebook">
+						<i id="fbIcon" class="fa fa-facebook"></i>
+					</a>
+
+					<a href="https://instagram.com/spemer/" target="_blank" title="Instagram">
+						<i id="inIcon" class="fa fa-instagram"></i>
+					</a>
+
+					<a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">
+						<i id="liIcon" class="fa fa-linkedin"></i>
+					</a>
+
+					<a href="https://dribbble.com/spemer" target="_blank" title="Dribbble">
+						<i id="drIcon" class="fa fa-dribbble"></i>
+					</a>
+
+					<a href="https://behance.net/spemer" target="_blank" title="Behance">
+						<i id="beIcon" class="fa fa-behance"></i>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+	<style>
+		@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+	</style>
+
+    <script src="https://spemer.com/js/jquery-3.0.0.min.js"></script>
+    <script src="https://spemer.com/js/smooth.scroll.js"></script>
+    <script src="https://spemer.com/js/anchor.scroll.js"></script>
+
+	<script>
+		smoothScroll.init({
+			speed: 1000,
+			easing: 'easeOutQuad',
+			offset: 0,
+			updateURL: false,
+		});
+	</script>
+
+	<script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+	</script>
+
+</body>
+</html>

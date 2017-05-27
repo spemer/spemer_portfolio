@@ -3,28 +3,28 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="author" 		content="Spemer" />
-	<meta name="robots" 		content="index,follow" />
-	<meta name="description" 	content="Hyouk Seo (Spemer) - Personal Portfolio" />
-	<meta name="keywords" 		content="UI, UX, GUI, Design, Portfolio, Application Design, Graphic Design, Web Design, Frontend Web Development, About, Music, Adobe, Illustrator, Photoshop, ImageLine, FL Studio, Nine Cinema Productions, Seoul, NYC, New York, Korea,Incheon, Designer" />
-	<meta name="viewport" 		content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+	<meta name="author" content="Spemer" />
+	<meta name="robots" content="index,follow" />
+	<meta name="description" content="Hyouk Seo (Spemer) - Personal Portfolio" />
+	<meta name="keywords" content="UI, UX, GUI, Design, Portfolio, Application Design, Graphic Design, Web Design, Frontend Web Development, About, Music, Adobe, Illustrator, Photoshop, ImageLine, FL Studio, Nine Cinema Productions, Seoul, NYC, New York, Korea,Incheon, Designer" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
 
-	<meta name="og:type" 		content="website" />
-	<meta name="og:title" 		content="Spemer - About" />
-	<meta name="og:image" 		content="https://spemer.com/img/ogimg.jpg" />
-	<meta name="og:url" 		content="https://www.spemer.com/about-spemer.html" />
+	<meta name="og:type" content="website" />
+	<meta name="og:title" content="Spemer - About" />
+	<meta name="og:image" content="https://spemer.com/img/ogimg.jpg" />
+	<meta name="og:url" content="https://www.spemer.com/about-spemer.html" />
 	<meta name="og:description" content="Hyouk Seo (Spemer) - Personal Portfolio" />
 
-	<meta name="twitter:card" 			content="summary">
-	<meta name="twitter:domain" 		content="spemer.com">
-	<meta name="twitter:title" 			content="Spemer - About">
-	<meta name="twitter:site" 			content="@OfficialSpemer">
-	<meta name="twitter:creator" 		content="@OfficialSpemer">
-	<meta name="twitter:image" 			content="https://spemer.com/img/ogimg.jpg">
-	<meta name="twitter:description" 	content="Hyouk Seo (Spemer) - Personal Portfolio">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:domain" content="spemer.com">
+	<meta name="twitter:title" content="Spemer - About">
+	<meta name="twitter:site" content="@OfficialSpemer">
+	<meta name="twitter:creator" content="@OfficialSpemer">
+	<meta name="twitter:image" content="https://spemer.com/img/ogimg.jpg">
+	<meta name="twitter:description" content="Hyouk Seo (Spemer) - Personal Portfolio">
 
-	<link rel="shortcut icon" 	href="img/favicon.png">
-	<link rel="canonical" 		href="https://www.spemer.com/about-spemer.html">
+	<link rel="shortcut icon" href="img/favicon.png">
+	<link rel="canonical" href="https://www.spemer.com/about-spemer.html">
 
 	<title>Spemer - About</title>
 
@@ -43,8 +43,11 @@
 			<div id="headerNav">
 				<nav>
 					<ul>
-						<li><a href="index.html" onmouseover="lineDel()" onmouseleave="lineLive()">PORTFOLIO</a></li>
-						<li><a href="about-spemer.html" class="ready aboutHover">ABOUT</a></li>
+						<li><a href="https://www.spemer.com/index.html" class="ready readyHide" onmouseover="lineDel()" onmouseleave="lineLive()">PORTFOLIO</a></li>
+
+						<li><a href="https://www.spemer.com/article/connecting-domain-with-google-firebase.html" class="ready2 readyHide2" onmouseover="lineDel2()" onmouseleave="lineLive2()">ARTICLE</a></li>
+						
+						<li><a href="https://www.spemer.com/about-spemer.html" class="ready3 aboutHover">ABOUT</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -53,11 +56,17 @@
 
 	<script>
 		function lineDel(){
+			$('.ready').addClass('aboutHover');
+		}
+		function lineLive(){
 			$('.ready').removeClass('aboutHover');
 		}
 
-		function lineLive(){
-			$('.ready').addClass('aboutHover');
+		function lineDel2(){
+			$('.ready2').addClass('aboutHover2');
+		}
+		function lineLive2(){
+			$('.ready2').removeClass('aboutHover2');
 		}
 	</script>
 
@@ -253,21 +262,6 @@
 	</script>
 
 	<script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
-	</script>
-
-	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-
-	<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyAB0JuGXxMEGPqPbUXzXvtMUGYxHCP5rN8",
-			authDomain: "spemer-bad39.firebaseapp.com",
-			databaseURL: "https://spemer-bad39.firebaseio.com",
-			projectId: "spemer-bad39",
-			storageBucket: "spemer-bad39.appspot.com",
-			messagingSenderId: "966829305796"
-		};
-		firebase.initializeApp(config);
 	</script>
 
 </body>
