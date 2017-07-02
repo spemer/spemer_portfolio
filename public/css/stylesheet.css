@@ -8,6 +8,12 @@
 	--trans-hover: color .5s ease;
 	--trans-color: color .25s ease;
 	--article-border: 1.25px solid rgba(0,0,0,0.125);
+
+	--color-gray: #999;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-darkgray: rgba(0,0,0,0.6);
+	--color-lightgray: rgba(0,0,0,0.25);
 }
 
 * {
@@ -18,9 +24,9 @@
 	text-decoration: none;
 	font-size: var(--font-size)rem;
 	line-height: calc(var(--font-size)*2rem);
-	letter-spacing: calc(var(--font-size)*1.25px);
+	letter-spacing: calc(var(--font-size)*1px);
 	-webkit-font-family: 'Roboto', sans-serif;
-			font-family: 'Roboto', sans-serif;
+					font-family: 'Roboto', sans-serif;
 }
 
 h3 {
@@ -29,25 +35,25 @@ h3 {
 
 body::-webkit-scrollbar {
 	width: 10px;
-	background-color: #fff;
+	background-color: var(--color-white);
 }
 
 body::-webkit-scrollbar-track {
-	background-color: #fff;
+	background-color: var(--color-white);
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: rgba(0,0,0,0.25);
+	background-color: var(--color-lightgray);
 }
 
 ::selection {
-	background: rgba(0,0,0,0.25);
-	color: white;
+	background: var(--color-lightgray);
+	color: var(--color-white);
 }
 
 ::-moz-selection {
-	background: rgba(0,0,0,0.25);
-	color: white;
+	background: var(--color-lightgray);
+	color: var(--color-white);
 }
 
 img::selection {
@@ -65,7 +71,7 @@ img::-moz-selection {
 	display: block;
 	font-weight: 100;
 	font-size: calc(var(--font-size)*1.5rem);
-	color: #999999;
+	color: var(--color-gray);
 }
 
 .clearfix {
@@ -94,14 +100,14 @@ body {
 .everyTxtEnd2 h3,
 .everyTxtEnd3 h3 {
 	font-size: calc(var(--font-size)*1.5rem);
-	color: rgba(0,0,0,0.6);
+	color: var(--color-darkgray);
 }
 
 .everyTxtEnd p,
 .everyTxtEnd2 p,
 .everyTxtEnd3 p {
 	font-size: calc(var(--font-size)*1rem);
-	color: #999;
+	color: var(--color-gray);
 }
 
 .everyTxtEndEnd {
@@ -109,12 +115,12 @@ body {
 }
 
 .everyTxtEndEnd p {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*1rem);
 }
 
 .everyTxtEndEnd a {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*1rem);
 }
 
@@ -126,30 +132,30 @@ body {
 
 .prevNextTop {
 	float: left;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	-webkit-transition: var(--trans-color);
-			transition: var(--trans-color);
+					transition: var(--trans-color);
 }
 
 .prevNextTop:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-color);
-			transition: var(--trans-color);
+					transition: var(--trans-color);
 }
 
 .prevNext {
 	float: right;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	-webkit-transition: var(--trans-color);
-			transition: var(--trans-color);
+					transition: var(--trans-color);
 }
 
 .prevNext:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-color);
-			transition: var(--trans-color);
+					transition: var(--trans-color);
 }
 
 header {
@@ -166,18 +172,18 @@ header {
 }
 
 #headerLogo h1 {
-	color: #999;
+	color: var(--color-gray);
 	font-weight: normal;
 	font-size: calc(var(--font-size)*2.5rem);
 	line-height: calc(var(--font-size)*5rem);
 	-webkit-transition: var(--trans-all);
-			transition: var(--trans-all);
+					transition: var(--trans-all);
 }
 
 #headerLogo h1:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-all);
-			transition: var(--trans-all);
+					transition: var(--trans-all);
 }
 
 #headerNav nav {
@@ -202,20 +208,20 @@ header nav li a {
 	font-weight: 100;
 	font-size: calc(var(--font-size)*1rem);
 	border-bottom: 1px solid transparent;
-	color: #999;
+	color: var(--color-gray);
 	-webkit-transition: var(--trans-all);
 			transition: var(--trans-all);
 }
 
 header nav li a:hover {
-	border-bottom: 1px solid #999;
-	color: #000;
+	border-bottom: 1px solid var(--color-gray);
+	color: var(--color-black);
 	-webkit-transition: var(--trans-all);
 			transition: var(--trans-all);
 }
 
 .aboutHover {
-	border-bottom: 1px solid #999;
+	border-bottom: 1px solid var(--color-gray);
 }
 
 @media screen and (max-width: 420px) {
@@ -267,13 +273,13 @@ header nav li a:hover {
 	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
 	        box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
 	-webkit-transform: translateY(-10px);
-			transform: translateY(-10px);
+					transform: translateY(-10px);
 	-webkit-transition: all .35s ease;
-			transition: all .35s ease;
+					transition: all .35s ease;
 }
 
 .artImgBoxEach figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-weight: lighter;
 	text-align: center;
 	font-size: calc(var(--font-size)*.9rem);
@@ -293,7 +299,7 @@ header nav li a:hover {
 .imgTextHover {
 	display: inline;
 	position: absolute;
-	color: #000;
+	color: var(--color-black);
 	opacity: 0;
 }
 
@@ -306,7 +312,7 @@ footer {
 
 footer p {
 	float: left;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -316,11 +322,11 @@ footer p {
 	text-align: center;
 	float: right;
 	opacity: .5;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*1.1rem);
 	margin-left: 20px;
 	-webkit-transition: var(--trans-all);
-			transition: var(--trans-all);
+					transition: var(--trans-all);
 }
 /* ===== */
 .topUp {
@@ -388,7 +394,7 @@ footer p {
 	-webkit-transform: translateY(-2.5px);
 	        transform: translateY(-2.5px);
 	-webkit-transition: var(--trans-all);
-			transition: var(--trans-all);
+					transition: var(--trans-all);
 }
 
 #twIcon:hover {
@@ -425,7 +431,7 @@ footer p {
 }
 
 .aboutTxtBox h3 {
-	color: rgba(0,0,0,0.6);
+	color: var(--color-darkgray);
 	font-size: calc(var(--font-size)*1.5rem);
 }
 
@@ -489,21 +495,21 @@ footer p {
 
 
 .aboutTxtBox p {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*1rem);
 }
 
 .aboutTxtBox p a {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*1rem);
 	-webkit-transition: var(--trans-hover);
-			transition: var(--trans-hover);
+					transition: var(--trans-hover);
 }
 
 .aboutTxtBox p a:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-hover);
-			transition: var(--trans-hover);
+					transition: var(--trans-hover);
 }
 
 /*=====*/
@@ -547,7 +553,7 @@ footer p {
 
 .triBox figcaption {
 	font-size: calc(var(--font-size)*.9rem);
-	color: #999;
+	color: var(--color-gray);
 }
 
 .tricam2D, .tricam3D,
@@ -578,7 +584,7 @@ footer p {
 .tri2dH3, .tri3dH3,
 .triOutputH3, .triOthersH3 {
 	font-size: calc(var(--font-size)*1.5rem);
-	color: rgba(0,0,0,0.6);
+	color: var(--color-darkgray);
 }
 
 .tricamBanner {
@@ -591,7 +597,7 @@ footer p {
 	.tri2dH3, .tri3dH3,
 	.triOutputH3, .triOthersH3 {
 		font-size: calc(var(--font-size)*1.25rem);
-		color: rgba(0,0,0,0.6);
+		color: var(--color-darkgray);
 	}
 }
 
@@ -610,7 +616,7 @@ footer p {
 }
 
 .brandBox figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -691,7 +697,7 @@ footer p {
 .soriImg figcaption,
 .soriImg2Each figcaption,
 .soriColorEach figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -748,7 +754,7 @@ footer p {
 }
 
 .soriMidTitle {
-	color: rgba(0,0,0,0.6);
+	color: var(--color-darkgray);
 	font-size: calc(var(--font-size)*1.5rem);
 	padding: 25px 0px;
 }
@@ -808,7 +814,7 @@ footer p {
 }
 
 .hugImg2 figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -837,7 +843,7 @@ footer p {
 }
 
 .flatIconBoxEach figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -861,7 +867,7 @@ footer p {
 }
 
 .pckIconBoxEach figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 }
 
@@ -882,7 +888,7 @@ footer p {
 }
 
 .guiIconBoxEach figcaption {
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	position: relative;
 	bottom: 50px;
@@ -909,23 +915,23 @@ footer p {
 
 .musicEachBox p {
 	margin-top: 5px;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	line-height: 1.5em;
 }
 
 .musicEachBox a {
 	display: inline-block;
-	color: #999;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.85rem);
 	-webkit-transition: var(--trans-hover);
-			transition: var(--trans-hover);
+					transition: var(--trans-hover);
 }
 
 .musicEachBox a:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-hover);
-			transition: var(--trans-hover);
+					transition: var(--trans-hover);
 }
 
 .musicEachBox a i {
@@ -966,7 +972,7 @@ footer p {
 		right: 50%;
 		left: 50%;
 		-webkit-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
 	}
 
 	#headerLogo {
@@ -977,7 +983,7 @@ footer p {
 		margin: 0 auto;
 		margin-top: 50px;
 		-webkit-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
+						transform: translate(-50%, -50%);
 	}
 }
 
@@ -1076,7 +1082,7 @@ footer p {
 		width: 100%;
 		margin: 0 auto;
 		-webkit-transform: translate(-25%, -50%);
-				transform: translate(-25%, -50%);
+						transform: translate(-25%, -50%);
 	}
 
 	#snsIcon i {
@@ -1157,7 +1163,7 @@ footer p {
 }
 
 .siteMapBtn {
-	color: #999;
+	color: var(--color-gray);
 }
 
 .siteMapBtn:hover {
@@ -1169,15 +1175,15 @@ footer p {
 }
 
 #siteMap a {
-	color: #999;
+	color: var(--color-gray);
 	-webkit-transition: var(--trans-color);
-			transition: var(--trans-color);
+					transition: var(--trans-color);
 }
 
 #siteMap a:hover {
-	color: #000;
+	color: var(--color-black);
 	-webkit-transition: var(--trans-hover);
-			transition: var(--trans-hover);
+					transition: var(--trans-hover);
 }
 
 #siteMap li {
@@ -1208,25 +1214,25 @@ footer p {
 	height: 40px;
 	font-size: 0;
 	text-indent: -9999px;
-	-webkit-appearance: none;
-	   -moz-appearance: none;
-			appearance: none;
-	-webkit-box-shadow: none;
-			box-shadow: none;
+	box-shadow: none;
 	border: none;
 	cursor: pointer;
 	border-radius: none;
+	-webkit-appearance: none;
+		 -moz-appearance: none;
+		 			appearance: none;
+	-webkit-box-shadow: none;
 	-webkit-transition: background .3s;
-			transition: background .3s;
+					transition: background .3s;
 	opacity: .25;
 	-webkit-transition: opacity ease .5s;
-			transition: opacity ease .5s;
+					transition: opacity ease .5s;
 }
 
 .c-hamburger:hover {
 	opacity: .75;
 	-webkit-transition: opacity ease .5s;
-			transition: opacity ease .5s;
+					transition: opacity ease .5s;
 }
 
 .c-hamburger:focus {
@@ -1268,29 +1274,29 @@ footer p {
 
 .c-hamburger--htx span {
 	-webkit-transition: background 0s 0.3s;
-			transition: background 0s 0.3s;
+					transition: background 0s 0.3s;
 }
 
 .c-hamburger--htx span::before,
 .c-hamburger--htx span::after {
 	-webkit-transition-duration: 0.3s, 0.3s;
-			transition-duration: 0.3s, 0.3s;
+					transition-duration: 0.3s, 0.3s;
 	-webkit-transition-delay: 0.3s, 0s;
-			transition-delay: 0.3s, 0s;
+					transition-delay: 0.3s, 0s;
 }
 
 .c-hamburger--htx span::before {
 	-webkit-transition-property: top, -webkit-transform;
-	transition-property: top, -webkit-transform;
-	transition-property: top, transform;
-	transition-property: top, transform, -webkit-transform;
+					transition-property: top, -webkit-transform;
+					transition-property: top, transform;
+					transition-property: top, transform, -webkit-transform;
 }
 
 .c-hamburger--htx span::after {
 	-webkit-transition-property: bottom, -webkit-transform;
-	transition-property: bottom, -webkit-transform;
-	transition-property: bottom, transform;
-	transition-property: bottom, transform, -webkit-transform;
+					transition-property: bottom, -webkit-transform;
+					transition-property: bottom, transform;
+					transition-property: bottom, transform, -webkit-transform;
 }
 
 .c-hamburger--htx.is-active {
@@ -1304,19 +1310,19 @@ footer p {
 .c-hamburger--htx.is-active span::before {
 	top: 0;
 	-webkit-transform: rotate(45deg);
-			transform: rotate(45deg);
+					transform: rotate(45deg);
 }
 
 .c-hamburger--htx.is-active span::after {
 	bottom: 0;
 	-webkit-transform: rotate(-45deg);
-			transform: rotate(-45deg);
+					transform: rotate(-45deg);
 }
 
 .c-hamburger--htx.is-active span::before,
 .c-hamburger--htx.is-active span::after {
 	-webkit-transition-delay: 0s, 0.3s;
-			transition-delay: 0s, 0.3s;
+					transition-delay: 0s, 0.3s;
 }
 
 .articleImgSize {
