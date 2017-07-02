@@ -1,5 +1,3 @@
-
-//top hover
 function topUp() {
     "use strict";
     
@@ -39,8 +37,8 @@ function nextLeftDel() {
     $('.fa-angle-double-left').removeClass('nextLeft');
 }
 
+//
 
-//nav hover
 function lineLive2() {
     "use strict";
     
