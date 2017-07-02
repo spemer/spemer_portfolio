@@ -29,7 +29,6 @@
 	<meta property="og:image" content="https://spemer.com/img/ogimg.jpg" />
 	<meta property="og:url" content="https://www.spemer.com/about-spemer.html" />
 	<meta property="og:description" content="Hyouk Seo (Spemer) - Personal Portfolio" />
-	<meta name="description" content="Hyouk Seo (Spemer) - Personal Portfolio" />
 
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:domain" content="spemer.com">
@@ -66,22 +65,7 @@
 			</div>
 		</div>
 	</header>
-
-	<script>
-		function lineDel(){
-			$('.ready').addClass('aboutHover');
-		}
-		function lineLive(){
-			$('.ready').removeClass('aboutHover');
-		}
-
-		function lineDel2(){
-			$('.ready2').addClass('aboutHover2');
-		}
-		function lineLive2(){
-			$('.ready2').removeClass('aboutHover2');
-		}
-	</script>
+    
 
 	<article class="clearfix article animated fadeInUp">
 
@@ -173,19 +157,9 @@
 
 				<a href="index.html" class="prevNext"><b>Back to Main Page</b></a>
 			</div>
-		<nav>
+        </nav>
 	</article>
 
-	<script>
-		function topUp(){
-			$('.fa-angle-up').addClass('topUp');
-			$('.fa-angle-up').removeClass('topUp2');
-		}
-		function topDn(){
-			$('.fa-angle-up').addClass('topUp2');
-			$('.fa-angle-up').removeClass('topUp');
-		}
-	</script>
 
 	<div id="siteMap">
 		<p class="siteMapBtn" title="Site Map">
@@ -262,20 +236,20 @@
 		</div>
 	</footer>
 
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/smooth.scroll.js"></script>
-    <script src="js/anchor.scroll.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
 
-	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeOutQuad',
-			offset: 0,
-			updateURL: false,
-		});
-	</script>
-
-	<script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+    <script>
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
+        });
+        
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
 
 </body>

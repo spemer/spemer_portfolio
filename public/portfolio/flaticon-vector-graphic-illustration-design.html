@@ -29,7 +29,6 @@
 	<meta property="og:title" content="Hyouk Seo(Spemer) - Flat Icon (Vector Illustration)" />
 	<meta property="og:image" content="https://spemer.com/img/works/flaticon/house.jpg" />
 	<meta property="og:description" content="Flat Icon Design (Vector Illustrations)" />
-	<meta name="description" content="Flat Icon Design (Vector Illustrations)" />
 
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:domain" content="spemer.com">
@@ -56,7 +55,7 @@
 			<div id="headerNav">
 				<nav>
 					<ul>
-						<li><a href="../index.html" class="aboutHover ready"">PORTFOLIO</a></li>
+						<li><a href="../index.html" class="aboutHover ready">PORTFOLIO</a></li>
 
 						<li><a href="../article/connecting-domain-with-google-firebase.html" class="ready2 readyHide2" onmouseover="lineDel2()" onmouseleave="lineLive2()">ARTICLE</a></li>
 						
@@ -274,7 +273,15 @@
 		});
 	</script>
 
-	<script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+	<script>
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
+        });
+        
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
 	
 </body>

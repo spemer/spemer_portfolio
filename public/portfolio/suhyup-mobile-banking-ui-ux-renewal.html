@@ -29,7 +29,6 @@
 	<meta property="og:title" content="Hyouk Seo(Spemer) - Suhyup Mobile Banking UI/UX Renewal" />
 	<meta property="og:image" content="https://spemer.com/img/works/suhyup/thumb.png" />
 	<meta property="og:description" content="Hyouk Seo(Spemer) - Suhyup Mobile Banking UI/UX Renewal" />
-	<meta name="description" content="Hyouk Seo(Spemer) - Suhyup Mobile Banking UI/UX Renewal" />
 
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:domain" content="spemer.com">
@@ -58,7 +57,7 @@
 			<div id="headerNav">
 				<nav>
 					<ul>
-						<li><a href="../index.html" class="aboutHover ready"">PORTFOLIO</a></li>
+						<li><a href="../index.html" class="aboutHover ready">PORTFOLIO</a></li>
 
 						<li><a href="../article/connecting-domain-with-google-firebase.html" class="ready2 readyHide2" onmouseover="lineDel2()" onmouseleave="lineLive2()">ARTICLE</a></li>
 						
@@ -68,22 +67,7 @@
 			</div>
 		</div>
 	</header>
-
-	<script>
-		function lineLive2(){
-			$('.ready2').removeClass('aboutHover2');
-		}
-		function lineDel2(){
-			$('.ready2').addClass('aboutHover2');
-		}
-
-		function lineLive3(){
-			$('.ready3').removeClass('aboutHover3');
-		}
-		function lineDel3(){
-			$('.ready3').addClass('aboutHover3');
-		}
-	</script>
+    
 
 	<article class="clearfix article animated fadeInUp">
 		<div class="triBox">
@@ -128,40 +112,12 @@
 
 					<a href="iloom-website-redesign-concept-design.html" class="prevNext" title="Illom" onmouseover="nextRight()" onmouseleave="nextRightDel()"><b>&nbsp; Next <i class="fa fa-angle-double-right"></i></b></a>
 				
-					<a href="interior-item-sharing-mobile-application.html" class="prevNext" title="Insharior" onmouseover="nextLeft()" onmouseleave="nextLeftDel()"><b><i class="fa fa-angle-double-left"></i> Prev &nbsp;</b></a></a>
+					<a href="interior-item-sharing-mobile-application.html" class="prevNext" title="Insharior" onmouseover="nextLeft()" onmouseleave="nextLeftDel()"><b><i class="fa fa-angle-double-left"></i> Prev &nbsp;</b></a>
 				</div>
 			</nav>
 		</div>
 	</article>
-
-	<script>
-		function topUp(){
-			$('.fa-angle-up').addClass('topUp');
-			$('.fa-angle-up').removeClass('topUp2');
-		}
-		function topDn(){
-			$('.fa-angle-up').addClass('topUp2');
-			$('.fa-angle-up').removeClass('topUp');
-		}
-
-		function nextRight(){
-			$('.fa-angle-double-right').addClass('nextRight');
-			$('.fa-angle-double-right').removeClass('nextRight2');
-		}
-		function nextRightDel(){
-			$('.fa-angle-double-right').addClass('nextRight2');
-			$('.fa-angle-double-right').removeClass('nextRight');
-		}
-
-		function nextLeft(){
-			$('.fa-angle-double-left').addClass('nextLeft');
-			$('.fa-angle-double-left').removeClass('nextLeft2');
-		}
-		function nextLeftDel(){
-			$('.fa-angle-double-left').addClass('nextLeft2');
-			$('.fa-angle-double-left').removeClass('nextLeft');
-		}
-	</script>
+    
 
 	<div id="siteMap">
 		<p class="siteMapBtn" title="Site Map">
@@ -240,20 +196,20 @@
 		</div>
 	</footer>
 
-    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="../js/index.js"></script>
     <script src="../js/smooth.scroll.js"></script>
     <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
 
 	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeOutQuad',
-			offset: 0,
-			updateURL: false,
-		});
-	</script>
-
-	<script>$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
+        });
+        
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
 	
 </body>

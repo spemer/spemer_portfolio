@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://spemer.com/css/animate.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -26,7 +27,7 @@
 	line-height: calc(var(--font-size)*2rem);
 	letter-spacing: calc(var(--font-size)*1px);
 	-webkit-font-family: 'Roboto', sans-serif;
-					font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif;
 }
 
 h3 {
@@ -57,21 +58,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 img::selection {
-	background: transparent;
 	visibility: hidden;
+	background: transparent;
 }
 
 img::-moz-selection {
-	background: transparent;
 	visibility: hidden;
+	background: transparent;
 }
 
 .mainYears {
 	float: left;
 	display: block;
 	font-weight: 100;
-	font-size: calc(var(--font-size)*1.5rem);
 	color: var(--color-gray);
+	font-size: calc(var(--font-size)*1.5rem);
 }
 
 .clearfix {
@@ -80,8 +81,8 @@ img::-moz-selection {
 
 body {
 	width: 75%;
-	max-width: 1280px;
 	margin: 0 auto;
+	max-width: 1280px;
 }
 
 .everyTxtEnd {
@@ -99,15 +100,15 @@ body {
 .everyTxtEnd h3,
 .everyTxtEnd2 h3,
 .everyTxtEnd3 h3 {
-	font-size: calc(var(--font-size)*1.5rem);
 	color: var(--color-darkgray);
+	font-size: calc(var(--font-size)*1.5rem);
 }
 
 .everyTxtEnd p,
 .everyTxtEnd2 p,
 .everyTxtEnd3 p {
-	font-size: calc(var(--font-size)*1rem);
 	color: var(--color-gray);
+	font-size: calc(var(--font-size)*1rem);
 }
 
 .everyTxtEndEnd {
@@ -135,13 +136,13 @@ body {
 	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	-webkit-transition: var(--trans-color);
-					transition: var(--trans-color);
+            transition: var(--trans-color);
 }
 
 .prevNextTop:hover {
 	color: var(--color-black);
 	-webkit-transition: var(--trans-color);
-					transition: var(--trans-color);
+            transition: var(--trans-color);
 }
 
 .prevNext {
@@ -149,13 +150,13 @@ body {
 	color: var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem);
 	-webkit-transition: var(--trans-color);
-					transition: var(--trans-color);
+            transition: var(--trans-color);
 }
 
 .prevNext:hover {
 	color: var(--color-black);
 	-webkit-transition: var(--trans-color);
-					transition: var(--trans-color);
+            transition: var(--trans-color);
 }
 
 header {
@@ -172,18 +173,18 @@ header {
 }
 
 #headerLogo h1 {
-	color: var(--color-gray);
 	font-weight: normal;
+	color: var(--color-gray);
 	font-size: calc(var(--font-size)*2.5rem);
 	line-height: calc(var(--font-size)*5rem);
 	-webkit-transition: var(--trans-all);
-					transition: var(--trans-all);
+            transition: var(--trans-all);
 }
 
 #headerLogo h1:hover {
 	color: var(--color-black);
 	-webkit-transition: var(--trans-all);
-					transition: var(--trans-all);
+            transition: var(--trans-all);
 }
 
 #headerNav nav {
@@ -193,8 +194,8 @@ header {
 }
 
 #headerNav nav ul li {
-	display: inline-block;
 	margin-left: 25px;
+	display: inline-block;
 }
 
 #headerNav nav ul li:first-child {
@@ -202,20 +203,20 @@ header {
 }
 
 header nav li a {
-	display: inline-block;
-	padding-bottom: 1px;
 	padding-top: 1px;
 	font-weight: 100;
-	font-size: calc(var(--font-size)*1rem);
-	border-bottom: 1px solid transparent;
+	padding-bottom: 1px;
+	display: inline-block;
 	color: var(--color-gray);
+	border-bottom: 1px solid transparent;
+	font-size: calc(var(--font-size)*1rem);
 	-webkit-transition: var(--trans-all);
 			transition: var(--trans-all);
 }
 
 header nav li a:hover {
-	border-bottom: 1px solid var(--color-gray);
 	color: var(--color-black);
+	border-bottom: 1px solid var(--color-gray);
 	-webkit-transition: var(--trans-all);
 			transition: var(--trans-all);
 }
@@ -234,16 +235,16 @@ header nav li a:hover {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
-	display: inline-block;
 	padding: 50px 0px;
+	display: inline-block;
 	border-top: var(--article-border);
 	border-bottom: var(--article-border);
 }
 
 #artImgBox {
-	display: inline-block;
 	width: 100%;
 	margin: 0 auto;
+	display: inline-block;
 }
 
 #artImgBox div {
