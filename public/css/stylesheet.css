@@ -85,6 +85,12 @@ body {
 	max-width: 1280px;
 }
 
+.everyTxtEndArticle {
+	max-width: 768px;
+	text-align: left;
+	padding-bottom: 25px;
+}
+
 .everyTxtEnd {
 	padding: 25px 0px 100px 0px;
 }
