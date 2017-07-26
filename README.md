@@ -1,10 +1,11 @@
 ## Portfolio website  
-Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built this website with HTML5, CSS3 and some JavaScript. Hope you enjoy and Thanks for watching this project you all!  
+Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built this website with __HTML5, CSS3 and JavaScript__. Hope you enjoy and Thanks for watching this project you all!  
   
 Design & Development - __Hyouk Seo__ (Spemer)  
   
-Built with these __AWESOME libraries__
+Built with these __AWESOME stuffs__
 * [JQuery][jquery]
+* [Firebase][firebase]
 * [Google Fonts][googlefonts]
 * [Font Awesome][fontawesome]  
   
@@ -25,6 +26,7 @@ Built with these __AWESOME libraries__
 
 [jquery]: https://jquery.com/
 [fontawesome]: http://fontawesome.io/
+[firebase]: https://firebase.google.com/
 [googlefonts]: https://fonts.google.com/specimen/Roboto
 
 [spemer]: https://spemer.com/
