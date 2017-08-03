@@ -226,13 +226,13 @@ header nav li a {
 
 header nav li a:hover {
 	color: var(--color-black);
-	border-bottom: 1px solid var(--color-gray);
+	border-bottom: 2px solid #babac0;
 	-webkit-transition: var(--trans-all);
 			transition: var(--trans-all);
 }
 
 .aboutHover {
-	border-bottom: 1px solid var(--color-gray);
+	border-bottom: var(--article-border);
 }
 
 @media screen and (max-width: 420px) {
@@ -1245,7 +1245,7 @@ footer p {
 	-webkit-box-shadow: none;
 	-webkit-transition: background .3s;
             transition: background .3s;
-	opacity: .25;
+	opacity: .5;
 	-webkit-transition: opacity ease .5s;
             transition: opacity ease .5s;
 }
@@ -1267,7 +1267,7 @@ footer p {
 	height: 2px;
 	display: block;
 	position: absolute;
-	background-color: var(--color-border);
+	background-color: var(--color-lightgray);
 }
 
 .c-hamburger span::before,
@@ -1278,7 +1278,7 @@ footer p {
 	height: 2px;
 	display: block;
 	position: absolute;
-	background-color: var(--color-border);
+	background-color: var(--color-lightgray);
 }
 
 .c-hamburger span::before {
