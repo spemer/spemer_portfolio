@@ -8,12 +8,16 @@
 	--trans-all: all .25s ease;
 	--trans-hover: color .5s ease;
 	--trans-color: color .25s ease;
-	--article-border: 1.25px solid #dfdfdf;
+	--article-border: 2px solid #e7e9ee;
 
 	--color-white: #fff;
-	--color-gray: #656c7a;
 	--color-black: #2a2e2e;
+
+	--color-gray:     #656c7a;
+	--color-border:   #656c7a;
 	--color-darkgray: #656c7a;
+
+
 	--color-lightgray: #babac0;
 }
 
@@ -1241,7 +1245,7 @@ footer p {
 	-webkit-box-shadow: none;
 	-webkit-transition: background .3s;
             transition: background .3s;
-	opacity: .5;
+	opacity: .25;
 	-webkit-transition: opacity ease .5s;
             transition: opacity ease .5s;
 }
@@ -1260,10 +1264,10 @@ footer p {
 	top: 25px;
 	left: 5px;
 	right: 5px;
-	height: 1px;
+	height: 2px;
 	display: block;
 	position: absolute;
-	background-color: var(--color-gray);
+	background-color: var(--color-border);
 }
 
 .c-hamburger span::before,
@@ -1271,10 +1275,10 @@ footer p {
 	left: 0;
 	content: "";
 	width: 100%;
-	height: 1px;
+	height: 2px;
 	display: block;
 	position: absolute;
-	background-color: var(--color-gray);
+	background-color: var(--color-border);
 }
 
 .c-hamburger span::before {
