@@ -434,6 +434,10 @@ footer p {
 	color: #1769ff;
 }
 
+#medIcon:hover {
+	color: #00ab6c;
+}
+
 #drIcon:hover {
 	color: #ea4c89;
 }
@@ -1100,8 +1104,8 @@ footer p {
 
 	#snsIcon i {
 		margin: 0 auto;
-		margin-left: 5.5%;
-		margin-right: 5.5%;
+		margin-left: 3.85%;
+		margin-right: 3.85%;
 	}
 
 	footer {
