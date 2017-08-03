@@ -8,13 +8,13 @@
 	--trans-all: all .25s ease;
 	--trans-hover: color .5s ease;
 	--trans-color: color .25s ease;
-	--article-border: 1.25px solid rgba(0,0,0,0.125);
+	--article-border: 1.25px solid #656c7a;
 
-	--color-gray: #999;
-	--color-black: #000;
+	--color-gray: #656c7a;
+	--color-black: #2a2e2e;
 	--color-white: #fff;
-	--color-darkgray: rgba(0,0,0,0.6);
-	--color-lightgray: rgba(0,0,0,0.25);
+	--color-darkgray: #656c7a;
+	--color-lightgray: #babac0;
 }
 
 * {
