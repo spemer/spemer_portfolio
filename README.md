@@ -4,6 +4,7 @@ Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built thi
 Built with these __AWESOME stuffs__:
 * [JQuery][jquery]
 * [Animate][animate]
+* [DISQUS][disqus]
 * [Firebase][firebase]
 * [Google Fonts][googlefonts]
 * [Font Awesome][fontawesome]  
@@ -28,9 +29,10 @@ Visit __[My Website][spemer]__ for more details!
 
 [jquery]: https://jquery.com/
 [animate]: https://daneden.github.io/animate.css/
-[fontawesome]: http://fontawesome.io/
+[disqus]: https://disqus.com/
 [firebase]: https://firebase.google.com/
 [googlefonts]: https://fonts.google.com/specimen/Roboto
+[fontawesome]: http://fontawesome.io/
 
 [spemer]: https://spemer.com/
 [googleme]: https://www.google.co.kr/?gfe_rd=cr&ei=2KVsWaTjKrHz8AfP1qz4Bw&gws_rd=ssl#q=spemer
