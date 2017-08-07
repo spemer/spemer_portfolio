@@ -431,7 +431,7 @@ footer p {
 }
 
 #inIcon:hover {
-	color: #125688;
+	color: #833ab4;
 }
 
 #beIcon:hover {
@@ -444,6 +444,10 @@ footer p {
 
 #drIcon:hover {
 	color: #ea4c89;
+}
+
+#scIcon:hover {
+	color: #ff3300;
 }
 
 .articleNoTopBorder {
@@ -1089,27 +1093,47 @@ footer p {
 	}
 
 	#snsIcon i {
-		margin-bottom: 25px;
+		margin: 0 auto;
+		margin-left: 2%;
+		margin-right: 2%;
 	}
 
-	#twIcon, #inIcon, #liIcon, #fbIcon {
-		display: none;
+}
+
+@media screen and (max-width: 622px) {
+	#snsIcon i {
+		left: 6%;
 	}
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 540px) {
+	#snsIcon i {
+		left: 11%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#snsIcon i {
+		left: 13%;
+	}
+}
+
+@media screen and (max-width: 622px) {
 	#snsIcon {
 		width: 100%;
 		display: block;
 		margin: 0 auto;
+		text-align: center;
 		-webkit-transform: translate(-25%, -50%);
                 transform: translate(-25%, -50%);
 	}
 
 	#snsIcon i {
 		margin: 0 auto;
-		margin-left: 3.85%;
-		margin-right: 3.85%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+		margin-bottom: 25px;
+		text-align: center;
 	}
 
 	footer {
@@ -1148,8 +1172,11 @@ footer p {
 		text-align: center;
 	}
 
-	#ytIcon, #liIcon {
-		display: none;
+	#snsIcon i {
+		margin: 0 auto;
+		margin-left: 5%;
+		margin-bottom: 25px;
+		text-align: center;
 	}
 
 	.flatIconBox div:first-child,
@@ -1393,10 +1420,8 @@ footer p {
 	}
 }
 
-/*
 @media screen and (max-width: 768px){
 	figcaption {
 		display: inline-block;
 	}
 }
-*/
