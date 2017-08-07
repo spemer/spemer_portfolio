@@ -1368,6 +1368,10 @@ footer p {
 	display: inline-block;
 }
 
+.articleImg30 img {
+	width: 30%;
+}
+
 .articleFig figcaption {
 	text-align: center;
 }
@@ -1378,10 +1382,21 @@ footer p {
 	.articleImg50 img {
 		width: 100%;
 	}
+	.articleImg35 img {
+		width: 60%;
+	}
 }
 
+@media screen and (max-width: 420px){
+	.articleImg35 img {
+		width: 100%;
+	}
+}
+
+/*
 @media screen and (max-width: 768px){
 	figcaption {
 		display: inline-block;
 	}
 }
+*/
