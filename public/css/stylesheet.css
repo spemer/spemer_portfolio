@@ -1100,7 +1100,7 @@ footer p {
 
 }
 
-@media screen and (max-width: 622px) {
+@media screen and (max-width: 700px) {
 	#snsIcon i {
 		left: 6%;
 	}
@@ -1118,7 +1118,7 @@ footer p {
 	}
 }
 
-@media screen and (max-width: 622px) {
+@media screen and (max-width: 700px) {
 	#snsIcon {
 		width: 100%;
 		display: block;
