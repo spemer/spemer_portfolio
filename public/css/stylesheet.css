@@ -353,14 +353,14 @@ footer p {
 
 
 
-#twIcon: hover { color: #1da1f2; }
-#ghIcon: hover { color: #333333; }
-#liIcon: hover { color: #0077b5; }
-#fbIcon: hover { color: #3b5998; }
-#inIcon: hover { color: #e1306c; }
-#beIcon: hover { color: #1769ff; }
-#drIcon: hover { color: #ea4c89; }
-#scIcon: hover { color: #ff3300; }
+#twIcon:hover  { color: #1da1f2; }
+#ghIcon:hover  { color: #333333; }
+#liIcon:hover  { color: #0077b5; }
+#fbIcon:hover  { color: #3b5998; }
+#inIcon:hover  { color: #e1306c; }
+#beIcon:hover  { color: #1769ff; }
+#drIcon:hover  { color: #ea4c89; }
+#scIcon:hover  { color: #ff3300; }
 #medIcon:hover { color: #00ab6c; }
 
 
