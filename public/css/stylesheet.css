@@ -4,17 +4,17 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 :root {
-	--font-size: 1;
-	--color-white:     #ffffff;
-	--color-black:     #2a2e2e;
-	--color-gray:      #656c7a;
-	--color-border:    #656c7a;
-	--color-darkgray:  #656c7a;
-	--color-lightgray: #babac0;
-	--trans-all:     all .25s ease;
-	--trans-hover:  color .5s ease;
-	--trans-color: color .25s ease;
-	--article-border: 2px solid #e7e9ee; }
+    --font-size: 1;
+    --color-white:     #ffffff;
+    --color-black:     #2a2e2e;
+    --color-gray:      #656c7a;
+    --color-border:    #656c7a;
+    --color-darkgray:  #656c7a;
+    --color-lightgray: #babac0;
+    --trans-all:     all .25s ease;
+    --trans-hover: color  .5s ease;
+    --trans-color: color .25s ease;
+    --article-border: 2px solid #e7e9ee; }
 
 * { margin:  0;
 	padding: 0;
@@ -36,19 +36,10 @@ body::-webkit-scrollbar       { background-color: var(--color-white); width: 10p
 body::-webkit-scrollbar-track { background-color: var(--color-white); }
 body::-webkit-scrollbar-thumb { background-color: var(--color-lightgray); }
 
-::selection {
-	color:      var(--color-white);
-	background: var(--color-lightgray); }
-	::-moz-selection {
-	color:      var(--color-white);
-	background: var(--color-lightgray); }
-
-img::selection {
-	visibility: hidden;
-	background: transparent; }
-	img::-moz-selection {
-	visibility: hidden;
-	background: transparent; }
+     img::selection { visibility: hidden; background: transparent; }
+img::-moz-selection { visibility: hidden; background: transparent; }
+        ::selection { color: var(--color-white); background: var(--color-lightgray); }
+   ::-moz-selection { color: var(--color-white); background: var(--color-lightgray); }
 
 
 .mainYears {
@@ -103,15 +94,15 @@ body {
 	padding-bottom: 50px; }
 
 .prevNextTop {
-	float: left;
-	color:                 var(--color-gray);
-	-webkit-transition:    var(--trans-color);
+    float: left;
+    color:                 var(--color-gray);
+    -webkit-transition:    var(--trans-color);
             transition:    var(--trans-color); 
-	font-size:        calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem); }
-	.prevNextTop:hover {
-	color:                 var(--color-black);
-	-webkit-transition:    var(--trans-color);
+    font-size:        calc(var(--font-size)*.9rem);
+    font-size:-webkit-calc(var(--font-size)*.9rem); }
+    .prevNextTop:hover {
+    color:                 var(--color-black);
+    -webkit-transition:    var(--trans-color);
             transition:    var(--trans-color); }
 
 .prevNext {
