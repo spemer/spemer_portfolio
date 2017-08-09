@@ -21,7 +21,6 @@
 	outline:           none;
 	list-style:        none;
 	text-decoration:   none;
-	background-color:  #fff;
 	font-size:                  var(--font-size)rem;
 	letter-spacing:        calc(var(--font-size)*1px);
 	letter-spacing:-webkit-calc(var(--font-size)*1px);
@@ -56,7 +55,8 @@ img::-moz-selection { visibility: hidden; background: transparent; }
 body {
 	width: 75%;
 	margin: 0 auto;
-	max-width: 1280px; }
+	max-width: 1280px;
+	background-color: #fff; }
 
 
 .everyTxtEndArticle {
@@ -987,3 +987,14 @@ footer p {
 
 
 .articleFig figcaption { text-align: center; }
+
+
+.topBtn {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	font-size: 1.5rem; }
+	@media screen and (max-width: 768px){
+		.topBtn {
+			display: none;
+			visibility: hidden; } }
