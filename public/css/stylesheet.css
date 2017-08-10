@@ -58,6 +58,8 @@ body {
 	max-width: 1280px;
 	background-color: #fff; }
 
+a { color: var(--color-gray); }
+
 
 .everyTxtEndArticle {
 	max-width: 768px;
@@ -343,7 +345,6 @@ footer p {
             transition: var(--trans-all); }
 
 
-
 #twIcon:hover  { color: #1da1f2; }
 #ghIcon:hover  { color: #333333; }
 #liIcon:hover  { color: #0077b5; }
@@ -363,7 +364,6 @@ footer p {
 .aboutTxtBox h3 {
 	color:          var(--color-darkgray);
 	font-size: calc(var(--font-size)*1.5rem); }
-
 
 
 .aboutIntroBox_100_bigbox {
@@ -465,7 +465,6 @@ footer p {
 
 
 
-
 .brandBox       { width: 100%; }
 .brandCover img { width:  75%; }
 .brandCoverImg  { width: 100%; padding-top: 25px; padding-bottom: 50px; }
@@ -493,7 +492,6 @@ footer p {
 	height: 100%;
 	min-height: 500px;
 	padding: 20px 0px 25px 0px; }
-
 
 
 
@@ -548,7 +546,6 @@ footer p {
 
 
 
-
 .hugImg2, .hugImg2 img { width: 100%; }
 .hugImg                { width: 100%; margin: 0 auto; }
 .hugImg img            { width:  50%; margin-bottom: 25px; }
@@ -571,7 +568,6 @@ footer p {
 .hugImg2 figcaption {
 	color:          var(--color-gray);
 	font-size: calc(var(--font-size)*.9rem); }
-
 
 
 
