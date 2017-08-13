@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url('featherlight.css');
 @import url('featherlight.gallery.css');
-@import url('css/animate.css');
+@import url('animate.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
@@ -18,7 +18,8 @@
     --trans-color: color .25s ease;
     --article-border: 2px solid #e7e9ee; }
 
-* { margin:  0;
+* { 
+	margin:  0;
 	padding: 0;
 	outline:           none;
 	list-style:        none;
@@ -30,6 +31,7 @@
 	line-height:   -webkit-calc(var(--font-size)*2rem);
     -webkit-font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
             font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif; }
+
 
 h3 { line-height: calc(var(--font-size)*3rem); }
 
