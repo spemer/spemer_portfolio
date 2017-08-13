@@ -90,7 +90,13 @@
 					</p><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/1.jpeg">
 						<img src="../img/works/bodymovin/1.jpeg" alt="Install and set plug-in" title="Install and set plug-in" />
+					</a>
+					</section>
+
 					</figure><br />
 				</div>
 
@@ -101,7 +107,13 @@
 					</p><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/2.jpeg">
 						<img src="../img/works/bodymovin/2.jpeg" alt="Making a shape layer for example file" title="Making a shape layer for example file" />
+					</a>
+					</section>
+
 					</figure><br />
 				</div>
 
@@ -112,15 +124,27 @@
 					</p><br />
 
 					<figure class="articleImg50 articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/3.jpeg">
 						<img src="../img/works/bodymovin/3.jpeg" alt=".json Export settings" title=".json Export settings" />
+					</a>
+					</section>
+
 					</figure><br /><br /><br /><br /><br />
 
 					<p>
 						Check ‘Glyphs’ if you have texts in your animation, check ‘Hidden’ if you want to export hidden layers which you created on After Effects. I checked ‘Demo’ setting to see the demo animation on web browser. It’ll export a HTML file with the animation you’ve made on After Effects. Check ‘Demo’ if you want to get demo file to test it on web browser. Save the settings, and you’re good to render it.
 					</p>
 					<figure class="articleImg75 articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/4.jpeg">
 						<img src="../img/works/bodymovin/4.jpeg" alt="Brackets!" title="Brackets!" />
 						<figcaption>Brackets!</figcaption>
+					</a>
+					</section>
+
 					</figure><br />
 				</div>
 
@@ -131,7 +155,13 @@
 					</p><br />
 
 					<figure class="articleImg50 articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/5.jpeg">
 						<img src="../img/works/bodymovin/5.jpeg" alt="Customizing the CSS code for web browser preview" title="Customizing the CSS code for web browser preview" />
+					</a>
+					</section>
+
 					</figure><br />
 				</div>
 
@@ -143,7 +173,13 @@
 					</p><br/>
 
 					<figure class="articleImg50 articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/bodymovin/6.gif">
 						<img src="../img/works/bodymovin/6.gif" alt="GIF" title="GIF" />
+					</a>
+					</section>
+					
 					</figure><br />
 				</div></center>
 
@@ -289,6 +325,8 @@
     <script src="../js/smooth.scroll.js"></script>
     <script src="../js/anchor.scroll.js"></script>
     <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
 
 	<script>
         smoothScroll.init({
@@ -296,11 +334,20 @@
             easing: 'easeOutQuad',
             offset: 0,
             updateURL: false,
-        });
-        
+		});
+
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
+
         $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
-
 	
 
 	<div>
@@ -308,7 +355,6 @@
 			<i class="fa fa-angle-up topBtn" aria-hidden="true" title="Top"></i>
 		</a>
 	</div>
-
 
 	
 </body>

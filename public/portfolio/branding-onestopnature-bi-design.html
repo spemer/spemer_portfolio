@@ -74,8 +74,12 @@
 				<center>
 				<div class="brandCoverImg">
 					<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/onestop/cover.jpg">
 						<img src="../img/works/onestop/cover.jpg" alt="Cover" title="Cover" />
 						<figcaption>Cover</figcaption>
+					</a>
+					</section>
 					</figure>
 				</div>
 				</center>
@@ -92,29 +96,45 @@
 				<center>
 				<div>
 					<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/onestop/content1.jpg">
 						<img src="../img/works/onestop/content1.jpg" alt="Contents 1" title="Contents 1" />
 						<figcaption>Contents</figcaption>
+					</a>
+					</section>
 					</figure>
 				</div>
 
 				<div>
 					<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/onestop/content2.jpg">
 					<img src="../img/works/onestop/content2.jpg" alt="Contents 2" title="Contents 2" />
 						<figcaption>Contents</figcaption>
+					</a>
+					</section>
 					</figure>
 				</div>
 
 				<div>
 					<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/onestop/card.jpg">
 					<img src="../img/works/onestop/card.jpg" alt="Card" title="Card" />
 						<figcaption>Card Design</figcaption>
+					</a>
+					</section>
 					</figure>
 				</div>
 
 				<div>
 					<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/onestop/namecard.png">
 					<img src="../img/works/onestop/namecard.png" alt="Business Card" title="Business Card" />
 						<figcaption>Business Card</figcaption>
+					</a>
+					</section>
 					</figure>
 				</div>
 
@@ -255,22 +275,33 @@
 	</footer>
 
 	<script src="../js/ga.js"></script>
-	<script src="../js/index.js"></script>
-	<script src="../js/smooth.scroll.js"></script>
-	<script src="../js/anchor.scroll.js"></script>
-	<script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
 
 	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeOutQuad',
-			offset: 0,
-			updateURL: false,
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
 		});
 
-		$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
-	</script>
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
 
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+	</script>
 	
 
 	<div>
@@ -278,7 +309,6 @@
 			<i class="fa fa-angle-up topBtn" aria-hidden="true" title="Top"></i>
 		</a>
 	</div>
-
 
 	
 </body>

@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('featherlight.css');
+@import url('featherlight.gallery.css');
 @import url('https://spemer.com/css/animate.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto:400');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -966,12 +968,11 @@ footer p {
 	margin: 25px 0px;
 	text-align: center; }
 
-.articleImg30 img { width: 30%; }
-.articleImg50 img { width: 50%; }
-.articleImg75 img { width: 75%; }
-.articleImg   img { width: 100%; }
-.articleImg40 img {
-	width: 49.5%;
+.articleImg30 img { width:   30%; }
+.articleImg50 img { width:   50%; }
+.articleImg75 img { width:   75%; }
+.articleImg   img { width:  100%; }
+.articleImg40 img { width: 49.5%;
 	display: inline-block; }
 	@media screen and (max-width: 767px){
 		.articleImg40 img,

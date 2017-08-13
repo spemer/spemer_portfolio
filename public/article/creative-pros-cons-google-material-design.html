@@ -79,8 +79,14 @@
 					</p><br /><br /><br /><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/material/1.png">
 						<img src="../img/works/material/1.png" alt="Material Design" title="Material Design" />
 						<figcaption>Material Design by Google (Codename ‘Quantum Paper’)</figcaption>
+					</a>
+					</section>
+
 					</figure>
 				</div>
 
@@ -93,8 +99,14 @@
 					</p><br /><br /><br /><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/material/2.png">
 						<img src="../img/works/material/2.png" alt="Details of Material Design guidelines" title="Details of Material Design guidelines" />
 						<figcaption>Details, Details, and Details.</figcaption>
+					</a>
+					</section>
+
 					</figure>
 				</div>
 
@@ -105,8 +117,14 @@
 					</p><br /><br /><br /><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/material/3.png">
 						<img src="../img/works/material/3.png" alt="Sample image from material.io" title="Sample image from material.io" />
 						<figcaption>Sample image from material.io</figcaption>
+					</a>
+					</section>
+
 					</figure>
 				</div>
 
@@ -123,8 +141,14 @@
 					</p><br /><br /><br /><br />
 
 					<figure class="articleImg articleFig articleImgSize">
+
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/material/4.png">
 						<img src="../img/works/material/4.png" alt="Example of Dos and Don’ts on Material guideline" title="Example of Dos and Don’ts on Material guideline" />
 						<figcaption>Example of Do s and Don’t s on Material guideline</figcaption>
+					</a>
+					</section>
+
 					</figure>
 						<br /><br /><br /><br />
 
@@ -278,6 +302,8 @@
     <script src="../js/smooth.scroll.js"></script>
     <script src="../js/anchor.scroll.js"></script>
     <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
 
 	<script>
         smoothScroll.init({
@@ -285,8 +311,18 @@
             easing: 'easeOutQuad',
             offset: 0,
             updateURL: false,
-        });
-        
+		});
+
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
+
         $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
 	

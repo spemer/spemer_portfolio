@@ -90,43 +90,67 @@
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/house.jpg">
 					<img src="../img/works/flaticon/house.jpg" alt="House" title="House" />
 					<figcaption>House</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/joystick.jpg">
 					<img src="../img/works/flaticon/joystick.jpg" alt="Joystick" title="Joystick" />
 					<figcaption>Joystick</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/mini.jpg">
 					<img src="../img/works/flaticon/mini.jpg" alt="Mini" title="Mini" />
 					<figcaption>Mini</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/synthesizer.jpg">
 					<img src="../img/works/flaticon/synthesizer.jpg" alt="Synthesizer" title="Synthesizer" />
 					<figcaption>Synthesizer</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/couch.jpg">
 					<img src="../img/works/flaticon/couch.jpg" alt="Couch" title="Couch" />
 					<figcaption>Couch</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
 			<div class="flatIconBoxEach">
 				<figure>
+					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+					<a class="feather" href="../img/works/flaticon/camera.jpg">
 					<img src="../img/works/flaticon/camera.jpg" alt="Camera" title="Camera" />
 					<figcaption>Camera</figcaption>
+					</a>
+					</section>
 				</figure>
 			</div>
 
@@ -263,22 +287,33 @@
 	</footer>
 
 	<script src="../js/ga.js"></script>
-	<script src="../js/index.js"></script>
-	<script src="../js/smooth.scroll.js"></script>
-	<script src="../js/anchor.scroll.js"></script>
-	<script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
 
 	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeOutQuad',
-			offset: 0,
-			updateURL: false,
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
 		});
 
-		$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
+
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
-	
 	
 
 	<div>
@@ -286,7 +321,6 @@
 			<i class="fa fa-angle-up topBtn" aria-hidden="true" title="Top"></i>
 		</a>
 	</div>
-
 
 	
 </body>
