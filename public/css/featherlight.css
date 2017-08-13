@@ -34,7 +34,7 @@
 
 	/* support for nested featherlights. Does not work in IE8 (use JS to fix) */
 	.featherlight:last-of-type {
-		background: rgba(0, 0, 0, 0.8);
+		background: rgba(0, 0, 0, 0.9);
 	}
 
 	.featherlight:before {
@@ -56,8 +56,8 @@
 
 		/* dimensions: cut off images */
 		overflow: auto;
-		padding: 25px 25px 0;
-		border-bottom: 25px solid transparent;
+		padding: 0;
+		border-bottom: none;
 
 		/* dimensions: handling large content */
 		margin-left: 5%;
@@ -147,7 +147,7 @@
 		margin-right: 0;
 		max-height: 98%;
 
-		padding: 10px 10px 0;
-		border-bottom: 10px solid transparent;
+		padding: 0;
+		border-bottom: none;
 	}
 }
