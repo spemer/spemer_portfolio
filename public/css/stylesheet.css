@@ -1227,3 +1227,11 @@ footer p {
 		.topBtn {
 			display: none;
 			visibility: hidden; } }
+
+
+.code {
+	padding: 16px;
+	font-weight: 400;
+	font-family: monospace;
+	background-color: #f0f0f0;
+}
