@@ -73,6 +73,7 @@ img::selection { visibility: hidden; background: transparent; }
 body {
 	width: 75%;
 	margin: 0 auto;
+	padding: 0px 8px;
 	max-width: 1280px;
 	background-color: #ffffff;
 }
