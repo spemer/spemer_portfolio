@@ -275,11 +275,7 @@ header nav li a:hover {
 
 
 #artImgBox div { margin-bottom: 50px; }
-
-
-#artImgBox div:nth-child(2),
-#artImgBox div:nth-child(5),
-#artImgBox div:nth-child(8) { margin: 0% 4%; }
+#artImgBox div:nth-child(3n+2) { margin: 0% 4%; }
 
 
 .artImgBoxEach {
@@ -906,37 +902,18 @@ footer p {
 		font-size: -moz-calc(var(--font-size)*.875rem);
 		font-size: calc(var(--font-size)*.875rem); }
 
-
 	#headerNav nav ul li:first-child { margin-left: 0px; }
 
-	#artImgBox div:nth-child(2),
-	#artImgBox div:nth-child(5),
-	#artImgBox div:nth-child(8) { margin: 0%; }
 
-	.artImgBoxEach:first-child div,
-	.artImgBoxEach:nth-child(2) div,
-	.artImgBoxEach:nth-child(3) div,
-	.artImgBoxEach:nth-child(4) div,
-	.artImgBoxEach:nth-child(5) div,
-	.artImgBoxEach:nth-child(6) div,
-	.artImgBoxEach:nth-child(7) div,
-	.artImgBoxEach:nth-child(8) div,
-	.artImgBoxEach:last-child div { margin: 2%; }
+	#artImgBox div:nth-child(3n+2) { margin: 0%; }
+	#artImgBox div:nth-child(n+1) { margin: 2%; width: 45%; }
+	.artImgBoxEach:nth-child(n+1) div { margin: 2%; }
+
 
 	.brandContents img:first-child,
 	.brandContents img:nth-child(2) { margin-bottom: 0px; }
 
-	#artImgBox div:first-child,
-	#artImgBox div:nth-child(2),
-	#artImgBox div:nth-child(3),
-	#artImgBox div:nth-child(4),
-	#artImgBox div:nth-child(5),
-	#artImgBox div:nth-child(6),
-	#artImgBox div:nth-child(7),
-	#artImgBox div:nth-child(8),
-	#artImgBox div:last-child { margin: 2%; width: 45%; }
 
-	
 	.hugVid        { width: 100%; margin: 0 auto; }
 	.hugVid video  { width: 90%; min-width: 100px; }
 	.iframe iframe {
@@ -1013,12 +990,8 @@ footer p {
 		margin-bottom: 25px;
 		text-align: center; }
 
-	.flatIconBox div:first-child,
-	.flatIconBox div:nth-child(2),
-	.flatIconBox div:nth-child(3),
-	.flatIconBox div:nth-child(4),
-	.flatIconBox div:nth-child(5),
-	.flatIconBox div:last-child { width: 42.5%; margin: 25px 2.5%; }
+	.flatIconBox div:nth-child(n+1) { width: 42.5%; margin: 25px 2.5%; }
+
 
 	.hugImg2 div:first-child,
 	.hugImg2 div:nth-child(2),
@@ -1214,9 +1187,20 @@ footer p {
 		@media screen and (max-width: 420px){
 			.articleImg35 img { width: 100%; } }
 
+ol > li {
+	margin-left: 24px;
+	list-style-type: decimal;
+	color: #656c7a;
+}
+
+ul > li {
+	margin-left: 24px;
+	list-style-type: disc;
+	color: #656c7a;
+}
+
 
 .articleFig figcaption { text-align: center; }
-
 
 .topBtn {
 	position: fixed;
@@ -1228,7 +1212,6 @@ footer p {
 		.topBtn {
 			display: none;
 			visibility: hidden; } }
-
 
 .code {
 	padding: 16px;
