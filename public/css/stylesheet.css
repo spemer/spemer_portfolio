@@ -76,8 +76,6 @@ body {
 	padding: 0px 8px;
 	max-width: 1280px;
 	background-color: #ffffff;
-	padding-left: constant(safe-area-inset-left);
-	padding-right: constant(safe-area-inset-right);
 }
 
 a { color: #656c7a; }
