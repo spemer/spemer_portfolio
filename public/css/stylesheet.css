@@ -147,6 +147,26 @@ a { color: #656c7a; }
             transition: color .25s ease;
 }
 
+.prevNextTop2 {
+    float: left;
+    color: #babac0;
+    -webkit-transition: color .25s ease;
+            -o-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease; 
+    font-size: 14.4px;
+    font-size: -moz-calc(var(--font-size)*.9rem); 
+    font-size: calc(var(--font-size)*.9rem);
+    font-size: -webkit-calc(var(--font-size)*.9rem);
+}
+    .prevNextTop2:hover {
+    color: #656c7a;
+    -webkit-transition: color .25s ease;
+            -o-transition: color .25s ease;
+            -moz-transition: color .25s ease;
+            transition: color .25s ease;
+}
+
 
 .prevNext {
 	float: right;
