@@ -1173,6 +1173,7 @@ footer p {
 	margin: 25px 0px;
 	text-align: center; }
 
+.articleImg35-small img { width: 25%; }
 .articleImg30 img { width:   30%; }
 .articleImg50 img { width:   50%; }
 .articleImg75 img { width:   75%; }
@@ -1183,9 +1184,12 @@ footer p {
 		.articleImg40 img,
 		.articleImg75 img,
 		.articleImg50 img { width: 100%; }
-		.articleImg35 img { width: 60%;  } }
+		.articleImg35 img { width: 60%;  }
+		.articleImg35-small img { width: 45%; } }
 		@media screen and (max-width: 420px){
-			.articleImg35 img { width: 100%; } }
+			.articleImg35 img { width: 100%; }
+			.articleImg35-small img { width: 60%; } }
+
 
 ol > li {
 	margin-left: 24px;
@@ -1200,7 +1204,11 @@ ul > li {
 }
 
 
-.articleFig figcaption { text-align: center; }
+.articleFig figcaption {
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+}
 
 .topBtn {
 	position: fixed;
@@ -1214,10 +1222,22 @@ ul > li {
 			visibility: hidden; } }
 
 .code {
+	margin: 24px 0px 32px 0px;
 	padding: 16px;
 	font-weight: 400;
 	font-family: monospace;
 	background-color: #f0f0f0;
+}
+
+.textbox-colored {
+	margin: 24px 0px 32px 0px;
+	padding: 16px;
+	background-color: #f0f0f0;
+}
+
+.textbox-colored li {
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 .feather img {
@@ -1226,4 +1246,30 @@ ul > li {
 
 .memoree-margin img {
 	margin: 50px 0px;
+}
+
+.quote
+{
+	display: inline-block;
+	margin: 32px 0px;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
+.prototype {
+	background-color: white;
+	margin: 32px 0px 64px 0px;
+}
+@media screen and (max-width: 768px){
+	.prototype {
+		display: none;
+	}
+}
+
+.hrline span
+{
+	display: inline-block;
+	font-size: 1rem;
+	margin: 6rem .5rem;
+	color: var(--color-border);
 }
