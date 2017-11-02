@@ -1018,6 +1018,8 @@ ul > li {
 }
 
 .feather img {
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
 	cursor: zoom-in;
 }
 
@@ -1029,7 +1031,9 @@ ul > li {
 {
 	display: inline-block;
 	margin: 32px 0px;
+	font-size: 24px;
 	font-size: 1.5rem;
+	line-height: 40px;
 	line-height: 2.5rem;
 }
 
@@ -1052,7 +1056,9 @@ ul > li {
 .hrline span
 {
 	display: inline-block;
+	font-size: 20px;
 	font-size: 1.25rem;
+	margin: 96px 4px;
 	margin: 6rem .25rem;
 	color: var(--color-border);
 }
