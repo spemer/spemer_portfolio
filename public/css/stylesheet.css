@@ -1043,10 +1043,16 @@ ul > li {
 	}
 }
 
+.underline {
+	border-bottom: 2px solid #babac0;
+	display: inline-block;
+	line-height: 1.5;
+}
+
 .hrline span
 {
 	display: inline-block;
-	font-size: 1rem;
-	margin: 6rem .5rem;
+	font-size: 1.25rem;
+	margin: 6rem .25rem;
 	color: var(--color-border);
 }
