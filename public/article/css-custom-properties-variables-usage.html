@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+
+<head>
+	<title>Hyouk Seo(Spemer) - Using variables(custom properties) in CSS</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="author" content="Hyouk Seo(Spemer)" />
+	<meta name="robots" content="index,follow" />
+	<meta name=”referrer” content=”origin-when-cross-origin” />
+	<meta name="description" content="Hyouk Seo (Spemer) - Using variables(custom properties) in CSS" />
+	<meta name="abstract" content="Hyouk Seo (Spemer) - Using variables(custom properties) in CSS" />
+	<meta name="keywords" content="design, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, article, website, seo, interface, interface design, experience, experience design, product, product design, publisher, web publish, ux, usability, case study, process, product designer, css, html, web, frontend, development, stylesheet, preprocessor, sass, less, variable, variables, custom, property, properties" />
+	
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+	<meta name="subject" content="Design" />
+	<meta name="copyright" content="Hyouk Seo(Spemer)" />
+	<meta name="designer" content="Hyouk Seo(Spemer)" />
+	<meta name="publisher" content="Hyouk Seo(Spemer)" />
+	<!-- ghsspower, hyouk, spemer -->
+	<meta name="fb:admins" content="100001935259349" />
+	<meta name="fb:app_id" content="116484055630441" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Hyouk Seo(Spemer)" />
+	<meta property="og:url" content="https://spemer.com/article/css-custom-properties-variables-usage.html" />
+	<meta property="og:title" content="Hyouk Seo(Spemer) - Using variables(custom properties) in CSS" />
+	<meta property="og:image" content="https://spemer.com/img/works/css/thumb.png" />
+	<meta property="og:description" content="Hyouk Seo(Spemer) - Using variables(custom properties) in CSS" />
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:domain" content="spemer.com">
+	<meta name="twitter:title" content="Hyouk Seo(Spemer) - Using variables(custom properties) in CSS">
+	<meta name="twitter:site" content="@OfficialSpemer">
+	<meta name="twitter:creator" content="@OfficialSpemer">
+	<meta name="twitter:description" content="Hyouk Seo(Spemer) - Using variables(custom properties) in CSS">
+	<meta name="twitter:image" content="https://spemer.com/img/works/css/thumb.png">
+
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="canonical" href="https://www.spemer.com/article/css-custom-properties-variables-usage.html">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	
+</head>
+
+<body class="animated fadeInUp">
+	<header>
+		<div>
+			<div id="headerLogo">
+				<a href="../index.html"><h1>Spemer</h1></a>
+			</div>
+			<div id="headerNav">
+				<nav>
+					<ul>
+						<li><a href="../index.html" class="ready readyHide" onmouseover="lineDel()" onmouseleave="lineLive()"><b>Portfolio</b></a></li>
+
+						<li><a href="../articles.html" class="ready2 aboutHover"><b>Article</b></a></li>
+
+						<li><a href="../about-spemer.html" class="ready3 readyHide3" onmouseover="lineDel3()" onmouseleave="lineLive3()"><b>About</b></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+	<article class="clearfix article animated fadeInUp">
+		<div class="triBox">
+			<div class="triBoxMain"><center>
+
+				<div class="everyTxtEnd everyTxtEndArticle"><br /><br />
+					<h2>Using variables in CSS</h2>
+					<p>Basic usage of CSS custom properties — variables</p>
+					<br /><br />
+
+
+					<figure class="articleImg35-small articleFig articleImgSize" >
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/css/css_small.png">
+							<img src="../img/works/css/css_small.png" alt="CSS3" title="CSS3" />
+						</a>
+						</section>
+					</figure>
+					<br /><br />
+
+
+					<p>
+						Using <b>variables on CSS</b> is useful and awesome. It can reduce some overlapping codes in your stylesheet, results <b>shorten your codes</b> throughout your stylesheet. And it also <b>increases efficiency</b> due to change a single line of code affects dependent codes, which means you don’t have to fix each same codes one by one with ctrl+F.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<p><b>What you have to do is:</b></p>
+
+					<ol class="textbox-colored">
+						<li>
+						<b>Declare a variable</b> at the top of your stylesheet with <b>value</b>
+						</li>
+
+						<li>
+						Apply it into your CSS code
+						</li>
+					</ol>
+
+					<p>
+						I have managed my website for my design portfolio from two years ago. Every time I needed to change something on my website like <span class="codeInline">font-size</span> or <span class="codeInline">background-color</span>, I’ve been wander here and there in my stylesheet with ctrl+F to find and fix all the same codes that need to be revised, until I found this lovely stuff — <b>CSS Variables</b>. And now, I’m gonna tell you how to use it, and how to apply it in a stylesheet.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Basic usage</h3>
+					<h4>Declaration</h4>
+					<p>
+						Pseudo-class <span class="codeInline">:root</span> acts as a <b>selector</b> in your stylesheet. You can put this at the top of your stylesheet, and <b>declare a name of variable</b> like <span class="codeInline">--var-name</span>. After that, <b>save value</b> which you want to like below.
+					</p>
+					<p class="code">
+						:root {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;--paragraph-color: #656c7a;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;--paragraph-font-size: 1rem;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;--figcaption-font-size: 12px;<br />
+						}
+					</p>
+
+					<br />
+					<h4>Reference</h4>
+					<p>
+						Now you can <b>refer your variable</b> elsewhere you want with <span class="codeInline">var()</span> like below, which I declared above.
+					</p>
+					<p class="code">
+						p {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
+						}
+					</p>
+
+					<p>
+						It results every <span class="codeInline">p</span> tags colored in <span class="codeInline">--paragraph-color</span> in your stylesheet. The advantages of variable is after you <b>declare it once</b>, you can <b>refer it anywhere</b> you want and as many times you want. If you want to revise it, all you have to do is just fix the value in variable you’ve declared. I’ll show you how.
+					</p>
+
+					<br />
+
+					<p class="code">
+						p {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--paragraph-font-size);<br />
+						}<br />
+						
+						li .primary-nav {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
+						}<br />
+						
+						p {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--figcaption-font-size);<br />
+						}<br />
+					</p>
+
+					<p>
+						In case of above, I referenced <span class="codeInline">--paragraph-color</span> to two tags and one class. It affects them all in the same way — to colored with <span class="codeInline">#656c7a</span> — because I saved that value in variable <span class="codeInline">--paragraph-color</span> at the <span class="codeInline">:root</span> selector.
+						<br /><br />
+						If you want to change value of <span class="codeInline">--paragraph-color</span>, you don’t need to change every <span class="codeInline">--paragraph-color</span> in your stylesheet. Just <b>changing value</b> of it at the <span class="codeInline">:root</span> selector <b>affects every lines</b> that have <span class="codeInline">--paragraph-color</span> variable.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Applications</h3>
+					<p>
+						Variables in CSS also have function to <b>calculate</b> it’s own value. This means your variable that declared with number value can be calculated and used in multiple ways.
+					</p>
+
+					<p class="code">
+						:root {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;--font-size: 1;<br />
+						}
+					</p>
+
+					<br />
+
+					<p>
+						In this case, I declared variable called <span class="codeInline">--font-size</span> with value of ‘1’. I can use this value as is, but <span class="codeInline">calc()</span> let us to use it in other way we want. See the examples below.
+					</p>
+					<p class="code">
+						.header-text {<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;margin-top: calc(var(--font-size)*16px);<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;font-size: calc(var(--font-size)*3rem);<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;line-height: calc(var(--font-size)*1.5em);<br />
+						}
+					</p>
+					<p>
+						The value of <span class="codeInline">--font-size</span> is integer ‘1’. We can use it with <span class="codeInline">var()</span> as I’ve shown you before. If you want to use value ‘3’, you can declare another variable at the <span class="codeInline">:root</span> selector, but that’s inefficient way. The solution is to use <span class="codeInline">calc()</span> before <span class="codeInline">var()</span> in the line you want to <b>calculate the variable</b> of it’s value like above. In this case,
+						<br /><br />
+						The value of <span class="codeInline">margin-top</span> property in this class is <b>16px</b>.
+						<br />
+						The value of <span class="codeInline">font-size</span> property in this class is <b>3rem</b>.
+						<br />
+						The value of <span class="codeInline">line-height</span> property in this class is <b>1.5em</b>.
+						<br /><br />
+						In this way, you can <b>reuse your single variable</b> as a <b>multiple value</b>, in a <b>various properties</b>. With <span class="codeInline">calc()</span>, you can calculate your value with other operators like plus, subtract, multiply and divide operator.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Can I Use?</h3>
+					<p>
+						At this point in my writing this article today(November 18, 2017), search result on caniuse.com says <b>76.28% of browsers fully support</b> for CSS variables, and 1.62% of browsers partially support for it in global usage. You can check the latest report on <a href="https://www.caniuse.com/#search=css%20variable" target="_blank" title="caniuse.com(new tab)"><b class="underline">caniuse.com</b></a>.
+					</p>
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/css/css_variable_caniuse.png" alt="caniuse.com" title="caniuse.com">
+							<img src="../img/works/css/css_variable_caniuse.png" alt="caniuse.com" title="caniuse.com" />
+							<figcaption>Usage report from caniuse.com</figcaption>
+						</a>
+						</section>
+					</figure>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Takeaway</h3>
+					<p>
+						You can check how I used it in my website’s stylesheet on my <a href="https://github.com/spemer/spemer_portfolio/blob/master/public/css/stylesheet.css" target="_blank" title="GitHub(new tab)"><b class="underline">GitHub</b></a>, or you can just visit my website to see the results.
+					</p>
+					<br />
+					<p>
+						If you’re unfamiliar with CSS preprocessors like <b>SASS</b> or <b>LESS</b>, CSS variables would be a great alternatives. It’s easy to learn and use, incredibly powerful. That’s why I decided to applied <b>CSS variables</b> in my website’s stylesheet, and it works just same as before, with more efficiency.
+					</p>
+					<br />
+					<p>
+						Thank you for reading my article, hope you enjoyed.
+					</p>
+
+
+				</div></center>
+
+
+
+				<div class="everyTxtEndEnd">
+					<p>
+						Using variables in CSS<br />
+						<strong><a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Click Here to Watch on Medium</a></strong><br />
+						<br />
+
+						<strong>Title :</strong> <a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Using variables in CSS</a><br />
+
+						<strong>Date :</strong> November 18, 2017<br />
+
+						<strong>Writer :</strong> Hyouk SEO (Spemer)<br />
+
+						<br /><br />
+					</p>
+				</div>
+
+			</div>
+
+			<nav>
+				<div id="prevNext">
+					<a data-scroll href="body" class="prevNextTop" onmouseover="topUp()" onmouseleave="topDn()"><b><i class="fa fa-angle-up"></i>&nbsp;Top</b></a>
+
+					<a href="free-github-blog-and-hosting-with-jekyll.html" class="prevNext" title="Jekyll" onmouseover="nextRight()" onmouseleave="nextRightDel()"><b>&nbsp; Next <i class="fa fa-angle-double-right"></i></b></a>
+
+					<a href="../index.html" class="prevNext" title="Main"><b>Home &nbsp;</b></a>
+				</div>
+			</nav>
+		</div>
+	
+	</article>
+
+	<div id="siteMap">
+		<p class="siteMapBtn" title="Site Map">
+			<button class="c-hamburger c-hamburger--htx"><span></span></button>
+		</p>
+
+		<nav class="siteMapNav">
+			<ul>
+				<li><a href="../portfolio/instagram-tracker-application-igtracker-design.html" title="IGTracker - Instagram Tracking Application UI Design">IGTracker</a></li>
+
+				<li><a href="../portfolio/memory-record-application-ui-design.html" title="Memoree - Minimal UI/UX design for iOS">Memoree</a></li>
+
+				<li><a href="../portfolio/insharior-ux-case-study-user-experience-design.html" title="Interior item sharing mobile application design">Insharior</a></li>
+
+				<li><a href="../portfolio/album-image-sort-application-univcam.html" title="UnivCam - Album sorting application UI/UX design">UnivCam</a></li>
+
+				<li><a href="../portfolio/todo-task-list-manage-application-sprinter.html" title="Sprinter - ToDo list &amp; task management application UI/UX design">Sprinter</a></li>
+
+				<li><a href="../portfolio/suhyup-mobile-banking-ui-ux-renewal.html" title="Suhyup Mobile Banking UI/UX Renewal">Suhyup</a></li>
+
+				<li><a href="css-custom-properties-variables-usage.html" title="Using variables(custom properties) in CSS">CSS Variables</a></li>
+
+				<li><a href="free-github-blog-and-hosting-with-jekyll.html" title="Free GitHub blog and Hosting with Jekyll">Jekyll</a></li>
+
+				<li><a href="creative-pros-cons-google-material-design.html" title="Material">Material</a></li>
+
+				<li><a href="bodymovin-airbnb-lottie-after-effects.html" title="Bodymovin">Bodymovin</a></li>
+
+				<li><a href="connecting-domain-with-google-firebase.html" title="Firebase">Firebase</a></li>
+
+				<li><a href="spemer-music.html" title="Musics">Musics</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<footer class="clearfix">
+		<div>
+			<p>
+				<i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by Hyouk Seo(Spemer)
+			</p>
+			<nav>
+				<div id="snsIcon">
+					<a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">
+						<i id="twIcon" class="fa fa-twitter"></i>
+					</a>
+
+					<a href="https://github.com/spemer" target="_blank" title="Github">
+						<i id="ghIcon" class="fa fa-github"></i>
+					</a>
+
+					<a href="https://facebook.com/ghsspower" target="_blank" title="Facebook">
+						<i id="fbIcon" class="fa fa-facebook"></i>
+					</a>
+
+					<a href="https://instagram.com/spemer/" target="_blank" title="Instagram">
+						<i id="inIcon" class="fa fa-instagram"></i>
+					</a>
+
+					<a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">
+						<i id="liIcon" class="fa fa-linkedin"></i>
+					</a>
+
+					<a href="https://dribbble.com/spemer" target="_blank" title="Dribbble">
+						<i id="drIcon" class="fa fa-dribbble"></i>
+					</a>
+
+					<a href="https://medium.com/spemer" target="_blank" title="Medium">
+						<i id="medIcon" class="fa fa-medium" aria-hidden="true"></i>
+					</a>
+
+					<a href="https://behance.net/spemer" target="_blank" title="Behance">
+						<i id="beIcon" class="fa fa-behance"></i>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+	<script src="../js/ga.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
+
+	<script>
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
+		});
+
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			closeOnClick: 'anywhere',
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
+
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+	</script>
+	
+
+	<div>
+		<a data-scroll href="body" class="prevNextTop2" onmouseover="topUp()" onmouseleave="topDn()">
+			<i class="fa fa-chevron-circle-up topBtn" aria-hidden="true" title="top"></i></i>
+		</a>
+	</div>
+
+
+	
+
+</body>
+</html>

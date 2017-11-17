@@ -31,8 +31,8 @@
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-feature-settings:  'liga';
 		-moz-font-feature-settings: 'liga';
-			font-feature-settings:  'liga';
-	-moz-font-feature-settings:    "liga" on;
+			 font-feature-settings: 'liga';
+		-moz-font-feature-settings: "liga" on;
 	line-height: 32px;
 	line-height: calc(var(--font-size)*2rem);
 	line-height: -moz-calc(var(--font-size)*2rem);
@@ -563,11 +563,15 @@ footer p {
 
 .aboutTxtBox h2, h3 {
 	color: #656c7a;
-    font-size: 24px;
+	font-size: 24px;
 	font-size: -webkit-calc(var(--font-size)*1.5rem);
 	font-size: -moz-calc(var(--font-size)*1.5rem);
 	font-size: calc(var(--font-size)*1.5rem); }
 
+h4 {
+	color: #656c7a;
+	font-size: 21px;
+}
 
 .aboutIntroBox_100_bigbox {
 	width: 100%;
@@ -1041,23 +1045,31 @@ ul > li {
 			visibility: hidden; } }
 
 .code {
-	margin: 24px 0px 32px 0px;
+	letter-spacing: -.25px;
 	padding: 16px;
-	font-weight: 400;
-	font-family: monospace;
 	background-color: #f0f0f0;
-	-webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	        border-radius: 8px;
+	margin: 24px 0px 32px 0px;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
+}
+
+.codeInline {
+	letter-spacing: -.25px;
+	display: inline;
+	padding: 2px 4px;
+	background-color: #f0f0f0;
+	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
 }
 
 .textbox-colored {
-	margin: 24px 0px 32px 0px;
 	padding: 16px;
 	background-color: #f0f0f0;
-	-webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	        border-radius: 8px;
+	margin: 24px 0px 32px 0px;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
 }
 
 .textbox-colored li {
