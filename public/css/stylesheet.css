@@ -33,10 +33,10 @@
 		-moz-font-feature-settings: 'liga';
 			 font-feature-settings: 'liga';
 		-moz-font-feature-settings: "liga" on;
-	line-height: 32px;
-	line-height: calc(var(--font-size)*2rem);
-	line-height: -moz-calc(var(--font-size)*2rem);
-	line-height: -webkit-calc(var(--font-size)*2rem);
+	line-height: 30px;
+	line-height: calc(var(--font-size)*1.875rem);
+	line-height: -moz-calc(var(--font-size)*1.875rem);
+	line-height: -webkit-calc(var(--font-size)*1.875rem);
 	-webkit-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 			font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -571,6 +571,9 @@ footer p {
 h4 {
 	color: #656c7a;
 	font-size: 21px;
+	font-size: -webkit-calc(var(--font-size)*1.313rem);
+	font-size: -moz-calc(var(--font-size)*1.313rem);
+	font-size: calc(var(--font-size)*1.313rem); }
 }
 
 .aboutIntroBox_100_bigbox {
