@@ -1046,18 +1046,17 @@ ul > li {
 		.topBtn {
 			display: none;
 			visibility: hidden; } }
-
+/**/
 .code {
 	letter-spacing: -.25px;
-	padding: 16px;
+	padding: 16px 24px;
 	background-color: #f0f0f0;
-	margin: 24px 0px 32px 0px;
+	margin: 32px 0px;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	        border-radius: 4px;
 	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
 }
-
 .codeInline {
 	letter-spacing: -.25px;
 	display: inline;
@@ -1066,10 +1065,11 @@ ul > li {
 	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
 }
 
+/**/
 .textbox-colored {
 	padding: 16px;
 	background-color: #f0f0f0;
-	margin: 24px 0px 32px 0px;
+	margin: 32px 0px;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	        border-radius: 4px;
@@ -1112,7 +1112,7 @@ ul > li {
 .underline {
 	border-bottom: 2px solid #babac0;
 	display: inline-block;
-	line-height: 1.5;
+	line-height: 1.45;
 }
 
 .hrline span
