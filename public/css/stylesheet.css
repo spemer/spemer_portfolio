@@ -58,6 +58,10 @@ html,body {
 	overflow-y: auto;
 }
 
+@media screen and (max-width: 420px) {
+	p { line-height: 28px; }
+}
+
 h2, h3 { line-height: -webkit-calc(var(--font-size)*3rem);
 			line-height: -moz-calc(var(--font-size)*3rem);
 				line-height:  calc(var(--font-size)*3rem); }
