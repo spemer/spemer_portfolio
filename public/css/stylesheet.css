@@ -58,7 +58,7 @@ html,body {
 	overflow-y: auto;
 }
 
-h2, h3 { line-height: -webkit-calc(var(--font-size)*3rem);
+h2, h3 {line-height: -webkit-calc(var(--font-size)*3rem);
 			line-height: -moz-calc(var(--font-size)*3rem);
 				line-height:  calc(var(--font-size)*3rem); }
 
@@ -1112,14 +1112,14 @@ ul > li {
 .underline {
 	border-bottom: 2px solid #babac0;
 	display: inline-block;
-	line-height: 1.45;
+	line-height: 1.4;
 }
 
-.hrline span
-{
+.hrline span {
+	color: #babac0 !important;
 	display: inline-block;
-	font-size: 20px;
-	font-size: 1.25rem;
+	font-size: 17px;
+	font-size: 1.063rem;
 	margin: 96px 4px;
 	margin: 6rem .25rem;
 	color: var(--color-border);
