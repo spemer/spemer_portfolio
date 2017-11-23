@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+
+<head>
+	<title>Hyouk Seo(Spemer) - AWeather — UX Case Study</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="author" content="Hyouk Seo(Spemer)" />
+	<meta name="robots" content="index,follow" />
+	<meta name=”referrer” content=”origin-when-cross-origin” />
+	<meta name="description" content="Hyouk Seo (Spemer) - AWeather UX Case study — Weather notification application" />
+	<meta name="abstract" content="Hyouk Seo (Spemer) - AWeather UX Case study — Weather notification application" />
+	<meta name="keywords" content="design, user interface, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, mobile, article, website, Certificate, seo, visual, visual design, artist, interface, interface design, experience, experience design, xd, product, product design, publisher, web publish, ux, usability, case study, process, freelancer, ui designer, ux designer, product designer, freelance designer, visual designer, graphic designer, process, observation, persona, job stories, ideation, branstorming, concepts, prototype, wireframe, dashboard, feedback, user, improvements, zeplin, implementation, medium, behance" />
+
+	<meta name="subject" content="Design" />
+	<meta name="copyright" content="Hyouk Seo(Spemer)" />
+	<meta name="designer" content="Hyouk Seo(Spemer)" />
+	<meta name="publisher" content="Hyouk Seo(Spemer)" />
+	<!-- ghsspower, hyouk, spemer -->
+	<meta name="fb:admins" content="100001935259349" />
+	<meta name="fb:app_id" content="116484055630441" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Hyouk Seo(Spemer)" />
+	<meta property="og:url" content="https://spemer.com/portfolio/weather-push-notification-alarm-application.html" />
+	<meta property="og:title" content="Hyouk Seo(Spemer) - AWeather — UX Case Study" />
+	<meta property="og:image" content="https://spemer.com/img/works/weather/thumb.png" />
+	<meta property="og:description" content="Hyouk Seo (Spemer) - AWeather UX Case study — Weather notification application" />
+	<meta property="article:author" content="Hyouk Seo(Spemer)">
+
+	<meta itemprop="name" content="Hyouk Seo(Spemer)">
+	<meta itemprop="description" content="Hyouk Seo (Spemer) - AWeather UX Case study — Weather notification application">
+	<meta itemprop="image" content="https://spemer.com/img/works/weather/thumb.png">
+	
+	<meta name="googlebot" content="index,follow">
+	<meta name="google" content="notranslate">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.spemer.com/portfolio/weather-push-notification-alarm-application.html">
+	<meta name="twitter:domain" content="https://www.spemer.com/portfolio/weather-push-notification-alarm-application.html">
+	<meta name="twitter:title" content="Hyouk Seo (Spemer) - AWeather UX Case study">
+	<meta name="twitter:site" content="@OfficialSpemer">
+	<meta name="twitter:creator" content="@OfficialSpemer">
+	<meta name="twitter:description" content="Hyouk Seo (Spemer) - AWeather UX Case study — Weather notification application">
+	<meta name="twitter:image" content="https://spemer.com/img/works/weather/thumb.png">
+
+	<link href="https://plus.google.com/114021748891431138237" rel="publisher">
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<link rel="icon" href="path/to/favicon-16.png"  sizes="16x16"   type="../img/favicon-16.png">
+	<link rel="icon" href="path/to/favicon-32.png"  sizes="32x32"   type="../img/favicon-32.png">
+	<link rel="icon" href="path/to/favicon-48.png"  sizes="48x48"   type="../img/favicon-48.png">
+	<link rel="icon" href="path/to/favicon-62.png"  sizes="62x62"   type="../img/favicon-62.png">
+	<link rel="icon" href="path/to/favicon-192.png" sizes="192x192" type="../img/favicon-192.png">
+	<link rel="canonical" href="https://www.spemer.com/portfolio/weather-push-notification-alarm-application.html">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	
+</head>
+
+<body class="animated fadeInUp">
+	<header>
+		<div>
+			<div id="headerLogo">
+				<a href="../index.html"><h1>Spemer</h1></a>
+			</div>
+			<div id="headerNav">
+				<nav>
+					<ul>
+						<li><a href="../index.html" class="aboutHover ready"><b>Portfolio</b></a></li>
+
+						<li><a href="../articles.html" class="ready2 readyHide2" onmouseover="lineDel2()" onmouseleave="lineLive2()"><b>Article</b></a></li>
+						
+						<li><a href="../about-spemer.html" class="ready3 readyHide3" onmouseover="lineDel3()" onmouseleave="lineLive3()"><b>About</b></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+
+	<article class="clearfix article animated fadeInUp">
+		<div class="triBox">
+			<div class="triBoxMain"><center>
+
+				<div class="everyTxtEnd everyTxtEndArticle"><br /><br />
+					<h2>UX Case study — Weather notification application</h2>
+					<p>Notifies weather events that user selected</p>
+
+
+					<br />
+					<figure class="articleImg35-small articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/small.png">
+							<img src="../img/works/weather/small.png" alt="Launcher Icon" title="Launcher Icon" />
+						</a>
+						</section>
+					</figure>
+					<br />
+
+
+					<p>
+						People can download <b>thousands of weather apps</b> on Apple App Store or Android Play Store nowadays. Those apps show about present weather information and weather forecasts, with sleek and gorgeous interfaces. It seems it’s unnecessary to design more weather applications, but I designed new one few days ago. For what?
+					</p>
+					<br />
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/weather_apps.png">
+							<img src="../img/works/weather/weather_apps.png" alt="Weather apps" title="Weather apps" />
+							<figcaption>
+								Various weather applications on App/Play Store
+							</figcaption>
+						</a>
+						</section>
+					</figure>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Start Off</h3>
+					<p>
+						As I told you above, people can get various kinds of weather forecast apps. But those apps are all the same thing, except their design elements like color, icons, etc. Basically, it’s not a big problem. Their main purpose is to <b>inform how’s the weather like</b> today or this week. But the problems are:
+						
+
+						<ol class="textbox-colored">
+							<li>
+							Users easily <b>forget to check today’s weather</b>. Imagine you have meeting at night with your gf, without knowing the rain is coming…
+							</li>
+
+							<li>
+							For sure, those apps are beautiful. But it’s still <b>bothersome</b> to check today’s weather forecast <b>every morning, right after you woke up</b>.
+
+							</li>
+
+							<li>
+							Some weather apps notify users about today’s weather forecast, but it’s kind of somewhat annoying thing to get push notification <b>everyday morning when they’re still on bed</b>.
+							</li>
+						</ol>
+					</p>
+					<p>
+						I guess everybody has an experience once before like this, ‘<b>Do I need to take my umbrella today…?</b>’ in front of his/her front door, just before open the door to go outside, turn on smartphone… launch weather application… check if it’s rainy today… and decide to take it or not. But what if he/she totally forgot to check the weather application?
+						<br />
+						<br />
+						When I took this project(to design any weather application) as an assignment, I decided to design a weather “<b>Alarm</b>” application — <b>AWeather</b> that notifies users about <b>weather events only they want to be notified</b>, not the same application that people usually can get on store.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+					
+
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/mockup.png">
+							<img src="../img/works/weather/mockup.png" alt="Mock up" title="Mock up" />
+						</a>
+						</section>
+					</figure>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>#1. Observation</h3>
+					<h4>Goal &amp; Audience</h4>
+					<p>
+						I wanted users not to launch AWeather often. When users launch this app for the first time, they set settings like <b>what weather events</b> to be notified like ‘snowy’ or ‘cloudy’, and <b>what time and days</b> to be notified. That’s it! When setting finished, users don’t need to launch this app again until they want to change notification settings.
+					</p>
+					<br /><br /><br />
+
+					<h4>Job Stories</h4>
+					<p>
+						Additionally, I wrote some <a href="https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27" target="_blank" title="New tab"><b class="underline">Jobs to be done</b></a> lists to design more useful product and make it from user’s perspective.
+
+
+					<ol class="textbox-colored">
+						<li><p>
+							When <b>I woke up late for the work</b>, I want to <b>get notified in advance about specific weather events</b>, so I can <b>prepare with that even I don’t have much time to check how’s the weather like today</b>.
+						</p></li>
+
+						<li><p>
+							When <b>I’m too lazy that it’s bothersome to check the weather with my smartphone on every morning</b>, I want to <b>be notified about today’s weather only it’s rainy outside</b>, so I can <b>prepare my umbrella without forgetting and get additional minutes on my bed</b>.
+						</p></li>
+
+						<li><p>
+							When <b>I set an alarm at specific time like before I go to my work</b>, I want to <b>be notified about the events I want, not every alarm how’s the weather like today</b>, so I can <b>avoid to get notification everyday even if it’s sunny(that I don’t need to be informed)</b>.
+						</p></li>
+					</ol>
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>#2. Ideation</h3>
+					<h4>Main purpose</h4>
+
+					<p>
+					AWeather’s main purpose is to notify users about the weather information that <b>only they want to be notified</b>, on time they selected. This can save their time, makes them to get ready with specific weather events without checking weather forecast.
+					</p>
+					<br /><br /><br />
+
+					<h4>Brainstorming</h4>
+
+					<p>
+						Here’s simple user flow about this application:
+					</p>
+
+					<ol class="textbox-colored">
+						<li>User <b>download and launch AWeather</b></li>
+						<li>User <b>sets weather events</b> he/she wants to be notified</li>
+						<li>User <b>gets notification</b> based on the settings</li>
+					</ol>
+
+					<p>
+						For example, if users selected that they wants to get notification when it’s <b>rainy or windy</b>, push notification pops up on the <b>time when user sets, only when it’s rainy or windy</b>.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>#3. Rapid Prototyping</h3>
+					<h4>Lo-Fi Prototypes</h4>
+					<p>
+						With the ideas and concepts above, I created some rough prototypes for AWeather with <a href="https://ovenapp.io/" target="_blank" title="Kakao Oven(new tab)"><b class="underline">Kakao Oven</b></a> before making Hi-fi prototypes. (Click image to enlarge)
+					</p>
+
+					<br />
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/lofi.png">
+							<img src="../img/works/weather/lofi.png" alt="Lo-Fi Prototypes" title="Lo-Fi Prototypes" />
+							<figcaption>
+								Lo-fi prototypes (Screen number goes from 1. to 4.)
+							</figcaption>
+						</a>
+						</section>
+					</figure>
+
+					<br />
+
+					<ol class="textbox-colored">
+						<li>
+							On the main screen, simple introduction and launcher icon pops up before user get started with “<b>Start</b>” button at the bottom of the screen.
+						</li>
+
+						<li>
+							On “<b>Select weather type</b>” screen, users can select what kind of weather events they want to be notified. <b>Selected weather types</b> are shows up at the top of the screen as a <b>weather icons</b>.
+						</il>
+
+						<li>
+							On “<b>Set time</b>” screen, users can set what time to be notified with time picker and date picker.
+						</li>
+
+						<li>
+							On the last screen, AWeather informs users that everything has finished. If users want to change settings of alarm they set, simply tab the “<b>Alarm Settings</b>” button at the bottom of the screen. This makes users to iterate one step from <b>screen 2</b> to <b>screen 3</b>.
+						</li>
+					</ol>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Improvements</h3>
+					<h4>Usability Testing</h4>
+					<p>
+						Based on the Lo-fi prototypes above, I had some <b>usability tests</b> with my friends who were not designers to <b>prove usability</b> of this application. Examples below are about some <b>pain points</b> I’ve notified during user testing.
+					</p>
+
+					<br /><br /><br />
+					<h4>Pain Point #1.</h4>
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/painpoint_1.png">
+							<img src="../img/works/weather/painpoint_1.png" alt="Pain point #1. (Screen 2., Set time screen)" title="Pain point #1. (Screen 2., Set time screen)" />
+							<figcaption>
+								Pain point #1. (Screen 2., Set time screen)
+							</figcaption>
+						</a>
+						</section>
+					</figure>
+
+					<p>
+						On existing screen <b>3(Set time)</b>, right after users select type of the weather events, there was no <b>[Back]</b> button to go back to “<b>Select weather type</b>” screen. It makes users to finish one whole step to select the weather type again. On improved screen on the right side, users can go back directly with <b>[Back]</b> button when they want to delete or select again the weather types.
+					</p>
+
+
+					<br /><br /><br />
+
+					
+					<h4>Pain Point #2.</h4>
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/painpoint_2.png">
+							<img src="../img/works/weather/painpoint_2.png" alt="Pain point #2. (Screen 4., Finished screen)" title="Pain point #2. (Screen 4., Finished screen)" />
+							<figcaption>
+								Pain point #2. (Screen 4., Finished screen)
+							</figcaption>
+						</a>
+						</section>
+					</figure>
+
+					<p>
+						After the test finished, most of testers asked me some questions like “<b>How can I check my alarm’s information?</b>” or “<b>What settings can I set with this ‘Alarm Settings’ button at the bottom?</b>”.
+						<br /><br />
+						On existing screen(<b>left</b>), unnecessary launcher icon pops up with some long sentences. They don’t give users any information they really need. So I deleted them all, and put icons about <b>weather events</b> that user selected before on screen 2(<b>Select weather type</b>).
+						<br /><br />
+						And I added some <b>texts</b> to make sure what types of <b>weather events they selected</b>, with <b>time they set</b> to get notification. Lastly, I changed tests on the button from “Alarm Settings” to “<b>Edit Alarm</b>” to make sure about the function of this button.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>#4. Output</h3>
+					<h4>Hi-Fi Prototypes</h4>
+					<p>
+						After some usability tests, I fixed and redesigned some screens and details <b>based on the feedback</b> from the tests. With them, I created Hi-fi prototypes you can see below. (Click image to enlarge)
+
+					</p>
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/hifi.png">
+							<img src="../img/works/weather/hifi.png" alt="Hi-Fi Prototypes" title="Hi-Fi Prototypes" />
+							<figcaption>
+								Hi-Fi prototypes based on feedback
+							</figcaption>
+						</a>
+						</section>
+					</figure>
+
+					<p>
+						Based on the settings that user set on, <b>push notification</b> pops up on user’s smartphone. In this case, user selected that he/she wants to get notification only when it’s <b>[Snow/Rainy]</b>, <b>[Swelter]</b> or <b>[Gale]</b>. When it’s <b>[Snow/Rainy]</b>, <b>[Swelter]</b> or <b>[Gale]</b>on every <b>Monday</b>, <b>Tuesday</b> and <b>Thursday</b>, push notification will pops up at <b>9AM</b>.
+						<br /><br />
+						Once users set their alarm, they <b>don’t need to launch AWeather again</b> until they need to change the alarm’s setting.
+					</p>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h4>Interaction</h4>
+					<p>
+						Tiny animations on mobile application screens can improve user experience about <b>processes and results</b> of the application. In AWeather, I used the theory to make sure and help users to select what weather events at what time to get notification from AWeather.
+					</p>
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/protopie.png" title="ProtoPie">
+							<img src="../img/works/weather/protopie.png" />
+						</a>
+						</section>
+					</figure>
+
+					<figure class="articleImg articleFig articleImgSize">
+						<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+						<a class="feather" href="../img/works/weather/weather-interaction.gif">
+							<img src="../img/works/weather/weather-interaction.gif" />
+						</a>
+						</section>
+					</figure>
+
+
+
+					<div class="hrline"><center>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+						<span>ㆍ</span>
+					</center></div>
+
+
+
+					<h3>Takeaways</h3>
+					<p>
+						<b>AWeather</b> is a <b>weather alarm application</b> that lets user who needs weather alarm for only <b>weather events user wants</b>, only <b>when they want to be notified</b>. Even if users forgot to check weather forecast or to take umbrella before they go out, AWeather will let them know to take umbrella on rainy day or additional outer on cold weather.
+						<br /><br />
+						I designed this application in my college’s UI/UX design class.
+						<br />
+						Hope you enjoyed my article!
+					</p>
+
+				</div></center>
+
+
+
+				<div class="everyTxtEndEnd">
+					<p>
+						UX Case study — Weather notification application<br />
+						<strong><a href="https://medium.com/@Spemer/ux-case-study-weather-notification-application-baeb9623512c" target="_blank" title="Medium (New Tab)">Click Here to Watch on Medium</a></strong><br />
+						<br />
+
+						<strong>Title :</strong> <a href="https://medium.com/@Spemer/ux-case-study-weather-notification-application-baeb9623512c" target="_blank" title="Medium (New Tab)">UX Case study — Weather notification application</a><br />
+
+						<strong>Date :</strong> November 23, 2017<br />
+
+						<strong>Tools :</strong> Adobe XD, Adobe Photoshop, Adobe Illustrator, Kakao Oven, Studio XID ProtoPie<br />
+
+						<strong>Designer :</strong> Hyouk SEO (Spemer)<br />
+
+						<br /><br />
+					</p>
+				</div>
+
+			</div>
+
+			<nav>
+				<div id="prevNext">
+					<a data-scroll href="body" class="prevNextTop" onmouseover="topUp()" onmouseleave="topDn()"><b><i class="fa fa-angle-up"></i>&nbsp;Top</b></a>
+
+					<a href="instagram-tracker-application-igtracker-design.html" class="prevNext" title="IGTracker" onmouseover="nextRight()" onmouseleave="nextRightDel()"><b>&nbsp; Next <i class="fa fa-angle-double-right"></i></b></a>
+
+					<a href="../index.html" class="prevNext" title="Main"><b>Home &nbsp;</b></a>
+				</div>
+			</nav>
+		</div>
+	
+	</article>
+
+	<div id="siteMap">
+		<p class="siteMapBtn" title="Site Map">
+			<button class="c-hamburger c-hamburger--htx"><span></span></button>
+		</p>
+
+		<nav class="siteMapNav">
+			<ul>
+				<li><a href="weather-push-notification-alarm-application.html" title="AWeather - UX Case study — Weather notification application"><b class="underline">AWeather</b></a></li>
+
+				<li><a href="instagram-tracker-application-igtracker-design.html" title="IGTracker - Instagram Tracking Application UI Design">IGTracker</a></li>
+
+				<li><a href="memory-record-application-ui-design.html" title="Memoree - Minimal UI/UX design for iOS">Memoree</a></li>
+
+				<li><a href="insharior-ux-case-study-user-experience-design.html" title="Interior item sharing mobile application design">Insharior</a></li>
+
+				<li><a href="album-image-sort-application-univcam.html" title="UnivCam - Album sorting application UI/UX design">UnivCam</a></li>
+
+				<li><a href="todo-task-list-manage-application-sprinter.html" title="Sprinter - ToDo list &amp; task management application UI/UX design">Sprinter</a></li>
+
+				<li><a href="suhyup-mobile-banking-ui-ux-renewal.html" title="Suhyup Mobile Banking UI/UX Renewal">Suhyup</a></li>
+
+				<li><a href="../article/css-custom-properties-variables-usage.html" title="Using variables(custom properties) in CSS">CSS Variables</a></li>
+
+				<li><a href="../article/free-github-blog-and-hosting-with-jekyll.html" title="Free GitHub blog and Hosting with Jekyll">Jekyll</a></li>
+
+				<li><a href="../article/creative-pros-cons-google-material-design.html" title="Material">Material</a></li>
+
+				<li><a href="../article/bodymovin-airbnb-lottie-after-effects.html" title="Bodymovin">Bodymovin</a></li>
+
+				<li><a href="../article/connecting-domain-with-google-firebase.html" title="Firebase">Firebase</a></li>
+
+				<li><a href="../article/spemer-music.html" title="Musics">Musics</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<footer class="clearfix">
+		<div>
+			<p>
+				<i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by Hyouk Seo(Spemer)
+			</p>
+			<nav>
+				<div id="snsIcon">
+					<a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">
+						<i id="twIcon" class="fa fa-twitter"></i>
+					</a>
+
+					<a href="https://github.com/spemer" target="_blank" title="Github">
+						<i id="ghIcon" class="fa fa-github"></i>
+					</a>
+
+					<a href="https://facebook.com/ghsspower" target="_blank" title="Facebook">
+						<i id="fbIcon" class="fa fa-facebook"></i>
+					</a>
+
+					<a href="https://instagram.com/spemer/" target="_blank" title="Instagram">
+						<i id="inIcon" class="fa fa-instagram"></i>
+					</a>
+
+					<a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">
+						<i id="liIcon" class="fa fa-linkedin"></i>
+					</a>
+
+					<a href="https://dribbble.com/spemer" target="_blank" title="Dribbble">
+						<i id="drIcon" class="fa fa-dribbble"></i>
+					</a>
+
+					<a href="https://medium.com/spemer" target="_blank" title="Medium">
+						<i id="medIcon" class="fa fa-medium" aria-hidden="true"></i>
+					</a>
+
+					<a href="https://behance.net/spemer" target="_blank" title="Behance">
+						<i id="beIcon" class="fa fa-behance"></i>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</footer>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery.slim.min.js"></script>
+    <script src="../js/featherlight.js"></script>
+    <script src="../js/featherlight.gallery.js"></script>
+
+	<script>
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
+		});
+
+		$('a.feather').featherlightGallery({
+			closeIcon: null,
+			openSpeed: 300,
+			closeSpeed: 300,
+			closeOnClick: 'anywhere',
+			previousIcon: '&#9664;',
+			nextIcon: '&#9654;',
+			galleryFadeIn: 0,
+			galleryFadeOut: 0
+		});
+
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+	</script>
+	
+
+	<div>
+		<a data-scroll href="body" class="prevNextTop2" onmouseover="topUp()" onmouseleave="topDn()">
+			<i class="fa fa-chevron-circle-up topBtn" aria-hidden="true" title="top"></i></i>
+		</a>
+	</div>
+
+
+	
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import url('roboto.css');
 @import url('animate.css');
 @import url('featherlight.css');
 @import url('featherlight.gallery.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 :root {
 	--font-size: 1.063;
@@ -37,8 +37,8 @@
 	line-height: calc(var(--font-size)*1.875rem);
 	line-height: -moz-calc(var(--font-size)*1.875rem);
 	line-height: -webkit-calc(var(--font-size)*1.875rem);
-	-webkit-font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	-webkit-font-family: 'Open Sans', Arial, sans-serif;
+			font-family: 'Open Sans', Arial, sans-serif;
 }
 
 @supports (-ms-ime-align:auto) {
@@ -222,7 +222,7 @@ header {
 }
 
 #headerLogo h1 {
-	font-weight: normal;
+	font-weight: bold;
 	color: #656c7a;
 	-webkit-transition: all .25s ease;
             -o-transition: all .25s ease;
@@ -407,7 +407,7 @@ footer {
 	width: 100%;
 	height: auto;
 	vertical-align: middle;
-	padding: 50px 0px 75px 0px;
+	padding: 4rem 0px 6rem 0px;
 }
 
 footer p {
@@ -570,10 +570,12 @@ footer p {
 
 h4 {
 	color: #656c7a;
-	font-size: 21px;
-	font-size: -webkit-calc(var(--font-size)*1.313rem);
-	font-size: -moz-calc(var(--font-size)*1.313rem);
-	font-size: calc(var(--font-size)*1.313rem); }
+	font-size: 20px;
+	margin: 8px 0px 4px;
+	display: inline-block;
+	font-size: -webkit-calc(var(--font-size)*1.25rem);
+	font-size: -moz-calc(var(--font-size)*1.25rem);
+	font-size: calc(var(--font-size)*1.25rem); }
 }
 
 .aboutIntroBox_100_bigbox {
@@ -1092,11 +1094,22 @@ ul > li {
 
 .quote {
 	display: inline-block;
-	margin: 32px 0px;
 	font-size: 24px;
+	margin: 32px 64px;
 	font-size: 1.5rem;
 	line-height: 40px;
 	line-height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+	.quote {
+		margin: 32px;
+	}
+}
+@media screen and (max-width: 420px) {
+	.quote {
+		margin: 32px 0px;
+	}
 }
 
 .prototype {
@@ -1110,7 +1123,7 @@ ul > li {
 }
 
 .underline {
-	border-bottom: 2px solid #babac0;
+	border-bottom: 1.5px solid #babac0;
 	display: inline-block;
 	line-height: 1.4;
 }
@@ -1118,8 +1131,7 @@ ul > li {
 .hrline span {
 	color: #babac0 !important;
 	display: inline-block;
-	font-size: 17px;
-	font-size: 1.063rem;
+	font-size: 24px;
 	margin: 96px 4px;
 	margin: 6rem .25rem;
 	color: var(--color-border);
