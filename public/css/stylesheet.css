@@ -237,13 +237,18 @@ header {
 	font-size: calc(var(--font-size)*2.5rem);
 	font-size:  -webkit-calc(var(--font-size)*2.5rem);
 }
-
 #headerLogo h1:hover {
 	color: #2a2e2e;
 	-webkit-transition: all .25s ease;
             -o-transition: all .25s ease;
             -moz-transition: all .25s ease;
             transition: all .25s ease;
+}
+@media screen and (max-width: 420px) {
+	#headerLogo h1 {
+		font-size: 36px;
+		margin: 15px 0px -15px;
+	}
 }
 
 #headerNav nav {
@@ -319,7 +324,7 @@ header nav li a:hover {
 
 .artImgBoxEach {
 	width: 29%;
-	margin: 3% 0.85%;
+	margin: 3% 0.75%;
 	display: inline-block;
 }
 
@@ -1076,12 +1081,15 @@ ul > li {
 	   -moz-border-radius: 4px;
 	        border-radius: 4px;
 }
-
 .textbox-colored li {
 	margin-top: 8px;
 	margin-bottom: 8px;
 }
+.aboutTxtBox ul {
+	padding: 0px 16px;
+}
 
+/**/
 .feather img {
 	cursor: -webkit-zoom-in;
 	cursor: -moz-zoom-in;
@@ -1104,11 +1112,15 @@ ul > li {
 @media screen and (max-width: 768px) {
 	.quote {
 		margin: 32px;
+		font-size: 22px;
+		line-height: 36px;
 	}
 }
 @media screen and (max-width: 420px) {
 	.quote {
 		margin: 32px 0px;
+		font-size: 20px;
+		line-height: 32px;
 	}
 }
 
