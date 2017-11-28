@@ -353,9 +353,9 @@ header nav li a:hover {
 .profile {
 	width: 100%;
 	height: 100%;
-	-webkit-border-radius: 8px;
-	   -moz-border-radius: 8px;
-	        border-radius: 8px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
 }
 
 @media screen and (max-width: 420px){
@@ -385,10 +385,11 @@ header nav li a:hover {
 	text-align: center;
 	font-weight: lighter;
 	color: #656c7a;
-	font-size: 14.4px;
-	font-size: -moz-calc(var(--font-size)*.9rem);
-	font-size: calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem); }
+	font-size: 12px;
+	margin-top: -8px;
+	font-size: -moz-calc(var(--font-size)*.8rem);
+	font-size: calc(var(--font-size)*.8rem);
+	font-size:-webkit-calc(var(--font-size)*.8rem); }
 
 
 
@@ -640,10 +641,11 @@ h4 {
 .triBox { width: 100%; height: auto; }
 .triBox figcaption {
 	color: #656c7a;
-    font-size: 14.4px;
-	font-size:        -moz-calc(var(--font-size)*.9rem);
-	font-size:        calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem); }
+    font-size: 12px;
+	margin-top: -8px;
+	font-size:        -moz-calc(var(--font-size)*.8rem);
+	font-size:        calc(var(--font-size)*.8rem);
+	font-size:-webkit-calc(var(--font-size)*.8rem); }
 
 .triBoxMain { margin: 0 auto; }
 
@@ -1007,7 +1009,9 @@ h4 {
 	text-align: center; }
 
 .articleImg35-small img { width: 25%; }
+.articleImg50-small img { width: 50%; }
 .articleImg30 img { width:   30%; }
+.articleImg35 img { width:   35%; }
 .articleImg50 img { width:   50%; }
 .articleImg75 img { width:   75%; }
 .articleImg   img { width:  100%; }
@@ -1018,9 +1022,11 @@ h4 {
 		.articleImg75 img,
 		.articleImg50 img { width: 100%; }
 		.articleImg35 img { width: 60%;  }
+		.articleImg50-small img { width: 60%; }
 		.articleImg35-small img { width: 45%; } }
 		@media screen and (max-width: 420px){
 			.articleImg35 img { width: 100%; }
+			.articleImg50-small img { width: 100%; }
 			.articleImg35-small img { width: 60%; } }
 
 
@@ -1076,7 +1082,7 @@ ul > li {
 .textbox-colored {
 	padding: 16px;
 	background-color: #f4f4f4;
-	margin: 32px 0px;
+	margin: 16px 0px 32px;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	        border-radius: 4px;
@@ -1148,4 +1154,11 @@ ul > li {
 	font-weight: bolder;
 	display: inline-block;
 	color: var(--color-border);
+}
+
+.colorBox {
+	height: 8px;
+	width: 32px;
+	margin: -8px 0px 12px;
+	background-color: #babac0;
 }

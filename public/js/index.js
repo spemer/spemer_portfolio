@@ -60,3 +60,8 @@ function lineDel3() {
     
     $('.ready3').addClass('aboutHover3');
 }
+
+
+$(window).load(function() {
+    $(".se-pre-con").fadeOut("slow");;
+});
