@@ -10,7 +10,6 @@ function topDn() {
     $('.fa-angle-up').addClass('topUp2');
     $('.fa-angle-up').removeClass('topUp');
 }
-
 function nextRight() {
     "use strict";
     
@@ -23,7 +22,6 @@ function nextRightDel() {
     $('.fa-angle-double-right').addClass('nextRight2');
     $('.fa-angle-double-right').removeClass('nextRight');
 }
-
 function nextLeft() {
     "use strict";
     
@@ -36,9 +34,7 @@ function nextLeftDel() {
     $('.fa-angle-double-left').addClass('nextLeft2');
     $('.fa-angle-double-left').removeClass('nextLeft');
 }
-
 //
-
 function lineLive2() {
     "use strict";
     
@@ -49,7 +45,6 @@ function lineDel2() {
     
     $('.ready2').addClass('aboutHover2');
 }
-
 function lineLive3() {
     "use strict";
     
@@ -60,8 +55,3 @@ function lineDel3() {
     
     $('.ready3').addClass('aboutHover3');
 }
-
-
-$(window).load(function() {
-    $(".se-pre-con").fadeOut("slow");;
-});
