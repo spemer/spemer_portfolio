@@ -30,10 +30,10 @@
 	text-rendering:optimizeLegibility;
 	-moz-osx-font-smoothing:grayscale;
 	-webkit-font-smoothing:antialiased;
-	-webkit-font-feature-settings:liga;
-	-moz-font-feature-settings:liga;
-	font-feature-settings:liga;
-	-moz-font-feature-settings:liga on;
+	-webkit-font-feature-settings:'liga';
+	-moz-font-feature-settings:'liga';
+	font-feature-settings:'liga';
+	-moz-font-feature-settings:"liga" on;
 	line-height:30px;
 	line-height:calc(var(--font-size)*1.875rem);
 	line-height:-moz-calc(var(--font-size)*1.875rem);
@@ -50,14 +50,14 @@ p,.textbox-colored { line-height:36px }
 @supports (-ms-ime-align:auto) { .topBtn { display: none; } }
  
 @-moz-document url-prefix(){
-	.topBtn { display: none; }
-	p, .textbox-colored { line-height: 36px; }
-	#headerNav a { font-weight: bold; }
-	#headerLogo h1 { font-size: 40px !important; }
-	.siteMapNav li { margin: 36px 0px 0px !important; }
+	.topBtn { display: none }
+	p, .textbox-colored { line-height: 36px }
+	#headerNav a { font-weight: bold }
+	#headerLogo h1 { font-size: 40px !important }
+	.siteMapNav li { margin: 36px 0px 0px !important }
 	.triBox figcaption, .artImgBoxEach figcaption {
 		margin-top: 4px !important;
-		font-size: 14px !important; }}
+		font-size: 14px !important }}
 
 html,body { overflow-x:hidden; overflow-y:auto }
 h2,h3
