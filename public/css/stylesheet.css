@@ -1149,8 +1149,8 @@ ul > li {
 .hrline span {
 	color: #babac0 !important;
 	font-size: 24px;
-	margin: 64px 4px;
-	margin: 4rem .25rem;
+	margin: 64px 4px 72px;
+	margin: 4rem .25rem 4.5rem;
 	font-weight: bolder;
 	display: inline-block;
 	color: var(--color-border);
