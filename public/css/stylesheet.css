@@ -1182,26 +1182,34 @@ ul > li {
 	margin:3% 0%;
 	display:inline-block
 }
-@media screen and (max-width: 420px){
+.flatIconBoxEach figcaption {
+	margin: -4px 0;
+}
+
+@media screen and (max-width: 768px) {
+	.flatIconBoxEach figcaption {
+		margin: -8px 0;
+	}
+}
+@media screen and (max-width: 420px) {
 	.flatIconBoxEach {
 		width: 42.5%;
 		margin: 2.5% 2.75%;
 		display: inline-block;
-	} }
+	}
+	.flatIconBoxEach img {
+		-webkit-border-radius:4px;
+		-moz-border-radius:4px;
+		border-radius:4px
+	}
+	figcaption { display: none; } }
+
 
 .flatIconBoxEach img {
 	width: 100%;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	border-radius:8px
-}
-@media screen and (max-width: 420px) {
-	.flatIconBoxEach img {
-		-webkit-border-radius:4px;
-		-moz-border-radius:4px;
-		border-radius:4px
-	}
-	figcaption { display: none; }
 }
 
 .flatIconBoxEach:nth-child(3n+2) {
