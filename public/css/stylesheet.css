@@ -1111,7 +1111,8 @@ ul > li {
 
 .aboutTxtBox ul { padding:0 16px }
 
-.feather img {
+.feather img,
+.feather figcaption {
 	cursor:-webkit-zoom-in;
 	cursor:-moz-zoom-in;
 	cursor:zoom-in
