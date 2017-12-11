@@ -1077,6 +1077,7 @@ ul > li {
 	} }
 
 .code {
+	border: 2px solid #e5e5e5;
 	letter-spacing:-.25px;
 	padding:16px 24px;
 	background-color:#f4f4f4;
@@ -1084,15 +1085,15 @@ ul > li {
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
-	font-family:Menlo,Monaco,"Courier New",Courier,monospace
+	font-family:Menlo,Monaco,Consolas,"Courier New",monospace
 }
 
 .codeInline {
 	letter-spacing:-.25px;
 	display:inline;
 	padding:2px 4px;
-	background-color:#f4f4f4;
-	font-family:Menlo,Monaco,"Courier New",Courier,monospace
+	background-color:#f0f0f0;
+	font-family:Menlo,Monaco,Consolas,"Courier New",monospace
 }
 
 .textbox-colored {
@@ -1101,11 +1102,18 @@ ul > li {
 	margin:16px 0 32px;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
-	border-radius:4px
+	border-radius:4px;
+	border: 2px solid #e5e5e5;
 }
 
 .textbox-colored li {
-	margin-top:8px;
+	margin-top:16px;
+	margin-bottom:16px
+}
+.textbox-colored li:first-child {
+	margin-top:8px
+}
+.textbox-colored li:last-child {
 	margin-bottom:8px
 }
 
@@ -1174,9 +1182,7 @@ ul > li {
 }
 
 
-.flatIconBox {
-	width: 100%;
-}
+.flatIconBox { width: 100% }
 
 .flatIconBoxEach {
 	width:30.25%;
@@ -1217,3 +1223,5 @@ ul > li {
 	margin-left: 2.75%;
 	margin-right: 2.75%;
 }
+
+.copy { cursor: pointer }

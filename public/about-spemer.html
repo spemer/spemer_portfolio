@@ -118,7 +118,9 @@
 
 				<div class="aboutIntroBox_EMAIL clearfix">
 					<p>
-						<strong>E-mail : </strong><a href="mailto:ghsspower@gmail.com?cc=ghsspower@naver.com" target="_blank" title="Mail to Hyouk Seo(new tab)">ghsspower@gmail.com</a> | <a href="mailto:ghsspower@naver.com?cc=ghsspower@gmail.com" target="_blank" title="Mail to Hyouk Seo(new tab)">ghsspower@naver.com</a>
+						<strong>E-mail: </strong>
+						<span id="foo" value="ghsspower@gmail.com">ghsspower@gmail.com</span>
+						<a class="copy btn" data-clipboard-target="#foo" title="Copy to clipboard"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
 					</p>
 				</div>
 		</div>
@@ -129,12 +131,13 @@
 		<div class="aboutTxtBox rvl2">
 			<strong><h3>Skills</h3></strong>
 
-			<h4>Software</h4><br />
+			<h4>Software &amp; Work</h4><br />
 			<p>
 			<b>Digital graphics</b>: Adobe Photoshop, Illustrator and After Effects<br />
 			<b>Wireframing &amp; Ideation</b>: Hand sketch, Kakao Oven, Xtensio and Draw.io<br />
 			<b>Prototyping</b>: Invision, Marvel App, Studio XID ProtoPie and Adobe Experience Design (XD)<br />
-			<b>Co-working ability</b>: <a href="https://github.com/spemer" target="_blank" title="Spemer on GitHub(new tab)">GitHub</a>, Zeplin, Slack, Trello, Fabric and Bodymovin.
+			<b>Co-working ability</b>: <a href="https://github.com/spemer" target="_blank" title="Spemer on GitHub(new tab)">GitHub</a>, Zeplin, Slack, Trello, Fabric and Bodymovin<br />
+			<b>Photography</b>: <a href="https://unsplash.com/@spemer" title="Unsplash(new tab)" target="_blank">Take a look at my shots on Unsplash <i class="fa fa-external-link" aria-hidden="true"></i></a>
 			</p>
 			<br />
 
@@ -333,11 +336,14 @@
 	</footer>
 
 	<script src="js/index.js"></script>
+	<script src="js/clipboard.min.js"></script>
 	<script src="js/smooth.scroll.js"></script>
 	<script src="js/anchor.scroll.js"></script>
 	<script src="js/jquery.slim.min.js"></script>
 
     <script>
+    	var clipboard = new Clipboard('.btn');
+
 		smoothScroll.init({
 			speed: 1000,
 			easing: 'easeOutQuad',
