@@ -1225,3 +1225,7 @@ ul > li {
 }
 
 .copy { cursor: pointer }
+
+.lineImage {
+	border: 2px solid #e5e5e5;
+}
