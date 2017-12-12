@@ -55,3 +55,10 @@ function lineDel3() {
     
     $('.ready3').addClass('aboutHover3');
 }
+//
+function addTooltip() {
+    $('.copied').removeClass('tooltip');
+}
+function removeTooltip() {
+    $('.copied').addClass('tooltip');
+}

@@ -1110,14 +1110,10 @@ ul > li {
 	margin-top:16px;
 	margin-bottom:16px
 }
-.textbox-colored li:first-child {
-	margin-top:8px
-}
-.textbox-colored li:last-child {
-	margin-bottom:8px
-}
+.textbox-colored li:first-child {margin-top:8px}
+.textbox-colored li:last-child {margin-bottom:8px}
 
-.aboutTxtBox ul { padding:0 16px }
+.aboutTxtBox ul {padding:0 16px}
 
 .feather img,
 .feather figcaption {
@@ -1126,7 +1122,7 @@ ul > li {
 	cursor:zoom-in
 }
 
-.memoree-margin img { margin:50px 0 }
+.memoree-margin img {margin:50px 0}
 
 .quote {
 	display:inline-block;
@@ -1141,20 +1137,17 @@ ul > li {
 	.quote {
 		margin:32px;
 		font-size:22px;
-		line-height:36px
-	} }
+		line-height:36px} }
 
 @media screen and (max-width: 420px) {
 	.quote {
 		margin:32px 0;
 		font-size:20px;
-		line-height:32px
-	} }
+		line-height:32px} }
 
 .prototype {
 	background-color:#fff;
-	margin:32px 0 64px
-}
+	margin:32px 0 64px}
 
 @media screen and (max-width: 768px) { .prototype { display:none } }
 
@@ -1182,22 +1175,17 @@ ul > li {
 }
 
 
-.flatIconBox { width: 100% }
-
+.flatIconBox {width: 100%}
 .flatIconBoxEach {
 	width:30.25%;
 	margin:3% 0%;
 	display:inline-block
 }
-.flatIconBoxEach figcaption {
-	margin: -4px 0;
-}
+.flatIconBoxEach figcaption {margin: -4px 0}
 
 @media screen and (max-width: 768px) {
 	.flatIconBoxEach figcaption {
-		margin: -8px 0;
-	}
-}
+		margin: -8px 0}}
 @media screen and (max-width: 420px) {
 	.flatIconBoxEach {
 		width: 42.5%;
@@ -1209,8 +1197,7 @@ ul > li {
 		-moz-border-radius:4px;
 		border-radius:4px
 	}
-	figcaption { display: none; } }
-
+	figcaption {display: none} }
 
 .flatIconBoxEach img {
 	width: 100%;
@@ -1218,14 +1205,20 @@ ul > li {
 	-moz-border-radius:8px;
 	border-radius:8px
 }
-
 .flatIconBoxEach:nth-child(3n+2) {
 	margin-left: 2.75%;
-	margin-right: 2.75%;
+	margin-right: 2.75%
 }
 
-.copy { cursor: pointer }
+.lineImage {border: 2px solid #e5e5e5}
 
-.lineImage {
-	border: 2px solid #e5e5e5;
+.copy { cursor: pointer }
+.tooltip {
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 2s ease;
+    -o-transition: opacity 2s ease;
+    -ms-transition: opacity 2s ease;
+    -moz-transition: opacity 2s ease;
+    -webkit-transition: opacity 2s ease;
 }
