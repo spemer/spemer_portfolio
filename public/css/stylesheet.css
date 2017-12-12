@@ -569,7 +569,7 @@ footer p {
 
 h4 {
 	color:#656c7a;
-	font-size:22px !important;
+	font-size:22px;
 	margin:8px 0 4px;
 	display:inline-block;
 	font-size:-webkit-calc(var(--font-size)*1.375rem);
