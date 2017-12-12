@@ -653,7 +653,7 @@ h4 {
 .triBox { width:100%; height:auto }
 
 .triBox figcaption {
-	color:#656c7a;
+	color:#babac0;
 	font-size:12px;
 	margin-top:-8px;
 	font-size:-moz-calc(var(--font-size)*.8rem);
@@ -1130,7 +1130,8 @@ ul > li {
 	margin:32px 64px;
 	font-size:1.5rem;
 	line-height:40px;
-	line-height:2.5rem
+	line-height:2.5rem;
+	font-family:Cambria,"Times New Roman",serif
 }
 
 @media screen and (max-width: 768px) {
