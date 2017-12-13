@@ -1223,3 +1223,16 @@ ul > li {
     -moz-transition: opacity 2s ease;
     -webkit-transition: opacity 2s ease;
 }
+
+
+.textbox-colored h6 {
+	color:#656c7a;
+	font-size:21px;
+	font-style:italic;
+}
+.textbox-colored p {margin: 0px 8px}
+.textbox-colored h6{margin: 0px 16px}
+.textbox-colored h6:first-child,
+.textbox-colored p:first-child{margin-top:8px}
+.textbox-colored h6:last-child,
+.textbox-colored p:last-child{margin-bottom:8px}
