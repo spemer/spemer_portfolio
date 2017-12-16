@@ -1060,7 +1060,7 @@ ul > li{
 	color:#656c7a
 }
 
-.articleFig figcaption{
+.articleFig figcaption, .figcpt{
 	text-align:center;
 	font-style:italic;
 	font-weight:700
