@@ -1200,7 +1200,8 @@ ul > li{
 		-moz-border-radius:4px;
 		border-radius:4px
 	}
-	figcaption{display: none}}
+	.artImgBoxEach figcaption,
+	.flatIconBoxEach figcaption{display: none}}
 
 .flatIconBoxEach img{
 	width: 100%;
@@ -1214,6 +1215,9 @@ ul > li{
 }
 
 .lineImage {border: 2px solid #e5e5e5}
+@media screen and (max-width: 420px){
+	.xdiframe{display: none;}
+}
 
 .copy{cursor: url(../img/specialCopyCursor-2lv34.cur), auto}
 .tooltip{
