@@ -857,7 +857,7 @@ h4 {
 	width:100%;
 	height:auto;
 	text-align:center;
-	padding:50px 0;
+	padding:50px 0 4rem;
 	border-bottom:2px solid #e7e9ee
 }
 
@@ -865,6 +865,8 @@ h4 {
 .siteMapBtn { color:#656c7a }
 .siteMapBtn:hover { cursor:pointer }
 .siteMapNav { display:none }
+
+#siteMap nav li:last-child {padding-bottom: 2rem}
 
 #siteMap a {
 	color:#656c7a;
