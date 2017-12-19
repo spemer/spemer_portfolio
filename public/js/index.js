@@ -177,6 +177,7 @@ for (j = 0; j < snsIconLink.length; j++)
     var iconNode = document.createElement("i");
     iconNode.id = iconID[j];
     iconNode.className = "fa " + iconClass[j];
+    iconNode.setAttribute('aria-hidden', 'true');
     snsIcon.appendChild(snsNode);
     snsNode.appendChild(iconNode);
 }
