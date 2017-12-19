@@ -54,7 +54,6 @@ function removeTooltip() {
     "use strict";
     $('.copied').addClass('tooltip');
 }
-//
 
 //siteMap
 var siteMapNavList = [
@@ -120,10 +119,35 @@ for (i = 0; i < siteMapNavList.length; i++)
     siteMapNav.appendChild(listNode);
     listNode.appendChild(linkNode);
     linkNode.appendChild(textNode);
-    //navEach += '<li><a>' + siteMapNavList[i] + '</a></li>';
 }
-//siteMapNav.innerHTML = (navEach);
 
+
+var prevNextHome = document.querySelector('#prevNext');
+var body = document.body,
+    html = document.documentElement;
+var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+var topBtnNode = document.createElement("a");
+topBtnNode.setAttribute('data-scroll', '');
+topBtnNode.href = "body";
+topBtnNode.title = "Top";
+topBtnNode.className = "prevNextTop";
+if (height < 22000)
+{
+    topBtnNode.setAttribute('onmouseover', 'topUp()');
+    topBtnNode.setAttribute('onmouseleave', 'topDn()');
+}
+var topBtnBold = document.createElement("b");
+var topBtnIcon = document.createElement("i");
+topBtnIcon.className = "fa" + " " + "fa-angle-up";
+topBtnIcon.setAttribute('aria-hidden', 'true');
+var topTextNode = document.createTextNode(" Top");
+
+prevNextHome.appendChild(topBtnNode);
+topBtnNode.appendChild(topBtnBold);
+topBtnBold.appendChild(topBtnIcon);
+topBtnBold.appendChild(topTextNode);
 
 //snsIcon
 var snsIconLink = [
@@ -166,17 +190,17 @@ var iconClass = [
     'medium',
     'behance'
 ];
-var j, snsEach = '';
+var snsEach = '';
 var snsIcon = document.querySelector('#snsIcon');
-for (j = 0; j < snsIconLink.length; j++)
+for (i = 0; i < snsIconLink.length; i++)
 {
     var snsNode = document.createElement("a");
-    snsNode.title = snsIconTitle[j];
-    snsNode.href = "https://" + snsIconLink[j];
+    snsNode.title = snsIconTitle[i];
+    snsNode.href = "https://" + snsIconLink[i];
     snsNode.target = "_blank";
     var iconNode = document.createElement("i");
-    iconNode.id = iconID[j];
-    iconNode.className = "fa fa-" + iconClass[j];
+    iconNode.id = iconID[i];
+    iconNode.className = "fa fa-" + iconClass[i];
     iconNode.setAttribute('aria-hidden', 'true');
     snsIcon.appendChild(snsNode);
     snsNode.appendChild(iconNode);

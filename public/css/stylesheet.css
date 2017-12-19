@@ -153,7 +153,7 @@ a,b { color:#656c7a; color:var(--color-gray) }
 #prevNext{
 	width:100%;
 	padding-top:25px;
-	padding-bottom:50px
+	padding-bottom:50px;
 }
 
 .prevNextTop{
