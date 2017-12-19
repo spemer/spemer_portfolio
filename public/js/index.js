@@ -75,21 +75,21 @@ var siteMapNavList = [
     'Musics'
 ];
 var siteMapNavHref = [
-    'https://spemer.com/portfolio/weather-push-notification-alarm-application.html',
-    'https://spemer.com/portfolio/instagram-tracker-application-igtracker-design.html',
-    'https://spemer.com/portfolio/insharior-ux-case-study-user-experience-design.html',
-    'https://spemer.com/portfolio/dream-drim-korea-apartment-application.html',
-    'https://spemer.com/portfolio/album-image-sort-application-univcam.html',
-    'https://spemer.com/portfolio/memory-record-application-ui-design.html',
-    'https://spemer.com/portfolio/todo-task-list-manage-application-sprinter.html',
-    'https://spemer.com/portfolio/suhyup-mobile-banking-ui-ux-renewal.html',
-    'https://spemer.com/portfolio/flaticon-vector-graphic-illustration-design.html',
-    'https://spemer.com/article/css-custom-properties-variables-usage.html',
-    'https://spemer.com/article/free-github-blog-and-hosting-with-jekyll.html',
-    'https://spemer.com/article/creative-pros-cons-google-material-design.html',
-    'https://spemer.com/article/bodymovin-airbnb-lottie-after-effects.html',
-    'https://spemer.com/article/connecting-domain-with-google-firebase.html',
-    'https://spemer.com/article/spemer-music.html'
+    'portfolio/weather-push-notification-alarm-application',
+    'portfolio/instagram-tracker-application-igtracker-design',
+    'portfolio/insharior-ux-case-study-user-experience-design',
+    'portfolio/dream-drim-korea-apartment-application',
+    'portfolio/album-image-sort-application-univcam',
+    'portfolio/memory-record-application-ui-design',
+    'portfolio/todo-task-list-manage-application-sprinter',
+    'portfolio/suhyup-mobile-banking-ui-ux-renewal',
+    'portfolio/flaticon-vector-graphic-illustration-design',
+    'article/css-custom-properties-variables-usage',
+    'article/free-github-blog-and-hosting-with-jekyll',
+    'article/creative-pros-cons-google-material-design',
+    'article/bodymovin-airbnb-lottie-after-effects',
+    'article/connecting-domain-with-google-firebase',
+    'article/spemer-music'
 ];
 var siteMapNavTitle = [
     'AWeather - UX Case study: Weather notification application',
@@ -115,7 +115,7 @@ for (i = 0; i < siteMapNavList.length; i++)
     var listNode = document.createElement("li");
     var linkNode = document.createElement("a");
     linkNode.title = siteMapNavTitle[i];
-    linkNode.href = siteMapNavHref[i];
+    linkNode.href = "https://spemer.com/" + siteMapNavHref[i] + ".html";
     var textNode = document.createTextNode(siteMapNavList[i]);
     siteMapNav.appendChild(listNode);
     listNode.appendChild(linkNode);
@@ -127,14 +127,14 @@ for (i = 0; i < siteMapNavList.length; i++)
 
 //snsIcon
 var snsIconLink = [
-    'https://twitter.com/OfficialSpemer',
-    'https://github.com/spemer',
-    'https://facebook.com/ghsspower',
-    'https://instagram.com/spemer/',
-    'https://www.linkedin.com/in/hyouk-seo-0b6801122/',
-    'https://dribbble.com/spemer',
-    'https://medium.com/@spemer',
-    'https://behance.net/spemer'
+    'twitter.com/OfficialSpemer',
+    'github.com/spemer',
+    'facebook.com/ghsspower',
+    'instagram.com/spemer/',
+    'www.linkedin.com/in/hyouk-seo-0b6801122/',
+    'dribbble.com/spemer',
+    'medium.com/@spemer',
+    'behance.net/spemer'
 ];
 var snsIconTitle = [
     'Twitter',
@@ -157,14 +157,14 @@ var iconID = [
     'beIcon'
 ];
 var iconClass = [
-    'fa-twitter',
-    'fa-github',
-    'fa-facebook',
-    'fa-instagram',
-    'fa-linkedin',
-    'fa-dribbble',
-    'fa-medium',
-    'fa-behance'
+    'twitter',
+    'github',
+    'facebook',
+    'instagram',
+    'linkedin',
+    'dribbble',
+    'medium',
+    'behance'
 ];
 var j, snsEach = '';
 var snsIcon = document.querySelector('#snsIcon');
@@ -172,11 +172,11 @@ for (j = 0; j < snsIconLink.length; j++)
 {
     var snsNode = document.createElement("a");
     snsNode.title = snsIconTitle[j];
-    snsNode.href = snsIconLink[j];
+    snsNode.href = "https://" + snsIconLink[j];
     snsNode.target = "_blank";
     var iconNode = document.createElement("i");
     iconNode.id = iconID[j];
-    iconNode.className = "fa " + iconClass[j];
+    iconNode.className = "fa fa-" + iconClass[j];
     iconNode.setAttribute('aria-hidden', 'true');
     snsIcon.appendChild(snsNode);
     snsNode.appendChild(iconNode);
