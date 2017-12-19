@@ -55,7 +55,9 @@ function removeTooltip() {
     $('.copied').addClass('tooltip');
 }
 
-//siteMap
+
+//
+// siteMap
 var siteMapNavList = [
     'AWeather',
     'IGTracker',
@@ -122,6 +124,8 @@ for (i = 0; i < siteMapNavList.length; i++)
 }
 
 
+//
+// TopBtn
 var prevNextHome = document.querySelector('#prevNext');
 var body = document.body,
     html = document.documentElement;
@@ -149,7 +153,9 @@ topBtnNode.appendChild(topBtnBold);
 topBtnBold.appendChild(topBtnIcon);
 topBtnBold.appendChild(topTextNode);
 
-//snsIcon
+
+//
+// Footer snsIcon
 var snsIconLink = [
     'twitter.com/OfficialSpemer',
     'github.com/spemer',
@@ -205,3 +211,21 @@ for (i = 0; i < snsIconLink.length; i++)
     snsIcon.appendChild(snsNode);
     snsNode.appendChild(iconNode);
 }
+
+
+//
+// Code with Love by Hyouk Seo(Spemer)
+var codeBy = document.querySelector('#codeBySpemer');
+var codeIconNode = document.createElement("i");
+codeIconNode.className = "fa fa-code";
+codeIconNode.setAttribute('aria-hidden', 'true');
+var topTextNode1 = document.createTextNode(" with ");
+var loveIconNode = document.createElement("i");
+loveIconNode.className = "fa fa-heart";
+loveIconNode.setAttribute('aria-hidden', 'true');
+var topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+
+codeBy.appendChild(codeIconNode);
+codeBy.appendChild(topTextNode1);
+codeBy.appendChild(loveIconNode);
+codeBy.appendChild(topTextNode2);
