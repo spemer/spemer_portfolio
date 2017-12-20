@@ -194,54 +194,46 @@
 				</div>
 			</nav>
 		</div>
-
-	
 	
 	</article>
 
 	<div id="siteMap">
 		<p class="siteMapBtn" title="Site Map">
-			<button class="c-hamburger c-hamburger--htx"><span></span></button>
+			<button class="c-hamburger c-hamburger--htx">
+				<span></span>
+			</button>
 		</p>
-
 		<nav>
-			<ul class="siteMapNav">
-			</ul>
+			<ul class="siteMapNav"></ul>
 		</nav>
 	</div>
 
 	<footer class="clearfix">
 		<div>
-			<p id="codeBySpemer">
-			</p>
+			<p id="codeBySpemer"></p>
 			<nav>
-				<div id="snsIcon">
-				</div>
+				<div id="snsIcon"></div>
 			</nav>
 		</div>
 	</footer>
 
-	<script src="../js/index.js"></script>
-	<script src="../js/smooth.scroll.js"></script>
-	<script src="../js/anchor.scroll.js"></script>
-	<script src="../js/jquery.slim.min.js"></script>
+	<div id="topBtnFixed"></div>
+
+    <script src="../js/index.js"></script>
+    <script src="../js/smooth.scroll.js"></script>
+    <script src="../js/anchor.scroll.js"></script>
+    <script src="../js/jquery.slim.min.js"></script>
 
 	<script>
-		smoothScroll.init({
-			speed: 1000,
-			easing: 'easeOutQuad',
-			offset: 0,
-			updateURL: false,
+        smoothScroll.init({
+            speed: 1000,
+            easing: 'easeOutQuad',
+            offset: 0,
+            updateURL: false,
 		});
 
-		$(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
+        $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 	</script>
 	
-	<div>
-		<a data-scroll href="body" class="prevNextTop2">
-			<i class="fa fa-chevron-circle-up topBtn" aria-hidden="true" title="top"></i></i>
-		</a>
-	</div>
-
 </body>
 </html>
