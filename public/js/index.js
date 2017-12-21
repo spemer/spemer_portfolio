@@ -382,12 +382,14 @@ codeBy.appendChild(topTextNode2);
 const fixedTopBtn = document.querySelector('#topBtnFixed');
 if (fixedTopBtn) {
     const width = window.innerWidth;
-    if (width > 420) {
-        let fixedTopBtnLink = document.createElement('a');
+    if (width <= 768) {
+        fixedTopBtn.style = 'display: none;'
+    } else {
+        var fixedTopBtnLink = document.createElement('a');
         fixedTopBtnLink.setAttribute('data-scroll', '');
         fixedTopBtnLink.href = 'body';
         fixedTopBtnLink.className = 'prevNextTop2';
-        let fixedTopBtnIcon = document.createElement("i");
+        var fixedTopBtnIcon = document.createElement("i");
         fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
         fixedTopBtnIcon.title = 'Top';
         fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
@@ -407,4 +409,3 @@ if (fixedTopBtn) {
 //     externalLinks[i].appendChild(setExternalLinksIcon);
 //     document.write(externalLinks[i] + "<br>");
 // }
-

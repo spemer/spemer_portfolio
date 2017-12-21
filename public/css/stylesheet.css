@@ -41,12 +41,12 @@
 	-webkit-font-family:'Open Sans',Arial,sans-serif;
 	font-family:'Open Sans',Arial,sans-serif
 }
-/*
+
 img[alt=""],
 img:not([alt]){
 	border: 4px dashed red;
 }
-*/
+
 p,.textbox-colored { line-height:36px}
 #headerNav a { font-weight:700}
 #headerLogo h1 { font-size:40px!important}
@@ -1075,11 +1075,6 @@ ul > li{
 	font-size:24px;
 	font-size:1.5rem
 }
-
-@media screen and(max-width: 768px){
-	.topBtn{
-		display:none;
-		visibility:hidden}}
 
 .code{
 	border: 2px solid #e5e5e5;
