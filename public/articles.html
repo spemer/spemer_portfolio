@@ -74,7 +74,7 @@
 			<div id="headerNav">
 				<nav>
 					<ul>
-						<li><a href="index.html" class="ready readyHide" onmouseover="lineDel()" onmouseleave="lineLive()"><b>Portfolio</b></a></li>
+						<li><a href="index.html" class="ready readyHide"><b>Portfolio</b></a></li>
 
 						<li><a href="articles.html" class="aboutHover ready"><b>Article</b></a></li>
 
@@ -90,64 +90,7 @@
 		<div id="artImgBox">
 
 
-		<nav>
-
-			<div class="artImgBoxEach grow">
-				<a href="article/css-custom-properties-variables-usage.html">
-					<figure>
-						<img src="img/works/css/thumb.png" width="250px" alt="Using variables(custom properties) in CSS" title="Using variables(custom properties) in CSS" />
-						<figcaption><strong>CSS Variables</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="artImgBoxEach grow">
-				<a href="article/free-github-blog-and-hosting-with-jekyll.html">
-					<figure>
-						<img src="img/works/jekyll/thumb.png" width="250px" alt="Free GitHub blog and Hosting with Jekyll" title="Free GitHub blog and Hosting with Jekyll" />
-						<figcaption><strong>Jekyll</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="artImgBoxEach grow">
-				<a href="article/creative-pros-cons-google-material-design.html">
-					<figure>
-						<img src="img/works/material/material.png" width="250px" alt="Does Material Design make designers ‘non-creative’?" title="Does Material Design make designers ‘non-creative’?" />
-						<figcaption><strong>Material</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="artImgBoxEach grow">
-				<a href="article/bodymovin-airbnb-lottie-after-effects.html">
-					<figure>
-						<img src="img/works/bodymovin/cover.png" width="250px" alt="Using After Effects plug-in ‘Bodymovin’ for Airbnb ‘Lottie’" title="Using After Effects plug-in ‘Bodymovin’ for Airbnb ‘Lottie’" />
-						<figcaption><strong>Bodymovin</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-			<div class="artImgBoxEach grow">
-				<a href="article/connecting-domain-with-google-firebase.html">
-					<figure>
-						<img src="img/works/firebase/firebase_logo.jpg" width="250px" alt="Connecting your domain by using Google Firebase(w/ Node.js)" title="Connecting your domain by using Google Firebase(w/ Node.js)" />
-						<figcaption><strong>Firebase</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-
-			<div class="artImgBoxEach">
-				<a href="article/spemer-music.html">
-					<figure>
-						<img src="img/works/music/cover.jpg" width="250px" alt="Flat Icon" title="Musics" />
-						<figcaption><strong>Musics</strong></figcaption>
-					</figure>
-				</a>
-			</div>
-
-		</nav>
+		<nav id="articleList"></nav>
 
 		<!--Music END-->
 
@@ -156,54 +99,20 @@
 
 	<div id="siteMap">
 		<p class="siteMapBtn" title="Site Map">
-			<button class="c-hamburger c-hamburger--htx"><span></span></button>
+			<button class="c-hamburger c-hamburger--htx">
+				<span></span>
+			</button>
 		</p>
-
 		<nav>
-			<ul class="siteMapNav">
-			</ul>
+			<ul class="siteMapNav"></ul>
 		</nav>
 	</div>
 
-	<footer>
+	<footer class="clearfix">
 		<div>
-			<p>
-				<i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by Hyouk Seo(Spemer)
-			</p>
+			<p id="codeBySpemer"></p>
 			<nav>
-				<div id="snsIcon">
-					<a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">
-						<i id="twIcon" class="fa fa-twitter"></i>
-					</a>
-
-					<a href="https://github.com/spemer" target="_blank" title="Github">
-						<i id="ghIcon" class="fa fa-github"></i>
-					</a>
-
-					<a href="https://facebook.com/ghsspower" target="_blank" title="Facebook">
-						<i id="fbIcon" class="fa fa-facebook"></i>
-					</a>
-
-					<a href="https://instagram.com/spemer/" target="_blank" title="Instagram">
-						<i id="inIcon" class="fa fa-instagram"></i>
-					</a>
-
-					<a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">
-						<i id="liIcon" class="fa fa-linkedin"></i>
-					</a>
-
-					<a href="https://dribbble.com/spemer" target="_blank" title="Dribbble">
-						<i id="drIcon" class="fa fa-dribbble"></i>
-					</a>
-
-					<a href="https://medium.com/@spemer" target="_blank" title="Medium">
-						<i id="medIcon" class="fa fa-medium" aria-hidden="true"></i>
-					</a>
-
-					<a href="https://behance.net/spemer" target="_blank" title="Behance">
-						<i id="beIcon" class="fa fa-behance"></i>
-					</a>
-				</div>
+				<div id="snsIcon"></div>
 			</nav>
 		</div>
 	</footer>
