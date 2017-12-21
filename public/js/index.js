@@ -233,7 +233,7 @@ if (indexLists)
         indexFigure.appendChild(figCap);
         figCap.appendChild(figStr);
         figStr.appendChild(figTxt);
-        
+
         ++indexCount;
     }
 }
@@ -272,11 +272,11 @@ else if (articleLists)
 // TopBtn
 const prevNextHome = document.querySelector('#prevNext');
 if(prevNextHome) {
-    const body = document.body,
+    let body = document.body,
         html = document.documentElement;
-    const height = Math.max( body.scrollHeight, body.offsetHeight, 
+    let height = Math.max( body.scrollHeight, body.offsetHeight,
                            html.clientHeight, html.scrollHeight, html.offsetHeight );
-    const topBtnNode = document.createElement("a");
+    let topBtnNode = document.createElement("a");
     topBtnNode.setAttribute('data-scroll', '');
     topBtnNode.href = "body";
     topBtnNode.title = "Top";
@@ -286,11 +286,11 @@ if(prevNextHome) {
         topBtnNode.setAttribute('onmouseover', 'topUp()');
         topBtnNode.setAttribute('onmouseleave', 'topDn()');
     }
-    const topBtnBold = document.createElement("b");
-    const topBtnIcon = document.createElement("i");
+    let topBtnBold = document.createElement("b");
+    let topBtnIcon = document.createElement("i");
     topBtnIcon.className = "fa" + " " + "fa-angle-up";
     topBtnIcon.setAttribute('aria-hidden', 'true');
-    const topTextNode = createTextNode(" Top");
+    let topTextNode = createTextNode(" Top");
     prevNextHome.appendChild(topBtnNode);
     topBtnNode.appendChild(topBtnBold);
     topBtnBold.appendChild(topBtnIcon);
@@ -390,11 +390,11 @@ if (fixedTopBtn) {
     if (width <= 768) {
         fixedTopBtn.style = 'display: none;'
     } else {
-        var fixedTopBtnLink = document.createElement('a');
+        let fixedTopBtnLink = document.createElement('a');
         fixedTopBtnLink.setAttribute('data-scroll', '');
         fixedTopBtnLink.href = 'body';
         fixedTopBtnLink.className = 'prevNextTop2';
-        var fixedTopBtnIcon = document.createElement("i");
+        let fixedTopBtnIcon = document.createElement("i");
         fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
         fixedTopBtnIcon.title = 'Top';
         fixedTopBtnIcon.setAttribute('aria-hidden', 'true');

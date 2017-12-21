@@ -41,12 +41,12 @@
 	-webkit-font-family:'Open Sans',Arial,sans-serif;
 	font-family:'Open Sans',Arial,sans-serif
 }
-
+/*
 img[alt=""],
 img:not([alt]){
 	border: 4px dashed red;
 }
-
+*/
 p,.textbox-colored { line-height:36px}
 #headerNav a { font-weight:700}
 #headerLogo h1 { font-size:40px!important}
