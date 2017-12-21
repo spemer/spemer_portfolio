@@ -56,13 +56,18 @@ function removeTooltip() {
 }
 
 
+function createTextNode(text) {
+    return document.createTextNode(text);
+}
+
+
 //
 // headerLogo
 const _headerLogo = document.querySelector('#headerLogo');
 const headerLink = document.createElement('a');
 headerLink.href = 'https://spemer.com/';
 const headerHeading = document.createElement('h1');
-const headerText = document.createTextNode('Hyouk Seo');
+const headerText = createTextNode('Hyouk Seo');
 _headerLogo.appendChild(headerLink);
 headerLink.appendChild(headerHeading);
 headerHeading.appendChild(headerText);
@@ -170,10 +175,10 @@ for (let key in siteMapList)
     let listNode = document.createElement("li");
 
     let hrefNode = document.createElement("a");
-    hrefNode.href = "portfolio/" + siteMapList[key].href + ".html";
+    hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
     hrefNode.title = siteMapList[key].title;
 
-    let textNode = document.createTextNode(siteMapList[key].name);
+    let textNode = createTextNode(siteMapList[key].name);
 
     siteMapNav.appendChild(listNode);
     listNode.appendChild(hrefNode);
@@ -187,7 +192,7 @@ for (let key in siteMapListArticle)
     hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
     hrefNode.title = siteMapListArticle[key].title;
 
-    let textNode = document.createTextNode(siteMapListArticle[key].name);
+    let textNode = createTextNode(siteMapListArticle[key].name);
 
     siteMapNav.appendChild(listNode);
     listNode.appendChild(hrefNode);
@@ -219,7 +224,7 @@ if (indexLists)
 
         let figCap = document.createElement('figcaption');
         let figStr = document.createElement('strong');
-        let figTxt = document.createTextNode(siteMapList[key].name);
+        let figTxt = createTextNode(siteMapList[key].name);
 
         indexLists.appendChild(indexDiv);
         indexDiv.appendChild(indexLink);
@@ -250,7 +255,7 @@ else if (articleLists)
 
         let figCap = document.createElement('figcaption');
         let figStr = document.createElement('strong');
-        let figTxt = document.createTextNode(siteMapListArticle[key].name);
+        let figTxt = createTextNode(siteMapListArticle[key].name);
 
         articleLists.appendChild(articleDiv);
         articleDiv.appendChild(articleLink);
@@ -285,7 +290,7 @@ if(prevNextHome) {
     const topBtnIcon = document.createElement("i");
     topBtnIcon.className = "fa" + " " + "fa-angle-up";
     topBtnIcon.setAttribute('aria-hidden', 'true');
-    const topTextNode = document.createTextNode(" Top");
+    const topTextNode = createTextNode(" Top");
     prevNextHome.appendChild(topBtnNode);
     topBtnNode.appendChild(topBtnBold);
     topBtnBold.appendChild(topBtnIcon);
@@ -366,11 +371,11 @@ const codeBy = document.querySelector('#codeBySpemer');
 const codeIconNode = document.createElement("i");
 codeIconNode.className = "fa fa-code";
 codeIconNode.setAttribute('aria-hidden', 'true');
-const topTextNode1 = document.createTextNode(" with ");
+const topTextNode1 = createTextNode(" with ");
 const loveIconNode = document.createElement("i");
 loveIconNode.className = "fa fa-heart";
 loveIconNode.setAttribute('aria-hidden', 'true');
-const topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+const topTextNode2 = createTextNode(" by Hyouk Seo(Spemer)");
 codeBy.appendChild(codeIconNode);
 codeBy.appendChild(topTextNode1);
 codeBy.appendChild(loveIconNode);
