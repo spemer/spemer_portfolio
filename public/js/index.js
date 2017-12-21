@@ -57,6 +57,18 @@ function removeTooltip() {
 
 
 //
+// headerLogo
+const _headerLogo = document.querySelector('#headerLogo');
+const headerLink = document.createElement('a');
+headerLink.href = 'https://spemer.com/';
+const headerHeading = document.createElement('h1');
+const headerText = document.createTextNode('Hyouk Seo');
+_headerLogo.appendChild(headerLink);
+headerLink.appendChild(headerHeading);
+headerHeading.appendChild(headerText);
+
+
+//
 // siteMap
 var siteMapList = {
     AWeather: {
@@ -158,7 +170,7 @@ for (let key in siteMapList)
     let listNode = document.createElement("li");
 
     let hrefNode = document.createElement("a");
-    hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+    hrefNode.href = "portfolio/" + siteMapList[key].href + ".html";
     hrefNode.title = siteMapList[key].title;
 
     let textNode = document.createTextNode(siteMapList[key].name);
@@ -369,17 +381,21 @@ codeBy.appendChild(topTextNode2);
 // topBtnFixed
 const fixedTopBtn = document.querySelector('#topBtnFixed');
 if (fixedTopBtn) {
-    let fixedTopBtnLink = document.createElement('a');
-    fixedTopBtnLink.setAttribute('data-scroll', '');
-    fixedTopBtnLink.href = 'body';
-    fixedTopBtnLink.className = 'prevNextTop2';
-    let fixedTopBtnIcon = document.createElement("i");
-    fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
-    fixedTopBtnIcon.title = 'Top';
-    fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
-    fixedTopBtn.appendChild(fixedTopBtnLink);
-    fixedTopBtnLink.appendChild(fixedTopBtnIcon);
+    const width = window.innerWidth;
+    if (width > 420) {
+        let fixedTopBtnLink = document.createElement('a');
+        fixedTopBtnLink.setAttribute('data-scroll', '');
+        fixedTopBtnLink.href = 'body';
+        fixedTopBtnLink.className = 'prevNextTop2';
+        let fixedTopBtnIcon = document.createElement("i");
+        fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
+        fixedTopBtnIcon.title = 'Top';
+        fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
+        fixedTopBtn.appendChild(fixedTopBtnLink);
+        fixedTopBtnLink.appendChild(fixedTopBtnIcon);
+    }
 }
+
 
 // //
 // // externalLink
