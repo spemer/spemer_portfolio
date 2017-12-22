@@ -1,17 +1,25 @@
-//"use strict";
+"use strict";
+//import siteMapList from 'indexList.js';
 
-function createTextNode(text) {
+
+function createTextNode(text){
     return document.createTextNode(text);
+}
+function select(ID_Class){
+    return document.querySelector(ID_Class);
+}
+function create(el){
+    return document.createElement(el);
 }
 
 
 //
 // headerLogo
 (function(){
-    const _headerLogo = document.querySelector('#headerLogo');
-    const headerLink = document.createElement('a');
+    const _headerLogo = select('#headerLogo');
+    const headerLink = create('a');
     headerLink.href = 'https://spemer.com/';
-    const headerHeading = document.createElement('h1');
+    const headerHeading = create('h1');
     const headerText = createTextNode('Hyouk Seo');
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
@@ -20,7 +28,7 @@ function createTextNode(text) {
 
 
 //
-// siteMap
+// siteMap links
 (function(){
     const siteMapList = {
         AWeather: {
@@ -116,12 +124,33 @@ function createTextNode(text) {
             img: 'music/cover.jpg'
         }
     }
-    const siteMapNav = document.querySelector('.siteMapNav');
+
+
+    //
+    // prevNext
+    const getPrevNext = select('#prevNext');
     for (let key in siteMapList)
     {
-        let listNode = document.createElement("li");
+        let nextNode = create('a');
+        let prevNode = create('a');
+        let homeNode = create('a');
+        switch (key){
+            case siteMapList[0]:
+                getPrevNext.appendChild(nextNode);
+                getPrevNext.appendChild(HomeNode);
+                break;
+        }
+    }
 
-        let hrefNode = document.createElement("a");
+
+    //
+    // bottom siteMap navigation
+    const siteMapNav = select('.siteMapNav');
+    for (let key in siteMapList)
+    {
+        let listNode = create("li");
+
+        let hrefNode = create("a");
         hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
         hrefNode.title = siteMapList[key].title;
 
@@ -133,9 +162,9 @@ function createTextNode(text) {
     }
     for (let key in siteMapListArticle)
     {
-        let listNode = document.createElement("li");
+        let listNode = create("li");
 
-        let hrefNode = document.createElement("a");
+        let hrefNode = create("a");
         hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
         hrefNode.title = siteMapListArticle[key].title;
 
@@ -146,8 +175,11 @@ function createTextNode(text) {
         hrefNode.appendChild(textNode);
     }
 
-    const indexLists = document.querySelector('#indexList');
-    const articleLists = document.querySelector('#articleList');
+
+    //
+    // index, article.html -> lists
+    const indexLists = select('#indexList');
+    const articleLists = select('#articleList');
     if (indexLists)
     {
         let indexCount = 0;
@@ -157,20 +189,20 @@ function createTextNode(text) {
                 break;
             }
 
-            let indexDiv = document.createElement('div');
+            let indexDiv = create('div');
             indexDiv.className = "artImgBoxEach grow";
-            let indexLink = document.createElement('a');
+            let indexLink = create('a');
             indexLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
 
-            let indexFigure = document.createElement('figure');
+            let indexFigure = create('figure');
 
-            let figImg = document.createElement('img');
+            let figImg = create('img');
             figImg.src = "https://spemer.com/img/works/" + siteMapList[key].img;
             figImg.alt = siteMapList[key].title;
             figImg.title = siteMapList[key].title;
 
-            let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('strong');
+            let figCap = create('figcaption');
+            let figStr = create('strong');
             let figTxt = createTextNode(siteMapList[key].name);
 
             indexLists.appendChild(indexDiv);
@@ -188,20 +220,20 @@ function createTextNode(text) {
     {
         let articleCount = 0;
         for (let key in siteMapListArticle) {
-            let articleDiv = document.createElement('div');
+            let articleDiv = create('div');
             articleDiv.className = "artImgBoxEach grow";
-            let articleLink = document.createElement('a');
+            let articleLink = create('a');
             articleLink.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
 
-            let articleFigure = document.createElement('figure');
+            let articleFigure = create('figure');
 
-            let figImg = document.createElement('img');
+            let figImg = create('img');
             figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[key].img;
             figImg.alt = siteMapListArticle[key].title;
             figImg.title = siteMapListArticle[key].title;
 
-            let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('strong');
+            let figCap = create('figcaption');
+            let figStr = create('strong');
             let figTxt = createTextNode(siteMapListArticle[key].name);
 
             articleLists.appendChild(articleDiv);
@@ -219,13 +251,13 @@ function createTextNode(text) {
 //
 // TopBtn
 (function(){
-    const prevNextHome = document.querySelector('#prevNext');
+    const prevNextHome = select('#prevNext');
     if(prevNextHome) {
         let body = document.body,
             html = document.documentElement;
         let height = Math.max( body.scrollHeight, body.offsetHeight,
                                html.clientHeight, html.scrollHeight, html.offsetHeight );
-        let topBtnNode = document.createElement("a");
+        let topBtnNode = create("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
@@ -235,8 +267,8 @@ function createTextNode(text) {
             topBtnNode.setAttribute('onmouseover', 'topUp()');
             topBtnNode.setAttribute('onmouseleave', 'topDn()');
         }
-        let topBtnBold = document.createElement("b");
-        let topBtnIcon = document.createElement("i");
+        let topBtnBold = create("b");
+        let topBtnIcon = create("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
         topBtnIcon.setAttribute('aria-hidden', 'true');
         let topTextNode = createTextNode(" Top");
@@ -301,13 +333,13 @@ function createTextNode(text) {
             iconClass : 'behance'
         }
     }
-    const snsIcon = document.querySelector('#snsIcon');
+    const snsIcon = select('#snsIcon');
     for (let key in snsIconList) {
-        let snsNode = document.createElement("a");
+        let snsNode = create("a");
         snsNode.title = snsIconList[key].title + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
-        let iconNode = document.createElement("i");
+        let iconNode = create("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
         iconNode.setAttribute('aria-hidden', 'true');
@@ -320,12 +352,12 @@ function createTextNode(text) {
 //
 // Code with Love by Hyouk Seo(Spemer)
 (function(){
-    let codeBy = document.querySelector('#codeBySpemer');
-    let codeIconNode = document.createElement("i");
+    let codeBy = select('#codeBySpemer');
+    let codeIconNode = create("i");
     codeIconNode.className = "fa fa-code";
     codeIconNode.setAttribute('aria-hidden', 'true');
     let topTextNode1 = createTextNode(" with ");
-    let loveIconNode = document.createElement("i");
+    let loveIconNode = create("i");
     loveIconNode.className = "fa fa-heart";
     loveIconNode.setAttribute('aria-hidden', 'true');
     let topTextNode2 = createTextNode(" by Hyouk Seo(Spemer)");
@@ -339,17 +371,17 @@ function createTextNode(text) {
 //
 // topBtnFixed
 (function(){
-    const fixedTopBtn = document.querySelector('#topBtnFixed');
+    const fixedTopBtn = select('#topBtnFixed');
     if (fixedTopBtn) {
         const width = window.innerWidth;
         if (width <= 768) {
             fixedTopBtn.style = 'display: none;'
         } else {
-            let fixedTopBtnLink = document.createElement('a');
+            let fixedTopBtnLink = create('a');
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
             fixedTopBtnLink.className = 'prevNextTop2';
-            let fixedTopBtnIcon = document.createElement("i");
+            let fixedTopBtnIcon = create("i");
             fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
             fixedTopBtnIcon.title = 'Top';
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
