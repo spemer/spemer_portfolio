@@ -14,6 +14,16 @@ function create(el){
 
 
 //
+// meta -> charset
+(function(){
+    const headTitle = select('head > title');
+    const setMeta = create('meta');
+    setMeta.setAttribute('charset','utf-8');
+    headTitle.after(setMeta);
+})();
+
+
+//
 // headerLogo
 (function(){
     const _headerLogo = select('#headerLogo');
@@ -122,23 +132,6 @@ function create(el){
             href:  'spemer-music',
             title: 'Musics by Spemer',
             img: 'music/cover.jpg'
-        }
-    }
-
-
-    //
-    // prevNext
-    const getPrevNext = select('#prevNext');
-    for (let key in siteMapList)
-    {
-        let nextNode = create('a');
-        let prevNode = create('a');
-        let homeNode = create('a');
-        switch (key){
-            case siteMapList[0]:
-                getPrevNext.appendChild(nextNode);
-                getPrevNext.appendChild(HomeNode);
-                break;
         }
     }
 
@@ -394,8 +387,8 @@ function create(el){
 
 // //
 // // externalLink
-// var externalLinks = document.querySelectorAll('.externalLink');
-// var setExternalLinksIcon = document.createElement('i');
+// const externalLinks = document.querySelectorAll('.externalLink');
+// const setExternalLinksIcon = document.createElement('i');
 // setExternalLinksIcon.className = "fa fa-external-link";
 // setExternalLinksIcon.setAttribute('aria-hidden','true');
 // for (i = 0; i < externalLinks.length; i++) {
