@@ -1,16 +1,4 @@
 "use strict";
-//import siteMapList from 'indexList.js';
-
-
-function createTextNode(text){
-    return document.createTextNode(text);
-}
-function select(ID_Class){
-    return document.querySelector(ID_Class);
-}
-function create(el){
-    return document.createElement(el);
-}
 
 
 //
@@ -134,6 +122,34 @@ function create(el){
             img: 'music/cover.jpg'
         }
     }
+
+
+    // //
+    // // home next prev(bottom)
+    // // const articleLinks = document.querySelector('.article');
+    // const portfolioLinks = document.querySelector('.portfolio');
+    // for (let key in siteMapList)
+    // {
+    //     let thisUrl = window.location.href;
+    //     let substring = siteMapList[key].href;
+    //     if(thisUrl.indexOf(substring) != -1)
+    //     {
+    //         let nextLink = document.createElement('a');
+    //         nextLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+    //         nextLink.title = siteMapList[key].name;
+    //         nextLink.className = 'prevNext';
+            
+    //         let nextBold = document.createElement('b');
+    //         let nextText = document.createTextNode(' Next ');
+    //         let nextIcon = document.createElement('i');
+    //         nextIcon.className = 'fa fa-angle-double-right';
+
+    //         portfolioLinks.appendChild(nextLink);
+    //         nextLink.appendChild(nextBold);
+    //         nextBold.appendChild(nextText);
+    //         nextBold.appendChild(nextIcon);
+    //     }
+    // }
 
 
     //
@@ -386,12 +402,12 @@ function create(el){
 
 
 //
-// externalLink
+// externalLink Icon
 (function(){
     const externalLinks = document.getElementsByClassName("externalLink");
     let i;
     for (i = 0; i < externalLinks.length; i++) {
-        var setExternalLinksIcon = document.createElement('i');
+        let setExternalLinksIcon = document.createElement('i');
         setExternalLinksIcon.className = "fa fa-external-link";
         setExternalLinksIcon.setAttribute('aria-hidden','true');
         externalLinks[i].appendChild(setExternalLinksIcon);
