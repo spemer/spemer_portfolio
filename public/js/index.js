@@ -16,8 +16,8 @@ function create(el){
 //
 // meta -> charset
 (function(){
-    const headTitle = select('head > title');
-    const setMeta = create('meta');
+    const headTitle = document.querySelector('head > title');
+    const setMeta = document.createElement('meta');
     setMeta.setAttribute('charset','utf-8');
     headTitle.after(setMeta);
 })();
@@ -26,11 +26,11 @@ function create(el){
 //
 // headerLogo
 (function(){
-    const _headerLogo = select('#headerLogo');
-    const headerLink = create('a');
+    const _headerLogo = document.querySelector('#headerLogo');
+    const headerLink = document.createElement('a');
     headerLink.href = 'https://spemer.com/';
-    const headerHeading = create('h1');
-    const headerText = createTextNode('Hyouk Seo');
+    const headerHeading = document.createElement('h1');
+    const headerText = document.createTextNode('Hyouk Seo');
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
@@ -138,16 +138,16 @@ function create(el){
 
     //
     // bottom siteMap navigation
-    const siteMapNav = select('.siteMapNav');
+    const siteMapNav = document.querySelector('.siteMapNav');
     for (let key in siteMapList)
     {
-        let listNode = create("li");
+        let listNode = document.createElement("li");
 
-        let hrefNode = create("a");
+        let hrefNode = document.createElement("a");
         hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
         hrefNode.title = siteMapList[key].title;
 
-        let textNode = createTextNode(siteMapList[key].name);
+        let textNode = document.createTextNode(siteMapList[key].name);
 
         siteMapNav.appendChild(listNode);
         listNode.appendChild(hrefNode);
@@ -155,13 +155,13 @@ function create(el){
     }
     for (let key in siteMapListArticle)
     {
-        let listNode = create("li");
+        let listNode = document.createElement("li");
 
-        let hrefNode = create("a");
+        let hrefNode = document.createElement("a");
         hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
         hrefNode.title = siteMapListArticle[key].title;
 
-        let textNode = createTextNode(siteMapListArticle[key].name);
+        let textNode = document.createTextNode(siteMapListArticle[key].name);
 
         siteMapNav.appendChild(listNode);
         listNode.appendChild(hrefNode);
@@ -171,8 +171,8 @@ function create(el){
 
     //
     // index, article.html -> lists
-    const indexLists = select('#indexList');
-    const articleLists = select('#articleList');
+    const indexLists = document.querySelector('#indexList');
+    const articleLists = document.querySelector('#articleList');
     if (indexLists)
     {
         let indexCount = 0;
@@ -182,21 +182,21 @@ function create(el){
                 break;
             }
 
-            let indexDiv = create('div');
+            let indexDiv = document.createElement('div');
             indexDiv.className = "artImgBoxEach grow";
-            let indexLink = create('a');
+            let indexLink = document.createElement('a');
             indexLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
 
-            let indexFigure = create('figure');
+            let indexFigure = document.createElement('figure');
 
-            let figImg = create('img');
+            let figImg = document.createElement('img');
             figImg.src = "https://spemer.com/img/works/" + siteMapList[key].img;
             figImg.alt = siteMapList[key].title;
             figImg.title = siteMapList[key].title;
 
-            let figCap = create('figcaption');
-            let figStr = create('strong');
-            let figTxt = createTextNode(siteMapList[key].name);
+            let figCap = document.createElement('figcaption');
+            let figStr = document.createElement('strong');
+            let figTxt = document.createTextNode(siteMapList[key].name);
 
             indexLists.appendChild(indexDiv);
             indexDiv.appendChild(indexLink);
@@ -213,21 +213,21 @@ function create(el){
     {
         let articleCount = 0;
         for (let key in siteMapListArticle) {
-            let articleDiv = create('div');
+            let articleDiv = document.createElement('div');
             articleDiv.className = "artImgBoxEach grow";
-            let articleLink = create('a');
+            let articleLink = document.createElement('a');
             articleLink.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
 
-            let articleFigure = create('figure');
+            let articleFigure = document.createElement('figure');
 
-            let figImg = create('img');
+            let figImg = document.createElement('img');
             figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[key].img;
             figImg.alt = siteMapListArticle[key].title;
             figImg.title = siteMapListArticle[key].title;
 
-            let figCap = create('figcaption');
-            let figStr = create('strong');
-            let figTxt = createTextNode(siteMapListArticle[key].name);
+            let figCap = document.createElement('figcaption');
+            let figStr = document.createElement('strong');
+            let figTxt = document.createTextNode(siteMapListArticle[key].name);
 
             articleLists.appendChild(articleDiv);
             articleDiv.appendChild(articleLink);
@@ -244,13 +244,13 @@ function create(el){
 //
 // TopBtn
 (function(){
-    const prevNextHome = select('#prevNext');
+    const prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome) {
         let body = document.body,
             html = document.documentElement;
         let height = Math.max( body.scrollHeight, body.offsetHeight,
                                html.clientHeight, html.scrollHeight, html.offsetHeight );
-        let topBtnNode = create("a");
+        let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
@@ -260,11 +260,11 @@ function create(el){
             topBtnNode.setAttribute('onmouseover', 'topUp()');
             topBtnNode.setAttribute('onmouseleave', 'topDn()');
         }
-        let topBtnBold = create("b");
-        let topBtnIcon = create("i");
+        let topBtnBold = document.createElement("b");
+        let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
         topBtnIcon.setAttribute('aria-hidden', 'true');
-        let topTextNode = createTextNode(" Top");
+        let topTextNode = document.createTextNode(" Top");
         prevNextHome.appendChild(topBtnNode);
         topBtnNode.appendChild(topBtnBold);
         topBtnBold.appendChild(topBtnIcon);
@@ -326,13 +326,13 @@ function create(el){
             iconClass : 'behance'
         }
     }
-    const snsIcon = select('#snsIcon');
+    const snsIcon = document.querySelector('#snsIcon');
     for (let key in snsIconList) {
-        let snsNode = create("a");
+        let snsNode = document.createElement("a");
         snsNode.title = snsIconList[key].title + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
-        let iconNode = create("i");
+        let iconNode = document.createElement("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
         iconNode.setAttribute('aria-hidden', 'true');
@@ -345,15 +345,15 @@ function create(el){
 //
 // Code with Love by Hyouk Seo(Spemer)
 (function(){
-    let codeBy = select('#codeBySpemer');
-    let codeIconNode = create("i");
+    let codeBy = document.querySelector('#codeBySpemer');
+    let codeIconNode = document.createElement("i");
     codeIconNode.className = "fa fa-code";
     codeIconNode.setAttribute('aria-hidden', 'true');
-    let topTextNode1 = createTextNode(" with ");
-    let loveIconNode = create("i");
+    let topTextNode1 = document.createTextNode(" with ");
+    let loveIconNode = document.createElement("i");
     loveIconNode.className = "fa fa-heart";
     loveIconNode.setAttribute('aria-hidden', 'true');
-    let topTextNode2 = createTextNode(" by Hyouk Seo(Spemer)");
+    let topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
     codeBy.appendChild(codeIconNode);
     codeBy.appendChild(topTextNode1);
     codeBy.appendChild(loveIconNode);
@@ -364,17 +364,17 @@ function create(el){
 //
 // topBtnFixed
 (function(){
-    const fixedTopBtn = select('#topBtnFixed');
+    const fixedTopBtn = document.querySelector('#topBtnFixed');
     if (fixedTopBtn) {
         const width = window.innerWidth;
         if (width <= 768) {
             fixedTopBtn.style = 'display: none;'
         } else {
-            let fixedTopBtnLink = create('a');
+            let fixedTopBtnLink = document.createElement('a');
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
             fixedTopBtnLink.className = 'prevNextTop2';
-            let fixedTopBtnIcon = create("i");
+            let fixedTopBtnIcon = document.createElement("i");
             fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
             fixedTopBtnIcon.title = 'Top';
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
@@ -385,16 +385,18 @@ function create(el){
 })();
 
 
-// //
-// // externalLink
-// const externalLinks = document.querySelectorAll('.externalLink');
-// const setExternalLinksIcon = document.createElement('i');
-// setExternalLinksIcon.className = "fa fa-external-link";
-// setExternalLinksIcon.setAttribute('aria-hidden','true');
-// for (i = 0; i < externalLinks.length; i++) {
-//     externalLinks[i].appendChild(setExternalLinksIcon);
-//     document.write(externalLinks[i] + "<br>");
-// }
+//
+// externalLink
+(function(){
+    const externalLinks = document.getElementsByClassName("externalLink");
+    let i;
+    for (i = 0; i < externalLinks.length; i++) {
+        var setExternalLinksIcon = document.createElement('i');
+        setExternalLinksIcon.className = "fa fa-external-link";
+        setExternalLinksIcon.setAttribute('aria-hidden','true');
+        externalLinks[i].appendChild(setExternalLinksIcon);
+    }
+})();
 
 
 function topUp() {
