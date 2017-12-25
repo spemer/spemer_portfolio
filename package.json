@@ -1,0 +1,21 @@
+{
+	"name": "Webha",
+	"version": "0.0.1",
+	"description": "app",
+	"main": "server.js",
+	"author": "뺑이",
+	"private": false,
+	"license": "Webha",
+	"repository": {
+	    "type": null,
+	    "url": null
+	},
+	"dependencies": {
+		"express" : "4.13.4",
+		"express-session" : "1.13.0",
+		"cookie-parser" : "1.4.2",
+		"body-parser" : "1.15.1",
+		"ejs" : "2.4.1",
+		"bcrypt-nodejs" : "0.0.3"
+	}
+}

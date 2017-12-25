@@ -269,7 +269,7 @@
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
         topBtnNode.className = "prevNextTop";
-        if (height < 18000)
+        if (height < 16000)
         {
             topBtnNode.setAttribute('onmouseover', 'topUp()');
             topBtnNode.setAttribute('onmouseleave', 'topDn()');
