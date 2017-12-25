@@ -47,23 +47,23 @@ img:not([alt]){
 	border: 4px dashed red;
 }
 */
-p,.textbox-colored { line-height:36px}
-#headerNav a { font-weight:700}
-#headerLogo h1 { font-size:40px!important}
-.siteMapNav li { margin:36px 0 0!important}
+p,.textbox-colored{line-height:36px}
+#headerNav a{font-weight:700}
+#headerLogo h1{font-size:40px !important}
+.siteMapNav li{margin:36px 0 0 !important}
 
-@supports (-ms-ime-align:auto) { .topBtn { display: none; } }
+@supports(-ms-ime-align:auto)
+{.topBtn{display:none !important}}
  
 @-moz-document url-prefix(){
-	.topBtn { display: none}
-	p, .textbox-colored { line-height: 36px}
-	#headerNav a { font-weight: bold}
-	#headerLogo h1 { font-size: 40px !important}
-	.aboutTxtBox li { line-height: 2rem !important; }
-	.siteMapNav li { margin: 36px 0px 8px !important }
+	.topBtn {display: none !important}
+	p, .textbox-colored {line-height:36px !important}
+	#headerNav a {font-weight:bold !important}
+	#headerLogo h1 {font-size: 40px !important}
+	.aboutTxtBox li {line-height: 2rem !important}
+	.siteMapNav li {margin: 36px 0px 8px !important}
 	.triBox figcaption, .artImgBoxEach figcaption{
-		margin-top: 4px !important;
-		font-size: 14px !important}}
+		margin-top:4px !important;font-size:14px !important}}
 
 html,body { overflow-x:hidden; overflow-y:auto}
 h2,h3 {

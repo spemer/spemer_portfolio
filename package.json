@@ -15,7 +15,7 @@
 		"express-session" : "1.13.0",
 		"cookie-parser" : "1.4.2",
 		"body-parser" : "1.15.1",
-		"ejs" : "2.4.1",
+		"ejs" : "2.5.5",
 		"bcrypt-nodejs" : "0.0.3"
 	}
 }
