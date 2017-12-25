@@ -1,13 +1,4 @@
-"use strict";
-//
-// meta -> charset
-(function(){
-    const headTitle = document.querySelector('head > title');
-    const setMeta = document.createElement('meta');
-    setMeta.setAttribute('charset','utf-8');
-    headTitle.after(setMeta);
-})();
-
+//"use strict";
 
 //
 // headerLogo

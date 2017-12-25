@@ -1120,6 +1120,8 @@ ul > li{
 .feather figcaption{
 	cursor:-webkit-zoom-in;
 	cursor:-moz-zoom-in;
+	cursor:-ms-zoom-in;
+	cursor:-o-zoom-in;
 	cursor:zoom-in
 }
 
@@ -1217,7 +1219,7 @@ ul > li{
 	.xdiframe{display: none;}
 }
 
-.copy{cursor: url(../img/specialCopyCursor-2lv34.cur), auto}
+.copy{cursor: url(../img/specialCopyCursor-2lv34.cur), pointer}
 .tooltip{
     visibility: visible;
     opacity: 0;
