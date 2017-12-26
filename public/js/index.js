@@ -121,6 +121,12 @@
         }
     }
 
+    //
+    // siteMapList linkName
+    // for (let key in siteMapList){
+    //     siteMapList[key].linkName = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+    // }
+
 
     // //
     // // home next prev(bottom)
