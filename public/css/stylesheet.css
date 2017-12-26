@@ -168,16 +168,14 @@ a,b { color:#656c7a; color:var(--color-gray) }
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem)
-}
+	font-size:-webkit-calc(var(--font-size)*.9rem)}
 
 .prevNextTop:hover{
 	color:#2a2e2e;
 	-webkit-transition:color .25s ease;
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
-	transition:color .25s ease
-}
+	transition:color .25s ease}
 
 .prevNextTop2{
 	float:left;
@@ -189,16 +187,14 @@ a,b { color:#656c7a; color:var(--color-gray) }
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem)
-}
+	font-size:-webkit-calc(var(--font-size)*.9rem)}
 
 .prevNextTop2:hover{
 	color:#656c7a;
 	-webkit-transition:color .25s ease;
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
-	transition:color .25s ease
-}
+	transition:color .25s ease}
 
 .prevNext{
 	float:right;
@@ -210,24 +206,21 @@ a,b { color:#656c7a; color:var(--color-gray) }
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
 	font-size:-webkit-calc(var(--font-size)*.9rem);
-	font-size:14.4px
-}
+	font-size:14.4px}
 
 .prevNext:hover{
 	color:#2a2e2e;
 	-webkit-transition:color .25s ease;
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
-	transition:color .25s ease
-}
+	transition:color .25s ease}
 
 header{
 	width:100%;
 	height:auto;
 	margin:0 auto;
 	display:block;
-	padding:25px 0 50px
-}
+	padding:25px 0 50px}
 
 #headerLogo { float:left; margin:50px 0}
 
@@ -245,8 +238,7 @@ header{
 	font-size:40px;
 	font-size:-moz-calc(var(--font-size)*2.5rem);
 	font-size:calc(var(--font-size)*2.5rem);
-	font-size:-webkit-calc(var(--font-size)*2.5rem)
-}
+	font-size:-webkit-calc(var(--font-size)*2.5rem)}
 
 #headerLogo h1:hover{
 	color:#2a2e2e;
@@ -259,8 +251,7 @@ header{
 @media screen and (max-width: 420px){
 	#headerLogo h1{
 		font-size:36px;
-		margin:15px 0 -15px
-	}}
+		margin:15px 0 -15px}}
 
 #headerNav nav{
 	float:right;
@@ -350,7 +341,7 @@ header nav li a:hover{
 		-webkit-border-radius:4px;
 		-moz-border-radius:4px;
 		border-radius:4px
-	} }
+	}}
 
 .profile {
 	width:100%;
