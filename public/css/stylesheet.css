@@ -2,7 +2,7 @@
 @import "animate.css";
 @import "featherlight.css";
 @import "featherlight.gallery.css";
-@import "https://fonts.googleapis.com/css?family=Roboto";
+@import "https://fonts.googleapis.com/css?family=Merriweather:300|Roboto";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 :root {
@@ -29,9 +29,13 @@
 	text-rendering:optimizeLegibility;
 	-moz-osx-font-smoothing:grayscale;
 	-webkit-font-smoothing:antialiased;
+	font-feature-settings: 'liga';
 	line-height:30px;
-	-webkit-font-family:'Roboto',Arial,sans-serif;
-	font-family:'Roboto',Arial,sans-serif
+	line-height:calc(var(--font-size)*1.875rem);
+	line-height:-moz-calc(var(--font-size)*1.875rem);
+	line-height:-webkit-calc(var(--font-size)*1.875rem);
+	-webkit-font-family:'Merriweather',serif;
+	font-family:'Merriweather',serif
 }
 /*
 img[alt=""],
@@ -43,6 +47,12 @@ p,.textbox-colored{line-height:36px}
 #headerNav a{font-weight:700}
 #headerLogo h1{font-size:40px !important}
 .siteMapNav li{margin:36px 0 0 !important}
+
+h1,h2,h3,h4,h5,h6,footer p,
+figcaption,figcaption strong{
+	-webkit-font-family:'Roboto',Arial,sans-serif;
+	font-family:'Roboto',Arial,sans-serif
+}
 
 @supports(-ms-ime-align:auto)
 {.topBtn{display:none !important}}
