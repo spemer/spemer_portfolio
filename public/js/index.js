@@ -287,20 +287,20 @@ else if (articleLists)
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome) {
-        let body = document.body,
-            html = document.documentElement;
-        let height = Math.max( body.scrollHeight, body.offsetHeight,
-                               html.clientHeight, html.scrollHeight, html.offsetHeight );
+        // let body = document.body,
+        //     html = document.documentElement;
+        // let height = Math.max( body.scrollHeight, body.offsetHeight,
+        //                        html.clientHeight, html.scrollHeight, html.offsetHeight );
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
         topBtnNode.className = "prevNextTop";
-        if (height < 16000)
-        {
-            topBtnNode.setAttribute('onmouseover', 'topUp()');
-            topBtnNode.setAttribute('onmouseleave', 'topDn()');
-        }
+        // if (height < 16000)
+        // {
+        //     topBtnNode.setAttribute('onmouseover', 'topUp()');
+        //     topBtnNode.setAttribute('onmouseleave', 'topDn()');
+        // }
         let topBtnBold = document.createElement("b");
         let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
@@ -407,10 +407,10 @@ else if (articleLists)
 (function(){
     const fixedTopBtn = document.querySelector('#topBtnFixed');
     if (fixedTopBtn) {
-        const width = window.innerWidth;
-        if (width <= 768) {
-            fixedTopBtn.style = 'display: none;'
-        } else {
+        // const width = window.innerWidth;
+        // if (width <= 768) {
+        //     fixedTopBtn.style = 'display: none;'
+        // } else {
             let fixedTopBtnLink = document.createElement('a');
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
@@ -421,7 +421,7 @@ else if (articleLists)
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
             fixedTopBtn.appendChild(fixedTopBtnLink);
             fixedTopBtnLink.appendChild(fixedTopBtnIcon);
-        }
+        //}
     }   
 })();
 
@@ -440,30 +440,30 @@ else if (articleLists)
 })();
 
 
-function topUp() {
-    $('.fa-angle-up').addClass('topUp');
-    $('.fa-angle-up').removeClass('topUp2');
-}
-function topDn() {
-    $('.fa-angle-up').addClass('topUp2');
-    $('.fa-angle-up').removeClass('topUp');
-}
-function nextRight() {
-    $('.fa-angle-double-right').addClass('nextRight');
-    $('.fa-angle-double-right').removeClass('nextRight2');
-}
-function nextRightDel() {
-    $('.fa-angle-double-right').addClass('nextRight2');
-    $('.fa-angle-double-right').removeClass('nextRight');
-}
-function nextLeft() {
-    $('.fa-angle-double-left').addClass('nextLeft');
-    $('.fa-angle-double-left').removeClass('nextLeft2');
-}
-function nextLeftDel() {
-    $('.fa-angle-double-left').addClass('nextLeft2');
-    $('.fa-angle-double-left').removeClass('nextLeft');
-}
+// function topUp() {
+//     $('.fa-angle-up').addClass('topUp');
+//     $('.fa-angle-up').removeClass('topUp2');
+// }
+// function topDn() {
+//     $('.fa-angle-up').addClass('topUp2');
+//     $('.fa-angle-up').removeClass('topUp');
+// }
+// function nextRight() {
+//     $('.fa-angle-double-right').addClass('nextRight');
+//     $('.fa-angle-double-right').removeClass('nextRight2');
+// }
+// function nextRightDel() {
+//     $('.fa-angle-double-right').addClass('nextRight2');
+//     $('.fa-angle-double-right').removeClass('nextRight');
+// }
+// function nextLeft() {
+//     $('.fa-angle-double-left').addClass('nextLeft');
+//     $('.fa-angle-double-left').removeClass('nextLeft2');
+// }
+// function nextLeftDel() {
+//     $('.fa-angle-double-left').addClass('nextLeft2');
+//     $('.fa-angle-double-left').removeClass('nextLeft');
+// }
 //
 function lineLive2() {
     $('.ready2').removeClass('aboutHover2');
