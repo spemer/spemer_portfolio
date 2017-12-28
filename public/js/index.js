@@ -118,8 +118,8 @@ const siteMapListArticle = {
 // let listTotalLength = Object.keys(siteMapList).length + Object.keys(siteMapListArticle).length;
 
 // // adding number property - siteMapList
-// for (let key in siteMapList){
-//     for (i = 0; i < Object.keys(siteMapList).length; i++){
+// for (i = 0; i < Object.keys(siteMapList).length; i++){
+//     for (let key in siteMapList){
 //         siteMapList[key].number = i+1;
 //     }
 // }
@@ -397,10 +397,10 @@ else if (articleLists)
 (function(){
     const fixedTopBtn = document.querySelector('#topBtnFixed');
     if (fixedTopBtn) {
-        // const width = window.innerWidth;
-        // if (width <= 768) {
-        //     fixedTopBtn.style = 'display: none;'
-        // } else {
+        const width = window.innerWidth;
+        if (width <= 768) {
+            fixedTopBtn.style = 'display: none;'
+        } else {
             let fixedTopBtnLink = document.createElement('a');
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
@@ -411,7 +411,7 @@ else if (articleLists)
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
             fixedTopBtn.appendChild(fixedTopBtnLink);
             fixedTopBtnLink.appendChild(fixedTopBtnIcon);
-        //}
+        }
     }   
 })();
 
