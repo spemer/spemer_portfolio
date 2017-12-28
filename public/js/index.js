@@ -1,15 +1,5 @@
 //"use strict";
 //
-// meta -> charset
-// (function(){
-//     const headTitle = document.querySelector('head > title');
-//     const setMeta = document.createElement('meta');
-//     setMeta.setAttribute('charset','utf-8');
-//     headTitle.after(setMeta);
-// })();
-
-
-//
 // headerLogo
 (function(){
     const _headerLogo = document.querySelector('#headerLogo');
@@ -484,3 +474,12 @@ function addTooltip() {
 function removeTooltip() {
     $('.copied').addClass('tooltip');
 }
+
+//
+// meta -> charset
+(function(){
+    const headTitle = document.querySelector('head > title');
+    const setMeta = document.createElement('meta');
+    setMeta.setAttribute('owner','Hyouk Seo(Spemer)');
+    headTitle.appendChild(setMeta);
+})();
