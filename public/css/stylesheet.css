@@ -1,9 +1,10 @@
 @charset "UTF-8";
-@import "animate.css";
+/*@import "animate.css";*/
 @import "featherlight.css";
 @import "featherlight.gallery.css";
 @import "https://fonts.googleapis.com/css?family=Merriweather:300|Roboto";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css";
 
 :root {
 	--font-size:1.063;
@@ -37,12 +38,16 @@
 	-webkit-font-family:'Merriweather',serif;
 	font-family:'Merriweather',serif
 }
+
+/*.pace .pace-progress {}*/
+
 /*
 img[alt=""],
 img:not([alt]){
 	border: 4px dashed red;
 }
 */
+
 p,.textbox-colored{line-height:36px}
 #headerNav a{font-weight:700}
 #headerLogo h1{font-size:40px !important}

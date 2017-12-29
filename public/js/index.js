@@ -1,4 +1,16 @@
 //"use strict";
+
+
+//
+// pace.js
+(function(){
+    const headTitle = document.querySelector('head');
+    const setScript = document.createElement('script');
+    setScript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js');
+    headTitle.appendChild(setScript);
+})();
+
+
 //
 // headerLogo
 (function(){
@@ -123,7 +135,7 @@ const siteMapListArticle = {
 //         siteMapList[key].number = i+1;
 //     }
 // }
-// adding number property - siteMapListArticle
+// // adding number property - siteMapListArticle
 // for (let key in siteMapListArticle){
 //     for (i = Object.keys(siteMapList).length; i < Object.keys(siteMapList).length; i++){
 //         siteMapListArticle[key].number = i+1;
@@ -474,12 +486,3 @@ function addTooltip() {
 function removeTooltip() {
     $('.copied').addClass('tooltip');
 }
-
-//
-// meta -> charset
-(function(){
-    const headTitle = document.querySelector('head > title');
-    const setMeta = document.createElement('meta');
-    setMeta.setAttribute('owner','Hyouk Seo(Spemer)');
-    headTitle.appendChild(setMeta);
-})();
