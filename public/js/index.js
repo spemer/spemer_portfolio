@@ -1,11 +1,9 @@
 //"use strict";
-
-
 //
 // pace.js
 (function(){
-    const headTitle = document.querySelector('head');
-    const setScript = document.createElement('script');
+    let headTitle = document.querySelector('head');
+    let setScript = document.createElement('script');
     setScript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js');
     headTitle.appendChild(setScript);
 })();
@@ -14,11 +12,11 @@
 //
 // headerLogo
 (function(){
-    const _headerLogo = document.querySelector('#headerLogo');
-    const headerLink = document.createElement('a');
+    let _headerLogo = document.querySelector('#headerLogo');
+    let headerLink = document.createElement('a');
     headerLink.href = 'https://spemer.com/';
-    const headerHeading = document.createElement('h1');
-    const headerText = document.createTextNode('Hyouk Seo');
+    let headerHeading = document.createElement('h1');
+    let headerText = document.createTextNode('Hyouk Seo');
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
@@ -28,260 +26,261 @@
 
 //
 // siteMap links
-const siteMapList = {
-    AWeather: {
-        name:  'AWeather',
-        href:  'weather-push-notification-alarm-application',
-        title: 'AWeather - UX Case study: Weather notification application',
-        img: 'weather/thumb.png'
-    },
-    IGTracker: {
-        name:  'IGTracker',
-        href:  'instagram-tracker-application-igtracker-design',
-        title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
-        img: 'igtracker/thumb.png'
-    },
-    Insharior: {
-        name:  'Insharior',
-        href:  'insharior-ux-case-study-user-experience-design',
-        title: 'Insharior - UX Case study: Interior item sharing mobile application design',
-        img: 'insharior/thumb.png'
-    },
-    Neighbors: {
-        name:  'Neighbors',
-        href:  'dream-drim-korea-apartment-application',
-        title: 'Neighbors - SNS application for neighborhood UI Design',
-        img: 'dream/cover.png'
-    },
-    UnivCam: {
-        name:  'UnivCam',
-        href:  'album-image-sort-application-univcam',
-        title: 'UnivCam - UX Case study: Album sorting application UI/UX design',
-        img: 'univcam/thumb.png'
-    },
-    Memoree: {
-        name:  'Memoree',
-        href:  'memory-record-application-ui-design',
-        title: 'Memoree - Minimal UI/UX design for iOS',
-        img: 'memoree/thumb.png'
-    },
-    Sprinter: {
-        name:  'Sprinter',
-        href:  'todo-task-list-manage-application-sprinter',
-        title: 'Sprinter - ToDo list & task management application UI/UX design',
-        img: 'sprinter/thumb.png'
-    },
-    Suhyup: {
-        name:  'Suhyup',
-        href:  'suhyup-mobile-banking-ui-ux-renewal',
-        title: 'Suhyup - Mobile Banking Application UI/UX Renewal',
-        img: 'suhyup/thumb.png'
-    },
-    FlatIcons: {
-        name:  'Flat Icons',
-        href:  'flaticon-vector-graphic-illustration-design',
-        title: 'Minimal vector flat icon design',
-        img: 'flaticon/house.jpg'
+(function(){
+    let siteMapList = {
+        AWeather: {
+            name:  'AWeather',
+            href:  'weather-push-notification-alarm-application',
+            title: 'AWeather - UX Case study: Weather notification application',
+            img: 'weather/thumb.png'
+        },
+        IGTracker: {
+            name:  'IGTracker',
+            href:  'instagram-tracker-application-igtracker-design',
+            title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
+            img: 'igtracker/thumb.png'
+        },
+        Insharior: {
+            name:  'Insharior',
+            href:  'insharior-ux-case-study-user-experience-design',
+            title: 'Insharior - UX Case study: Interior item sharing mobile application design',
+            img: 'insharior/thumb.png'
+        },
+        Neighbors: {
+            name:  'Neighbors',
+            href:  'dream-drim-korea-apartment-application',
+            title: 'Neighbors - SNS application for neighborhood UI Design',
+            img: 'dream/cover.png'
+        },
+        UnivCam: {
+            name:  'UnivCam',
+            href:  'album-image-sort-application-univcam',
+            title: 'UnivCam - UX Case study: Album sorting application UI/UX design',
+            img: 'univcam/thumb.png'
+        },
+        Memoree: {
+            name:  'Memoree',
+            href:  'memory-record-application-ui-design',
+            title: 'Memoree - Minimal UI/UX design for iOS',
+            img: 'memoree/thumb.png'
+        },
+        Sprinter: {
+            name:  'Sprinter',
+            href:  'todo-task-list-manage-application-sprinter',
+            title: 'Sprinter - ToDo list & task management application UI/UX design',
+            img: 'sprinter/thumb.png'
+        },
+        Suhyup: {
+            name:  'Suhyup',
+            href:  'suhyup-mobile-banking-ui-ux-renewal',
+            title: 'Suhyup - Mobile Banking Application UI/UX Renewal',
+            img: 'suhyup/thumb.png'
+        },
+        FlatIcons: {
+            name:  'Flat Icons',
+            href:  'flaticon-vector-graphic-illustration-design',
+            title: 'Minimal vector flat icon design',
+            img: 'flaticon/house.jpg'
+        }
     }
-}
-const siteMapListArticle = {
-    CSSVariables: {
-        name:  'CSS Variables',
-        href:  'css-custom-properties-variables-usage',
-        title: 'Using variables(custom properties) in CSS3',
-        img: 'css/thumb.png'
-    },
-    Jekyll: {
-        name:  'Jekyll',
-        href:  'free-github-blog-and-hosting-with-jekyll',
-        title: 'Free GitHub blog and Hosting with Jekyll',
-        img: 'jekyll/thumb.png'
-    },
-    Material: {
-        name:  'Material',
-        href:  'creative-pros-cons-google-material-design',
-        title: 'Cons and Pros of Material design by Google',
-        img: 'material/material.png'
-    },
-    Bodymovin: {
-        name:  'Bodymovin',
-        href:  'bodymovin-airbnb-lottie-after-effects',
-        title: 'How to use Bodymovin for After Effects by Airbnb',
-        img: 'bodymovin/cover.png'
-    },
-    Firebase: {
-        name:  'Firebase',
-        href:  'connecting-domain-with-google-firebase',
-        title: 'Using Firebase to host website for free!',
-        img: 'firebase/firebase_logo.jpg'
-    },
-    Musics: {
-        name:  'Musics',
-        href:  'spemer-music',
-        title: 'Musics by Spemer',
-        img: 'music/cover.jpg'
+    let siteMapListArticle = {
+        CSSVariables: {
+            name:  'CSS Variables',
+            href:  'css-custom-properties-variables-usage',
+            title: 'Using variables(custom properties) in CSS3',
+            img: 'css/thumb.png'
+        },
+        Jekyll: {
+            name:  'Jekyll',
+            href:  'free-github-blog-and-hosting-with-jekyll',
+            title: 'Free GitHub blog and Hosting with Jekyll',
+            img: 'jekyll/thumb.png'
+        },
+        Material: {
+            name:  'Material',
+            href:  'creative-pros-cons-google-material-design',
+            title: 'Cons and Pros of Material design by Google',
+            img: 'material/material.png'
+        },
+        Bodymovin: {
+            name:  'Bodymovin',
+            href:  'bodymovin-airbnb-lottie-after-effects',
+            title: 'How to use Bodymovin for After Effects by Airbnb',
+            img: 'bodymovin/cover.png'
+        },
+        Firebase: {
+            name:  'Firebase',
+            href:  'connecting-domain-with-google-firebase',
+            title: 'Using Firebase to host website for free!',
+            img: 'firebase/firebase_logo.jpg'
+        },
+        Musics: {
+            name:  'Musics',
+            href:  'spemer-music',
+            title: 'Musics by Spemer',
+            img: 'music/cover.jpg'
+        }
     }
-}
 
 
 
-//
-// adding number property
-// let listTotalLength = Object.keys(siteMapList).length + Object.keys(siteMapListArticle).length;
+    //
+    // adding number property
+    // let listTotalLength = Object.keys(siteMapList).length + Object.keys(siteMapListArticle).length;
 
-// // adding number property - siteMapList
-// for (i = 0; i < Object.keys(siteMapList).length; i++){
-//     for (let key in siteMapList){
-//         siteMapList[key].number = i+1;
-//     }
-// }
-// // adding number property - siteMapListArticle
-// for (let key in siteMapListArticle){
-//     for (i = Object.keys(siteMapList).length; i < Object.keys(siteMapList).length; i++){
-//         siteMapListArticle[key].number = i+1;
-//     }
-// }
-
-
-// for문을 사용해서.
-// 현재 윈도우의 href값을 알아낸 다음, siteMapList[key]와 비교
-// 일치한다면 siteMapList[key]의 다음 키값을 적용
-// for문을 사용해서
-// siteMapList에 숫자로 된 key값 추가
-// siteMapListArticle 에는 siteMapList.length 부터 시작
+    // // adding number property - siteMapList
+    // for (i = 0; i < Object.keys(siteMapList).length; i++){
+    //     for (let key in siteMapList){
+    //         siteMapList[key].number = i+1;
+    //     }
+    // }
+    // // adding number property - siteMapListArticle
+    // for (let key in siteMapListArticle){
+    //     for (i = Object.keys(siteMapList).length; i < Object.keys(siteMapList).length; i++){
+    //         siteMapListArticle[key].number = i+1;
+    //     }
+    // }
 
 
-//
-// home next prev(bottom)
-// const articleLinks = document.querySelector('.article');
-// const portfolioLinks = document.querySelector('.portfolio');
-// for (let listKey in siteMapList)
-// {
-//     let thisUrl = window.location.href;
-//     let substring = siteMapList[listKey].href;
-//     if(thisUrl.indexOf(substring) != -1)
-//     {
-//         let nextLink = document.createElement('a');
-//         nextLink.href = "https://spemer.com/portfolio/" + siteMapList[listKey].href + ".html";
-//         nextLink.title = siteMapList[listKey].name;
-//         nextLink.className = 'prevNext';
-        
-//         let nextBold = document.createElement('b');
-//         let nextText = document.createTextNode(' Next ');
-//         let nextIcon = document.createElement('i');
-//         nextIcon.className = 'fa fa-angle-double-right';
-
-//         portfolioLinks.appendChild(nextLink);
-//         nextLink.appendChild(nextBold);
-//         nextBold.appendChild(nextText);
-//         nextBold.appendChild(nextIcon);
-//     }
-// }
+    // for문을 사용해서.
+    // 현재 윈도우의 href값을 알아낸 다음, siteMapList[key]와 비교
+    // 일치한다면 siteMapList[key]의 다음 키값을 적용
+    // for문을 사용해서
+    // siteMapList에 숫자로 된 key값 추가
+    // siteMapListArticle 에는 siteMapList.length 부터 시작
 
 
-//
-// bottom siteMap navigation
-const siteMapNav = document.querySelector('.siteMapNav');
-for (let key in siteMapList)
-{
-    let listNode = document.createElement("li");
+    //
+    // home next prev(bottom)
+    // const articleLinks = document.querySelector('.article');
+    // const portfolioLinks = document.querySelector('.portfolio');
+    // for (let listKey in siteMapList)
+    // {
+    //     let thisUrl = window.location.href;
+    //     let substring = siteMapList[listKey].href;
+    //     if(thisUrl.indexOf(substring) != -1)
+    //     {
+    //         let nextLink = document.createElement('a');
+    //         nextLink.href = "https://spemer.com/portfolio/" + siteMapList[listKey].href + ".html";
+    //         nextLink.title = siteMapList[listKey].name;
+    //         nextLink.className = 'prevNext';
+            
+    //         let nextBold = document.createElement('b');
+    //         let nextText = document.createTextNode(' Next ');
+    //         let nextIcon = document.createElement('i');
+    //         nextIcon.className = 'fa fa-angle-double-right';
 
-    let hrefNode = document.createElement("a");
-    hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
-    hrefNode.title = siteMapList[key].title;
-
-    let textNode = document.createTextNode(siteMapList[key].name);
-
-    siteMapNav.appendChild(listNode);
-    listNode.appendChild(hrefNode);
-    hrefNode.appendChild(textNode);
-}
-for (let key in siteMapListArticle)
-{
-    let listNode = document.createElement("li");
-
-    let hrefNode = document.createElement("a");
-    hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
-    hrefNode.title = siteMapListArticle[key].title;
-
-    let textNode = document.createTextNode(siteMapListArticle[key].name);
-
-    siteMapNav.appendChild(listNode);
-    listNode.appendChild(hrefNode);
-    hrefNode.appendChild(textNode);
-}
+    //         portfolioLinks.appendChild(nextLink);
+    //         nextLink.appendChild(nextBold);
+    //         nextBold.appendChild(nextText);
+    //         nextBold.appendChild(nextIcon);
+    //     }
+    // }
 
 
-//
-// index, article.html -> lists
-const indexLists = document.querySelector('#indexList');
-const articleLists = document.querySelector('#articleList');
-if (indexLists)
-{
-    let indexCount = 0;
+    //
+    // bottom siteMap navigation
+    const siteMapNav = document.querySelector('.siteMapNav');
     for (let key in siteMapList)
     {
-        if (indexCount === 9) {
-            break;
+        let listNode = document.createElement("li");
+
+        let hrefNode = document.createElement("a");
+        hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+        hrefNode.title = siteMapList[key].title;
+
+        let textNode = document.createTextNode(siteMapList[key].name);
+
+        siteMapNav.appendChild(listNode);
+        listNode.appendChild(hrefNode);
+        hrefNode.appendChild(textNode);
+    }
+    for (let key in siteMapListArticle)
+    {
+        let listNode = document.createElement("li");
+
+        let hrefNode = document.createElement("a");
+        hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
+        hrefNode.title = siteMapListArticle[key].title;
+
+        let textNode = document.createTextNode(siteMapListArticle[key].name);
+
+        siteMapNav.appendChild(listNode);
+        listNode.appendChild(hrefNode);
+        hrefNode.appendChild(textNode);
+    }
+
+
+    //
+    // index, article.html -> lists
+    const indexLists = document.querySelector('#indexList');
+    const articleLists = document.querySelector('#articleList');
+    if (indexLists)
+    {
+        let indexCount = 0;
+        for (let key in siteMapList)
+        {
+            if (indexCount === 9) {
+                break;
+            }
+
+            let indexDiv = document.createElement('div');
+            indexDiv.className = "artImgBoxEach grow";
+            let indexLink = document.createElement('a');
+            indexLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+
+            let indexFigure = document.createElement('figure');
+
+            let figImg = document.createElement('img');
+            figImg.src = "https://spemer.com/img/works/" + siteMapList[key].img;
+            figImg.alt = siteMapList[key].title;
+            figImg.title = siteMapList[key].title;
+
+            let figCap = document.createElement('figcaption');
+            let figStr = document.createElement('strong');
+            let figTxt = document.createTextNode(siteMapList[key].name);
+
+            indexLists.appendChild(indexDiv);
+            indexDiv.appendChild(indexLink);
+            indexLink.appendChild(indexFigure);
+            indexFigure.appendChild(figImg);
+            indexFigure.appendChild(figCap);
+            figCap.appendChild(figStr);
+            figStr.appendChild(figTxt);
+
+            ++indexCount;
         }
-
-        let indexDiv = document.createElement('div');
-        indexDiv.className = "artImgBoxEach grow";
-        let indexLink = document.createElement('a');
-        indexLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
-
-        let indexFigure = document.createElement('figure');
-
-        let figImg = document.createElement('img');
-        figImg.src = "https://spemer.com/img/works/" + siteMapList[key].img;
-        figImg.alt = siteMapList[key].title;
-        figImg.title = siteMapList[key].title;
-
-        let figCap = document.createElement('figcaption');
-        let figStr = document.createElement('strong');
-        let figTxt = document.createTextNode(siteMapList[key].name);
-
-        indexLists.appendChild(indexDiv);
-        indexDiv.appendChild(indexLink);
-        indexLink.appendChild(indexFigure);
-        indexFigure.appendChild(figImg);
-        indexFigure.appendChild(figCap);
-        figCap.appendChild(figStr);
-        figStr.appendChild(figTxt);
-
-        ++indexCount;
     }
-}
-else if (articleLists)
-{
-    let articleCount = 0;
-    for (let key in siteMapListArticle) {
-        let articleDiv = document.createElement('div');
-        articleDiv.className = "artImgBoxEach grow";
-        let articleLink = document.createElement('a');
-        articleLink.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
+    else if (articleLists)
+    {
+        let articleCount = 0;
+        for (let key in siteMapListArticle) {
+            let articleDiv = document.createElement('div');
+            articleDiv.className = "artImgBoxEach grow";
+            let articleLink = document.createElement('a');
+            articleLink.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
 
-        let articleFigure = document.createElement('figure');
+            let articleFigure = document.createElement('figure');
 
-        let figImg = document.createElement('img');
-        figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[key].img;
-        figImg.alt = siteMapListArticle[key].title;
-        figImg.title = siteMapListArticle[key].title;
+            let figImg = document.createElement('img');
+            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[key].img;
+            figImg.alt = siteMapListArticle[key].title;
+            figImg.title = siteMapListArticle[key].title;
 
-        let figCap = document.createElement('figcaption');
-        let figStr = document.createElement('strong');
-        let figTxt = document.createTextNode(siteMapListArticle[key].name);
+            let figCap = document.createElement('figcaption');
+            let figStr = document.createElement('strong');
+            let figTxt = document.createTextNode(siteMapListArticle[key].name);
 
-        articleLists.appendChild(articleDiv);
-        articleDiv.appendChild(articleLink);
-        articleLink.appendChild(articleFigure);
-        articleFigure.appendChild(figImg);
-        articleFigure.appendChild(figCap);
-        figCap.appendChild(figStr);
-        figStr.appendChild(figTxt);
+            articleLists.appendChild(articleDiv);
+            articleDiv.appendChild(articleLink);
+            articleLink.appendChild(articleFigure);
+            articleFigure.appendChild(figImg);
+            articleFigure.appendChild(figCap);
+            figCap.appendChild(figStr);
+            figStr.appendChild(figTxt);
+        }
     }
-}
-
+})();
 
 
 //
@@ -319,7 +318,7 @@ else if (articleLists)
 //
 // Footer snsIcon
 (function(){
-    const snsIconList = {
+    let snsIconList = {
         Twitter: {
             href : 'twitter.com/OfficialSpemer',
             title : 'Twitter',
@@ -369,7 +368,7 @@ else if (articleLists)
             iconClass : 'behance'
         }
     }
-    const snsIcon = document.querySelector('#snsIcon');
+    let snsIcon = document.querySelector('#snsIcon');
     for (let key in snsIconList) {
         let snsNode = document.createElement("a");
         snsNode.title = snsIconList[key].title + "(new tab)";
@@ -407,9 +406,9 @@ else if (articleLists)
 //
 // topBtnFixed
 (function(){
-    const fixedTopBtn = document.querySelector('#topBtnFixed');
+    let fixedTopBtn = document.querySelector('#topBtnFixed');
     if (fixedTopBtn) {
-        const width = window.innerWidth;
+        let width = window.innerWidth;
         if (width <= 768) {
             fixedTopBtn.style = 'display: none;'
         } else {
@@ -431,7 +430,7 @@ else if (articleLists)
 //
 // externalLink Icon
 (function(){
-    const externalLinks = document.getElementsByClassName("externalLink");
+    let externalLinks = document.getElementsByClassName("externalLink");
     let i;
     for (i = 0; i < externalLinks.length; i++) {
         let setExternalLinksIcon = document.createElement('i');
