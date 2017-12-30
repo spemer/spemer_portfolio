@@ -3,7 +3,7 @@
 @import "featherlight.css";
 @import "featherlight.gallery.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css";
-@import "https://fonts.googleapis.com/css?family=Merriweather:300|Roboto";
+@import "https://fonts.googleapis.com/css?family=Merriweather:300|Roboto+Slab";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 :root {
@@ -55,8 +55,8 @@ p,.textbox-colored{line-height:36px}
 
 h1,h2,h3,h4,h5,h6,footer p,
 figcaption,figcaption strong{
-	-webkit-font-family:'Roboto',Arial,sans-serif;
-	font-family:'Roboto',Arial,sans-serif
+	-webkit-font-family:'Roboto Slab',Arial,sans-serif;
+	font-family:'Roboto Slab',Arial,sans-serif
 }
 
 @supports(-ms-ime-align:auto)

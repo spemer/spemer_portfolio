@@ -219,7 +219,7 @@ function setAttrByHeight(target, attrName, attrValue){
     };
 
     // excute portfolio or article
-    if(portfolioLinks) {
+    if (portfolioLinks){
         setNextBtn(siteMapList, portfolioLinks, 8);
         setPrevBtn(siteMapList, portfolioLinks);
     }
