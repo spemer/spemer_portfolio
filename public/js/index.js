@@ -40,12 +40,6 @@ function setAttrByHeight(target, attrName, attrValue){
 (function(){
     let siteMapList = [
         {
-            name:  'AWeather',
-            href:  'portfolio/weather-push-notification-alarm-application',
-            title: 'AWeather - UX Case study: Weather notification application',
-            img: 'weather/thumb.png'
-        },
-        {
             name:  'IGTracker',
             href:  'portfolio/instagram-tracker-application-igtracker-design',
             title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
@@ -56,6 +50,12 @@ function setAttrByHeight(target, attrName, attrValue){
             href:  'portfolio/insharior-ux-case-study-user-experience-design',
             title: 'Insharior - UX Case study: Interior item sharing mobile application design',
             img: 'insharior/thumb.png'
+        },
+        {
+            name:  'AWeather',
+            href:  'portfolio/weather-push-notification-alarm-application',
+            title: 'AWeather - UX Case study: Weather notification application',
+            img: 'weather/thumb.png'
         },
         {
             name:  'Neighbors',
@@ -329,6 +329,7 @@ function setAttrByHeight(target, attrName, attrValue){
         }
     }
 })();
+
 
 //
 // TopBtn
