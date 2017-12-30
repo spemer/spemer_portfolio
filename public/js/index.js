@@ -23,6 +23,18 @@
 })();
 
 
+function setAttrByHeight(target, attrName, attrValue){
+    let body = document.body,
+        html = document.documentElement;
+    let height = Math.max( body.scrollHeight, body.offsetHeight,
+                           html.clientHeight, html.scrollHeight, html.offsetHeight );
+    if (height < 16000)
+    {
+        target.setAttribute(attrName, attrValue);
+    }
+}
+
+
 //
 // siteMap links
 (function(){
@@ -155,6 +167,9 @@
                 var nextText = document.createTextNode(' Next ');
                 var nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-right';
+
+                setAttrByHeight(nextLink, 'onmouseover', 'nextRight()');
+                setAttrByHeight(nextLink, 'onmouseleave', 'nextRightDel()');
             }
         }
         divClassName.appendChild(nextLink);
@@ -192,6 +207,9 @@
                 var nextText = document.createTextNode(' Prev ');
                 var nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-left';
+
+                setAttrByHeight(nextLink, 'onmouseover', 'nextLeft()');
+                setAttrByHeight(nextLink, 'onmouseleave', 'nextLeftDel()');
             }
         }
         divClassName.appendChild(nextLink);
@@ -218,16 +236,22 @@
         for (let i = 0; i < arrayName.length; i++)
         {
             let listNode = document.createElement("li");
-
             let hrefNode = document.createElement("a");
             hrefNode.href = "https://spemer.com/" + arrayName[i].href + ".html";
             hrefNode.title = arrayName[i].title;
-
             let textNode = document.createTextNode(arrayName[i].name);
 
             siteMapNav.appendChild(listNode);
             listNode.appendChild(hrefNode);
             hrefNode.appendChild(textNode);
+
+            let thisUrl = window.location.href;
+            let substring = arrayName[i].href;
+            if (thisUrl.indexOf(substring) != -1)
+            {
+                hrefNode.className = 'underline';
+                hrefNode.setAttribute('style', 'font-weight: bold');
+            }
         }
     }
     bottomSiteNav(siteMapList);
@@ -306,31 +330,26 @@
     }
 })();
 
-
 //
 // TopBtn
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome) {
-        let body = document.body,
-            html = document.documentElement;
-        let height = Math.max( body.scrollHeight, body.offsetHeight,
-                               html.clientHeight, html.scrollHeight, html.offsetHeight );
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
         topBtnNode.className = "prevNextTop";
-        if (height < 12000)
-        {
-            topBtnNode.setAttribute('onmouseover', 'topUp()');
-            topBtnNode.setAttribute('onmouseleave', 'topDn()');
-        }
+
+        setAttrByHeight(topBtnNode, 'onmouseover', 'topUp()');
+        setAttrByHeight(topBtnNode, 'onmouseleave', 'topDn()');
+
         let topBtnBold = document.createElement("b");
         let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
         topBtnIcon.setAttribute('aria-hidden', 'true');
         let topTextNode = document.createTextNode(" Top");
+
         prevNextHome.appendChild(topBtnNode);
         topBtnNode.appendChild(topBtnBold);
         topBtnBold.appendChild(topBtnIcon);
@@ -415,11 +434,13 @@
     let codeIconNode = document.createElement("i");
     codeIconNode.className = "fa fa-code";
     codeIconNode.setAttribute('aria-hidden', 'true');
+
     let topTextNode1 = document.createTextNode(" with ");
     let loveIconNode = document.createElement("i");
     loveIconNode.className = "fa fa-heart";
     loveIconNode.setAttribute('aria-hidden', 'true');
     let topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+
     codeBy.appendChild(codeIconNode);
     codeBy.appendChild(topTextNode1);
     codeBy.appendChild(loveIconNode);
@@ -440,10 +461,12 @@
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
             fixedTopBtnLink.className = 'prevNextTop2';
+
             let fixedTopBtnIcon = document.createElement("i");
             fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
             fixedTopBtnIcon.title = 'Top';
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
+
             fixedTopBtn.appendChild(fixedTopBtnLink);
             fixedTopBtnLink.appendChild(fixedTopBtnIcon);
         }
