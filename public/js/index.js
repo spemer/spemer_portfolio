@@ -23,192 +23,215 @@
 })();
 
 
-
 //
 // siteMap links
 (function(){
-    let siteMapList = {
-        AWeather: {
+    let siteMapList = [
+        {
             name:  'AWeather',
-            href:  'weather-push-notification-alarm-application',
+            href:  'portfolio/weather-push-notification-alarm-application',
             title: 'AWeather - UX Case study: Weather notification application',
             img: 'weather/thumb.png'
         },
-        IGTracker: {
+        {
             name:  'IGTracker',
-            href:  'instagram-tracker-application-igtracker-design',
+            href:  'portfolio/instagram-tracker-application-igtracker-design',
             title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
             img: 'igtracker/thumb.png'
         },
-        Insharior: {
+        {
             name:  'Insharior',
-            href:  'insharior-ux-case-study-user-experience-design',
+            href:  'portfolio/insharior-ux-case-study-user-experience-design',
             title: 'Insharior - UX Case study: Interior item sharing mobile application design',
             img: 'insharior/thumb.png'
         },
-        Neighbors: {
+        {
             name:  'Neighbors',
-            href:  'dream-drim-korea-apartment-application',
+            href:  'portfolio/dream-drim-korea-apartment-application',
             title: 'Neighbors - SNS application for neighborhood UI Design',
             img: 'dream/cover.png'
         },
-        UnivCam: {
+        {
             name:  'UnivCam',
-            href:  'album-image-sort-application-univcam',
+            href:  'portfolio/album-image-sort-application-univcam',
             title: 'UnivCam - UX Case study: Album sorting application UI/UX design',
             img: 'univcam/thumb.png'
         },
-        Memoree: {
+        {
             name:  'Memoree',
-            href:  'memory-record-application-ui-design',
+            href:  'portfolio/memory-record-application-ui-design',
             title: 'Memoree - Minimal UI/UX design for iOS',
             img: 'memoree/thumb.png'
         },
-        Sprinter: {
+        {
             name:  'Sprinter',
-            href:  'todo-task-list-manage-application-sprinter',
+            href:  'portfolio/todo-task-list-manage-application-sprinter',
             title: 'Sprinter - ToDo list & task management application UI/UX design',
             img: 'sprinter/thumb.png'
         },
-        Suhyup: {
+        {
             name:  'Suhyup',
-            href:  'suhyup-mobile-banking-ui-ux-renewal',
+            href:  'portfolio/suhyup-mobile-banking-ui-ux-renewal',
             title: 'Suhyup - Mobile Banking Application UI/UX Renewal',
             img: 'suhyup/thumb.png'
         },
-        FlatIcons: {
+        {
             name:  'Flat Icons',
-            href:  'flaticon-vector-graphic-illustration-design',
+            href:  'portfolio/flaticon-vector-graphic-illustration-design',
             title: 'Minimal vector flat icon design',
             img: 'flaticon/house.jpg'
         }
-    }
-    let siteMapListArticle = {
-        CSSVariables: {
+    ]
+    let siteMapListArticle = [
+        {
             name:  'CSS Variables',
-            href:  'css-custom-properties-variables-usage',
+            href:  'article/css-custom-properties-variables-usage',
             title: 'Using variables(custom properties) in CSS3',
             img: 'css/thumb.png'
         },
-        Jekyll: {
+        {
             name:  'Jekyll',
-            href:  'free-github-blog-and-hosting-with-jekyll',
+            href:  'article/free-github-blog-and-hosting-with-jekyll',
             title: 'Free GitHub blog and Hosting with Jekyll',
             img: 'jekyll/thumb.png'
         },
-        Material: {
+        {
             name:  'Material',
-            href:  'creative-pros-cons-google-material-design',
+            href:  'article/creative-pros-cons-google-material-design',
             title: 'Cons and Pros of Material design by Google',
             img: 'material/material.png'
         },
-        Bodymovin: {
+        {
             name:  'Bodymovin',
-            href:  'bodymovin-airbnb-lottie-after-effects',
+            href:  'article/bodymovin-airbnb-lottie-after-effects',
             title: 'How to use Bodymovin for After Effects by Airbnb',
             img: 'bodymovin/cover.png'
         },
-        Firebase: {
+        {
             name:  'Firebase',
-            href:  'connecting-domain-with-google-firebase',
+            href:  'article/connecting-domain-with-google-firebase',
             title: 'Using Firebase to host website for free!',
             img: 'firebase/firebase_logo.jpg'
         },
-        Musics: {
+        {
             name:  'Musics',
-            href:  'spemer-music',
+            href:  'article/spemer-music',
             title: 'Musics by Spemer',
             img: 'music/cover.jpg'
         }
-    }
-
-
-
-    //
-    // adding number property
-    // let listTotalLength = Object.keys(siteMapList).length + Object.keys(siteMapListArticle).length;
-
-    // // adding number property - siteMapList
-    // for (i = 0; i < Object.keys(siteMapList).length; i++){
-    //     for (let key in siteMapList){
-    //         siteMapList[key].number = i+1;
-    //     }
-    // }
-    // // adding number property - siteMapListArticle
-    // for (let key in siteMapListArticle){
-    //     for (i = Object.keys(siteMapList).length; i < Object.keys(siteMapList).length; i++){
-    //         siteMapListArticle[key].number = i+1;
-    //     }
-    // }
-
-
-    // for문을 사용해서.
-    // 현재 윈도우의 href값을 알아낸 다음, siteMapList[key]와 비교
-    // 일치한다면 siteMapList[key]의 다음 키값을 적용
-    // for문을 사용해서
-    // siteMapList에 숫자로 된 key값 추가
-    // siteMapListArticle 에는 siteMapList.length 부터 시작
+    ]
 
 
     //
     // home next prev(bottom)
-    // const articleLinks = document.querySelector('.article');
-    // const portfolioLinks = document.querySelector('.portfolio');
-    // for (let listKey in siteMapList)
-    // {
-    //     let thisUrl = window.location.href;
-    //     let substring = siteMapList[listKey].href;
-    //     if(thisUrl.indexOf(substring) != -1)
-    //     {
-    //         let nextLink = document.createElement('a');
-    //         nextLink.href = "https://spemer.com/portfolio/" + siteMapList[listKey].href + ".html";
-    //         nextLink.title = siteMapList[listKey].name;
-    //         nextLink.className = 'prevNext';
-            
-    //         let nextBold = document.createElement('b');
-    //         let nextText = document.createTextNode(' Next ');
-    //         let nextIcon = document.createElement('i');
-    //         nextIcon.className = 'fa fa-angle-double-right';
+    const portfolioLinks = document.querySelector('.portfolio');
+    const articleLinks = document.querySelector('.articles');
 
-    //         portfolioLinks.appendChild(nextLink);
-    //         nextLink.appendChild(nextBold);
-    //         nextBold.appendChild(nextText);
-    //         nextBold.appendChild(nextIcon);
-    //     }
-    // }
+    // home next prev(bottom) -> NEXT
+    function setNextBtn(arrayName, divClassName, listLength){
+        for (let i = 0; i < arrayName.length; i++)
+        {
+            let thisUrl = window.location.href;
+            let substring = arrayName[i].href;
+            if (thisUrl.indexOf(arrayName[listLength].href) != -1)
+            {
+                var nextLink = document.createElement('a');
+                nextLink.className = 'prevNext prevNextText';
+                nextLink.href = "https://spemer.com/";
+                nextLink.title = "Home";
+                
+                var nextBold = document.createElement('b');
+                var nextText = document.createTextNode(' Home ');
+                var nextIcon = document.createElement('i');
+            }
+            else if (thisUrl.indexOf(substring) != -1)
+            {
+                var nextLink = document.createElement('a');
+                nextLink.className = 'prevNext prevNextText';
+                nextLink.href = "https://spemer.com/" + arrayName[i + 1].href + ".html";
+                nextLink.title = arrayName[i + 1].name;
 
+                var nextBold = document.createElement('b');
+                var nextText = document.createTextNode(' Next ');
+                var nextIcon = document.createElement('i');
+                nextIcon.className = 'fa fa-angle-double-right';
+            }
+        }
+        divClassName.appendChild(nextLink);
+        nextLink.appendChild(nextBold);
+        nextBold.appendChild(nextText);
+        nextBold.appendChild(nextIcon);
+    }
 
+    //
+    // home next prev(bottom) -> PREV
+    function setPrevBtn(arrayName, divClassName){
+        for (let i = 0; i < arrayName.length; i++)
+        {
+            let thisUrl = window.location.href;
+            let substring = arrayName[i].href;
+            if (thisUrl.indexOf(arrayName[0].href) != -1)
+            {
+                var nextLink = document.createElement('a');
+                nextLink.className = 'prevNext prevNextText';
+                nextLink.href = "https://spemer.com/";
+                nextLink.title = "Home";
+                
+                var nextBold = document.createElement('b');
+                var nextText = document.createTextNode(' Home ');
+                var nextIcon = document.createElement('i');
+            }
+            else if (thisUrl.indexOf(substring) != -1)
+            {
+                var nextLink = document.createElement('a');
+                nextLink.className = 'prevNext prevNextText';
+                nextLink.href = "https://spemer.com/" + arrayName[i - 1].href + ".html";
+                nextLink.title = arrayName[i - 1].name;
+
+                var nextBold = document.createElement('b');
+                var nextText = document.createTextNode(' Prev ');
+                var nextIcon = document.createElement('i');
+                nextIcon.className = 'fa fa-angle-double-left';
+            }
+        }
+        divClassName.appendChild(nextLink);
+        nextLink.appendChild(nextBold);
+        nextBold.appendChild(nextIcon);
+        nextBold.appendChild(nextText);
+    };
+
+    // excute portfolio or article
+    if(portfolioLinks) {
+        setNextBtn(siteMapList, portfolioLinks, 8);
+        setPrevBtn(siteMapList, portfolioLinks);
+    }
+    else if (articleLinks){
+        setNextBtn(siteMapListArticle, articleLinks, 5);
+        setPrevBtn(siteMapListArticle, articleLinks);
+    }
+    
+    
     //
     // bottom siteMap navigation
     const siteMapNav = document.querySelector('.siteMapNav');
-    for (let key in siteMapList)
-    {
-        let listNode = document.createElement("li");
+    function bottomSiteNav(arrayName){
+        for (let i = 0; i < arrayName.length; i++)
+        {
+            let listNode = document.createElement("li");
 
-        let hrefNode = document.createElement("a");
-        hrefNode.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
-        hrefNode.title = siteMapList[key].title;
+            let hrefNode = document.createElement("a");
+            hrefNode.href = "https://spemer.com/" + arrayName[i].href + ".html";
+            hrefNode.title = arrayName[i].title;
 
-        let textNode = document.createTextNode(siteMapList[key].name);
+            let textNode = document.createTextNode(arrayName[i].name);
 
-        siteMapNav.appendChild(listNode);
-        listNode.appendChild(hrefNode);
-        hrefNode.appendChild(textNode);
+            siteMapNav.appendChild(listNode);
+            listNode.appendChild(hrefNode);
+            hrefNode.appendChild(textNode);
+        }
     }
-    for (let key in siteMapListArticle)
-    {
-        let listNode = document.createElement("li");
-
-        let hrefNode = document.createElement("a");
-        hrefNode.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
-        hrefNode.title = siteMapListArticle[key].title;
-
-        let textNode = document.createTextNode(siteMapListArticle[key].name);
-
-        siteMapNav.appendChild(listNode);
-        listNode.appendChild(hrefNode);
-        hrefNode.appendChild(textNode);
-    }
+    bottomSiteNav(siteMapList);
+    bottomSiteNav(siteMapListArticle);
 
 
     //
@@ -218,7 +241,7 @@
     if (indexLists)
     {
         let indexCount = 0;
-        for (let key in siteMapList)
+        for (let i = 0; i < siteMapList.length; i++)
         {
             if (indexCount === 9) {
                 break;
@@ -227,18 +250,18 @@
             let indexDiv = document.createElement('div');
             indexDiv.className = "artImgBoxEach grow";
             let indexLink = document.createElement('a');
-            indexLink.href = "https://spemer.com/portfolio/" + siteMapList[key].href + ".html";
+            indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
 
             let indexFigure = document.createElement('figure');
 
             let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapList[key].img;
-            figImg.alt = siteMapList[key].title;
-            figImg.title = siteMapList[key].title;
+            figImg.src = "https://spemer.com/img/works/" + siteMapList[i].img;
+            figImg.alt = siteMapList[i].title;
+            figImg.title = siteMapList[i].title;
 
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapList[key].name);
+            let figTxt = document.createTextNode(siteMapList[i].name);
 
             indexLists.appendChild(indexDiv);
             indexDiv.appendChild(indexLink);
@@ -251,25 +274,26 @@
             ++indexCount;
         }
     }
+    // article.html -> lists
     else if (articleLists)
     {
         let articleCount = 0;
-        for (let key in siteMapListArticle) {
+        for (let i = 0; i < siteMapListArticle.length; i++) {
             let articleDiv = document.createElement('div');
             articleDiv.className = "artImgBoxEach grow";
             let articleLink = document.createElement('a');
-            articleLink.href = "https://spemer.com/article/" + siteMapListArticle[key].href + ".html";
+            articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
 
             let articleFigure = document.createElement('figure');
 
             let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[key].img;
-            figImg.alt = siteMapListArticle[key].title;
-            figImg.title = siteMapListArticle[key].title;
+            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
+            figImg.alt = siteMapListArticle[i].title;
+            figImg.title = siteMapListArticle[i].title;
 
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapListArticle[key].name);
+            let figTxt = document.createTextNode(siteMapListArticle[i].name);
 
             articleLists.appendChild(articleDiv);
             articleDiv.appendChild(articleLink);
@@ -288,20 +312,20 @@
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome) {
-        // let body = document.body,
-        //     html = document.documentElement;
-        // let height = Math.max( body.scrollHeight, body.offsetHeight,
-        //                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+        let body = document.body,
+            html = document.documentElement;
+        let height = Math.max( body.scrollHeight, body.offsetHeight,
+                               html.clientHeight, html.scrollHeight, html.offsetHeight );
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
         topBtnNode.title = "Top";
         topBtnNode.className = "prevNextTop";
-        // if (height < 16000)
-        // {
-        //     topBtnNode.setAttribute('onmouseover', 'topUp()');
-        //     topBtnNode.setAttribute('onmouseleave', 'topDn()');
-        // }
+        if (height < 12000)
+        {
+            topBtnNode.setAttribute('onmouseover', 'topUp()');
+            topBtnNode.setAttribute('onmouseleave', 'topDn()');
+        }
         let topBtnBold = document.createElement("b");
         let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
@@ -441,31 +465,30 @@
 })();
 
 
-// function topUp() {
-//     $('.fa-angle-up').addClass('topUp');
-//     $('.fa-angle-up').removeClass('topUp2');
-// }
-// function topDn() {
-//     $('.fa-angle-up').addClass('topUp2');
-//     $('.fa-angle-up').removeClass('topUp');
-// }
-// function nextRight() {
-//     $('.fa-angle-double-right').addClass('nextRight');
-//     $('.fa-angle-double-right').removeClass('nextRight2');
-// }
-// function nextRightDel() {
-//     $('.fa-angle-double-right').addClass('nextRight2');
-//     $('.fa-angle-double-right').removeClass('nextRight');
-// }
-// function nextLeft() {
-//     $('.fa-angle-double-left').addClass('nextLeft');
-//     $('.fa-angle-double-left').removeClass('nextLeft2');
-// }
-// function nextLeftDel() {
-//     $('.fa-angle-double-left').addClass('nextLeft2');
-//     $('.fa-angle-double-left').removeClass('nextLeft');
-// }
-//
+function topUp() {
+    $('.fa-angle-up').addClass('topUp');
+    $('.fa-angle-up').removeClass('topUp2');
+}
+function topDn() {
+    $('.fa-angle-up').addClass('topUp2');
+    $('.fa-angle-up').removeClass('topUp');
+}
+function nextRight() {
+    $('.fa-angle-double-right').addClass('nextRight');
+    $('.fa-angle-double-right').removeClass('nextRight2');
+}
+function nextRightDel() {
+    $('.fa-angle-double-right').addClass('nextRight2');
+    $('.fa-angle-double-right').removeClass('nextRight');
+}
+function nextLeft() {
+    $('.fa-angle-double-left').addClass('nextLeft');
+    $('.fa-angle-double-left').removeClass('nextLeft2');
+}
+function nextLeftDel() {
+    $('.fa-angle-double-left').addClass('nextLeft2');
+    $('.fa-angle-double-left').removeClass('nextLeft');
+}
 function lineLive2() {
     $('.ready2').removeClass('aboutHover2');
 }

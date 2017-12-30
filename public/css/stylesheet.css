@@ -108,7 +108,7 @@ body{
 	background-color:var(--color-white)
 }
 
-a,b { color:#656c7a; color:var(--color-gray) }
+a,b {color:#656c7a; color:var(--color-gray)}
 
 .everyTxtEndArticle{
 	max-width:768px;
@@ -220,6 +220,10 @@ a,b { color:#656c7a; color:var(--color-gray) }
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
 	transition:color .25s ease}
+
+.prevNextText{
+	margin-left:16px;
+}
 
 header{
 	width:100%;
