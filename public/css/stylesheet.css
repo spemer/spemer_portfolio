@@ -269,14 +269,14 @@ header{
 	padding-top:25px
 }
 
-#headerNav nav ul li{
+.headerNavList{
 	margin-left:25px;
 	display:inline-block
 }
 
-#headerNav nav ul li:first-child{margin-left:0}
+.headerNavList:first-child{margin-left:0}
 
-header nav li a{
+.headerNav {
 	padding-top:1px;
 	font-weight:100;
 	padding-bottom:1px;
@@ -293,7 +293,7 @@ header nav li a{
 	font-size:calc(var(--font-size)*1rem)
 }
 
-header nav li a:hover{
+.headerNav:hover{
 	color:#2a2e2e;
 	border-bottom:2px solid #babac0;
 	-webkit-transition:all .25s ease;
@@ -768,7 +768,7 @@ h4 {
 		padding-top:50px
 	}
 	
-	#headerNav nav ul li {
+	.headerNavList {
 		margin-left:15px;
 		display:inline-block;
 		font-size:13.5px;
@@ -777,7 +777,7 @@ h4 {
 		font-size:calc(var(--font-size)*.875rem)
 	}
 	
-	#headerNav nav ul li:first-child { margin-left:0 }
+	.headerNavList:first-child { margin-left:0 }
 	#artImgBox div:nth-child(3n+2) { margin:0 }
 	#artImgBox div:nth-child(n+1) { margin:2%; width:45% }
 	.artImgBoxEach:nth-child(n+1) div { margin:2% }

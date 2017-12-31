@@ -40,10 +40,10 @@ function setAttrByHeight(target, attrName, attrValue){
 (function(){
     let siteMapList = [
         {
-            name:  'IGTracker',
-            href:  'portfolio/instagram-tracker-application-igtracker-design',
-            title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
-            img: 'igtracker/thumb.png'
+            name:  'AWeather',
+            href:  'portfolio/weather-push-notification-alarm-application',
+            title: 'AWeather - UX Case study: Weather notification application',
+            img: 'weather/thumb.png'
         },
         {
             name:  'Insharior',
@@ -52,10 +52,10 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'insharior/thumb.png'
         },
         {
-            name:  'AWeather',
-            href:  'portfolio/weather-push-notification-alarm-application',
-            title: 'AWeather - UX Case study: Weather notification application',
-            img: 'weather/thumb.png'
+            name:  'IGTracker',
+            href:  'portfolio/instagram-tracker-application-igtracker-design',
+            title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
+            img: 'igtracker/thumb.png'
         },
         {
             name:  'Neighbors',
@@ -97,37 +97,37 @@ function setAttrByHeight(target, attrName, attrValue){
     let siteMapListArticle = [
         {
             name:  'CSS Variables',
-            href:  'article/css-custom-properties-variables-usage',
+            href:  'articles/css-custom-properties-variables-usage',
             title: 'Using variables(custom properties) in CSS3',
             img: 'css/thumb.png'
         },
         {
             name:  'Jekyll',
-            href:  'article/free-github-blog-and-hosting-with-jekyll',
+            href:  'articles/free-github-blog-and-hosting-with-jekyll',
             title: 'Free GitHub blog and Hosting with Jekyll',
             img: 'jekyll/thumb.png'
         },
         {
             name:  'Material',
-            href:  'article/creative-pros-cons-google-material-design',
+            href:  'articles/creative-pros-cons-google-material-design',
             title: 'Cons and Pros of Material design by Google',
             img: 'material/material.png'
         },
         {
             name:  'Bodymovin',
-            href:  'article/bodymovin-airbnb-lottie-after-effects',
+            href:  'articles/bodymovin-airbnb-lottie-after-effects',
             title: 'How to use Bodymovin for After Effects by Airbnb',
             img: 'bodymovin/cover.png'
         },
         {
             name:  'Firebase',
-            href:  'article/connecting-domain-with-google-firebase',
+            href:  'articles/connecting-domain-with-google-firebase',
             title: 'Using Firebase to host website for free!',
             img: 'firebase/firebase_logo.jpg'
         },
         {
             name:  'Musics',
-            href:  'article/spemer-music',
+            href:  'articles/spemer-music',
             title: 'Musics by Spemer',
             img: 'music/cover.jpg'
         }
@@ -332,6 +332,56 @@ function setAttrByHeight(target, attrName, attrValue){
 
 
 //
+// headerNav 3 ul > li
+(function(){
+    let topNavLists = [
+        {
+            title: 'Portfolio',
+            href: 'https://spemer.com/',
+            hName: '/portfolio/'
+        },
+        {
+            title: 'Articles',
+            href: 'https://spemer.com/articles.html',
+            hName: '/articles'
+        },
+        {
+            title: 'About',
+            href: 'https://spemer.com/about-spemer.html',
+            hName: 'about-spemer.html'
+        }
+    ]
+
+    let headerNavLists = document.querySelector('#headerNav > nav > ul');
+
+    for (let i = 0; i < topNavLists.length; i++)
+    {
+        let setHeaderLists = document.createElement('li');
+        setHeaderLists.className = 'headerNavList';
+
+        let setHeaderAnchor = document.createElement('a');
+        setHeaderAnchor.title = topNavLists[i].title;
+        setHeaderAnchor.href = topNavLists[i].href;
+        setHeaderAnchor.className = 'headerNav';
+
+        let headerTextBold = document.createElement('b');
+        let setHeaderNavText = document.createTextNode(topNavLists[i].title);
+
+        headerNavLists.appendChild(setHeaderLists);
+        setHeaderLists.appendChild(setHeaderAnchor);
+        setHeaderAnchor.appendChild(headerTextBold);
+        headerTextBold.appendChild(setHeaderNavText);
+
+        let thisUrl = window.location.href;
+        let substring = topNavLists[i].hName;
+        if (thisUrl.indexOf(substring) != -1){
+            setHeaderLists.className = 'headerNavList aboutHover';
+        }
+    }
+})();
+
+
+//
 // TopBtn
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
@@ -513,18 +563,18 @@ function nextLeftDel() {
     $('.fa-angle-double-left').addClass('nextLeft2');
     $('.fa-angle-double-left').removeClass('nextLeft');
 }
-function lineLive2() {
-    $('.ready2').removeClass('aboutHover2');
-}
-function lineDel2() {
-    $('.ready2').addClass('aboutHover2');
-}
-function lineLive3() {
-    $('.ready3').removeClass('aboutHover3');
-}
-function lineDel3() {
-    $('.ready3').addClass('aboutHover3');
-}
+// function lineLive2() {
+//     $('.ready2').removeClass('aboutHover2');
+// }
+// function lineDel2() {
+//     $('.ready2').addClass('aboutHover2');
+// }
+// function lineLive3() {
+//     $('.ready3').removeClass('aboutHover3');
+// }
+// function lineDel3() {
+//     $('.ready3').addClass('aboutHover3');
+// }
 //
 function addTooltip() {
     $('.copied').removeClass('tooltip');
