@@ -22,6 +22,8 @@
         { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
         { name: 'designer', content: 'Hyouk Seo(Spemer)' },
         { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
+        { name: 'fb:admins', content: '100001935259349' },
+        { name: 'fb:app_id', content: '116484055630441' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
@@ -31,6 +33,33 @@
         setMeta.setAttribute('content', metaLists[i].content);
         headTitle.appendChild(setMeta);
     }
+})();
+
+
+//
+// favicon & shortcut icons
+(function(){
+    iconLists = [
+        { rel: 'theme-color', href: 'img/favicon-16.png', sizes: '16x16' },
+        { rel: 'theme-color', href: 'img/favicon-32.png', sizes: '32x32' },
+        { rel: 'theme-color', href: 'img/favicon-48.png', sizes: '48x48' },
+        { rel: 'theme-color', href: 'img/favicon-62.png', sizes: '62x62' },
+        { rel: 'theme-color', href: 'img/favicon-192.png', sizes: '192x192' },
+    ]
+    let headTitle = document.querySelector('head');
+    for (let i = 0; i < iconLists.length; i++)
+    {
+        let setScIcon = document.createElement('link');
+        setScIcon.setAttribute('rel', iconLists[i].rel);
+        setScIcon.setAttribute('href', 'https://spemer.com/' + iconLists[i].href);
+        setScIcon.setAttribute('sizes', iconLists[i].sizes);
+        setScIcon.setAttribute('type', 'https://spemer.com/' + iconLists[i].type);
+        headTitle.appendChild(setScIcon);
+    }
+    let setFavicon = document.createElement('link');
+    setFavicon.setAttribute('rel', 'shortcut icon');
+    setFavicon.setAttribute('href', 'https://spemer.com/img/favicon.png');
+    headTitle.appendChild(setFavicon);
 })();
 
 
