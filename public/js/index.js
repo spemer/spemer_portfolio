@@ -10,6 +10,34 @@
 
 
 //
+// metaTags ***meta name, content ONLY***
+(function(){
+    metaLists = [
+        {
+            name: 'theme-color',
+            content: '#ffffff'
+        },
+        {
+            name: 'googlebot',
+            content: 'index,follow'
+        },
+        {
+            name: 'google',
+            content: 'notranslate'
+        },
+    ]
+    let headTitle = document.querySelector('head');
+    for (let i = 0; i < metaLists.length; i++)
+    {
+        let setMeta = document.createElement('meta');
+        setMeta.setAttribute('name', metaLists[i].name);
+        setMeta.setAttribute('content', metaLists[i].content);
+        headTitle.appendChild(setMeta);
+    }
+})();
+
+
+//
 // headerLogo
 (function(){
     let _headerLogo = document.querySelector('#headerLogo');
