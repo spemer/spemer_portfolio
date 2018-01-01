@@ -77,9 +77,9 @@
 
     // apple icons
     faviconLists = [
-        { sizes: '152x152', href: 'favicon-152.png'},
-        { sizes: '180x180', href: 'favicon-180.png'},
-        { sizes: '167x167', href: 'favicon-167.png'}
+        { sizes: '152x152', href: 'touch-icon-ipad.png'},
+        { sizes: '180x180', href: 'touch-icon-iphone-retina.png'},
+        { sizes: '167x167', href: 'touch-icon-ipad-retina.png'}
     ]
     for (let i = 0; i < faviconLists.length; i++)
     {
