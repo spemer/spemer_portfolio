@@ -10,21 +10,18 @@
 
 
 //
-// metaTags ***meta name, content ONLY***
+// metaTags ***meta name, content***
 (function(){
     metaLists = [
-        {
-            name: 'theme-color',
-            content: '#ffffff'
-        },
-        {
-            name: 'googlebot',
-            content: 'index,follow'
-        },
-        {
-            name: 'google',
-            content: 'notranslate'
-        },
+        { name: 'theme-color', content: '#ffffff' },
+        { name: 'robots', content: 'index,follow' },
+        { name: 'referrer', content: 'origin-when-cross-origin' },
+        { name: 'googlebot', content: 'index,follow' },
+        { name: 'google', content: 'notranslate' },
+        { name: 'subject', content: 'Design' },
+        { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
+        { name: 'designer', content: 'Hyouk Seo(Spemer)' },
+        { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
