@@ -10,18 +10,18 @@
 
 
 //
-// metaTags ***meta name, content***
+// metaTags *** meta [name, content] ***
 (function(){
     metaLists = [
         { name: 'theme-color', content: '#ffffff' },
-        { name: 'robots', content: 'index,follow' },
-        { name: 'referrer', content: 'origin-when-cross-origin' },
-        { name: 'googlebot', content: 'index,follow' },
-        { name: 'google', content: 'notranslate' },
         { name: 'subject', content: 'Design' },
         { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
         { name: 'designer', content: 'Hyouk Seo(Spemer)' },
         { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
+        { name: 'robots', content: 'index,follow' },
+        { name: 'referrer', content: 'origin-when-cross-origin' },
+        { name: 'googlebot', content: 'index,follow' },
+        { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },
     ]
@@ -40,17 +40,17 @@
 // favicon & shortcut icons
 (function(){
     iconLists = [
-        { rel: 'theme-color', href: 'img/favicon-16.png', sizes: '16x16' },
-        { rel: 'theme-color', href: 'img/favicon-32.png', sizes: '32x32' },
-        { rel: 'theme-color', href: 'img/favicon-48.png', sizes: '48x48' },
-        { rel: 'theme-color', href: 'img/favicon-62.png', sizes: '62x62' },
-        { rel: 'theme-color', href: 'img/favicon-192.png', sizes: '192x192' },
+        { href: 'img/favicon-16.png', sizes: '16x16' },
+        { href: 'img/favicon-32.png', sizes: '32x32' },
+        { href: 'img/favicon-48.png', sizes: '48x48' },
+        { href: 'img/favicon-62.png', sizes: '62x62' },
+        { href: 'img/favicon-192.png', sizes: '192x192' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < iconLists.length; i++)
     {
         let setScIcon = document.createElement('link');
-        setScIcon.setAttribute('rel', iconLists[i].rel);
+        setScIcon.setAttribute('rel', 'icon');
         setScIcon.setAttribute('href', 'https://spemer.com/' + iconLists[i].href);
         setScIcon.setAttribute('sizes', iconLists[i].sizes);
         setScIcon.setAttribute('type', 'https://spemer.com/' + iconLists[i].type);
