@@ -1,4 +1,5 @@
 //"use strict";
+
 //
 // pace.js
 (function(){
@@ -10,7 +11,7 @@
 
 
 //
-// metaTags *** meta [name, content] ***
+// metaTags **meta [name, content]**
 (function(){
     metaLists = [
         { name: 'theme-color', content: '#ffffff' },
@@ -24,6 +25,8 @@
         { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },
+        { name: 'mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
@@ -39,27 +42,53 @@
 //
 // favicon & shortcut icons
 (function(){
-    iconLists = [
-        { href: 'img/favicon-16.png', sizes: '16x16' },
-        { href: 'img/favicon-32.png', sizes: '32x32' },
-        { href: 'img/favicon-48.png', sizes: '48x48' },
-        { href: 'img/favicon-62.png', sizes: '62x62' },
-        { href: 'img/favicon-192.png', sizes: '192x192' },
-    ]
     let headTitle = document.querySelector('head');
+    // basic icons
+    etcIcons = [
+        { rel: 'apple-touch-icon'},
+        { rel: 'apple-touch-startup-image'},
+        { rel: 'shortcut icon'}
+    ]
+    for (let i = 0; i < etcIcons.length; i++)
+    {
+        let setFavicon = document.createElement('link');
+        setFavicon.setAttribute('rel', etcIcons[i].rel);
+        setFavicon.setAttribute('href', 'https://spemer.com/img/favicon/favicon.png');
+        headTitle.appendChild(setFavicon);
+    }
+
+    // web shorcut icons
+    iconLists = [
+        { href: 'favicon-16.png', sizes: '16x16' },
+        { href: 'favicon-32.png', sizes: '32x32' },
+        { href: 'favicon-48.png', sizes: '48x48' },
+        { href: 'favicon-62.png', sizes: '62x62' },
+        { href: 'favicon-192.png', sizes: '192x192' }
+    ]
     for (let i = 0; i < iconLists.length; i++)
     {
         let setScIcon = document.createElement('link');
         setScIcon.setAttribute('rel', 'icon');
-        setScIcon.setAttribute('href', 'https://spemer.com/' + iconLists[i].href);
+        setScIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + iconLists[i].href);
         setScIcon.setAttribute('sizes', iconLists[i].sizes);
-        setScIcon.setAttribute('type', 'https://spemer.com/' + iconLists[i].type);
+        setScIcon.setAttribute('type', 'https://spemer.com/img/favicon/' + iconLists[i].href);
         headTitle.appendChild(setScIcon);
     }
-    let setFavicon = document.createElement('link');
-    setFavicon.setAttribute('rel', 'shortcut icon');
-    setFavicon.setAttribute('href', 'https://spemer.com/img/favicon.png');
-    headTitle.appendChild(setFavicon);
+
+    // apple icons
+    faviconLists = [
+        { sizes: '152x152', href: 'favicon-152.png'},
+        { sizes: '180x180', href: 'favicon-180.png'},
+        { sizes: '167x167', href: 'favicon-167.png'}
+    ]
+    for (let i = 0; i < faviconLists.length; i++)
+    {
+        let setFvIcon = document.createElement('link');
+        setFvIcon.setAttribute('rel', 'apple-touch-icon');
+        setFvIcon.setAttribute('sizes', faviconLists[i].sizes);
+        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + faviconLists[i].href);
+        headTitle.appendChild(setFvIcon);
+    }
 })();
 
 
