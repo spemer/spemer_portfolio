@@ -25,8 +25,6 @@
         { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },
-        { name: 'mobile-web-app-capable', content: 'yes' },
-        { name: 'apple-mobile-web-app-capable', content: 'yes' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
@@ -44,10 +42,10 @@
 (function(){
     let headTitle = document.querySelector('head');
     // basic icons
-    etcIcons = [
-        { rel: 'apple-touch-icon'},
-        { rel: 'apple-touch-startup-image'},
-        { rel: 'shortcut icon'}
+    let etcIcons = [
+        { rel: 'apple-touch-icon' },
+        { rel: 'apple-touch-startup-image' },
+        { rel: 'shortcut icon' }
     ]
     for (let i = 0; i < etcIcons.length; i++)
     {
@@ -58,7 +56,7 @@
     }
 
     // web shorcut icons
-    iconLists = [
+    let iconLists = [
         { href: 'favicon-16.png', sizes: '16x16' },
         { href: 'favicon-32.png', sizes: '32x32' },
         { href: 'favicon-48.png', sizes: '48x48' },
@@ -76,10 +74,10 @@
     }
 
     // apple icons
-    faviconLists = [
-        { sizes: '152x152', href: 'touch-icon-ipad.png'},
-        { sizes: '180x180', href: 'touch-icon-iphone-retina.png'},
-        { sizes: '167x167', href: 'touch-icon-ipad-retina.png'}
+    let faviconLists = [
+        { sizes: '152x152', href: 'touch-icon-ipad.png' },
+        { sizes: '180x180', href: 'touch-icon-iphone-retina.png' },
+        { sizes: '167x167', href: 'touch-icon-ipad-retina.png' }
     ]
     for (let i = 0; i < faviconLists.length; i++)
     {
@@ -178,6 +176,12 @@ function setAttrByHeight(target, attrName, attrValue){
         }
     ]
     let siteMapListArticle = [
+        {
+            name:  'Favicon',
+            href:  'articles/set-favicon-with-javascript',
+            title: 'Set favicons with JavaScript',
+            img: 'favicon/favicon.png'
+        },
         {
             name:  'CSS Variables',
             href:  'articles/css-custom-properties-variables-usage',
@@ -307,7 +311,7 @@ function setAttrByHeight(target, attrName, attrValue){
         setPrevBtn(siteMapList, portfolioLinks);
     }
     else if (articleLinks){
-        setNextBtn(siteMapListArticle, articleLinks, 5);
+        setNextBtn(siteMapListArticle, articleLinks, 6);
         setPrevBtn(siteMapListArticle, articleLinks);
     }
     

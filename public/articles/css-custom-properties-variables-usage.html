@@ -59,16 +59,16 @@
 		<div class="triBox">
 			<div class="triBoxMain"><center>
 
-				<div class="everyTxtEnd everyTxtEndArticle"><br /><br />
+				<div class="everyTxtEnd everyTxtEndArticle"><br />
 					<h2>Using variables in CSS</h2>
 					<p>Basic usage of CSS custom properties — variables</p>
-					<br /><br />
+					<br />
 
 
 					<figure class="articleImg35-small articleFig articleImgSize" >
 						<img src="../img/works/css/css_small.png" alt="CSS3" title="CSS3" />
 					</figure>
-					<br /><br />
+					<br />
 
 
 					<p>
@@ -116,24 +116,14 @@
 					<p>
 						Pseudo-class <span class="codeInline">:root</span> acts as a <b>selector</b> in your stylesheet. You can put this at the top of your stylesheet, and <b>declare a name of variable</b> like <span class="codeInline">--var-name</span>. After that, <b>save value</b> which you want to like below.
 					</p>
-					<p class="code">
-						:root {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;--paragraph-color: #656c7a;<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;--paragraph-font-size: 1rem;<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;--figcaption-font-size: 12px;<br />
-						}
-					</p>
+					<script src="https://gist.github.com/spemer/7ed77636a8edeacdddda1314ffa3299e.js"></script>
 
 					<br />
 					<h4>Reference</h4>
 					<p>
 						Now you can <b>refer your variable</b> elsewhere you want with <span class="codeInline">var()</span> like below, which I declared above.
 					</p>
-					<p class="code">
-						p {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
-						}
-					</p>
+					<script src="https://gist.github.com/spemer/1b78337d1016832768b447f6fc60dc7e.js"></script>
 
 					<p>
 						It results every <span class="codeInline">p</span> tags colored in <span class="codeInline">--paragraph-color</span> in your stylesheet. The advantages of variable is after you <b>declare it once</b>, you can <b>refer it anywhere</b> you want and as many times you want. If you want to revise it, all you have to do is just fix the value in variable you’ve declared. I’ll show you how.
@@ -141,21 +131,7 @@
 
 					<br />
 
-					<p class="code">
-						p {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--paragraph-font-size);<br />
-						}<br />
-						
-						li .primary-nav {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
-						}<br />
-						
-						p {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-color: var(--paragraph-color);<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-size: var(--figcaption-font-size);<br />
-						}<br />
-					</p>
+					<script src="https://gist.github.com/spemer/2d78b01916cee146ea1ffdc0ecf6e8c5.js"></script>
 
 					<p>
 						In case of above, I referenced <span class="codeInline">--paragraph-color</span> to two tags and one class. It affects them all in the same way — to colored with <span class="codeInline">#656c7a</span> — because I saved that value in variable <span class="codeInline">--paragraph-color</span> at the <span class="codeInline">:root</span> selector.
@@ -178,25 +154,16 @@
 						Variables in CSS also have function to <b>calculate</b> it’s own value. This means your variable that declared with number value can be calculated and used in multiple ways.
 					</p>
 
-					<p class="code">
-						:root {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;--font-size: 1;<br />
-						}
-					</p>
+					<script src="https://gist.github.com/spemer/fe9e07989ca5b36e008983dcb46f7802.js"></script>
 
 					<br />
 
 					<p>
 						In this case, I declared variable called <span class="codeInline">--font-size</span> with value of ‘1’. I can use this value as is, but <span class="codeInline">calc()</span> let us to use it in other way we want. See the examples below.
 					</p>
-					<p class="code">
-						.header-text {<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;margin-top: calc(var(--font-size)*16px);<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;font-size: calc(var(--font-size)*3rem);<br />
-							&nbsp;&nbsp;&nbsp;&nbsp;line-height: calc(var(--font-size)*1.5em);<br />
-						}
-					</p>
-					<p style="margin-bottom: 64px;>
+					<script src="https://gist.github.com/spemer/d324d19201ae78a51574c5b2d0f32861.js"></script>
+
+					<p style="margin-bottom: 64px;">
 						The value of <span class="codeInline">--font-size</span> is integer ‘1’. We can use it with <span class="codeInline">var()</span> as I’ve shown you before. If you want to use value ‘3’, you can declare another variable at the <span class="codeInline">:root</span> selector, but that’s inefficient way. The solution is to use <span class="codeInline">calc()</span> before <span class="codeInline">var()</span> in the line you want to <b>calculate the variable</b> of it’s value like above. In this case,
 						<br /><br />
 						The value of <span class="codeInline">margin-top</span> property in this class is <b>16px</b>.
