@@ -39,13 +39,13 @@
         { name: 'twitter:image', content: thisOGImg },
     ]
     let headTitle = document.querySelector('head');
-    for (let i = 0; i < metaLists.length; i++)
+    metaLists.forEach(function(metaList)
     {
         let setMeta = document.createElement('meta');
-        setMeta.setAttribute('name', metaLists[i].name);
-        setMeta.setAttribute('content', metaLists[i].content);
+        setMeta.setAttribute('name', metaList.name);
+        setMeta.setAttribute('content', metaList.content);
         headTitle.appendChild(setMeta);
-    }
+    });
 })();
 
 
@@ -59,13 +59,13 @@
         { rel: 'apple-touch-startup-image' },
         { rel: 'shortcut icon' }
     ]
-    for (let i = 0; i < etcIcons.length; i++)
+    etcIcons.forEach(function(etcIcon)
     {
         let setFavicon = document.createElement('link');
-        setFavicon.setAttribute('rel', etcIcons[i].rel);
+        setFavicon.setAttribute('rel', etcIcon.rel);
         setFavicon.setAttribute('href', 'https://spemer.com/img/favicon/favicon.png');
         headTitle.appendChild(setFavicon);
-    }
+    });
 
     // web shorcut icons
     let iconLists = [
@@ -75,15 +75,15 @@
         { href: 'favicon-62.png', sizes: '62x62' },
         { href: 'favicon-192.png', sizes: '192x192' }
     ]
-    for (let i = 0; i < iconLists.length; i++)
+    iconLists.forEach(function(iconList)
     {
         let setScIcon = document.createElement('link');
         setScIcon.setAttribute('rel', 'icon');
-        setScIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + iconLists[i].href);
-        setScIcon.setAttribute('sizes', iconLists[i].sizes);
-        setScIcon.setAttribute('type', 'https://spemer.com/img/favicon/' + iconLists[i].href);
+        setScIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + iconList.href);
+        setScIcon.setAttribute('sizes', iconList.sizes);
+        setScIcon.setAttribute('type', 'https://spemer.com/img/favicon/' + iconList.href);
         headTitle.appendChild(setScIcon);
-    }
+    });
 
     // apple icons
     let faviconLists = [
@@ -91,14 +91,14 @@
         { sizes: '180x180', href: 'touch-icon-iphone-retina.png' },
         { sizes: '167x167', href: 'touch-icon-ipad-retina.png' }
     ]
-    for (let i = 0; i < faviconLists.length; i++)
+    faviconLists.forEach(function(faviconList)
     {
         let setFvIcon = document.createElement('link');
         setFvIcon.setAttribute('rel', 'apple-touch-icon');
-        setFvIcon.setAttribute('sizes', faviconLists[i].sizes);
-        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + faviconLists[i].href);
+        setFvIcon.setAttribute('sizes', faviconList.sizes);
+        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + faviconList.href);
         headTitle.appendChild(setFvIcon);
-    }
+    });
 })();
 
 
@@ -239,7 +239,8 @@ function setAttrByHeight(target, attrName, attrValue){
     const articleLinks = document.querySelector('.articles');
 
     // home next prev(bottom) -> NEXT
-    function setNextBtn(arrayName, divClassName, listLength){
+    function setNextBtn(arrayName, divClassName, listLength)
+    {
         for (let i = 0; i < arrayName.length; i++)
         {
             let thisUrl = window.location.href;
@@ -279,7 +280,8 @@ function setAttrByHeight(target, attrName, attrValue){
 
     //
     // home next prev(bottom) -> PREV
-    function setPrevBtn(arrayName, divClassName){
+    function setPrevBtn(arrayName, divClassName)
+    {
         for (let i = 0; i < arrayName.length; i++)
         {
             let thisUrl = window.location.href;
@@ -320,11 +322,13 @@ function setAttrByHeight(target, attrName, attrValue){
     // excute portfolio or article
     let siteMapListLength = Number(siteMapList.length - 1);
     let siteMapListArticleLength = Number(siteMapListArticle.length - 1);
-    if (portfolioLinks){
+    if (portfolioLinks)
+    {
         setNextBtn(siteMapList, portfolioLinks, siteMapListLength);
         setPrevBtn(siteMapList, portfolioLinks);
     }
-    else if (articleLinks){
+    else if (articleLinks)
+    {
         setNextBtn(siteMapListArticle, articleLinks, siteMapListArticleLength);
         setPrevBtn(siteMapListArticle, articleLinks);
     }
@@ -333,27 +337,28 @@ function setAttrByHeight(target, attrName, attrValue){
     //
     // bottom siteMap navigation
     const siteMapNav = document.querySelector('.siteMapNav');
-    function bottomSiteNav(arrayName){
-        for (let i = 0; i < arrayName.length; i++)
+    function bottomSiteNav(arrayName)
+    {
+        arrayName.forEach(function(arrLen)
         {
             let listNode = document.createElement("li");
             let hrefNode = document.createElement("a");
-            hrefNode.href = "https://spemer.com/" + arrayName[i].href + ".html";
-            hrefNode.title = arrayName[i].title;
-            let textNode = document.createTextNode(arrayName[i].name);
+            hrefNode.href = "https://spemer.com/" + arrLen.href + ".html";
+            hrefNode.title = arrLen.title;
+            let textNode = document.createTextNode(arrLen.name);
 
             siteMapNav.appendChild(listNode);
             listNode.appendChild(hrefNode);
             hrefNode.appendChild(textNode);
 
             let thisUrl = window.location.href;
-            let substring = arrayName[i].href;
+            let substring = arrLen.href;
             if (thisUrl.indexOf(substring) != -1)
             {
                 hrefNode.className = 'underline';
                 hrefNode.setAttribute('style', 'font-weight: bold');
             }
-        }
+        });
     }
     bottomSiteNav(siteMapList);
     bottomSiteNav(siteMapListArticle);
@@ -366,27 +371,23 @@ function setAttrByHeight(target, attrName, attrValue){
     if (indexLists)
     {
         let indexCount = 0;
-        for (let i = 0; i < siteMapList.length; i++)
+        siteMapList.forEach(function(siteMapL)
         {
-            if (indexCount === 9) {
-                break;
-            }
-
             let indexDiv = document.createElement('div');
             indexDiv.className = "artImgBoxEach grow";
             let indexLink = document.createElement('a');
-            indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
+            indexLink.href = "https://spemer.com/" + siteMapL.href + ".html";
 
             let indexFigure = document.createElement('figure');
 
             let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapList[i].img;
-            figImg.alt = siteMapList[i].title;
-            figImg.title = siteMapList[i].title;
+            figImg.src = "https://spemer.com/img/works/" + siteMapL.img;
+            figImg.alt = siteMapL.title;
+            figImg.title = siteMapL.title;
 
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapList[i].name);
+            let figTxt = document.createTextNode(siteMapL.name);
 
             indexLists.appendChild(indexDiv);
             indexDiv.appendChild(indexLink);
@@ -397,28 +398,29 @@ function setAttrByHeight(target, attrName, attrValue){
             figStr.appendChild(figTxt);
 
             ++indexCount;
-        }
+        });
     }
     // article.html -> lists
     else if (articleLists)
     {
         let articleCount = 0;
-        for (let i = 0; i < siteMapListArticle.length; i++) {
+        siteMapListArticle.forEach(function(siteMapListArti)
+        {
             let articleDiv = document.createElement('div');
             articleDiv.className = "artImgBoxEach grow";
             let articleLink = document.createElement('a');
-            articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
+            articleLink.href = "https://spemer.com/" + siteMapListArti.href + ".html";
 
             let articleFigure = document.createElement('figure');
 
             let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
-            figImg.alt = siteMapListArticle[i].title;
-            figImg.title = siteMapListArticle[i].title;
+            figImg.src = "https://spemer.com/img/works/" + siteMapListArti.img;
+            figImg.alt = siteMapListArti.title;
+            figImg.title = siteMapListArti.title;
 
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapListArticle[i].name);
+            let figTxt = document.createTextNode(siteMapListArti.name);
 
             articleLists.appendChild(articleDiv);
             articleDiv.appendChild(articleLink);
@@ -427,7 +429,7 @@ function setAttrByHeight(target, attrName, attrValue){
             articleFigure.appendChild(figCap);
             figCap.appendChild(figStr);
             figStr.appendChild(figTxt);
-        }
+        });
     }
 })();
 
@@ -455,18 +457,18 @@ function setAttrByHeight(target, attrName, attrValue){
 
     let headerNavLists = document.querySelector('#headerNav > nav > ul');
 
-    for (let i = 0; i < topNavLists.length; i++)
+    topNavLists.forEach(function(topNavList)
     {
         let setHeaderLists = document.createElement('li');
         setHeaderLists.className = 'headerNavList';
 
         let setHeaderAnchor = document.createElement('a');
-        setHeaderAnchor.title = topNavLists[i].title;
-        setHeaderAnchor.href = topNavLists[i].href;
+        setHeaderAnchor.title = topNavList.title;
+        setHeaderAnchor.href = topNavList.href;
         setHeaderAnchor.className = 'headerNav';
 
         let headerTextBold = document.createElement('b');
-        let setHeaderNavText = document.createTextNode(topNavLists[i].title);
+        let setHeaderNavText = document.createTextNode(topNavList.title);
 
         headerNavLists.appendChild(setHeaderLists);
         setHeaderLists.appendChild(setHeaderAnchor);
@@ -474,11 +476,12 @@ function setAttrByHeight(target, attrName, attrValue){
         headerTextBold.appendChild(setHeaderNavText);
 
         let thisUrl = window.location.href;
-        let substring = topNavLists[i].hName;
-        if (thisUrl.indexOf(substring) != -1){
+        let substring = topNavList.hName;
+        if (thisUrl.indexOf(substring) != -1)
+        {
             setHeaderLists.className = 'headerNavList aboutHover';
         }
-    }
+    });
 })();
 
 
@@ -486,7 +489,8 @@ function setAttrByHeight(target, attrName, attrValue){
 // TopBtn
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
-    if(prevNextHome) {
+    if(prevNextHome)
+    {
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
@@ -564,11 +568,13 @@ function setAttrByHeight(target, attrName, attrValue){
         }
     }
     let snsIcon = document.querySelector('#snsIcon');
-    for (let key in snsIconList) {
+    for (let key in snsIconList)
+    {
         let snsNode = document.createElement("a");
         snsNode.title = snsIconList[key].title + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
+
         let iconNode = document.createElement("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
@@ -604,11 +610,16 @@ function setAttrByHeight(target, attrName, attrValue){
 // topBtnFixed
 (function(){
     let fixedTopBtn = document.querySelector('#topBtnFixed');
-    if (fixedTopBtn) {
+    if (fixedTopBtn)
+    {
         let width = window.innerWidth;
-        if (width <= 768) {
+
+        if (width <= 768)
+        {
             fixedTopBtn.style = 'display: none;'
-        } else {
+        }
+        else
+        {
             let fixedTopBtnLink = document.createElement('a');
             fixedTopBtnLink.setAttribute('data-scroll', '');
             fixedTopBtnLink.href = 'body';
@@ -630,8 +641,8 @@ function setAttrByHeight(target, attrName, attrValue){
 // externalLink Icon
 (function(){
     let externalLinks = document.getElementsByClassName("externalLink");
-    let i;
-    for (i = 0; i < externalLinks.length; i++) {
+    for (let i = 0; i < externalLinks.length; i++)
+    {
         let setExternalLinksIcon = document.createElement('i');
         setExternalLinksIcon.className = "fa fa-external-link";
         setExternalLinksIcon.setAttribute('aria-hidden','true');
