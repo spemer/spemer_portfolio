@@ -15,6 +15,8 @@
 (function(){
     let thisUrl = window.location.href;
     let thisTitle = document.title;
+    let thisDesc = document.querySelector("meta[name='description']").getAttribute("content");
+    let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
     metaLists = [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'subject', content: 'Design' },
@@ -33,6 +35,8 @@
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@OfficialSpemer' },
         { name: 'twitter:creator', content: '@OfficialSpemer' },
+        { name: 'twitter:description', content: thisDesc },
+        { name: 'twitter:image', content: thisOGImg },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
