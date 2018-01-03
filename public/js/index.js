@@ -13,6 +13,8 @@
 //
 // metaTags **meta [name, content]**
 (function(){
+    let thisUrl = window.location.href;
+    let thisTitle = document.title;
     metaLists = [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'subject', content: 'Design' },
@@ -25,6 +27,12 @@
         { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },
+        { name: 'twitter:url', content: thisUrl },
+        { name: 'twitter:domain', content: thisUrl },
+        { name: 'twitter:title', content: thisTitle },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: '@OfficialSpemer' },
+        { name: 'twitter:creator', content: '@OfficialSpemer' },
     ]
     let headTitle = document.querySelector('head');
     for (let i = 0; i < metaLists.length; i++)
