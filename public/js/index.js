@@ -306,12 +306,14 @@ function setAttrByHeight(target, attrName, attrValue){
     };
 
     // excute portfolio or article
+    let siteMapListLength = Number(siteMapList.length - 1);
+    let siteMapListArticleLength = Number(siteMapListArticle.length - 1);
     if (portfolioLinks){
-        setNextBtn(siteMapList, portfolioLinks, 8);
+        setNextBtn(siteMapList, portfolioLinks, siteMapListLength);
         setPrevBtn(siteMapList, portfolioLinks);
     }
     else if (articleLinks){
-        setNextBtn(siteMapListArticle, articleLinks, 6);
+        setNextBtn(siteMapListArticle, articleLinks, siteMapListArticleLength);
         setPrevBtn(siteMapListArticle, articleLinks);
     }
     

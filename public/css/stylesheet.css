@@ -1243,8 +1243,8 @@ ul > li{
 .textbox-colored h6:last-child,
 .textbox-colored p:last-child{margin-bottom:8px}
 
-
-body .gist{margin:1.8rem 0 2rem 0}
+/*Gist*/
+body .gist{margin:1.5rem 0 0.5rem 0}
 body .gist pre, body .gist td, body .gist tr, .blob-num, .blob-code, .gist-data, .pl-v,
 .pl-c1, .pl-k, .pl-s, .pl-en, .pl-smi, .pl-e, .pl-ent, .pl-pds, .blob-wrapper, .t-body
 {font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -1254,4 +1254,9 @@ body .gist-meta, body .gist-meta a
 sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
 !important;font-size:13px !important}
 .gist-data{padding: 8px 0}
-.gist-meta{padding: 0px 1rem !important}
+.gist-meta{display:none;/*padding: 0px 1rem !important*/}
+.gist-data, .gist{
+border-bottom:1px solid transparent !important;}
+
+/*.aboutTxtBox{margin-top: 2rem}*/
+.everyTxtEnd,.everyTxtEndArticle{padding-top:2.5rem;}
