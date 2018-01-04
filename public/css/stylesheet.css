@@ -993,15 +993,15 @@ ul > li{
 	margin:32px 0;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
-	border-radius:4px;
-	font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace}
+	border-radius:4px}
 
 .codeInline{
 	letter-spacing:-.25px;
 	display:inline;
 	padding:2px 4px;
-	background-color:#f0f0f0;
-	font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace}
+	background-color:#f0f0f0}
+
+.code,.codeInline{font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace}
 
 .textbox-colored{
 	padding:16px;
