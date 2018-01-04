@@ -16,6 +16,7 @@
     let thisUrl = window.location.href;
     let thisTitle = document.title;
     let thisDesc = document.querySelector("meta[name='description']").getAttribute("content");
+    let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
     let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
     metaLists = [
         { name: 'theme-color', content: '#ffffff' },
@@ -33,6 +34,8 @@
         { name: 'pagename', content: thisTitle },
         { name: 'language', content: 'english' },
         { name: 'distribution', content: 'global' },
+        { name: 'Resource-Type', content: 'Document' },
+        { name: 'HandheldFriendly', content: 'true' },
         { name: 'robots', content: 'index,follow' },
         { name: 'referrer', content: 'origin-when-cross-origin' },
         { name: 'googlebot', content: 'index,follow' },
@@ -52,6 +55,7 @@
         { name: 'application-name', content: thisTitle },
         { name: 'msapplication-TileColor', content: '#656c7a' },
         { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
+        { name: 'news_keywords', content: thisKeys },
     ]
     let headTitle = document.querySelector('head');
     metaLists.forEach(function(metaList)
@@ -76,6 +80,7 @@
     let etcIcons = [
         { rel: 'home', href: '' },
         { rel: 'pingback', href: '' },
+        { rel: 'standout', href: '' },
         { rel: 'author', href: 'about-spemer.html' },
         { rel: 'manifest', href: 'img/favicons/manifest.json' },
         { rel: 'shortcut icon', href: 'img/favicons/favicon.ico' },
