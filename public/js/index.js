@@ -719,19 +719,6 @@ function nextLeftDel() {
     $('.fa-angle-double-left').addClass('nextLeft2');
     $('.fa-angle-double-left').removeClass('nextLeft');
 }
-// function lineLive2() {
-//     $('.ready2').removeClass('aboutHover2');
-// }
-// function lineDel2() {
-//     $('.ready2').addClass('aboutHover2');
-// }
-// function lineLive3() {
-//     $('.ready3').removeClass('aboutHover3');
-// }
-// function lineDel3() {
-//     $('.ready3').addClass('aboutHover3');
-// }
-//
 function addTooltip() {
     $('.copied').removeClass('tooltip');
 }
