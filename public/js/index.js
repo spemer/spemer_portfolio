@@ -18,7 +18,7 @@
     let thisDesc = document.querySelector("meta[name='description']").getAttribute("content");
     let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
     let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
-    metaLists = [
+    let metaLists = [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'subject', content: 'Design' },
         { name: 'DC.subject', content: 'Design' },
@@ -67,6 +67,8 @@
         { name: 'twitter:image:alt', content: 'Hyouk Seo(Spemer)' },
         { name: 'application-name', content: thisTitle },
         { name: 'msapplication-TileColor', content: '#656c7a' },
+        { name: 'msapplication-tooltip', content: thisTitle },
+        { name: 'msapplication-starturl', content: thisUrl },
         { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
         { name: 'DC.description', content: thisDesc },
         { name: 'DC.keywords', content: thisKeys },
@@ -320,6 +322,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 var nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-right';
 
+                // meta next
                 var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'next');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i + 1].href + ".html");
@@ -368,6 +371,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 var nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-left';
 
+                // meta prev
                 var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'prev');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i - 1].href + ".html");
