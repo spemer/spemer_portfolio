@@ -24,7 +24,13 @@
         { name: 'designer', content: 'Hyouk Seo(Spemer)' },
         { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
         { name: 'owner', content: 'Hyouk Seo(Spemer)' },
+        { name: 'reply-to', content: 'ghsspower@gmail.com' },
+        { name: 'category', content: 'website' },
+        { name: 'topic', content: 'Design' },
+        { name: 'target', content: 'all' },
         { name: 'url', content: thisUrl },
+        { name: 'identifier-URL', content: thisUrl },
+        { name: 'pagename', content: thisTitle },
         { name: 'language', content: 'english' },
         { name: 'distribution', content: 'global' },
         { name: 'robots', content: 'index,follow' },
@@ -41,6 +47,7 @@
         { name: 'twitter:creator', content: '@OfficialSpemer' },
         { name: 'twitter:description', content: thisDesc },
         { name: 'twitter:image', content: thisOGImg },
+        { name: 'application-name', content: thisTitle },
         { name: 'msapplication-TileColor', content: '#656c7a' },
         { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
     ]
@@ -147,16 +154,16 @@ function setAttrByHeight(target, attrName, attrValue){
 (function(){
     let siteMapList = [
         {
-            name:  'AWeather',
-            href:  'portfolio/weather-push-notification-alarm-application',
-            title: 'AWeather - UX Case study: Weather notification application',
-            img: 'weather/thumb.png'
-        },
-        {
             name:  'Insharior',
             href:  'portfolio/insharior-ux-case-study-user-experience-design',
             title: 'Insharior - UX Case study: Interior item sharing mobile application design',
             img: 'insharior/thumb.png'
+        },
+        {
+            name:  'AWeather',
+            href:  'portfolio/weather-push-notification-alarm-application',
+            title: 'AWeather - UX Case study: Weather notification application',
+            img: 'weather/thumb.png'
         },
         {
             name:  'IGTracker',
