@@ -47,6 +47,8 @@
         { name: 'twitter:creator', content: '@OfficialSpemer' },
         { name: 'twitter:description', content: thisDesc },
         { name: 'twitter:image', content: thisOGImg },
+        { name: 'twitter:image:src', content: thisOGImg },
+        { name: 'twitter:image:alt', content: 'Hyouk Seo(Spemer)' },
         { name: 'application-name', content: thisTitle },
         { name: 'msapplication-TileColor', content: '#656c7a' },
         { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
@@ -59,6 +61,10 @@
         setMeta.setAttribute('content', metaList.content);
         headTitle.appendChild(setMeta);
     });
+    let setMeta = document.createElement('meta');
+    setMeta.setAttribute('property', 'og:img:alt');
+    setMeta.setAttribute('content', thisTitle);
+    headTitle.appendChild(setMeta);
 })();
 
 
