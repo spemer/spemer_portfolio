@@ -23,6 +23,10 @@
         { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
         { name: 'designer', content: 'Hyouk Seo(Spemer)' },
         { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
+        { name: 'owner', content: 'Hyouk Seo(Spemer)' },
+        { name: 'url', content: thisUrl },
+        { name: 'language', content: 'english' },
+        { name: 'distribution', content: 'global' },
         { name: 'robots', content: 'index,follow' },
         { name: 'referrer', content: 'origin-when-cross-origin' },
         { name: 'googlebot', content: 'index,follow' },
@@ -37,6 +41,8 @@
         { name: 'twitter:creator', content: '@OfficialSpemer' },
         { name: 'twitter:description', content: thisDesc },
         { name: 'twitter:image', content: thisOGImg },
+        { name: 'msapplication-TileColor', content: '#656c7a' },
+        { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
     ]
     let headTitle = document.querySelector('head');
     metaLists.forEach(function(metaList)
@@ -55,49 +61,57 @@
     let headTitle = document.querySelector('head');
     // basic icons
     let etcIcons = [
-        { rel: 'apple-touch-icon' },
-        { rel: 'apple-touch-startup-image' },
-        { rel: 'shortcut icon' }
+        { rel: 'manifest', href: 'manifest.json' },
+        { rel: 'shortcut icon', href: 'favicon.ico' },
     ]
     etcIcons.forEach(function(etcIcon)
     {
         let setFavicon = document.createElement('link');
         setFavicon.setAttribute('rel', etcIcon.rel);
-        setFavicon.setAttribute('href', 'https://spemer.com/img/favicon/favicon.png');
+        setFavicon.setAttribute('href', 'https://spemer.com/img/favicons/' + etcIcon.href);
         headTitle.appendChild(setFavicon);
-    });
-
-    // web shorcut icons
-    let iconLists = [
-        { href: 'favicon-16.png', sizes: '16x16' },
-        { href: 'favicon-32.png', sizes: '32x32' },
-        { href: 'favicon-48.png', sizes: '48x48' },
-        { href: 'favicon-62.png', sizes: '62x62' },
-        { href: 'favicon-192.png', sizes: '192x192' }
-    ]
-    iconLists.forEach(function(iconList)
-    {
-        let setScIcon = document.createElement('link');
-        setScIcon.setAttribute('rel', 'icon');
-        setScIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + iconList.href);
-        setScIcon.setAttribute('sizes', iconList.sizes);
-        setScIcon.setAttribute('type', 'https://spemer.com/img/favicon/' + iconList.href);
-        headTitle.appendChild(setScIcon);
     });
 
     // apple icons
     let faviconLists = [
+        { sizes: '180x180', href: 'apple-touch-icon.png' },
         { sizes: '152x152', href: 'touch-icon-ipad.png' },
         { sizes: '180x180', href: 'touch-icon-iphone-retina.png' },
-        { sizes: '167x167', href: 'touch-icon-ipad-retina.png' }
+        { sizes: '167x167', href: 'touch-icon-ipad-retina.png' },
+        { sizes: '57x57', href: 'apple-touch-icon-57x57.png' },
+        { sizes: '60x60', href: 'apple-touch-icon-60x60.png' },
+        { sizes: '72x72', href: 'apple-touch-icon-72x72.png' },
+        { sizes: '76x76', href: 'apple-touch-icon-76x76.png' },
+        { sizes: '114x114', href: 'apple-touch-icon-114x114.png' },
+        { sizes: '120x120', href: 'apple-touch-icon-120x120.png' },
+        { sizes: '144x144', href: 'apple-touch-icon-144x144.png' },
+        { sizes: '152x152', href: 'apple-touch-icon-152x152.png' },
+        { sizes: '180x180', href: 'apple-touch-icon-180x180.png' },
     ]
     faviconLists.forEach(function(faviconList)
     {
         let setFvIcon = document.createElement('link');
         setFvIcon.setAttribute('rel', 'apple-touch-icon');
         setFvIcon.setAttribute('sizes', faviconList.sizes);
-        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicon/' + faviconList.href);
+        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + faviconList.href);
         headTitle.appendChild(setFvIcon);
+    });
+
+    // web shorcut icons
+    let iconLists = [
+        { sizes: '32x32', href: 'favicon-32x32.png' },
+        { sizes: '194x194', href: 'favicon-194x194.png' },
+        { sizes: '192x192', href: 'android-chrome-192x192.png' },
+        { sizes: '16x16', href: 'favicon-16x16.png' },
+    ]
+    iconLists.forEach(function(iconList)
+    {
+        let setScIcon = document.createElement('link');
+        setScIcon.setAttribute('rel', 'icon');
+        setScIcon.setAttribute('type', 'image/png');
+        setScIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + iconList.href);
+        setScIcon.setAttribute('sizes', iconList.sizes);
+        headTitle.appendChild(setScIcon);
     });
 })();
 
