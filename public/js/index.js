@@ -178,16 +178,16 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'igtracker/thumb.png'
         },
         {
-            name:  'Neighbors',
-            href:  'portfolio/dream-drim-korea-apartment-application',
-            title: 'Neighbors - SNS application for neighborhood UI Design',
-            img: 'dream/cover.png'
-        },
-        {
             name:  'UnivCam',
             href:  'portfolio/album-image-sort-application-univcam',
             title: 'UnivCam - UX Case study: Album sorting application UI/UX design',
             img: 'univcam/thumb.png'
+        },
+        {
+            name:  'Neighbors',
+            href:  'portfolio/dream-drim-korea-apartment-application',
+            title: 'Neighbors - SNS application for neighborhood UI Design',
+            img: 'dream/cover.png'
         },
         {
             name:  'Memoree',
