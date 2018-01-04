@@ -271,7 +271,6 @@ header{
 }
 
 .headerNav:hover{
-	color:#2a2e2e;
 	border-bottom:2px solid #babac0;
 	-webkit-transition:all .25s ease;
 	-o-transition:all .25s ease;
@@ -279,10 +278,10 @@ header{
 	transition:all .25s ease
 }
 
-.aboutHover{border-bottom:2px solid #e7e9ee}
+.aboutHover a{border-bottom:2px solid #e7e9ee}
 
 @media screen and(max-width: 420px){
-	.aboutHover{
+	.aboutHover a{
 		border-bottom:1px solid transparent
 	}}
 
@@ -725,6 +724,8 @@ h4 {
 	#snsIcon i { left:11% } }
 @media screen and (max-width: 420px) {
 	#snsIcon i { left:13% } }
+@media screen and (max-width: 360px) {
+	#snsIcon i { left:14.75% } }
 
 @media screen and (max-width: 700px) {
 	#snsIcon {
