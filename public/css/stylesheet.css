@@ -71,13 +71,13 @@ h2,h3{
 	line-height:-moz-calc(var(--font-size)*3rem);
 	line-height:calc(var(--font-size)*3rem)}
 
-body::-webkit-scrollbar{ background-color:#fff; width:12px }
-body::-webkit-scrollbar-track { background-color:#fff }
-body::-webkit-scrollbar-thumb { background-color:#babac0 }
-img::-moz-selection { visibility:hidden; background:transparent }
-img::selection { visibility:hidden; background:transparent }
-::-moz-selection { color:#fff; background:#babac0}
-::selection { color:#fff; background:#babac0}
+body::-webkit-scrollbar {background-color:#fff;width:12px}
+body::-webkit-scrollbar-track {background-color:#fff}
+body::-webkit-scrollbar-thumb {background-color:#babac0}
+img::-moz-selection {visibility:hidden;background:transparent}
+img::selection {visibility:hidden;background:transparent}
+::-moz-selection {color:#fff;background:#babac0}
+::selection {color:#fff;background:#babac0}
 
 .mainYears{
 	float:left;
@@ -661,12 +661,12 @@ h4{
 		margin-right:2%}}
 
 @media screen and (max-width:700px){#snsIcon i{left:6%}}
-@media screen and (max-width:620px){#snsIcon i{left:10%}}
-@media screen and (max-width:540px){#snsIcon i{left:11%}}
-@media screen and (max-width:480px){#snsIcon i{left:12%}}
-@media screen and (max-width:420px){#snsIcon i{left:13%}}
-@media screen and (max-width:360px){#snsIcon i{left:14%}}
-@media screen and (max-width:320px){#snsIcon i{left:16%}}
+@media screen and (max-width:620px){#snsIcon i{left:9%}}
+@media screen and (max-width:540px){#snsIcon i{left:10.5%}}
+@media screen and (max-width:480px){#snsIcon i{left:11.5%}}
+@media screen and (max-width:420px){#snsIcon i{left:12.5%}}
+@media screen and (max-width:360px){#snsIcon i{left:14.5%}}
+@media screen and (max-width:320px){#snsIcon i{left:16.5%}}
 @media screen and (max-width:700px){
 	#snsIcon{
 		width:100%;
@@ -747,11 +747,6 @@ h4{
 	display:inline-block}
 
 @media screen and (max-width:420px){#siteMap li{width:40%}}
-
-#siteMap li:last-child{
-	width:30%;
-	display:inline-block;
-	margin:25px 0}
 
 .c-hamburger{
 	margin:0;

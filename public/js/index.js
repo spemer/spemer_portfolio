@@ -191,16 +191,16 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'insharior/thumb.png'
         },
         {
-            name:  'AWeather',
-            href:  'portfolio/weather-push-notification-alarm-application',
-            title: 'AWeather - UX Case study: Weather notification application',
-            img: 'weather/thumb.png'
-        },
-        {
             name:  'IGTracker',
             href:  'portfolio/instagram-tracker-application-igtracker-design',
             title: 'IGTracker - UX Case study: Instagram Tracking Application UI Design',
             img: 'igtracker/thumb.png'
+        },
+        {
+            name:  'AWeather',
+            href:  'portfolio/weather-push-notification-alarm-application',
+            title: 'AWeather - UX Case study: Weather notification application',
+            img: 'weather/thumb.png'
         },
         {
             name:  'UnivCam',
@@ -247,7 +247,7 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'favicon/favicon.png'
         },
         {
-            name:  'CSS Variables',
+            name:  'CSSVariables',
             href:  'articles/css-custom-properties-variables-usage',
             title: 'Using variables(custom properties) in CSS3',
             img: 'css/thumb.png'
@@ -550,6 +550,16 @@ function setAttrByHeight(target, attrName, attrValue){
             setHeaderLists.className = 'headerNavList aboutHover';
         }
     });
+})();
+//
+// index.html only
+(function(){
+    let getindexMain = document.querySelector('.indexMain');
+    if (getindexMain)
+    {
+        let IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
+        IndexHeaderLi.className = 'headerNavList aboutHover';
+    }
 })();
 
 
