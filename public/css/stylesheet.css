@@ -661,9 +661,12 @@ h4{
 		margin-right:2%}}
 
 @media screen and (max-width:700px){#snsIcon i{left:6%}}
+@media screen and (max-width:620px){#snsIcon i{left:10%}}
 @media screen and (max-width:540px){#snsIcon i{left:11%}}
+@media screen and (max-width:480px){#snsIcon i{left:12%}}
 @media screen and (max-width:420px){#snsIcon i{left:13%}}
-@media screen and (max-width:360px){#snsIcon i{left:15%}}
+@media screen and (max-width:360px){#snsIcon i{left:14%}}
+@media screen and (max-width:320px){#snsIcon i{left:16%}}
 @media screen and (max-width:700px){
 	#snsIcon{
 		width:100%;
