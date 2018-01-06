@@ -11,6 +11,15 @@
 
 
 //
+// set html prefix
+(function(){
+    let getHtml = document.querySelector('html');
+    getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
+    getHtml.setAttribute('lang', 'en');
+})();
+
+
+//
 // metaTags **meta [name, content]**
 (function(){
     let thisUrl = window.location.href;
@@ -287,7 +296,7 @@ function setAttrByHeight(target, attrName, attrValue){
             href:  'articles/spemer-music',
             title: 'Musics by Spemer',
             img: 'music/cover.jpg'
-        }
+        },
     ]
 
 
@@ -731,6 +740,20 @@ function setAttrByHeight(target, attrName, attrValue){
         setExternalLinksIcon.className = "fa fa-external-link";
         setExternalLinksIcon.setAttribute('aria-hidden','true');
         externalLinks[i].appendChild(setExternalLinksIcon);
+    }
+})();
+
+
+//
+// head style -> strong font
+(function(){
+    let getHeadClass = document.querySelector('.strongFont');
+    if(getHeadClass)
+    {
+        let setHeadStyle = document.createElement('style');
+        let setStyleProp = document.createTextNode('strong{font-weight:400;font-size:16px}');
+        getHeadClass.appendChild(setHeadStyle);
+        setHeadStyle.appendChild(setStyleProp);
     }
 })();
 
