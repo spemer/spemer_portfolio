@@ -735,6 +735,25 @@ function setAttrByHeight(target, attrName, attrValue){
 })();
 
 
+//
+// hrline -> medium style 3 dots
+(function(){
+    let gethrline = document.getElementsByClassName('hrline');
+    for (let i = 0; i < gethrline.length; i++)
+    {
+        let setCenter = document.createElement('center');
+        gethrline[i].appendChild(setCenter);
+        for (let j = 0; j < 3; j++)
+        {
+            let setSpan = document.createElement('span');
+            let setSpanDot = document.createTextNode('ㆍ');
+            setCenter.appendChild(setSpan);
+            setSpan.appendChild(setSpanDot);
+        }
+    }
+})();
+
+
 function topUp() {
     $('.fa-angle-up').addClass('topUp');
     $('.fa-angle-up').removeClass('topUp2');
