@@ -20,6 +20,28 @@
 
 
 //
+// meta Tage **meta [property, content]**
+(function(){
+    let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
+    let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
+    let propLists = [
+        { property: 'og:img:alt', content: thisOGImg },
+        { property: 'og:img:url', content: thisOGImg },
+        { property: 'og:img:secure_url', content: thisOGImg },
+        { property: 'article:section', content: 'Design' },
+        { property: 'article:tag', content: thisKeys },
+    ]
+    let headTitle = document.querySelector('head');
+    propLists.forEach(function(propList){
+        let setMetaProp = document.createElement('meta');
+        setMetaProp.setAttribute('property', propList.property);
+        setMetaProp.setAttribute('content', propList.content);
+        headTitle.appendChild(setMetaProp);
+    });
+})();
+
+
+//
 // metaTags **meta [name, content]**
 (function(){
     let thisUrl = window.location.href;
