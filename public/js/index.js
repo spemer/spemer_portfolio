@@ -253,6 +253,12 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'css/thumb.png'
         },
         {
+            name:  'Scrollbar',
+            href:  'articles/customize-website-scrollbar-with-css-web-browser',
+            title: 'Customize website’s scrollbar with CSS',
+            img: 'scroll/cover.png'
+        },
+        {
             name:  'Jekyll',
             href:  'articles/free-github-blog-and-hosting-with-jekyll',
             title: 'Free GitHub blog and Hosting with Jekyll',

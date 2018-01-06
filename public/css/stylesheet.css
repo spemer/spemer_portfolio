@@ -1066,8 +1066,8 @@ ul > li{
 
 /*Gist*/
 body .gist{margin:1.5rem 0 0.5rem 0}
-body .gist pre, body .gist td, body .gist tr, .blob-num, .blob-code, .gist-data, .pl-v,
-.pl-c1, .pl-k, .pl-s, .pl-en, .pl-smi, .pl-e, .pl-ent, .pl-pds, .blob-wrapper, .t-body
+body .gist pre, body .gist td, body .gist tr,.blob-num,.blob-code,.gist-data,.pl-v,
+.pl-c1,.pl-c,.pl-k,.pl-s,.pl-en,.pl-smi,.pl-e,.pl-ent,.pl-pds,.blob-wrapper,.t-body
 {font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 font-size:13px !important;line-height:18px !important}
 body .gist-meta, body .gist-meta a
