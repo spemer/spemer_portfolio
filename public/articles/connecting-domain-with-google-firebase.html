@@ -28,6 +28,10 @@
 	<link rel="canonical" href="https://www.spemer.com/articles/connecting-domain-with-google-firebase.html">
 	
 	<link rel="stylesheet" href="../css/stylesheet.css">
+	<style>
+		img{border:1px solid #e7e9ee;border-radius: 4px}
+		figcaption{max-width:640px;line-height:1.62rem;margin:0 auto;padding-top:4px}
+	</style>
 </head>
 
 <body class="animated fadeInUp">
@@ -47,54 +51,52 @@
 			<div class="triBoxMain"><center>
 
 				<div class="everyTxtEnd everyTxtEndArticle">
-					
-					<h2>Connecting your domain by using Google Firebase(w/ Node.js)</h2>
+					<h2>Connecting your domain by using Google Firebase</h2>
+					<br>
 					<p>
 						Google Chrome announced that they are going to show “Not secure” message on their address bar from this October, if Chrome trying to enter URL with ‘HTTP’. Most of the major websites, such as Google, Twitter, Facebook — were already move their protocol to HTTPS.
-						<br><br>
+					</p>
+					<br>
+					<p>
 						However, with Firebase, you can get your own SSL certificate(for free!), and you don’t need to worry about ‘Not secure’ message even if you don’t have your own SSL certificate right now. With your Google account, you can create a Firebase project at Google Firebase.
 					</p>
-				</div>
 
-				<div class="everyTxtEnd everyTxtEndArticle">
-					<h3>Create a new project</h3>
+				<div class="hrline"></div>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<h3>Create a new project</h3>
+
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/main.png">
 						<img src="../img/works/firebase/main.png" alt="Main page of Google Firebase" title="Main page of Google Firebase" />
 						<figcaption>Main page of Firebase — You can add new project by clicking the”Add project(Red box)” button.</figcaption>
 					</a>
 					</section>
+				</figure><br>
 
-					</figure><br>
-
-					<figure class="articleImg75 articleFig articleImgSize">
-
+				<figure class="articleImg75 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/newProject.JPG">
 						<img src="../img/works/firebase/newProject.JPG" alt="Create a new project" title="Create a new project" />
 						<figcaption>Create a new project</figcaption>
 					</a>
 					</section>
-
-					</figure><br>
+				</figure><br>
 
 					<p>
 						Dialog shows up after you click “Add project” button. You can name your new project and select your country here. I selected “South Korea”, But I recommend you to select the country which has the best CDN server located(and of course, the nearest country!)
-					</p><br>
-				</div>
+					</p>
 
-				<div class="everyTxtEnd everyTxtEndArticle">
-					<h3>Start Google Firebase</h3>
+				<div class="hrline"></div>
 
-					<figure class="articleImg40 articleFig articleImgSize">
+				<h3>Start Google Firebase</h3>
+
+				<figure class="articleImg40 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/afterSignIn.png">
 						<img src="../img/works/firebase/afterSignIn.png" alt="Go to Hosting tab" title="Go to Hosting tab" />
 					</a>
 					</section>
-
 
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/hostingStart.png">
@@ -102,15 +104,14 @@
 						<figcaption>Go straight to “Hosting” tab on the left navigation bar and click “Start” button on the “Hosting” page.</figcaption>
 					</a>
 					</section>
+				</figure><br>
 
-					</figure><br>
-					<figure class="articleImg40 articleFig articleImgSize">
+				<figure class="articleImg40 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/hostingSetting.JPG">
 						<img src="../img/works/firebase/hostingSetting.JPG" alt="Hosting setting(1)" title="Hosting setting(1)" />
 					</a>
 					</section>
-
 
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/hostingSetting2.JPG">
@@ -118,7 +119,7 @@
 						<figcaption>You have to setup your local directory first — and open Terminal by Hold down the Shift key while right-clicking in your directory. Just copy and paste the npm code — Install code, Google sign in, Start project and Publish website.</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
 					<p>
 						You must setup your local directory first, because it’s based on Commend Line Interface of Node.js, not like a FTP server or Web hosting manager. Just make sure you installed Node.js on your computer!
@@ -151,23 +152,22 @@
 						After this, click the “Connect domain” button to start connecting your domain to Firebase. In this step, you need your own domain, or domain to redirection.
 					</p><br>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/connectingDomainBTN.png">
 						<img src="../img/works/firebase/connectingDomainBTN.png" alt="Connect domain" title="Connect domain" />
 						<figcaption>Click the “Connect domain” button</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
 
-					<figure class="articleImg40 articleFig articleImgSize">
+				<figure class="articleImg40 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/connectingDomain.png">
 						<img src="../img/works/firebase/connectingDomain.png" alt="Hosting setting(1)" title="Hosting setting(1)" />
 					</a>
 					</section>
-
 
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/confirmOwnership.png">
@@ -175,22 +175,22 @@
 						<figcaption>Type your domain, and confirm your domain’s ownership by adding TXT record to your DNS provider or service.</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
 					<p>
 						In my case, my DNS provider is “GoDaddy”. So I added the TXT record on my DNS provider’s DNS setting.
 					</p><br>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/addTXT.JPG">
 						<img src="../img/works/firebase/addTXT.JPG" alt="Change TXT value" title="Change TXT value" />
 						<figcaption>Type is TXT, Host is your domain. And just copy and paste the TXT value on TXT field.</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/key.JPG">
 						<img src="../img/works/firebase/key.JPG" alt="Change A value" title="Change A value" />
@@ -198,59 +198,57 @@
 						</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/godaddy.JPG">
 						<img src="../img/works/firebase/godaddy.JPG" alt="Changed A value" title="Changed A value" />
 						<figcaption>Changed “A” values on my service provider(GoDaddy)</figcaption>
 					</a>
 					</section>
-					</figure><br>
-				</div>
+				</figure>
 
-				<div class="everyTxtEnd everyTxtEndArticle">
-					<h3>Upload your files</h3>
+				<div class="hrline"></div>
 
+				<h3>Upload your files</h3>
 					<p>
 						Next thing to do is bringing your assets into your directory, which you’ve setup on terminal. In my case, I set my public directory as “public” folder(default). And then, on your Terminal, type a line of commend below.
 					</p><br>
 
-					<figure class="articleImg75 articleFig articleImgSize">
+				<figure class="articleImg75 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/deployOnly.JPG">
 						<img src="../img/works/firebase/deployOnly.JPG" alt="Create a new project" title="Create a new project" />
 						<figcaption>Type this line…</figcaption>
 					</a>
 					</section>
-					</figure>
+				</figure>
 
-					<figure class="articleImg75 articleFig articleImgSize">
+				<figure class="articleImg75 articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/deploy.JPG">
 						<img src="../img/works/firebase/deploy.JPG" alt="Create a new project" title="Create a new project" />
 						<figcaption>Files uploading… Done!</figcaption>
 					</a>
 					</section>
-					</figure><br>
-				</div>
+				</figure>
 
-				<div class="everyTxtEnd everyTxtEndArticle">
-					<h3>Get 'https'</h3>
+				<div class="hrline"></div>
 
+				<h3>Get 'https'</h3>
 					<p>
 						That’s it! Now you have to wait for 5 mins to 2 hours for Firebase to applying your domain’s settings. Before that, uncomfortable screen may come across to you — when you’re trying to enter your domain, like
 					</p><br/>
 
-					<figure class="articleImg articleFig articleImgSize">
+				<figure class="articleImg articleFig articleImgSize">
 					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
 					<a class="feather" href="../img/works/firebase/warning.JPG">
 						<img src="../img/works/firebase/warning.JPG" alt="Changed A value" title="Changed A value" />
 						<figcaption>This!</figcaption>
 					</a>
 					</section>
-					</figure><br>
+				</figure><br>
 
 					<p>
 						I did this for my design portfolio website, cause I don’t want to make my visitors get scared by “Not Secure” message on Chrome.(seriously...!)<br/>
