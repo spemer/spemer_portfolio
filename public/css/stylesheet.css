@@ -140,30 +140,24 @@ a,b {color:#656c7a; color:var(--color-gray)}
 
 .prevNextTop{
 	float:left;
-	color:#656c7a;
-	color:var(--color-gray);
-	font-size:14.4px;
-	font-size:-moz-calc(var(--font-size)*.9rem);
-	font-size:calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem)}
+	color:#656c7a;}
 
 .prevNextTop2{
 	float:left;
-	color:#babac0;
+	color:#babac0;}
+
+.prevNext{
+	float:right;
+	color:#656c7a;}
+
+.prevNextTop2:hover{color:#656c7a}
+.prevNext:hover,.prevNextTop:hover{color:#2a2e2e}
+
+.prevNextTop,.prevNextTop2,.prevNext{
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
 	font-size:-webkit-calc(var(--font-size)*.9rem)}
-.prevNextTop2:hover{color:#656c7a}
-
-.prevNext{
-	float:right;
-	color:#656c7a;
-	font-size:-moz-calc(var(--font-size)*.9rem);
-	font-size:calc(var(--font-size)*.9rem);
-	font-size:-webkit-calc(var(--font-size)*.9rem);
-	font-size:14.4px}
-.prevNext:hover,.prevNextTop:hover{color:#2a2e2e}
 
 .prevNextText{margin-left:16px}
 
@@ -532,34 +526,26 @@ h4{
 	padding:20px 0 25px}
 
 @media screen and (max-width:600px){
-	#headerNav nav{
+	#headerNav nav,#headerLogo{
 		left:50%;
 		right:50%;
-		width:100%;
-		padding-top:0;
-		margin:0 auto!important;
 		display:block;
 		position:relative;
-		text-align:center;
-		padding-bottom:0;
+		margin:0 auto !important;
 		-webkit-transform:translate(-50%,-50%);
 		-moz-transform:translate(-50%,-50%);
 		-ms-transform:translate(-50%,-50%);
 		-o-transform:translate(-50%,-50%);
 		transform:translate(-50%,-50%)}
-	
-	#headerLogo{
-		left:50%;
-		right:50%;
-		display:block;
-		margin:0 auto;
-		margin-top:50px;
-		position:relative;
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
-		-ms-transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		transform:translate(-50%,-50%)}}
+
+	#headerLogo{margin-top:3rem !important}
+	#headerNav nav{
+		width:100%;
+		padding-top:0;
+		padding-bottom:0;
+		text-align:center;
+		margin-top:-1rem !important}
+}
 
 @media screen and (max-width:768px){
 	body{width:90%}
@@ -851,9 +837,7 @@ ul > li{
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px}
-@media screen and (max-width: 420px){
-	.code{padding:8px 16px}
-}
+@media screen and (max-width: 420px){.code{padding:8px 16px}}
 .code::-webkit-scrollbar {background-color:transparent;height:6px;width:0}
 .code::-webkit-scrollbar-track {background-color:transparent}
 .code::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:4px}
@@ -861,7 +845,7 @@ ul > li{
 
 .codeInline{
 	display:inline;
-	padding:2px 4px;
+	padding:0px 4px 2px;
 	color:var(--color-code);
 	border:1px solid #e5e5e5;
 	-webkit-border-radius:2px;
@@ -887,9 +871,7 @@ ul > li{
 .textbox-colored li:first-child{margin-top:8px}
 .textbox-colored li:last-child{margin-bottom:8px}
 
-@media screen and (max-width: 420px){
-	.textbox-colored{padding:8px 16px 8px 8px}
-}
+@media screen and (max-width: 420px){.textbox-colored{padding:8px 16px 8px 8px}}
 
 .aboutTxtBox ul{padding:0 16px}
 
@@ -924,9 +906,7 @@ ul > li{
 		font-size:20px;
 		line-height:32px}}
 
-.prototype{
-	background-color:#fff;
-	margin:32px 0 64px}
+.prototype{background-color:#fff;margin:32px 0 64px}
 
 @media screen and (max-width: 768px){.prototype{display:none}}
 
@@ -1007,28 +987,23 @@ ul > li{
 .textbox-colored p:last-child{margin-bottom:8px}
 
 /*Gist*/
-body .gist{margin:1.5rem 0 0.5rem 0}
+body .gist{margin:1.5rem 0 0.5rem 0;}
 body .gist pre, body .gist td, body .gist tr,.blob-num,.blob-code,.gist-data,.pl-v,
 .pl-c1,.pl-c,.pl-k,.pl-s,.pl-en,.pl-smi,.pl-e,.pl-ent,.pl-pds,.blob-wrapper,.t-body
 {font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 font-size:13px !important;line-height:18px !important}
-body .gist-meta, body .gist-meta a
-{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,
-sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
-!important;font-size:13px !important}
 .gist-data{padding: 8px 0}
 .gist-meta{display:none}
-.gist-data, .gist{
-border-bottom:1px solid transparent !important}
+.gist-data,.gist{border-bottom:0px solid transparent !important;border-radius: 4px !important}
 
 .everyTxtEnd,.everyTxtEndArticle{padding-top:2.5rem}
 
-.whiteBgImg{border:1px solid #e7e9ee;border-radius: 4px}
+.whiteBgImg,.gist-file{border:1px solid #e5e5e5 !important;border-radius:4px !important}
 
 .prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,
 .prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,
 .headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,
-.artImgBoxEach img:hover{
+.artImgBoxEach img:hover,#headerNav li{
 	-webkit-transition:color .25s ease;
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
