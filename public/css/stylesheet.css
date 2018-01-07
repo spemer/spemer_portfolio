@@ -297,7 +297,7 @@ header{
 	-moz-border-radius:8px;
 	border-radius:8px}
 
-.artImgBoxEach figcaption{margin-bottom:4vw}
+.artImgBoxEach figcaption{margin-bottom:4vw;padding-top:.25vw}
 @media screen and (max-width:768px){.artImgBoxEach{grid-template-columns: 50% 50%}}
 @media screen and (max-width:420px){
 	.artImgBoxEach img{
