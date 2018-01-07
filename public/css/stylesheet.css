@@ -142,59 +142,28 @@ a,b {color:#656c7a; color:var(--color-gray)}
 	float:left;
 	color:#656c7a;
 	color:var(--color-gray);
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease;
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
 	font-size:-webkit-calc(var(--font-size)*.9rem)}
-
-.prevNextTop:hover{
-	color:#2a2e2e;
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease}
 
 .prevNextTop2{
 	float:left;
 	color:#babac0;
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease;
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
 	font-size:-webkit-calc(var(--font-size)*.9rem)}
-
-.prevNextTop2:hover{
-	color:#656c7a;
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease}
+.prevNextTop2:hover{color:#656c7a}
 
 .prevNext{
 	float:right;
 	color:#656c7a;
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease;
 	font-size:-moz-calc(var(--font-size)*.9rem);
 	font-size:calc(var(--font-size)*.9rem);
 	font-size:-webkit-calc(var(--font-size)*.9rem);
 	font-size:14.4px}
-
-.prevNext:hover{
-	color:#2a2e2e;
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:color .25s ease}
+.prevNext:hover,.prevNextTop:hover{color:#2a2e2e}
 
 .prevNextText{margin-left:16px}
 
@@ -206,14 +175,9 @@ header{
 	padding:25px 0 50px}
 
 #headerLogo{float:left; margin:50px 0}
-
 #headerLogo h1{
 	font-weight:700;
 	color:#656c7a;
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease;
 	line-height:80px;
 	line-height:-moz-calc(var(--font-size)*5rem);
 	line-height:calc(var(--font-size)*5rem);
@@ -223,17 +187,10 @@ header{
 	font-size:calc(var(--font-size)*2.5rem);
 	font-size:-webkit-calc(var(--font-size)*2.5rem)}
 
-#headerLogo h1:hover{
-	color:#2a2e2e;
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease}
+#headerLogo h1:hover{color:#2a2e2e}
 
 @media screen and (max-width: 420px){
-	#headerLogo h1{
-		font-size:36px;
-		margin:15px 0 -15px}}
+	#headerLogo h1{font-size:36px;margin:15px 0 -15px}}
 
 #headerNav nav{
 	float:right;
@@ -243,7 +200,6 @@ header{
 .headerNavList{
 	margin-left:25px;
 	display:inline-block}
-
 .headerNavList:first-child{margin-left:0}
 
 .headerNav{
@@ -253,21 +209,11 @@ header{
 	display:inline-block;
 	color:#656c7a;
 	border-bottom:1px solid transparent;
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease;
 	font-size:16px;
 	font-size:-moz-calc(var(--font-size)*1rem);
 	font-size:-webkit-calc(var(--font-size)*1rem);
 	font-size:calc(var(--font-size)*1rem)}
-
-.headerNav:hover{
-	border-bottom:2px solid #babac0;
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease}
+.headerNav:hover{border-bottom:2px solid #babac0}
 
 .aboutHover a{border-bottom:2px solid #e7e9ee}
 
@@ -312,10 +258,6 @@ header{
 @media screen and (max-width:420px){.profile{width:75%;height:75%}}
 
 .artImgBoxEach img:hover {
-	-webkit-transition:all .35s ease;
-	-o-transition:all .35s ease;
-	-moz-transition:all .35s ease;
-	transition:all .35s ease;
 	-webkit-transform:translateY(-10px);
 	-moz-transform:translateY(-10px);
 	-ms-transform:translateY(-10px);
@@ -379,10 +321,6 @@ footer p{
 	position:relative;
 	text-align:center;
 	color:#656c7a;
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease;
 	font-size:14.4px;
 	font-size:-moz-calc(var(--font-size)*1.1rem);
 	font-size:calc(var(--font-size)*1.1rem);
@@ -435,11 +373,7 @@ footer p{
 	-moz-transform:translateY(-2.5px);
 	-ms-transform:translateY(-2.5px);
 	-o-transform:translateY(-2.5px);
-	transform:translateY(-2.5px);
-	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
-	-moz-transition:all .25s ease;
-	transition:all .25s ease}
+	transform:translateY(-2.5px)}
 
 #twIcon:hover{color:#1da1f2}
 #ghIcon:hover{color:#333}
@@ -1090,3 +1024,12 @@ border-bottom:1px solid transparent !important}
 .everyTxtEnd,.everyTxtEndArticle{padding-top:2.5rem}
 
 .whiteBgImg{border:1px solid #e7e9ee;border-radius: 4px}
+
+.prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,
+.prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,
+.headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,
+.artImgBoxEach img:hover{
+	-webkit-transition:color .25s ease;
+	-o-transition:color .25s ease;
+	-moz-transition:color .25s ease;
+	transition:all .25s ease}
