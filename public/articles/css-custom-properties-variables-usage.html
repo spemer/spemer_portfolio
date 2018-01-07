@@ -49,12 +49,12 @@
 					
 					<h2>Using variables in CSS</h2>
 					<p>Basic usage of CSS custom properties — variables</p>
-					<br />
+					<br>
 
 					<figure class="articleImg35-small articleFig articleImgSize" >
 						<img src="../img/works/css/css_small.png" alt="CSS3" title="CSS3" />
 					</figure>
-					<br />
+					<br>
 
 					<p>
 						Using <b>variables in CSS</b> is useful and awesome. It can reduce some overlapping codes in your stylesheet, results <b>shorten your codes</b> throughout your stylesheet. And it also <b>increases efficiency</b> due to change a single line of code affects dependent codes, which means you don’t have to fix each same codes one by one with ctrl+F.
@@ -87,7 +87,7 @@
 					</p>
 					<script src="https://gist.github.com/spemer/7ed77636a8edeacdddda1314ffa3299e.js"></script>
 
-					<br />
+					<br>
 					<h4>Reference</h4>
 					<p>
 						Now you can <b>refer your variable</b> elsewhere you want with <span class="codeInline">var()</span> like below, which I declared above.
@@ -97,14 +97,13 @@
 					<p>
 						It results every <span class="codeInline">p</span> tags colored in <span class="codeInline">--paragraph-color</span> in your stylesheet. The advantages of variable is after you <b>declare it once</b>, you can <b>refer it anywhere</b> you want and as many times you want. If you want to revise it, all you have to do is just fix the value in variable you’ve declared. I’ll show you how.
 					</p>
-
-					<br />
+					<br>
 
 					<script src="https://gist.github.com/spemer/2d78b01916cee146ea1ffdc0ecf6e8c5.js"></script>
 
 					<p>
 						In case of above, I referenced <span class="codeInline">--paragraph-color</span> to two tags and one class. It affects them all in the same way — to colored with <span class="codeInline">#656c7a</span> — because I saved that value in variable <span class="codeInline">--paragraph-color</span> at the <span class="codeInline">:root</span> selector.
-						<br /><br />
+						<br><br>
 						If you want to change value of <span class="codeInline">--paragraph-color</span>, you don’t need to change every <span class="codeInline">--paragraph-color</span> in your stylesheet. Just <b>changing value</b> of it at the <span class="codeInline">:root</span> selector <b>affects every lines</b> that have <span class="codeInline">--paragraph-color</span> variable.
 					</p>
 
@@ -116,8 +115,7 @@
 					</p>
 
 					<script src="https://gist.github.com/spemer/fe9e07989ca5b36e008983dcb46f7802.js"></script>
-
-					<br />
+					<br>
 
 					<p>
 						In this case, I declared variable called <span class="codeInline">--font-size</span> with value of ‘1’. I can use this value as is, but <span class="codeInline">calc()</span> let us to use it in other way we want. See the examples below.
@@ -126,16 +124,15 @@
 
 					<p style="margin-bottom: 64px;">
 						The value of <span class="codeInline">--font-size</span> is integer ‘1’. We can use it with <span class="codeInline">var()</span> as I’ve shown you before. If you want to use value ‘3’, you can declare another variable at the <span class="codeInline">:root</span> selector, but that’s inefficient way. The solution is to use <span class="codeInline">calc()</span> before <span class="codeInline">var()</span> in the line you want to <b>calculate the variable</b> of it’s value like above. In this case,
-						<br /><br />
+						<br><br>
 						The value of <span class="codeInline">margin-top</span> property in this class is <b>16px</b>.
-						<br />
+						<br>
 						The value of <span class="codeInline">font-size</span> property in this class is <b>3rem</b>.
-						<br />
+						<br>
 						The value of <span class="codeInline">line-height</span> property in this class is <b>1.5em</b>.
-						<br /><br />
+						<br><br>
 						In this way, you can <b>reuse your single variable</b> as a <b>multiple value</b>, in a <b>various properties</b>. With <span class="codeInline">calc()</span>, you can calculate your value with other operators like plus, subtract, multiply and divide operator.
 					</p>
-
 
 					<p data-height="480" data-theme-id="dark" data-slug-hash="dZxmrv" data-default-tab="css,result" data-user="Spemer" data-embed-version="2" data-pen-title="CSS3 custom properties" class="codepen"">See the Pen <a href="https://codepen.io/Spemer/pen/dZxmrv/">CSS3 custom properties</a> by Hyouk Seo (<a href="https://codepen.io/Spemer">@Spemer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -162,36 +159,28 @@
 					<p>
 						You can check how I used it in my website’s stylesheet on my <a href="https://github.com/spemer/spemer_portfolio/blob/master/public/css/stylesheet.css" target="_blank" title="GitHub(new tab)" class="externalLink"><b class="underline">GitHub</b> </a>, or you can just visit my website to see the results.
 					</p>
-					<br />
+					<br>
 					<p>
 						If you’re unfamiliar with CSS preprocessors like <b>SASS</b> or <b>LESS</b>, CSS variables would be a great alternatives. It’s easy to learn and use, incredibly powerful. That’s why I decided to apply <b>CSS variables</b> in my website’s stylesheet, and it works just same as before, with more efficiency.
 					</p>
-					<br />
+					<br>
 					<p>
 						Thank you for reading my article, hope you enjoyed.
 					</p>
-
-
 				</div></center>
-
-
 
 				<div class="everyTxtEndEnd">
 					<p>
-						Using variables in CSS<br />
-						<strong><a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Click here to read this article on Medium <i class="fa fa-medium" aria-hidden="true"></i></a></strong><br />
-						<br />
+						Using variables in CSS<br>
+						<strong><a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Click here to read this article on Medium <i class="fa fa-medium" aria-hidden="true"></i></a></strong><br><br>
 
-						<strong>Title :</strong> <a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Using variables in CSS</a><br />
+						<strong>Title :</strong> <a href="https://medium.com/@Spemer/using-variables-in-css-efdcb32d7127" target="_blank" title="Medium(new tab)">Using variables in CSS</a><br>
 
-						<strong>Date :</strong> November 18, 2017<br />
+						<strong>Date :</strong> November 18, 2017<br>
 
-						<strong>Writer :</strong> Hyouk Seo (Spemer)<br />
-
-						<br /><br />
+						<strong>Writer :</strong> Hyouk Seo (Spemer)<br><br><br>
 					</p>
 				</div>
-
 			</div>
 
 			<nav>
