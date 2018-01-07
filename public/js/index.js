@@ -20,8 +20,28 @@
 
 
 //
+// preload
+(function(){
+    let preloadLists = [
+        { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
+        { href: 'https://spemer.com/js/index.js', as: 'script' },
+        { href: 'https://fonts.googleapis.com/css?family=Merriweather:300|Roboto+Slab', as: 'font' },
+    ]
+    let headTitle = document.querySelector('head');
+    preloadLists.forEach(function(preloadList){
+        let setLinkProp = document.createElement('link');
+        setLinkProp.setAttribute('rel', 'preload' );
+        setLinkProp.setAttribute('href', preloadList.href );
+        setLinkProp.setAttribute('as', preloadList.as );
+        headTitle.appendChild(setLinkProp);
+    });
+})();
+
+
+//
 // meta Tage **meta [property, content]**
 (function(){
+    let thisUrl = window.location.href;
     let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
     let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
     let propLists = [
@@ -30,6 +50,7 @@
         { property: 'og:img:secure_url', content: thisOGImg },
         { property: 'article:section', content: 'Design' },
         { property: 'article:tag', content: thisKeys },
+        { property: 'al:web:url', content: thisUrl },
     ]
     let headTitle = document.querySelector('head');
     propLists.forEach(function(propList){
@@ -129,6 +150,7 @@
         { rel: 'home', href: '' },
         { rel: 'pingback', href: '' },
         { rel: 'standout', href: '' },
+        { rel: 'alternate', href: '' },
         { rel: 'author', href: 'about-spemer.html' },
         { rel: 'manifest', href: 'img/favicons/manifest.json' },
         { rel: 'shortcut icon', href: 'img/favicons/favicon.ico' },
