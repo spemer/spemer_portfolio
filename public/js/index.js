@@ -475,66 +475,60 @@ function setAttrByHeight(target, attrName, attrValue){
     const articleLists = document.querySelector('#articleList');
     if (indexLists)
     {
-        let indexCount = 0;
-        siteMapList.forEach(function(siteMapL)
+        let indexDiv = document.createElement('div');
+        indexDiv.className = "artImgBoxEach grow";
+        indexLists.appendChild(indexDiv);
+
+        for (let i = 0; i < siteMapList.length; i++)
         {
-            let indexDiv = document.createElement('div');
-            indexDiv.className = "artImgBoxEach grow";
-            let indexLink = document.createElement('a');
-            indexLink.href = "https://spemer.com/" + siteMapL.href + ".html";
+            var indexLink = document.createElement('a');
+            var indexFigure = document.createElement('figure');
+            var figImg = document.createElement('img');
+            var figCap = document.createElement('figcaption');
+            var figStr = document.createElement('strong');
+            var figTxt = document.createTextNode(siteMapList[i].name);
 
-            let indexFigure = document.createElement('figure');
+            indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
+            figImg.src = "https://spemer.com/img/works/" + siteMapList[i].img;
+            figImg.alt = siteMapList[i].title;
+            figImg.title = siteMapList[i].title;
 
-            let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapL.img;
-            figImg.alt = siteMapL.title;
-            figImg.title = siteMapL.title;
-
-            let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapL.name);
-
-            indexLists.appendChild(indexDiv);
             indexDiv.appendChild(indexLink);
             indexLink.appendChild(indexFigure);
             indexFigure.appendChild(figImg);
             indexFigure.appendChild(figCap);
             figCap.appendChild(figStr);
             figStr.appendChild(figTxt);
-
-            ++indexCount;
-        });
+        }
     }
     // article.html -> lists
     else if (articleLists)
     {
-        let articleCount = 0;
-        siteMapListArticle.forEach(function(siteMapListArti)
+        let articleDiv = document.createElement('div');
+        articleDiv.className = "artImgBoxEach grow";
+        articleLists.appendChild(articleDiv);
+
+        for (let i = 0; i < siteMapListArticle.length; i++)
         {
-            let articleDiv = document.createElement('div');
-            articleDiv.className = "artImgBoxEach grow";
             let articleLink = document.createElement('a');
-            articleLink.href = "https://spemer.com/" + siteMapListArti.href + ".html";
-
             let articleFigure = document.createElement('figure');
-
             let figImg = document.createElement('img');
-            figImg.src = "https://spemer.com/img/works/" + siteMapListArti.img;
-            figImg.alt = siteMapListArti.title;
-            figImg.title = siteMapListArti.title;
-
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('strong');
-            let figTxt = document.createTextNode(siteMapListArti.name);
+            let figTxt = document.createTextNode(siteMapListArticle[i].name);
 
-            articleLists.appendChild(articleDiv);
+            articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
+            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
+            figImg.alt = siteMapListArticle[i].title;
+            figImg.title = siteMapListArticle[i].title;
+            
             articleDiv.appendChild(articleLink);
             articleLink.appendChild(articleFigure);
             articleFigure.appendChild(figImg);
             articleFigure.appendChild(figCap);
             figCap.appendChild(figStr);
             figStr.appendChild(figTxt);
-        });
+        }
     }
 })();
 
@@ -769,12 +763,20 @@ function setAttrByHeight(target, attrName, attrValue){
 //
 // head style -> strong font
 (function(){
-    let getHeadClass = document.querySelector('.strongFont');
-    if(getHeadClass)
+    let getHeadClassStrng = document.querySelector('.strongFont');
+    let getHeadClassAtech = document.querySelector('.atechImgSt');
+    if(getHeadClassStrng)
     {
         let setHeadStyle = document.createElement('style');
         let setStyleProp = document.createTextNode('strong{font-weight:400;font-size:16px}');
-        getHeadClass.appendChild(setHeadStyle);
+        getHeadClassStrng.appendChild(setHeadStyle);
+        setHeadStyle.appendChild(setStyleProp);
+    }
+    else if(getHeadClassAtech)
+    {
+        let setHeadStyle = document.createElement('style');
+        let setStyleProp = document.createTextNode('.atechImg{width:100%;height:100%;margin:0px;padding:0px}');
+        getHeadClassAtech.appendChild(setHeadStyle);
         setHeadStyle.appendChild(setStyleProp);
     }
 })();

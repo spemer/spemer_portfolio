@@ -270,8 +270,7 @@ header{
 
 .aboutHover a{border-bottom:2px solid #e7e9ee}
 
-@media screen and (max-width: 420px){
-	.aboutHover a{border-bottom:2px solid transparent}}
+@media screen and (max-width: 420px){.aboutHover a{border-bottom:2px solid transparent}}
 
 .article{
 	width:100%;
@@ -282,22 +281,14 @@ header{
 	border-top:2px solid #e7e9ee;
 	border-bottom:2px solid #e7e9ee}
 
-#artImgBox{
-	width:100%;
-	margin:0 auto;
-	display:inline-block}
-
-#artImgBox div{margin-bottom:50px}
-#artImgBox div:nth-child(3n+2){margin:0 4%}
+#artImgBox div{margin:2vw 0 0}
 
 .artImgBoxEach{
-	width:29%;
-	margin:3% .75%;
-	display:inline-block}
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;}
 .artImgBoxEach img{
-	opacity:1;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-	width:100%;
+	width:90%;
+	margin:0 5%;
 	-webkit-transition:all .5s ease;
 	-o-transition:all .5s ease;
 	-moz-transition:all .5s ease;
@@ -306,8 +297,12 @@ header{
 	-moz-border-radius:8px;
 	border-radius:8px}
 
+.artImgBoxEach figcaption{margin-bottom:4vw}
+@media screen and (max-width:768px){.artImgBoxEach{grid-template-columns: 50% 50%}}
 @media screen and (max-width:420px){
 	.artImgBoxEach img{
+		margin-top: 2vw;
+		margin-bottom: 2vw;
 		-webkit-border-radius:4px;
 		-moz-border-radius:4px;
 		border-radius:4px}}
@@ -319,8 +314,7 @@ header{
 	-moz-border-radius:6px;
 	border-radius:6px}
 
-@media screen and (max-width:420px){
-	.profile{width:75%;height:75%}}
+@media screen and (max-width:420px){.profile{width:75%;height:75%}}
 
 .artImgBoxEach img:hover {
 	-webkit-transition:all .35s ease;
@@ -648,9 +642,6 @@ h4{
 		font-size:calc(var(--font-size)*.875rem)}
 	
 	.headerNavList:first-child{margin-left:0}
-	#artImgBox div:nth-child(3n+2){margin:0}
-	#artImgBox div:nth-child(n+1){margin:2%; width:45%}
-	.artImgBoxEach:nth-child(n+1)div{margin:2%}
 	
 	.iframe iframe{
 		width:100%;
@@ -729,8 +720,6 @@ h4{
 .siteMapBtn{color:#656c7a}
 .siteMapBtn:hover{cursor:pointer}
 .siteMapNav{display:none}
-
-#siteMap nav li:last-child{padding-bottom:2rem}
 
 #siteMap a{
 	color:#656c7a;
