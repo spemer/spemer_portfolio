@@ -225,15 +225,21 @@ header{
 #artImgBox div{margin:2vw 0 0}
 
 .artImgBoxEach{
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%}
+    -ms-grid-columns: 33.3% 33.3% 33.3%;
+        grid-template-columns: 33.3% 33.3% 33.3%}
 .artImgBoxEach img{
 	width:90%;
 	margin:0 5%;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	border-radius:8px}
-@media screen and (max-width:768px){.artImgBoxEach{grid-template-columns: 50% 50%}}
+@media screen and (max-width:768px){
+	.artImgBoxEach{
+		-ms-grid-columns: 50% 50%;
+		grid-template-columns: 50% 50%}
+}
 @media screen and (max-width:420px){
 	.artImgBoxEach img{
 		margin-top: 2vw;
