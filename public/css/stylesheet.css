@@ -263,9 +263,9 @@ header{
 	-ms-transform:translateY(-10px);
 	-o-transform:translateY(-10px);
 	transform:translateY(-10px);
-	-webkit-box-shadow:0 8px 12px 2px #e7e9ee;
-	-moz-box-shadow:0 8px 12px 2px #e7e9ee;
-	box-shadow:0 8px 12px 2px #e7e9ee}
+	-webkit-box-shadow:0 8px 32px 4px #e7e9ee;
+	-moz-box-shadow:0 8px 24px 4px #e7e9ee;
+	box-shadow:0 8px 24px 4px #e7e9ee}
 
 .artImgBoxEach figcaption{
 	text-align:center;
@@ -273,7 +273,7 @@ header{
 	color:#656c7a;
 	font-size:12px;
 	margin-bottom:4vw;
-	margin-top:-.25vw;
+	margin-top:-.5vw;
 	font-size:-moz-calc(var(--font-size)*.8rem);
 	font-size:calc(var(--font-size)*.8rem);
 	font-size:-webkit-calc(var(--font-size)*.8rem)}
@@ -1014,3 +1014,5 @@ font-size:13px !important;line-height:18px !important}
 	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
 	transition:all .25s ease}
+
+figcaption{max-width:640px;line-height:1.62rem;margin:0 auto;padding-top:4px}
