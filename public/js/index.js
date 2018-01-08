@@ -14,7 +14,7 @@
 // set html prefix
 (function(){
     let getHtml = document.querySelector('html');
-    getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
+    getHtml.setAttribute('prefix', 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#');
     getHtml.setAttribute('lang', 'en');
 })();
 
@@ -25,14 +25,29 @@
     let preloadLists = [
         { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/js/index.js', as: 'script' },
-        { href: 'https://fonts.googleapis.com/css?family=Merriweather:300|Roboto+Slab', as: 'font' },
+        { href: 'https://spemer.com/css/featherlight.css', as: 'style' },
+        { href: 'https://spemer.com/css/featherlight.gallery.css', as: 'style' },
+        { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css', as: 'style' },
+        { href: 'https://fonts.gstatic.com/s/robotoslab/v7/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2', as: 'font' },
+        { href: 'https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2', as: 'font' },
+        { href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0', as: 'font' },
+        { href: 'https://spemer.com/js/jquery.slim.min.js', as: 'script' },
+        { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
+        { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
+        { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' },
     ]
     let headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
         let setLinkProp = document.createElement('link');
-        setLinkProp.setAttribute('rel', 'preload' );
-        setLinkProp.setAttribute('href', preloadList.href );
-        setLinkProp.setAttribute('as', preloadList.as );
+        setLinkProp.setAttribute('rel', 'preload');
+        setLinkProp.setAttribute('href', preloadList.href);
+        setLinkProp.setAttribute('as', preloadList.as);
+
+        if(preloadList.as == 'font')
+        {
+            setLinkProp.setAttribute('type', 'font/woff2');
+            setLinkProp.setAttribute('crossorigin','');
+        }
         headTitle.appendChild(setLinkProp);
     });
 })();
