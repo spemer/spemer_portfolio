@@ -315,7 +315,7 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'favicon/favicon.png'
         },
         {
-            name:  'CSSVariables',
+            name:  'CSS Variables',
             href:  'articles/css-custom-properties-variables-usage',
             title: 'Using variables(custom properties) in CSS3',
             img: 'css/thumb.png'
@@ -357,7 +357,6 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'music/cover.jpg'
         },
     ]
-
 
     //
     // home next prev(bottom)
