@@ -23,8 +23,8 @@
 // preload
 (function(){
     let preloadLists = [
-        { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/js/index.js', as: 'script' },
+        { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.gallery.css', as: 'style' },
         { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css', as: 'style' },
@@ -88,13 +88,9 @@
     let metaLists = [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'subject', content: 'Design' },
-        { name: 'DC.subject', content: 'Design' },
         { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
         { name: 'designer', content: 'Hyouk Seo(Spemer)' },
         { name: 'publisher', content: 'Hyouk Seo(Spemer)' },
-        { name: 'DC.publisher', content: 'Hyouk Seo(Spemer)' },
-        { name: 'DC.creator', content: 'Hyouk Seo(Spemer)' },
-        { name: 'DC.contributor', content: 'Hyouk Seo(Spemer)' },
         { name: 'creator', content: 'Hyouk Seo(Spemer)' },
         { name: 'web_author', content: 'Hyouk Seo(Spemer)' },
         { name: 'owner', content: 'Hyouk Seo(Spemer)' },
@@ -104,14 +100,9 @@
         { name: 'target', content: 'all' },
         { name: 'url', content: thisUrl },
         { name: 'identifier-URL', content: thisUrl },
-        { name: 'DC.source', content: thisUrl },
-        { name: 'DC.relation', content: 'https://spemer.com/' },
         { name: 'pagename', content: thisTitle },
-        { name: 'DC.title', content: thisTitle },
         { name: 'rating', content: 'general' },
         { name: 'language', content: 'english' },
-        { name: 'DC.language', content: 'en' },
-        { name: 'DC.coverage', content: 'World' },
         { name: 'distribution', content: 'global' },
         { name: 'Resource-Type', content: 'Document' },
         { name: 'classification', content: 'Design' },
@@ -137,6 +128,15 @@
         { name: 'msapplication-tooltip', content: thisTitle },
         { name: 'msapplication-starturl', content: thisUrl },
         { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
+        { name: 'DC.subject', content: 'Design' },
+        { name: 'DC.publisher', content: 'Hyouk Seo(Spemer)' },
+        { name: 'DC.creator', content: 'Hyouk Seo(Spemer)' },
+        { name: 'DC.contributor', content: 'Hyouk Seo(Spemer)' },
+        { name: 'DC.source', content: thisUrl },
+        { name: 'DC.relation', content: 'https://spemer.com/' },
+        { name: 'DC.title', content: thisTitle },
+        { name: 'DC.language', content: 'en' },
+        { name: 'DC.coverage', content: 'World' },
         { name: 'DC.description', content: thisDesc },
         { name: 'DC.keywords', content: thisKeys },
         { name: 'news_keywords', content: thisKeys },
@@ -684,7 +684,7 @@ function setAttrByHeight(target, attrName, attrValue){
         Instagram: {
             href : 'instagram.com/spemer/',
             title : 'Instagram',
-            iconID : 'InIcon',
+            iconID : 'inIcon',
             iconClass : 'instagram'
         },
         LinkedIn: {

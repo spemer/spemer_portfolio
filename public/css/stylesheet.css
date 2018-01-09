@@ -138,19 +138,9 @@ a,b {color:#656c7a; color:var(--color-gray)}
 	padding-top:25px;
 	padding-bottom:50px}
 
-.prevNextTop{
-	float:left;
-	color:#656c7a;}
-
-.prevNextTop2{
-	float:left;
-	color:#babac0;}
-
-.prevNext{
-	float:right;
-	color:#656c7a;}
-
-.prevNextTop2:hover{color:#656c7a}
+.prevNextTop2,.prevNextTop{float:left;color:#babac0}
+.prevNext{float:right;color:#656c7a}
+.prevNextTop,.prevNextTop2:hover{color:#656c7a}
 .prevNext:hover,.prevNextTop:hover{color:#2a2e2e}
 
 .prevNextTop,.prevNextTop2,.prevNext{
@@ -183,17 +173,14 @@ header{
 
 #headerLogo h1:hover{color:#2a2e2e}
 
-@media screen and (max-width: 420px){
-	#headerLogo h1{font-size:36px;margin:15px 0 -15px}}
+@media screen and (max-width: 420px){#headerLogo h1{font-size:36px;margin:15px 0 -15px}}
 
 #headerNav nav{
 	float:right;
 	margin:50px 0;
 	padding-top:25px}
 
-.headerNavList{
-	margin-left:25px;
-	display:inline-block}
+.headerNavList{margin-left:25px;display:inline-block}
 .headerNavList:first-child{margin-left:0}
 
 .headerNav{
@@ -238,8 +225,7 @@ header{
 @media screen and (max-width:768px){
 	.artImgBoxEach{
 		-ms-grid-columns: 50% 50%;
-		grid-template-columns: 50% 50%}
-}
+		grid-template-columns: 50% 50%}}
 @media screen and (max-width:420px){
 	.artImgBoxEach img{
 		margin-top: 2vw;
@@ -314,8 +300,6 @@ footer p{
 
 #snsIcon i{
 	top:5px;
-	opacity:1;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	float:right;
 	margin-left:20px;
 	position:relative;
@@ -368,7 +352,6 @@ footer p{
 	-webkit-transition:transform .25s ease}
 
 #snsIcon i:hover{
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	-webkit-transform:translateY(-2.5px);
 	-moz-transform:translateY(-2.5px);
 	-ms-transform:translateY(-2.5px);
@@ -550,8 +533,7 @@ h4{
 		padding-top:0;
 		padding-bottom:0;
 		text-align:center;
-		margin-top:-1rem !important}
-}
+		margin-top:-1rem !important}}
 
 @media screen and (max-width:768px){
 	body{width:90%}
@@ -709,7 +691,6 @@ h4{
 	-o-transition:opacity ease .5s;
 	-moz-transition:opacity ease .5s;
 	transition:opacity ease .5s}
-
 .c-hamburger:focus{outline:none}
 
 .c-hamburger span{
@@ -968,8 +949,7 @@ ul > li{
 	margin-right: 2.75%}
 
 .lineImage{border: 2px solid #e5e5e5}
-@media screen and (max-width:420px){
-	.xdiframe{display: none;}}
+@media screen and (max-width:420px){.xdiframe{display: none;}}
 
 .copy{cursor: url(../img/specialCopyCursor-2lv34.cur), pointer}
 .tooltip{
