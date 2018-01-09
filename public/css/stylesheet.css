@@ -832,7 +832,7 @@ ul > li{
 
 .codeInline{
 	display:inline;
-	padding:0px 4px 2px;
+	padding:1px 4px 1px;
 	color:var(--color-code);
 	border:1px solid #e5e5e5;
 	-webkit-border-radius:2px;
@@ -996,3 +996,26 @@ font-size:13px !important;line-height:18px !important}
 	transition:all .25s ease}
 
 figcaption{max-width:640px;line-height:1.62rem;margin:0 auto;padding-top:4px}
+
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 1.4em;
+  text-indent: -1.35em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.075rem;
+  font-weight: bolder;
+  text-align: right;
+  content: counter(item) ".";
+}

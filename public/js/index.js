@@ -1,5 +1,20 @@
 //"use strict";
 
+
+// //
+// // getImgHeightWidth
+// // get image height and apply bgcolor before load
+// (function(){
+//     let getImgAll = document.querySelectorAll('img');
+//     let imgHeight = [];
+//     for (let i = 0; i < getImgAll.length; i++)
+//     {
+//         imgHeight = imgHeight.concat(getImgAll[i].height);
+//         getImgAll[i].setAttribute('style', 'background-color:#fff;min-height:' + imgHeight[i]);
+//     }
+// })();
+
+
 //
 // pace.js
 (function(){
@@ -567,7 +582,6 @@ function setAttrByHeight(target, attrName, attrValue){
         }
     }
 })();
-
 
 //
 // headerNav 3 ul > li
