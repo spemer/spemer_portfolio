@@ -330,16 +330,22 @@ function setAttrByHeight(target, attrName, attrValue){
             img: 'favicon/favicon.png'
         },
         {
+            name:  'Scrollbar',
+            href:  'articles/customize-website-scrollbar-with-css-web-browser',
+            title: 'Customize website’s scrollbar with CSS',
+            img: 'scroll/cover.png'
+        },
+        {
             name:  'CSS Variables',
             href:  'articles/css-custom-properties-variables-usage',
             title: 'Using variables(custom properties) in CSS3',
             img: 'css/thumb.png'
         },
         {
-            name:  'Scrollbar',
-            href:  'articles/customize-website-scrollbar-with-css-web-browser',
-            title: 'Customize website’s scrollbar with CSS',
-            img: 'scroll/cover.png'
+            name:  'Bodymovin',
+            href:  'articles/bodymovin-airbnb-lottie-after-effects',
+            title: 'How to use Bodymovin for After Effects by Airbnb',
+            img: 'bodymovin/cover.png'
         },
         {
             name:  'Jekyll',
@@ -352,12 +358,6 @@ function setAttrByHeight(target, attrName, attrValue){
             href:  'articles/creative-pros-cons-google-material-design',
             title: 'Cons and Pros of Material design by Google',
             img: 'material/material.png'
-        },
-        {
-            name:  'Bodymovin',
-            href:  'articles/bodymovin-airbnb-lottie-after-effects',
-            title: 'How to use Bodymovin for After Effects by Airbnb',
-            img: 'bodymovin/cover.png'
         },
         {
             name:  'Firebase',
