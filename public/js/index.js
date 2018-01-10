@@ -1,6 +1,4 @@
 //"use strict";
-
-
 // //
 // // getImgHeightWidth
 // // get image height and apply bgcolor before load
@@ -20,16 +18,17 @@
 (function(){
     let headTitle = document.querySelector('head');
     let setScript = document.createElement('script');
+    setScript.setAttribute('async','');
     setScript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js');
     headTitle.appendChild(setScript);
 })();
 
 
 //
-// set html prefix
+// set html prefix + manifest
 (function(){
     let getHtml = document.querySelector('html');
-    getHtml.setAttribute('prefix', 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#');
+    getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
     getHtml.setAttribute('lang', 'en');
 })();
 
@@ -122,9 +121,7 @@
         { name: 'Resource-Type', content: 'Document' },
         { name: 'classification', content: 'Design' },
         { name: 'HandheldFriendly', content: 'true' },
-        { name: 'robots', content: 'index,follow' },
         { name: 'referrer', content: 'origin-when-cross-origin' },
-        { name: 'googlebot', content: 'index,follow' },
         { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },
@@ -424,6 +421,7 @@ function setAttrByHeight(target, attrName, attrValue){
         nextLink.appendChild(nextBold);
         nextBold.appendChild(nextText);
         nextBold.appendChild(nextIcon);
+        nextIcon.setAttribute('aria-hidden', 'true');
     }
 
     //
@@ -472,6 +470,7 @@ function setAttrByHeight(target, attrName, attrValue){
         divClassName.appendChild(nextLink);
         nextLink.appendChild(nextBold);
         nextBold.appendChild(nextIcon);
+        nextIcon.setAttribute('aria-hidden', 'true');
         nextBold.appendChild(nextText);
     };
 
@@ -818,6 +817,7 @@ function setAttrByHeight(target, attrName, attrValue){
     if(getHeadClassStrng)
     {
         let setHeadStyle = document.createElement('style');
+        setHeadStyle.setAttribute('type', 'text/css');
         let setStyleProp = document.createTextNode('strong{font-weight:400;font-size:16px}');
         getHeadClassStrng.appendChild(setHeadStyle);
         setHeadStyle.appendChild(setStyleProp);
@@ -825,6 +825,7 @@ function setAttrByHeight(target, attrName, attrValue){
     else if(getHeadClassAtech)
     {
         let setHeadStyle = document.createElement('style');
+        setHeadStyle.setAttribute('type', 'text/css');
         let setStyleProp = document.createTextNode('.atechImg{width:100%;height:100%;margin:0px;padding:0px}');
         getHeadClassAtech.appendChild(setHeadStyle);
         setHeadStyle.appendChild(setStyleProp);
@@ -843,9 +844,7 @@ function setAttrByHeight(target, attrName, attrValue){
         for (let j = 0; j < 3; j++)
         {
             let setSpan = document.createElement('span');
-            let setSpanDot = document.createTextNode('ㆍ');
             setCenter.appendChild(setSpan);
-            setSpan.appendChild(setSpanDot);
         }
     }
 })();

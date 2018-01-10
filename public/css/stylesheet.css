@@ -78,10 +78,14 @@ body::-webkit-scrollbar-thumb:hover {background-color:#a0a0a5}
 .blob-wrapper::-webkit-scrollbar-track {background-color:#fff}
 .blob-wrapper::-webkit-scrollbar-thumb {background-color:#babac0;border-radius:4px}
 .blob-wrapper::-webkit-scrollbar-thumb:hover {background-color:#a0a0a5}
-img::-moz-selection {visibility:hidden;background:transparent}
-img::selection {visibility:hidden;background:transparent}
-::-moz-selection {color:#fff;background:#babac0}
-::selection {color:#fff;background:#babac0}
+
+img::selection{visibility:hidden;background:transparent}
+img::-moz-selection{visibility:hidden;background:transparent}
+::selection{color:#fff;background:#babac0}
+::-moz-selection{color:#fff;background:#babac0}
+.hrline span::selection{color:#babac0;background:#fff}
+.hrline span::-moz-selection{color:#babac0;background:#fff}
+.hrline span:hover,.hrline:hover{cursor:default}
 
 .mainYears{
 	float:left;
@@ -906,6 +910,7 @@ ul > li{
 	font-weight:bolder;
 	display:inline-block;
 	color:var(--color-gray)}
+.hrline span:after{content: "ㆍ"}
 
 .colorBox{
 	height:8px;
