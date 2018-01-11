@@ -3,8 +3,8 @@ Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built thi
   
 Built with these __AWESOME stuffs__:
 * [JQuery][jquery]
-* [Animate][animate]
-* [DISQUS][disqus]
+<!-- * [Animate][animate] -->
+<!-- * [DISQUS][disqus] -->
 * [Firebase][firebase]
 * [Feather Light][feather]
 * [Google Fonts][googlefonts]
@@ -20,11 +20,11 @@ Visit __[My Website][spemer]__ for more details!
   
   
 ### Hyouk Seo on  
-* [Twitter][twitter]
-* [Behance][behance]
+* [LinkedIn][linkedin]  
 * [Medium][medium]
-* [Linked In][linkedin]  
+* [Behance][behance]
 * [Facebook][fb]
+* [Twitter][twitter]
   
   
 
