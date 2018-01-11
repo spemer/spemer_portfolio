@@ -61,120 +61,119 @@
 
 			<div class="everyTxtEnd everyTxtEndArticle">
 				
-				<h2>Customize website’s scrollbar with CSS</h2>
+			<h2>Customize website’s scrollbar with CSS</h2>
 				<p>Three lines of CSS code can make your website’s scrollbar looks like Mac OS’s one</p>
 				<br>
 
-				<figure class="articleImg articleFig articleImgSize">
-					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-					<a class="feather" href="../img/works/scroll/scrollbar.png" alt="Normal scrollbar(left) and customized one(right) on Chrome browser" title="Normal scrollbar(left) and customized one(right) on Chrome browser">
-						<img src="../img/works/scroll/scrollbar.png" alt="Normal scrollbar(left) and customized one(right) on Chrome browser" title="Normal scrollbar(left) and customized one(right) on Chrome browser" />
-						<figcaption>
-							Normal scrollbar(left) and customized one(right) on Chrome browser
-						</figcaption>
-					</a>
-					</section>
-				</figure>
+			<figure class="articleImg articleFig articleImgSize">
+				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+				<a class="feather" href="../img/works/scroll/scrollbar.png" alt="Normal scrollbar(left) and customized one(right) on Chrome browser" title="Normal scrollbar(left) and customized one(right) on Chrome browser">
+					<img src="../img/works/scroll/scrollbar.png" alt="Normal scrollbar(left) and customized one(right) on Chrome browser" title="Normal scrollbar(left) and customized one(right) on Chrome browser" />
+					<figcaption>
+						Normal scrollbar(left) and customized one(right) on Chrome browser
+					</figcaption>
+				</a>
+				</section>
+			</figure>
 
 				<p>
 					Although <b>scrollbar</b> has just small area on the web browser, to me — as interface designer — it’s not that tiny, nor okay to ignore. If you’re true nerd that care about every details, this short tutorial would be helpful for you.
 				</p>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h3>Start off</h3>
+			<h3>Start off</h3>
 				<p>
 					To customize your website’s scrollbar, there’s only <b>few lines of code in your stylesheet</b> needed. You don’t even need to write JavaScript to customize it! Following code snippet shows CSS code to customize web browser’s scrollbar.
 				</p>
 
-				<script src="https://gist.github.com/spemer/a0e218bbb45433bd611e68446523a00b.js"></script>
+			<script src="https://gist.github.com/spemer/a0e218bbb45433bd611e68446523a00b.js"></script>
 
 				<p>
 					Customizing web browser’s scrollbar is non standard method to styling, so you need to use <b>-webkit-</b> vendor prefix to use pseudo-elements above. Only <b>Webkit browsers</b>(e.g., Chrome, Safari) support this properties. Other browsers like Firefox or IE don’t support this method.
 				</p>
 
 				<br>
-				<figure class="articleImg75 articleFig articleImgSize" >
-					<img src="../img/works/scroll/ie.jpg" alt="Internet Explorer" title="Internet Explorer" />
-					<figcaption>/* IMGUR */</figcaption>
-				</figure>
+			<figure class="articleImg75 articleFig articleImgSize" >
+				<img src="../img/works/scroll/ie.jpg" alt="Internet Explorer" title="Internet Explorer" />
+				<figcaption>/* IMGUR */</figcaption>
+			</figure>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h4>Pseudo-Elements</h4>
-
+			<h4>Pseudo-Elements</h4>
 				<p>
 					You can use 7 different pseudo-elements to customize web browser’s scrollbar. See the code snippet below:
 				</p>
 
-				<script src="https://gist.github.com/spemer/c644f16a61103fc7228d2de8203761ab.js"></script>
+			<script src="https://gist.github.com/spemer/c644f16a61103fc7228d2de8203761ab.js"></script>
 
 				<p>
 					I used <span class="codeInline">::-webkit-scrollbar</span>, <span class="codeInline">::-webkit-scrollbar-track</span> and <span class="codeInline">::-webkit-scrollbar-thumb</span> for this tutorial. Each properties need <b>value</b> inside the brackets.
 				</p>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h3>CodePen</h3>
+			<h3>CodePen</h3>
 				<p>
 					See how it works on <a href="https://codepen.io/Spemer/pen/baoKPK" title="CodePen(new tab)" target="_blank" class="externalLink"><b class="underline">CodePen&nbsp;</b></a> below. If you try this code on IE or Firefox, this code will not run and JavaScript will return alternative text on div box.
 				</p>
 
 				<br>
-				<p data-height="480" data-theme-id="0" data-slug-hash="baoKPK" data-default-tab="css,result" data-user="Spemer" data-embed-version="2" data-pen-title="customize-scrollbar" class="codepen">See the Pen <a href="https://codepen.io/Spemer/pen/baoKPK/">customize-scrollbar</a> by Hyouk Seo (<a href="https://codepen.io/Spemer">@Spemer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<p data-height="480" data-theme-id="0" data-slug-hash="baoKPK" data-default-tab="css,result" data-user="Spemer" data-embed-version="2" data-pen-title="customize-scrollbar" class="codepen">See the Pen <a href="https://codepen.io/Spemer/pen/baoKPK/">customize-scrollbar</a> by Hyouk Seo (<a href="https://codepen.io/Spemer">@Spemer</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 				<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h3>From my stylesheet</h3>
+			<h3>From my stylesheet</h3>
 				<p>
 					I wrote only <b>three lines of CSS code</b> to customize my website’s scrollbar. These methods don’t need a single line of JavaScript code, super simple and easy to use. Check out link below to watch on live website!
 				</p>
 
-				<script src="https://gist.github.com/spemer/5c05dcc9d2da9758924e6b5f0cf4600f.js"></script>
+			<script src="https://gist.github.com/spemer/5c05dcc9d2da9758924e6b5f0cf4600f.js"></script>
 
 				<p>
 					See live version on my website: <a href="https://spemer.com" title="Spemer.com" target="_blank">https://spemer.com</a>, or check my CSS code on my <a href="https://github.com/spemer/spemer_portfolio/blob/master/public/css/stylesheet.css" title="GitHub(new tab)" target="_blank" class="externalLink"><b class="underline">GitHub&nbsp;</b></a> (line 75 to 82)
 				</p>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h3>Applications</h3>
+			<h3>Applications</h3>
 				<p>
 					If you’re using <b>GitHub Gist</b> code snippets on your own website, It’s available to customize it’s scrollbar either like image below. We can apply this method anywhere if we know the <b>classname</b> or <b>ID</b> of the elements, which we’re going to customize them.
 				</p>
 
 				<br>
-				<figure class="articleImg75 articleFig articleImgSize" >
-					<img src="../img/works/scroll/gist_scrollbar.png" alt="Captured from my website" title="Captured from my website" class="whiteBgImg" />
-					<figcaption>
-						Captured from my website
-					</figcaption>
-				</figure>
+			<figure class="articleImg75 articleFig articleImgSize" >
+				<img src="../img/works/scroll/gist_scrollbar.png" alt="Captured from my website" title="Captured from my website" class="whiteBgImg" />
+				<figcaption>
+					Captured from my website
+				</figcaption>
+			</figure>
 
-				<script src="https://gist.github.com/spemer/7ab104e2b6f9565314d2a62e1e457b7b.js"></script>
+			<script src="https://gist.github.com/spemer/7ab104e2b6f9565314d2a62e1e457b7b.js"></script>
 
 				<p>
 					Gist’s code snippet uses classname <span class="codeInline">.blob-wrapper</span> for it’s scrollbar, so we can customize it with that. Copy and paste the CSS code above will make your Gist code snippet’s scrollbar just like the image above.
 				</p>
 
-				<div class="hrline"></div>
+			<div class="hrline"></div>
 
-				<h3>Can I use?</h3>
+			<h3>Can I use?</h3>
 				<p>
 					At this point in my writing this article today(January 5, 2018), search result on caniuse.com says <b>87.07% of browsers</b> support for <span class="codeInline">::-webkit-scrollbar</span> pseudo-elements. You can check the latest report on <a href="https://caniuse.com/#search=scrollbar" title="caniuse.com(new tab)" target="_blank" class="externalLink"><b class="underline">caniuse.com&nbsp;</b></a>.
 				</p>
 
-				<figure class="articleImg articleFig articleImgSize">
-					<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-					<a class="feather" href="../img/works/scroll/caniuse_scrollbar.png" alt="Usage report from caniuse.com" title="Usage report from caniuse.com">
-						<img src="../img/works/scroll/caniuse_scrollbar.png" alt="Usage report from caniuse.com" title="Usage report from caniuse.com" />
-						<figcaption>
-							Usage report from caniuse.com
-						</figcaption>
-					</a>
-					</section>
-				</figure>
+			<figure class="articleImg articleFig articleImgSize">
+				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
+				<a class="feather" href="../img/works/scroll/caniuse_scrollbar.png" alt="Usage report from caniuse.com" title="Usage report from caniuse.com">
+					<img src="../img/works/scroll/caniuse_scrollbar.png" alt="Usage report from caniuse.com" title="Usage report from caniuse.com" />
+					<figcaption>
+						Usage report from caniuse.com
+					</figcaption>
+				</a>
+				</section>
+			</figure>
 
 				<p>
 					Again, this method only works on <b>Webkit browsers with vendor prefix</b>, *NOT* working on the other browsers. Thank you for reading my article, hope you enjoyed.
@@ -182,18 +181,18 @@
 
 			</div></center>
 
-			<div class="everyTxtEndEnd">
-				<p>
-					Hyouk Seo(Spemer) - Customize website’s scrollbar with CSS<br>
-					<strong><a href="https://medium.com/spemer/customize-websites-scrollbar-with-css-270ca436d6c1" target="_blank" title="Medium(new tab)">Click here to read this article on Medium <i class="fa fa-medium" aria-hidden="true"></i></a></strong><br><br>
+		<div class="everyTxtEndEnd">
+			<p>
+				Hyouk Seo(Spemer) - Customize website’s scrollbar with CSS<br>
+				<strong><a href="https://medium.com/spemer/customize-websites-scrollbar-with-css-270ca436d6c1" target="_blank" title="Medium(new tab)">Click here to read this article on Medium <i class="fa fa-medium" aria-hidden="true"></i></a></strong><br><br>
 
-					<strong>Title :</strong> <a href="https://medium.com/spemer/customize-websites-scrollbar-with-css-270ca436d6c1" target="_blank" title="Medium(new tab)">Customize website’s scrollbar with CSS</a><br>
+				<strong>Title :</strong> <a href="https://medium.com/spemer/customize-websites-scrollbar-with-css-270ca436d6c1" target="_blank" title="Medium(new tab)">Customize website’s scrollbar with CSS</a><br>
 
-					<strong>Date :</strong> January 5, 2018<br>
+				<strong>Date :</strong> January 5, 2018<br>
 
-					<strong>Writer :</strong> Hyouk Seo (Spemer)<br><br><br>
-				</p>
-			</div>
+				<strong>Writer :</strong> Hyouk Seo (Spemer)<br><br><br>
+			</p>
+		</div>
 		</div>
 
 		<nav>
