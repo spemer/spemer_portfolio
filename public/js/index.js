@@ -535,7 +535,7 @@ function setAttrByHeight(target, attrName, attrValue){
             var indexFigure = document.createElement('figure');
             var figImg = document.createElement('img');
             var figCap = document.createElement('figcaption');
-            var figStr = document.createElement('strong');
+            var figStr = document.createElement('h3');
             var figTxt = document.createTextNode(siteMapList[i].name);
 
             indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
@@ -564,7 +564,7 @@ function setAttrByHeight(target, attrName, attrValue){
             let articleFigure = document.createElement('figure');
             let figImg = document.createElement('img');
             let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('strong');
+            let figStr = document.createElement('h3');
             let figTxt = document.createTextNode(siteMapListArticle[i].name);
 
             articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
@@ -818,7 +818,7 @@ function setAttrByHeight(target, attrName, attrValue){
     {
         let setHeadStyle = document.createElement('style');
         setHeadStyle.setAttribute('type', 'text/css');
-        let setStyleProp = document.createTextNode('strong{font-weight:400;font-size:16px}');
+        let setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-10px 0}');
         getHeadClassStrng.appendChild(setHeadStyle);
         setHeadStyle.appendChild(setStyleProp);
     }

@@ -1,21 +1,6 @@
-CACHE MANIFEST
-# 2018-01-11 v1.0.0
-https://spemer.com/css/animate.css
-https://spemer.com/css/stylesheet.css
-https://spemer.com/css/featherlight.css
-https://spemer.com/css/featherlight.gallery.css
-https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css
-https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
-
-https://spemer.com/img/profile_about.png
-https://spemer.com/img/ogimg.jpg
-https://spemer.com/img/works/insharior/thumb.png
-
-https://spemer.com/index.html
-https://spemer.com/articles.html
+﻿https://spemer.com/index.html
 https://spemer.com/about-spemer.html
-https://spemer.com/404.html
-
+https://spemer.com/articles.html
 https://spemer.com/portfolio/insharior-ux-case-study-user-experience-design.html
 https://spemer.com/portfolio/instagram-tracker-application-igtracker-design.html
 https://spemer.com/portfolio/weather-push-notification-alarm-application.html
@@ -25,7 +10,6 @@ https://spemer.com/portfolio/memory-record-application-ui-design.html
 https://spemer.com/portfolio/todo-task-list-manage-application-sprinter.html
 https://spemer.com/portfolio/suhyup-mobile-banking-ui-ux-renewal.html
 https://spemer.com/portfolio/flaticon-vector-graphic-illustration-design.html
-
 https://spemer.com/articles/set-favicon-with-javascript.html
 https://spemer.com/articles/customize-website-scrollbar-with-css-web-browser.html
 https://spemer.com/articles/css-custom-properties-variables-usage.html
@@ -34,15 +18,3 @@ https://spemer.com/articles/free-github-blog-and-hosting-with-jekyll.html
 https://spemer.com/articles/creative-pros-cons-google-material-design.html
 https://spemer.com/articles/connecting-domain-with-google-firebase.html
 https://spemer.com/articles/spemer-music.html
-
-https://spemer.com/js/index.js
-https://spemer.com/js/anchor.scroll.js
-https://spemer.com/js/clipboard.min.js
-https://spemer.com/js/smooth.scroll.js
-https://spemer.com/js/featherlight.js
-https://spemer.com/js/featherlight.gallery.js
-https://spemer.com/js/jquery.slim.min.js
-
-https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0
-https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2
-https://fonts.gstatic.com/s/robotoslab/v7/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2
