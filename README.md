@@ -14,7 +14,7 @@ Design & Development - __Hyouk Seo__ (Spemer)
   
   
 ### Hyouk Seo  
-(A.K.A __Spemer__) is a Graphic Designer, Web & Mobile __UI/UX Designer__, Web Publisher and Music Producer. Majored in Visual Design in Incheon National University. Deeply Interested in Mobile UX/UI Design, Web Publishing and Web Design. Born in S.Korea, Based in Incheon. Music Producer in Nine Cinema Productions. Always enjoy making an effort to enhance ability of design trends, technologies and skills with active researches. __[Google me][googleme]__ 😎  
+I am detail-oriented __Digital product designer__, graphic designer, web publisher with passion and also known as music producer(a.k.a Spemer). Based in Seoul, South Korea. Major in __Visual Design__, minor in __Computer Science__ in Incheon National University. Deeply interested in mobile UX/UI Design, web publishing and web design. Always enjoy making an effort to enhance ability of design trends, technologies and skills with active researches. Currently seeking for an __internship opportunity__ in 2018. __Let's design for people better!__ 😎  
   
 Visit __[My Website][spemer]__ for more details!  
   
@@ -37,7 +37,6 @@ Visit __[My Website][spemer]__ for more details!
 [fontawesome]: http://fontawesome.io/
 
 [spemer]: https://spemer.com/
-[googleme]: https://www.google.co.kr/?gfe_rd=cr&ei=2KVsWaTjKrHz8AfP1qz4Bw&gws_rd=ssl#q=spemer
 
 [medium]: https://medium.com/@spemer
 [twitter]: https://twitter.com/OfficialSpemer
