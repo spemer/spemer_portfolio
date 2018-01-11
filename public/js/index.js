@@ -35,8 +35,8 @@
         { href: 'https://spemer.com/js/jquery.slim.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
-        { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' },
-    ]
+        { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' }
+    ];
     let headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
         let setLinkProp = document.createElement('link');
@@ -66,8 +66,8 @@
         { property: 'og:img:secure_url', content: thisOGImg },
         { property: 'article:section', content: 'Design' },
         { property: 'article:tag', content: thisKeys },
-        { property: 'al:web:url', content: thisUrl },
-    ]
+        { property: 'al:web:url', content: thisUrl }
+    ];
     let headTitle = document.querySelector('head');
     propLists.forEach(function(propList){
         let setMetaProp = document.createElement('meta');
@@ -138,8 +138,8 @@
         { name: 'DC.coverage', content: 'World' },
         { name: 'DC.description', content: thisDesc },
         { name: 'DC.keywords', content: thisKeys },
-        { name: 'news_keywords', content: thisKeys },
-    ]
+        { name: 'news_keywords', content: thisKeys }
+    ];
     let headTitle = document.querySelector('head');
     metaLists.forEach(function(metaList)
     {
@@ -167,8 +167,8 @@
         { rel: 'alternate', href: '' },
         { rel: 'author', href: 'about-spemer.html' },
         { rel: 'manifest', href: 'img/favicons/manifest.json' },
-        { rel: 'shortcut icon', href: 'img/favicons/favicon.ico' },
-    ]
+        { rel: 'shortcut icon', href: 'img/favicons/favicon.ico' }
+    ];
     etcIcons.forEach(function(etcIcon)
     {
         let setFavicon = document.createElement('link');
@@ -191,8 +191,8 @@
         { sizes: '120x120', href: 'apple-touch-icon-120x120.png' },
         { sizes: '144x144', href: 'apple-touch-icon-144x144.png' },
         { sizes: '152x152', href: 'apple-touch-icon-152x152.png' },
-        { sizes: '180x180', href: 'apple-touch-icon-180x180.png' },
-    ]
+        { sizes: '180x180', href: 'apple-touch-icon-180x180.png' }
+    ];
     faviconLists.forEach(function(faviconList)
     {
         let setFvIcon = document.createElement('link');
@@ -207,8 +207,8 @@
         { sizes: '32x32', href: 'favicon-32x32.png' },
         { sizes: '194x194', href: 'favicon-194x194.png' },
         { sizes: '192x192', href: 'android-chrome-192x192.png' },
-        { sizes: '16x16', href: 'favicon-16x16.png' },
-    ]
+        { sizes: '16x16', href: 'favicon-16x16.png' }
+    ];
     iconLists.forEach(function(iconList)
     {
         let setScIcon = document.createElement('link');
@@ -305,7 +305,7 @@ function setAttrByHeight(target, attrName, attrValue){
             title: 'Minimal vector flat icon design',
             img: 'flaticon/house.jpg'
         }
-    ]
+    ];
     let siteMapListArticle = [
         {
             name:  'Favicon',
@@ -354,8 +354,8 @@ function setAttrByHeight(target, attrName, attrValue){
             href:  'articles/spemer-music',
             title: 'Musics by Spemer',
             img: 'music/cover.jpg'
-        },
-    ]
+        }
+    ];
 
     //
     // home next prev(bottom)
@@ -365,6 +365,10 @@ function setAttrByHeight(target, attrName, attrValue){
     // home next prev(bottom) -> NEXT
     function setNextBtn(arrayName, divClassName, listLength)
     {
+        let nextLink;
+        let nextBold;
+        let nextText;
+        let nextIcon;
         for (let i = 0; i < arrayName.length; i++)
         {
             let headForMeta = document.querySelector('head');
@@ -373,29 +377,29 @@ function setAttrByHeight(target, attrName, attrValue){
             let substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[listLength].href) != -1)
             {
-                var nextLink = document.createElement('a');
+                nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/";
                 nextLink.title = "Home";
                 
-                var nextBold = document.createElement('b');
-                var nextText = document.createTextNode(' Home ');
-                var nextIcon = document.createElement('i');
+                nextBold = document.createElement('b');
+                nextText = document.createTextNode(' Home ');
+                nextIcon = document.createElement('i');
             }
             else if (thisUrl.indexOf(substring) != -1)
             {
-                var nextLink = document.createElement('a');
+                nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/" + arrayName[i + 1].href + ".html";
                 nextLink.title = arrayName[i + 1].name;
 
-                var nextBold = document.createElement('b');
-                var nextText = document.createTextNode(' Next ');
-                var nextIcon = document.createElement('i');
+                nextBold = document.createElement('b');
+                nextText = document.createTextNode(' Next ');
+                nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-right';
 
                 // meta next
-                var metaNextAttr = document.createElement('link');
+                let metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'next');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i + 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
@@ -415,6 +419,10 @@ function setAttrByHeight(target, attrName, attrValue){
     // home next prev(bottom) -> PREV
     function setPrevBtn(arrayName, divClassName)
     {
+        let nextLink;
+        let nextBold;
+        let nextText;
+        let nextIcon;
         for (let i = 0; i < arrayName.length; i++)
         {
             let headForMeta = document.querySelector('head');
@@ -423,29 +431,29 @@ function setAttrByHeight(target, attrName, attrValue){
             let substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[0].href) != -1)
             {
-                var nextLink = document.createElement('a');
+                nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/";
                 nextLink.title = "Home";
                 
-                var nextBold = document.createElement('b');
-                var nextText = document.createTextNode(' Home ');
-                var nextIcon = document.createElement('i');
+                nextBold = document.createElement('b');
+                nextText = document.createTextNode(' Home ');
+                nextIcon = document.createElement('i');
             }
             else if (thisUrl.indexOf(substring) != -1)
             {
-                var nextLink = document.createElement('a');
+                nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/" + arrayName[i - 1].href + ".html";
                 nextLink.title = arrayName[i - 1].name;
 
-                var nextBold = document.createElement('b');
-                var nextText = document.createTextNode(' Prev ');
-                var nextIcon = document.createElement('i');
+                nextBold = document.createElement('b');
+                nextText = document.createTextNode(' Prev ');
+                nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-left';
 
                 // meta prev
-                var metaNextAttr = document.createElement('link');
+                let metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'prev');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i - 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
@@ -518,12 +526,12 @@ function setAttrByHeight(target, attrName, attrValue){
 
         for (let i = 0; i < siteMapList.length; i++)
         {
-            var indexLink = document.createElement('a');
-            var indexFigure = document.createElement('figure');
-            var figImg = document.createElement('img');
-            var figCap = document.createElement('figcaption');
-            var figStr = document.createElement('h3');
-            var figTxt = document.createTextNode(siteMapList[i].name);
+            let indexLink = document.createElement('a');
+            let indexFigure = document.createElement('figure');
+            let figImg = document.createElement('img');
+            let figCap = document.createElement('figcaption');
+            let figStr = document.createElement('h3');
+            let figTxt = document.createTextNode(siteMapList[i].name);
 
             indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
             figImg.src = "https://spemer.com/img/works/" + siteMapList[i].img;
@@ -588,7 +596,7 @@ function setAttrByHeight(target, attrName, attrValue){
             href: 'https://spemer.com/about-spemer.html',
             hName: 'about-spemer.html'
         }
-    ]
+    ];
 
     let headerNavLists = document.querySelector('#headerNav > nav > ul');
 
@@ -711,7 +719,7 @@ function setAttrByHeight(target, attrName, attrValue){
             iconID : 'beIcon',
             iconClass : 'behance'
         }
-    }
+    };
     let snsIcon = document.querySelector('#snsIcon');
     for (let key in snsIconList)
     {
