@@ -180,23 +180,23 @@
 			</figure>
 				<br>
 
-				<h4>Job Stories</h4>
+			<h4>Job Stories</h4>
 				<p>
 					Additionally, I wrote some <a href="https://jtbd.info/replacing-the-user-story-with-the-job-story-af7cdee10c27" target="_blank" title="About job stories on Medium(new tab)" class="externalLink"><b class="underline">Jobs to be done</b> </a> lists to design more useful product and make it from user’s perspective.
 
 
 				<ol class="textbox-colored">
-					<li><p>
+					<li>
 						When <b>I woke up late for the work</b>, I want to <b>be notified in advance about specific weather events</b>, so I can <b>prepare with that even I don’t have much time to check how’s the weather like today</b>.
-					</p></li>
+					</li>
 
-					<li><p>
+					<li>
 						When <b>I’m too lazy that it’s bothersome to check the weather with my smartphone on every morning</b>, I want to <b>be notified about today’s weather only it’s rainy outside</b>, so I can <b>prepare my umbrella without forgetting and get additional minutes on my bed</b>.
-					</p></li>
+					</li>
 
-					<li><p>
+					<li>
 						When <b>I set an alarm at specific time like before I go to my work</b>, I want to <b>be notified about the events I want, not every alarm how’s the weather like today</b>, so I can <b>avoid to get notification everyday even if it’s sunny(that I don’t need to be informed)</b>.
-					</p></li>
+					</li>
 				</ol>
 				</p>
 
@@ -235,9 +235,9 @@
 				</p>
 
 				<ol class="textbox-colored">
-					<li>User <b>downloads and launches AWeather</b></li>
-					<li>User <b>sets an alarm of weather events</b> he/she wants to be notified</li>
-					<li>User <b>gets notification</b> based on the settings</li>
+					<li> User <b>downloads and launches AWeather</b></li>
+					<li> User <b>sets an alarm of weather events</b> he/she wants to be notified</li>
+					<li> User <b>gets notification</b> based on the settings</li>
 				</ol>
 
 			<figure class="articleImg articleFig articleImgSize">
@@ -320,7 +320,7 @@
 					</li>
 
 					<li>
-						On the last screen, AWeather informs users that everything has finished. If users want to change settings of alarm they set, simply tab the “<b>Alarm Settings</b>” button at the bottom of the screen. This makes users to iterate one step from <b>screen 2</b> to <b>screen 3</b>.
+						On the last screen, AWeather informs users that everything has finished. If users want to change alarm settings, simply tab the “<b>Alarm Settings</b>” button at the bottom of the screen. This makes users to iterate one step from <b>screen 2</b> to <b>screen 3</b>.
 					</li>
 				</ol>
 
@@ -330,13 +330,13 @@
 					On "<b>Select weather type</b>" screen, I did not give many options. Notifications for ordinary (e.g., sunny) weather on a smartphone that already has many push notifications will only <b>interfere with other more important notifications</b>. I only wanted to use push notifications for important weather events that require attention, such as <b>having to pick up an umbrella or wear a thick coat</b>. That is why I restricted the selection of weather events on the "Select weather type" screen. In addition, if there are too many options, users will spend <b>much more time to choose</b>. The choices that come out from those ideas are as follows:
 				</p>
 				<ul class="textbox-colored">
-					<li>Snow / Rainy</li>
-					<li>Thunderstorm</li>
-					<li>Swelter</li>
-					<li>Gale</li>
-					<li>Sudden Cold</li>
-					<li>Fog / Cloudy</li>
-					<li>All Above</li>
+					<li> Snow / Rainy</li>
+					<li> Thunderstorm</li>
+					<li> Swelter</li>
+					<li> Gale</li>
+					<li> Sudden Cold</li>
+					<li> Fog / Cloudy</li>
+					<li> All Above</li>
 				</ul>
 
 		<div class="hrline"></div>
@@ -615,23 +615,9 @@
 <script src="../js/featherlight.js"></script>
 <script src="../js/featherlight.gallery.js"></script>
 <script type="text/javascript">
-smoothScroll.init({
-	speed: 1000,
-	easing: 'easeOutQuad',
-	offset: 0,
-	updateURL: false,
-});
+smoothScroll.init({speed:1000,easing:"easeOutQuad",offset:0,updateURL:false});
 
-$('a.feather').featherlightGallery({
-	closeIcon: null,
-	openSpeed: 300,
-	closeSpeed: 300,
-	closeOnClick: 'anywhere',
-	previousIcon: '&#9664;',
-	nextIcon: '&#9654;',
-	galleryFadeIn: 0,
-	galleryFadeOut: 0
-});
+$("a.feather").featherlightGallery({closeIcon:null,openSpeed:300,closeSpeed:300,closeOnClick:"anywhere",previousIcon:"&#9664;",nextIcon:"&#9654;",galleryFadeIn:0,galleryFadeOut:0});
 
 $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();
 </script>
