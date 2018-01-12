@@ -32,6 +32,7 @@
         { href: 'https://fonts.gstatic.com/s/robotoslab/v7/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2', as: 'font' },
         { href: 'https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2', as: 'font' },
         { href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0', as: 'font' },
+        { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.slim.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
