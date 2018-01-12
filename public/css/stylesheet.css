@@ -139,6 +139,7 @@ a,b {color:#656c7a; color:var(--color-gray)}
 	width:100%;
 	padding-top:25px;
 	padding-bottom:50px}
+.prevNext .fa{margin:0 4px}
 
 .prevNextTop2,.prevNextTop{float:left;color:#babac0}
 .prevNext{float:right;color:#656c7a}
@@ -213,11 +214,11 @@ header{
 
 #artImgBox div{margin:2vw 0 0}
 
-.artImgBoxEach{
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 33.3% 33.3% 33.3%;
-        grid-template-columns: 33.3% 33.3% 33.3%}
+.artImgBoxEach a{
+	display:-webkit-inline-flex;
+	display:inline-flex;
+	width:33.33333%
+    }
 .artImgBoxEach img{
 	width:90%;
 	margin:0 5%;
@@ -225,9 +226,8 @@ header{
 	-moz-border-radius:8px;
 	border-radius:8px}
 @media screen and (max-width:768px){
-	.artImgBoxEach{
-		-ms-grid-columns: 50% 50%;
-		grid-template-columns: 50% 50%}}
+	.artImgBoxEach a{
+		width:50%}}
 @media screen and (max-width:420px){
 	.artImgBoxEach img{
 		margin-top: 2vw;
@@ -564,35 +564,19 @@ h4{
 		margin-bottom:25px}
 	
 	#snsIcon i{
-		margin:0 auto;
 		margin-left:2%;
 		margin-right:2%}}
 
-@media screen and (max-width:700px){#snsIcon i{left:6%}}
-@media screen and (max-width:620px){#snsIcon i{left:9%}}
-@media screen and (max-width:540px){#snsIcon i{left:10.5%}}
-@media screen and (max-width:480px){#snsIcon i{left:11.5%}}
-@media screen and (max-width:420px){#snsIcon i{left:12.5%}}
-@media screen and (max-width:360px){#snsIcon i{left:14.5%}}
-@media screen and (max-width:320px){#snsIcon i{left:16.5%}}
 @media screen and (max-width:700px){
 	#snsIcon{
-		width:100%;
-		display:block;
-		margin:0 auto;
-		text-align:center;
-		-webkit-transform:translate(-25%,-50%);
-		-moz-transform:translate(-25%,-50%);
-		-ms-transform:translate(-25%,-50%);
-		-o-transform:translate(-25%,-50%);
-		transform:translate(-25%,-50%)}
+		display:-webkit-flex;
+  		display:flex;
+		-webkit-flex-direction:row-reverse;
+		flex-direction:row-reverse;
+		-webkit-justify-content:center;
+		justify-content:center}
 	
-	#snsIcon i {
-		margin:0 auto;
-		margin-left:2.5%;
-		margin-right:2.5%;
-		margin-bottom:25px;
-		text-align:center}
+	#snsIcon a{margin:0 2.5% -4vw}
 	
 	footer{width:100%; margin:0 auto }
 	footer div{
@@ -613,12 +597,6 @@ h4{
 	header{
 		width:100%;
 		padding:0;
-		text-align:center}
-	
-	#snsIcon i{
-		margin:0 auto;
-		margin-left:5%;
-		margin-bottom:25px;
 		text-align:center}}
 
 #siteMap{
@@ -1017,3 +995,5 @@ ol > li:before {
   font-weight: bolder;
   text-align: right;
   content: counter(item) "."}
+
+body{max-width:1280px}

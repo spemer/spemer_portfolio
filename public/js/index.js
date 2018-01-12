@@ -235,16 +235,16 @@
 })();
 
 
-function setAttrByHeight(target, attrName, attrValue){
-    let body = document.body,
-        html = document.documentElement;
-    let height = Math.max( body.scrollHeight, body.offsetHeight,
-                           html.clientHeight, html.scrollHeight, html.offsetHeight );
-    if (height < 16000)
-    {
-        target.setAttribute(attrName, attrValue);
-    }
-}
+// function setAttrByHeight(target, attrName, attrValue){
+//     let body = document.body,
+//         html = document.documentElement;
+//     let height = Math.max( body.scrollHeight, body.offsetHeight,
+//                            html.clientHeight, html.scrollHeight, html.offsetHeight );
+//     if (height < 99999)
+//     {
+//         target.setAttribute(attrName, attrValue);
+//     }
+// }
 
 
 //
@@ -369,11 +369,20 @@ function setAttrByHeight(target, attrName, attrValue){
         let nextBold;
         let nextText;
         let nextIcon;
+        let thisUrl = window.location.href;
+        let headForMeta = document.querySelector('head');
+
+        if (thisUrl.indexOf(arrayName[listLength].href) != -1)
+        {
+            // meta next
+            let metaNextAttr = document.createElement('link');
+            metaNextAttr.setAttribute('rel', 'next');
+            metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapListArticle[0].href + ".html");
+            headForMeta.appendChild(metaNextAttr);
+        }
+
         for (let i = 0; i < arrayName.length; i++)
         {
-            let headForMeta = document.querySelector('head');
-
-            let thisUrl = window.location.href;
             let substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[listLength].href) != -1)
             {
@@ -383,7 +392,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 nextLink.title = "Home";
                 
                 nextBold = document.createElement('b');
-                nextText = document.createTextNode(' Home ');
+                nextText = document.createTextNode('Home');
                 nextIcon = document.createElement('i');
             }
             else if (thisUrl.indexOf(substring) != -1)
@@ -394,7 +403,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 nextLink.title = arrayName[i + 1].name;
 
                 nextBold = document.createElement('b');
-                nextText = document.createTextNode(' Next ');
+                nextText = document.createTextNode(arrayName[i + 1].name);
                 nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-right';
 
@@ -404,8 +413,8 @@ function setAttrByHeight(target, attrName, attrValue){
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i + 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
 
-                setAttrByHeight(nextLink, 'onmouseover', 'nextRight()');
-                setAttrByHeight(nextLink, 'onmouseleave', 'nextRightDel()');
+                nextLink.setAttribute('onmouseover', 'nextRight()');
+                nextLink.setAttribute('onmouseleave', 'nextRightDel()');
             }
         }
         divClassName.appendChild(nextLink);
@@ -423,11 +432,20 @@ function setAttrByHeight(target, attrName, attrValue){
         let nextBold;
         let nextText;
         let nextIcon;
+        let thisUrl = window.location.href;
+        let headForMeta = document.querySelector('head');
+
+        if (thisUrl.indexOf(arrayName[0].href) != -1)
+        {
+            // meta prev
+            let metaNextAttr = document.createElement('link');
+            metaNextAttr.setAttribute('rel', 'prev');
+            metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapList[siteMapList.length - 1].href + ".html");
+            headForMeta.appendChild(metaNextAttr);
+        }
+        
         for (let i = 0; i < arrayName.length; i++)
         {
-            let headForMeta = document.querySelector('head');
-
-            let thisUrl = window.location.href;
             let substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[0].href) != -1)
             {
@@ -437,7 +455,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 nextLink.title = "Home";
                 
                 nextBold = document.createElement('b');
-                nextText = document.createTextNode(' Home ');
+                nextText = document.createTextNode('Home');
                 nextIcon = document.createElement('i');
             }
             else if (thisUrl.indexOf(substring) != -1)
@@ -448,7 +466,7 @@ function setAttrByHeight(target, attrName, attrValue){
                 nextLink.title = arrayName[i - 1].name;
 
                 nextBold = document.createElement('b');
-                nextText = document.createTextNode(' Prev ');
+                nextText = document.createTextNode(arrayName[i - 1].name);
                 nextIcon = document.createElement('i');
                 nextIcon.className = 'fa fa-angle-double-left';
 
@@ -458,8 +476,8 @@ function setAttrByHeight(target, attrName, attrValue){
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i - 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
 
-                setAttrByHeight(nextLink, 'onmouseover', 'nextLeft()');
-                setAttrByHeight(nextLink, 'onmouseleave', 'nextLeftDel()');
+                nextLink.setAttribute('onmouseover', 'nextLeft()');
+                nextLink.setAttribute('onmouseleave', 'nextLeftDel()');
             }
         }
         divClassName.appendChild(nextLink);
@@ -650,8 +668,8 @@ function setAttrByHeight(target, attrName, attrValue){
         topBtnNode.title = "Top";
         topBtnNode.className = "prevNextTop";
 
-        setAttrByHeight(topBtnNode, 'onmouseover', 'topUp()');
-        setAttrByHeight(topBtnNode, 'onmouseleave', 'topDn()');
+        topBtnNode.setAttribute('onmouseover', 'topUp()');
+        topBtnNode.setAttribute('onmouseleave', 'topDn()');
 
         let topBtnBold = document.createElement("b");
         let topBtnIcon = document.createElement("i");
