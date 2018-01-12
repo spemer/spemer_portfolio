@@ -56,7 +56,7 @@
 
 
 //
-// meta Tage **meta [property, content]**
+// meta Tags **meta [property, content]**
 (function(){
     let thisUrl = window.location.href;
     let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
@@ -80,7 +80,7 @@
 
 
 //
-// metaTags **meta [name, content]**
+// meta Tags **meta [name, content]**
 (function(){
     let thisUrl = window.location.href;
     let thisTitle = document.title;
