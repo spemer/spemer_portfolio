@@ -1,16 +1,5 @@
 //"use strict";
 
-// //
-// // pace.js
-// (function(){
-//     let headTitle = document.querySelector('head');
-//     let setScript = document.createElement('script');
-//     setScript.setAttribute('async','');
-//     setScript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js');
-//     headTitle.appendChild(setScript);
-// })();
-
-
 //
 // set html prefix + manifest
 (function(){
@@ -234,18 +223,6 @@
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
 })();
-
-
-// function setAttrByHeight(target, attrName, attrValue){
-//     let body = document.body,
-//         html = document.documentElement;
-//     let height = Math.max( body.scrollHeight, body.offsetHeight,
-//                            html.clientHeight, html.scrollHeight, html.offsetHeight );
-//     if (height < 99999)
-//     {
-//         target.setAttribute(attrName, attrValue);
-//     }
-// }
 
 
 //
@@ -676,7 +653,7 @@
         let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
         topBtnIcon.setAttribute('aria-hidden', 'true');
-        let topTextNode = document.createTextNode(" Top");
+        let topTextNode = document.createTextNode("Top");
 
         prevNextHome.appendChild(topBtnNode);
         topBtnNode.appendChild(topBtnBold);
