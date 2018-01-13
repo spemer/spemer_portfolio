@@ -956,11 +956,11 @@ font-size:13px !important;line-height:18px !important}
 .prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,
 .prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,
 .headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,
-.artImgBoxEach img:hover,#headerNav li,{
-	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
-	-moz-transition:color .25s ease;
-	transition:all .25s ease}
+.artImgBoxEach img:hover,#headerNav li{
+	-webkit-transition:all .25s ease;
+	-o-transition:all .25s ease;
+	-moz-transition:all .25s ease;
+	transition:all .25s ease !important}
 
 figcaption{max-width:640px;line-height:1.62rem;margin:0 auto;padding-top:4px}
 
