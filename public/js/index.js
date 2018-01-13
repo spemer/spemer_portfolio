@@ -809,7 +809,7 @@
     {
         let setHeadStyle = document.createElement('style');
         setHeadStyle.setAttribute('type', 'text/css');
-        let setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-10px 0}');
+        let setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-12px 0 -8px;font-style:normal}');
         getHeadClassStrng.appendChild(setHeadStyle);
         setHeadStyle.appendChild(setStyleProp);
     }
