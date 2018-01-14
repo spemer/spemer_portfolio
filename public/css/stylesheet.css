@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*@import "animate.css";*/
 @import "featherlight.css";
 @import "featherlight.gallery.css";
 @import "https://fonts.googleapis.com/css?family=Merriweather:400|Roboto+Slab";
@@ -12,12 +11,7 @@ nav,article,header,footer,section,button,iframe{
 	padding:0;
 	font-size:100%;
 	text-decoration:none}
-/*
-img[alt=""],
-img:not([alt]){
-	border: 4px dashed red;
-}
-*/
+
 #headerNav a{font-weight:700}
 #headerLogo h1{font-size:40px !important}
 .siteMapNav li{margin:36px 0 0 !important}
@@ -212,24 +206,6 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	position:absolute;
 	color:#2a2e2e}
 
-footer{
-	width:100%;
-	height:auto;
-	vertical-align:middle;
-	padding:4rem 0 6rem}
-
-footer p{
-	float:left;
-	font-size:16px}
-
-#snsIcon i{
-	top:5px;
-	float:right;
-	margin-left:20px;
-	position:relative;
-	text-align:center;
-	font-size:18px}
-
 .topUp,.topUp2,.nextRight,.nextRight2,.nextLeft,.nextLeft{
 	-webkit-transition:-webkit-transform .25s ease;
 	transition:-webkit-transform .25s ease;
@@ -270,23 +246,6 @@ footer p{
 	transform:translateX(-5px);
 	-webkit-transform:translateX(-5px);
 	-webkit-transition:transform .25s ease}
-
-#snsIcon i:hover{
-	-webkit-transform:translateY(-2.5px);
-	-moz-transform:translateY(-2.5px);
-	-ms-transform:translateY(-2.5px);
-	-o-transform:translateY(-2.5px);
-	transform:translateY(-2.5px)}
-
-#twIcon:hover{color:#1da1f2}
-#ghIcon:hover{color:#333}
-#liIcon:hover{color:#0077b5}
-#fbIcon:hover{color:#3b5998}
-#inIcon:hover{color:#e1306c}
-#beIcon:hover{color:#1769ff}
-#drIcon:hover{color:#ea4c89}
-#scIcon:hover{color:#f30}
-#medIcon:hover{color:#00ab6c}
 
 .articleNoTopBorder{
 	border-top:1px solid transparent;
@@ -401,6 +360,32 @@ h4{
 	min-height:500px;
 	padding:20px 0 25px}
 
+footer{
+	width:100%;
+	height:auto;
+	vertical-align:middle;
+	padding:4rem 0 6rem}
+
+footer p{
+	float:left;
+	font-size:16px}
+
+#snsIcon i{
+	top:-4px;
+	float:right;
+	padding:8px;
+	font-size:18px;
+	margin-left:2px;
+	position:relative;
+	text-align:center}
+
+#snsIcon i:hover{
+	-webkit-transform:translateY(-2.5px);
+	-moz-transform:translateY(-2.5px);
+	-ms-transform:translateY(-2.5px);
+	-o-transform:translateY(-2.5px);
+	transform:translateY(-2.5px)}
+
 @media screen and (max-width:600px){
 	#headerNav nav,#headerLogo{
 		left:50%;
@@ -421,7 +406,6 @@ h4{
 		margin-top:-1rem !important}}
 
 @media screen and (max-width:768px){body{width:90%}
-	
 	#headerNav nav{
 		float:right;
 		margin:25px 0;
@@ -440,11 +424,7 @@ h4{
 		max-height:350px;
 		min-height:250px;
 		padding:25px 0;
-		margin-bottom:25px}
-	
-	#snsIcon i{
-		margin-left:2%;
-		margin-right:2%}}
+		margin-bottom:25px}}
 
 @media screen and (max-width:700px){
 	#snsIcon{
@@ -454,8 +434,8 @@ h4{
 		flex-direction:row-reverse;
 		-webkit-justify-content:center;
 		justify-content:center}
-	
-	#snsIcon a{margin:0 2.5% -4vw}
+
+	#snsIcon a{margin:4px .5vw -2rem}
 	
 	footer{width:100%;margin:0 auto}
 	footer div{clear:both}
@@ -474,6 +454,16 @@ h4{
 		width:100%;
 		padding:0;
 		text-align:center}}
+
+#twIcon:hover{color:#1da1f2}
+#ghIcon:hover{color:#333}
+#liIcon:hover{color:#0077b5}
+#fbIcon:hover{color:#3b5998}
+#inIcon:hover{color:#e1306c}
+#beIcon:hover{color:#1769ff}
+#drIcon:hover{color:#ea4c89}
+#scIcon:hover{color:#f30}
+#medIcon:hover{color:#00ab6c}
 
 #siteMap{
 	width:100%;
