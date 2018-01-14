@@ -663,7 +663,9 @@ footer p{float:left;font-size:16px}
 	font-size:1.5rem;
 	line-height:40px;
 	line-height:2.5rem;
-	font-family:Cambria,"Times New Roman",serif}
+	font-family:Cambria,"Times New Roman","Merriweather",serif;
+	-webkit-font-family:Cambria,"Times New Roman","Merriweather",serif}
+.quoteExcept{margin:32px 56px}
 
 @media screen and (max-width: 768px){
 	.quote{
