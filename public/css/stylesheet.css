@@ -69,17 +69,18 @@ img::-moz-selection{visibility:hidden;background:transparent}
 .clearfix{clear:both}
 
 .everyTxtEndArticle{
-	max-width:768px;
+	max-width:640px;
 	text-align:left;
 	padding-bottom:25px}
+
+@media screen and (max-width:768px){.everyTxtEndArticle{max-width:560px}}
 
 .everyTxtEnd{padding:25px 0 100px}
 .everyTxtEnd2{padding:50px 0 75px}
 .everyTxtEnd3{padding:10px 0 50px}
 .everyTxtEndEnd{padding:50px 0 25px}
 
-.everyTxtEnd h2,h3,.everyTxtEnd2 h2,h3,.everyTxtEnd3 h2,h3{
-	color:#656c7a;font-size:1.75rem}
+.everyTxtEnd h2,h3,.everyTxtEnd2 h2,h3,.everyTxtEnd3 h2,h3{font-size:1.75rem}
 
 #prevNext{padding-top:25px;padding-bottom:50px}
 .prevNext .fa{margin:0 4px}
@@ -90,7 +91,7 @@ img::-moz-selection{visibility:hidden;background:transparent}
 
 .prevNextText{margin-left:16px}
 
-#headerLogo{float:left; margin:50px 0}
+#headerLogo{float:left;margin:50px 0}
 #headerLogo h1{
 	font-weight:700;
 	line-height:5rem;
@@ -182,7 +183,6 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 .artImgBoxEach figcaption,.flatIconBoxEach figcaption{
 	text-align:center;
 	font-weight:lighter;
-	color:#656c7a;
 	margin-bottom:4vw;
 	margin-top:-.5vw}
 
@@ -198,13 +198,6 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	-o-transition:all .5s ease;
 	-moz-transition:all .5s ease;
 	transition:all .5s ease}
-
-.imgTextHover{
-	opacity:0;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-	display:inline;
-	position:absolute;
-	color:#2a2e2e}
 
 .topUp,.topUp2,.nextRight,.nextRight2,.nextLeft,.nextLeft{
 	-webkit-transition:-webkit-transform .25s ease;
@@ -330,25 +323,9 @@ h4{
 	max-width:750px;
 	min-width:200px}
 
-.musicEachBox p{
-	margin-top:5px;
-	line-height:1.5em;
-	font-size:0.9rem}
+.musicEachBox p{margin:4px 0px -8px}
 
-.musicEachBox a{
-	display:inline-block;
-	font-size:0.85rem;
-	-webkit-transition:color .5s ease;
-	-o-transition:color .5s ease;
-	-moz-transition:color .5s ease;
-	transition:color .5s ease}
-
-.musicEachBox a:hover{
-	color:#2a2e2e;
-	-webkit-transition:color .5s ease;
-	-o-transition:color .5s ease;
-	-moz-transition:color .5s ease;
-	transition:color .5s ease}
+.musicEachBox a{display:inline-block;font-size:0.85rem;}
 
 .musicEachBox a i{
 	opacity:.75;
@@ -603,7 +580,7 @@ footer p{
 	-o-transition-delay:0s,.3s;
 	transition-delay:0s,.3s}
 
-.articleImgSize{margin:25px 0;text-align:center}
+.articleImgSize{margin:24px 0;text-align:center}
 .articleImg35-small img{width:25%}
 .articleImg50-small img{width:50%}
 .articleImg30 img{width:30%}
@@ -662,7 +639,7 @@ footer p{
 .textbox-colored{
 	padding:16px;
 	background-color:#f4f4f4;
-	margin:16px 0 32px;
+	margin:24px 0 32px;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
@@ -738,17 +715,14 @@ footer p{
 .copy{cursor: url(../img/specialCopyCursor-2lv34.cur), pointer}
 .tooltip{
     visibility: visible;
-    opacity: 0;
+    opacity:0;
     transition: opacity 3s ease;
     -o-transition: opacity 3s ease;
     -ms-transition: opacity 3s ease;
     -moz-transition: opacity 3s ease;
     -webkit-transition: opacity 3s ease}
 
-.textbox-colored h6{
-	color:#656c7a;
-	font-size:21px;
-	font-style:italic}
+.textbox-colored h6{font-size:21px;font-style:italic}
 
 .textbox-colored p {margin: 0px 8px}
 .textbox-colored h6{margin: 0px 16px 4px}
@@ -760,12 +734,12 @@ footer p{
 .textbox-colored h6:last-child{margin-bottom:8px}
 
 /*Gist*/
-body .gist{margin:8px 0;}
+body .gist{margin:24px 0;}
 body .gist pre, body .gist td, body .gist tr,.blob-num,.blob-code,.gist-data,.pl-v,
 .pl-c1,.pl-c,.pl-k,.pl-s,.pl-en,.pl-smi,.pl-e,.pl-ent,.pl-pds,.blob-wrapper,.t-body
 {font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 font-size:13px !important;line-height:18px !important}
-.gist-data{padding: 8px 0}
+.gist-data{padding:8px 0}
 .gist-meta{display:none}
 .gist-data,.gist{border-bottom:0px solid transparent !important;border-radius: 4px !important}
 
