@@ -36,6 +36,7 @@ body{
 h2,h3{line-height:3rem}
 header{padding:25px 0 50px}
 a,b,p,li,ol,ul,span,strong{
+	outline:none;
 	color:#656c7a;
 	line-height:34px;
 	-webkit-transition:color .25s ease;
@@ -45,6 +46,7 @@ a,b,p,li,ol,ul,span,strong{
 
 h1,h2,h3,h4,h5,h6,footer p,
 figcaption,figcaption strong{
+	outline:none;
 	color:#656c7a;
 	-webkit-font-family:'Roboto Slab',Arial,sans-serif;
 	font-family:'Roboto Slab',Arial,sans-serif}
