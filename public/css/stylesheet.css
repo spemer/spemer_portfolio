@@ -12,8 +12,6 @@ nav,article,header,footer,section,button,iframe{
 	font-size:100%;
 	text-decoration:none}
 
-#headerNav a{font-weight:700}
-#headerLogo h1{font-size:40px !important}
 .siteMapNav li{margin:36px 0 0 !important}
 
 body{
@@ -37,10 +35,12 @@ body{
 
 h2,h3{line-height:3rem}
 header{padding:25px 0 50px}
-a,b,p,li,ol,ul,span,strong{color:#656c7a;line-height:34px;
+a,b,p,li,ol,ul,span,strong{
+	color:#656c7a;
+	line-height:34px;
 	-webkit-transition:color .25s ease;
-	-o-transition:color .25s ease;
 	-moz-transition:color .25s ease;
+	-o-transition:color .25s ease;
 	transition:color .25s ease}
 
 h1,h2,h3,h4,h5,h6,footer p,
@@ -134,11 +134,11 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 
 .artImgBoxEach a{
 	display:inline-block;
-	width:33.33333%}
+	width:33.3333%}
 
 .flatIconBox div{
 	display:inline-block;
-	width:32.88789%}
+	width:32.887%}
 
 .artImgBoxEach img,.flatIconBoxEach img{
 	width:90%;
@@ -148,8 +148,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	border-radius:8px}
 @media screen and (max-width:768px){
 	.artImgBoxEach a{width:50%}
-	.flatIconBox div{width:49%}
-}
+	.flatIconBox div{width:49%}}
 @media screen and (max-width:224px){.flatIconBox div{width:100%}}
 
 @media screen and (max-width:420px){
@@ -167,8 +166,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	border-radius:6px}
 @media screen and (max-width:420px){
 	.profile{width:75%;height:75%}
-	.artImgBoxEach figcaption,.flatIconBoxEach figcaption{display:none}
-}
+	.artImgBoxEach figcaption,.flatIconBoxEach figcaption{display:none}}
 
 .artImgBoxEach img:hover {
 	-webkit-transform:translateY(-10px);
@@ -280,7 +278,8 @@ h4{
 		width:50%;
 		float:left;
 		display:block;
-		margin:0 auto}}
+		margin:0 auto}
+	.aboutIntroBox_20 img{margin:24px 0}}
 @media screen and (max-width:420px){
 	.aboutIntroBox_20{
 		width:100%;
@@ -289,15 +288,11 @@ h4{
 		padding:20px 0}
 	.aboutIntroBox_80{padding-right:5%}}
 
-.aboutTxtBox p{
-	font-size:16px}
-
 .aboutTxtBox p a{
 	-webkit-transition:color .5s ease;
 	-o-transition:color .5s ease;
 	-moz-transition:color .5s ease;
-	transition:color .5s ease;
-	font-size:16px}
+	transition:color .5s ease}
 
 .aboutTxtBox p a:hover{
 	color:#2a2e2e;
@@ -343,9 +338,7 @@ footer{
 	vertical-align:middle;
 	padding:4rem 0 6rem}
 
-footer p{
-	float:left;
-	font-size:16px}
+footer p{float:left;font-size:16px}
 
 @media screen and (min-width:701px){#snsIcon{margin-right:-8px}}
 #snsIcon i{
@@ -391,8 +384,7 @@ footer p{
 	
 	.headerNavList{
 		margin-left:15px;
-		display:inline-block;
-		font-size:0.875rem)}
+		display:inline-block}
 	
 	.headerNavList:first-child{margin-left:0}
 	
@@ -691,8 +683,7 @@ footer p{
 
 .underline,#prevNext a:hover,.siteMapNav a:hover{
 	-webkit-text-decoration:underline;
-	text-decoration:underline
-}
+	text-decoration:underline}
 
 .hrline span{
 	color:#babac0!important;
@@ -701,7 +692,7 @@ footer p{
 	margin:4rem .25rem 4.5rem;
 	font-weight:bolder;
 	display:inline-block}
-.hrline span:after{content: "ㆍ"}
+.hrline span:after{content:"ㆍ"}
 
 .colorBox{
 	height:8px;
@@ -716,11 +707,11 @@ footer p{
 .tooltip{
     visibility: visible;
     opacity:0;
-    transition: opacity 3s ease;
-    -o-transition: opacity 3s ease;
-    -ms-transition: opacity 3s ease;
-    -moz-transition: opacity 3s ease;
-    -webkit-transition: opacity 3s ease}
+    transition:opacity 3s ease;
+    -o-transition:opacity 3s ease;
+    -ms-transition:opacity 3s ease;
+    -moz-transition:opacity 3s ease;
+    -webkit-transition:opacity 3s ease}
 
 .textbox-colored h6{font-size:21px;font-style:italic}
 
