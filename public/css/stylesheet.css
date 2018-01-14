@@ -370,6 +370,7 @@ footer p{
 	float:left;
 	font-size:16px}
 
+@media screen and (min-width:701px){#snsIcon{margin-right:-8px}}
 #snsIcon i{
 	top:-4px;
 	float:right;
