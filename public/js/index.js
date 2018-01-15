@@ -378,7 +378,7 @@
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/" + arrayName[i + 1].href + ".html";
-                nextLink.title = arrayName[i + 1].name;
+                nextLink.title = arrayName[i + 1].title;
 
                 nextBold = document.createElement('b');
                 nextText = document.createTextNode(arrayName[i + 1].name);
@@ -441,7 +441,7 @@
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "https://spemer.com/" + arrayName[i - 1].href + ".html";
-                nextLink.title = arrayName[i - 1].name;
+                nextLink.title = arrayName[i - 1].title;
 
                 nextBold = document.createElement('b');
                 nextText = document.createTextNode(arrayName[i - 1].name);
@@ -643,7 +643,7 @@
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "body";
-        topBtnNode.title = "Top";
+        topBtnNode.title = "Back to Top";
         topBtnNode.className = "prevNextTop";
 
         topBtnNode.setAttribute('onmouseover', 'topUp()');
@@ -776,14 +776,26 @@
 
             let fixedTopBtnIcon = document.createElement("i");
             fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
-            fixedTopBtnIcon.title = 'Top';
+            fixedTopBtnIcon.title = 'Back to Top';
             fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
 
             fixedTopBtn.appendChild(fixedTopBtnLink);
             fixedTopBtnLink.appendChild(fixedTopBtnIcon);
         }
-    }   
+    }
+    // topBtn hidden top
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320)
+        {
+            document.getElementById("topBtnFixed").style.opacity = 1;
+        } else {
+            document.getElementById("topBtnFixed").style.opacity = 0;
+        }
+    }
 })();
+
 
 
 //

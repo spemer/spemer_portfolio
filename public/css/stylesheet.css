@@ -280,14 +280,14 @@ h4{
 		width:50%;
 		float:left;
 		display:block;
-		margin:0 auto}
-	.aboutIntroBox_20 img{margin:24px 0}}
+		margin:0 auto}}
+
+@media screen and (max-width:768px){.aboutIntroBox_20 img{margin:24px 0}}
 @media screen and (max-width:420px){
 	.aboutIntroBox_20{
 		width:100%;
 		margin:0 auto;
-		display:block;
-		padding:20px 0}
+		display:block;}
 	.aboutIntroBox_80{padding-right:5%}}
 
 .aboutTxtBox p a{
@@ -594,12 +594,13 @@ footer p{float:left;font-size:16px}
 	.articleImg35-small img{width:60%}}
 
 .topBtn{
+	right:12px;
+	bottom:12px;
 	color:#babac0;
 	position:fixed;
-	bottom:12px;
-	right:12px;
 	font-size:26px}
 .topBtn:hover{color:#656c7a}
+#topBtnFixed{opacity:0}
 .fa-chevron-circle-up{padding:12px}
 
 .code{
@@ -742,13 +743,13 @@ font-size:13px !important;line-height:18px !important}
 
 .whiteBgImg,.gist-file{border:1px solid #e5e5e5 !important;border-radius:4px !important}
 
-.prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,a:hover,
+.prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,a:hover,#topBtnFixed,
 .prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,.topBtn:hover,.topBtn,
 .headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,#siteMap a,#siteMap a:hover,
 .artImgBoxEach img:hover,#headerNav li{
 	-webkit-transition:all .25s ease;
-	-o-transition:all .25s ease;
 	-moz-transition:all .25s ease;
+	-o-transition:all .25s ease;
 	transition:all .25s ease !important}
 
 figcaption{
