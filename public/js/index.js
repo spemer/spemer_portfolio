@@ -790,7 +790,9 @@
         if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320)
         {
             document.getElementById("topBtnFixed").style.opacity = 1;
-        } else {
+        }
+        else
+        {
             document.getElementById("topBtnFixed").style.opacity = 0;
         }
     }

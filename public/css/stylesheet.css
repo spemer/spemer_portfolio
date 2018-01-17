@@ -134,13 +134,8 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 
 #artImgBox div,.flatIconBox{margin:2vw 0 0}
 
-.artImgBoxEach a{
-	display:inline-block;
-	width:33.3333%}
-
-.flatIconBox div{
-	display:inline-block;
-	width:32.887%}
+.artImgBoxEach a{display:inline-block;width:33.3333%}
+.flatIconBox div{display:inline-block;width:32.8869%}
 
 .artImgBoxEach img,.flatIconBoxEach img{
 	width:90%;
@@ -287,7 +282,7 @@ h4{
 	.aboutIntroBox_20{
 		width:100%;
 		margin:0 auto;
-		display:block;}
+		display:block}
 	.aboutIntroBox_80{padding-right:5%}}
 
 .aboutTxtBox p a{
@@ -552,16 +547,14 @@ footer p{float:left;font-size:16px}
 
 .c-hamburger--htx.is-active{background-color:transparent }
 .c-hamburger--htx.is-active span{background:none}
-.c-hamburger--htx.is-active span:before{
-	top:0;
+.c-hamburger--htx.is-active span:before{top:0;
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
 	-ms-transform:rotate(45deg);
 	-o-transform:rotate(45deg);
 	transform:rotate(45deg)}
 
-.c-hamburger--htx.is-active span:after{
-	bottom:0;
+.c-hamburger--htx.is-active span:after{bottom:0;
 	-webkit-transform:rotate(-45deg);
 	-moz-transform:rotate(-45deg);
 	-ms-transform:rotate(-45deg);
@@ -609,7 +602,7 @@ footer p{float:left;font-size:16px}
 	padding:16px 24px 12px;
 	background-color:#f4f4f4;
 	margin:32px 0;
-	overflow: scroll;
+	overflow:scroll;
 	color:#66799f !important;
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
@@ -710,7 +703,7 @@ footer p{float:left;font-size:16px}
 
 .copy{cursor: url(../img/specialCopyCursor-2lv34.cur), pointer}
 .tooltip{
-    visibility: visible;
+    visibility:visible;
     opacity:0;
     transition:opacity 3s ease;
     -o-transition:opacity 3s ease;
@@ -719,13 +712,10 @@ footer p{float:left;font-size:16px}
     -webkit-transition:opacity 3s ease}
 
 .textbox-colored h6{font-size:21px;font-style:italic}
-
 .textbox-colored p {margin: 0px 8px}
 .textbox-colored h6{margin: 0px 16px 4px}
-
 .textbox-colored p:first-child,
 .textbox-colored h6:first-child{margin-top:8px}
-
 .textbox-colored p:last-child,
 .textbox-colored h6:last-child{margin-bottom:8px}
 
