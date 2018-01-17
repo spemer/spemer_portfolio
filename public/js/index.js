@@ -340,15 +340,15 @@
     const portfolioLinks = document.querySelector('.portfolio');
     const articleLinks = document.querySelector('.articles');
 
+    let nextLink;
+    let nextBold;
+    let nextText;
+    let nextIcon;
+    let thisUrl = window.location.href;
+    let headForMeta = document.querySelector('head');
     // home next prev(bottom) -> NEXT
     function setNextBtn(arrayName, divClassName, listLength)
     {
-        let nextLink;
-        let nextBold;
-        let nextText;
-        let nextIcon;
-        let thisUrl = window.location.href;
-        let headForMeta = document.querySelector('head');
 
         if (thisUrl.indexOf(arrayName[listLength].href) != -1)
         {
@@ -406,13 +406,6 @@
     // home next prev(bottom) -> PREV
     function setPrevBtn(arrayName, divClassName)
     {
-        let nextLink;
-        let nextBold;
-        let nextText;
-        let nextIcon;
-        let thisUrl = window.location.href;
-        let headForMeta = document.querySelector('head');
-
         if (thisUrl.indexOf(arrayName[0].href) != -1)
         {
             // meta prev
@@ -511,9 +504,11 @@
 
 
     //
-    // index, article.html -> lists
+    // set main lists
     const indexLists = document.querySelector('#indexList');
     const articleLists = document.querySelector('#articleList');
+
+    // index, article.html -> lists
     if (indexLists)
     {
         let indexDiv = document.createElement('div');
@@ -571,6 +566,36 @@
             figStr.appendChild(figTxt);
         }
     }
+
+    // function setImgList(){
+    //     let articleDiv = document.createElement('div');
+    //     articleDiv.className = "artImgBoxEach grow";
+    //     articleLists.appendChild(articleDiv);
+
+    //     for (let i = 0; i < siteMapListArticle.length; i++)
+    //     {
+    //         let articleLink = document.createElement('a');
+    //         let articleFigure = document.createElement('figure');
+    //         let figImg = document.createElement('img');
+    //         let figCap = document.createElement('figcaption');
+    //         let figStr = document.createElement('h3');
+    //         let figTxt = document.createTextNode(siteMapListArticle[i].name);
+
+    //         articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
+    //         figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
+    //         figImg.alt = siteMapListArticle[i].title;
+    //         figImg.title = siteMapListArticle[i].title;
+            
+    //         articleDiv.appendChild(articleLink);
+    //         articleLink.appendChild(articleFigure);
+    //         articleFigure.appendChild(figImg);
+    //         articleFigure.appendChild(figCap);
+    //         figCap.appendChild(figStr);
+    //         figStr.appendChild(figTxt);
+    //     }
+    // }
+
+    // setImgList(siteUrl,arrName);
 })();
 
 //
@@ -777,11 +802,11 @@
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);
     
     // topBtn hidden top
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function(){scrollFunction(320)};
 
-    function scrollFunction()
+    function scrollFunction(h)
     {
-        if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320)
+        if (document.body.scrollTop > h || document.documentElement.scrollTop > h)
         {
             fixedTopBtn.style.opacity = 1;
             fixedTopBtnIcon.setAttribute('style','visibility:visible');
