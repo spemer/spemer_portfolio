@@ -758,35 +758,30 @@
 //
 // topBtnFixed
 (function(){
-    let fixedTopBtn = document.querySelector('#topBtnFixed');
-    if (fixedTopBtn)
-    {
-        let width = window.innerWidth;
+    let getBody = document.querySelector('body');
+    let fixedTopBtn = document.createElement('div');
+    fixedTopBtn.id = "topBtnFixed";
 
-        if (width <= 768)
-        {
-            fixedTopBtn.style = 'display: none;'
-        }
-        else
-        {
-            let fixedTopBtnLink = document.createElement('a');
-            fixedTopBtnLink.setAttribute('data-scroll', '');
-            fixedTopBtnLink.href = 'body';
-            fixedTopBtnLink.className = 'prevNextTop2';
+    getBody.appendChild(fixedTopBtn);
 
-            let fixedTopBtnIcon = document.createElement("i");
-            fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
-            fixedTopBtnIcon.title = 'Back to Top';
-            fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
+    let fixedTopBtnLink = document.createElement('a');
+    fixedTopBtnLink.setAttribute('data-scroll', '');
+    fixedTopBtnLink.href = 'body';
+    fixedTopBtnLink.className = 'prevNextTop2';
 
-            fixedTopBtn.appendChild(fixedTopBtnLink);
-            fixedTopBtnLink.appendChild(fixedTopBtnIcon);
-        }
-    }
+    let fixedTopBtnIcon = document.createElement("i");
+    fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
+    fixedTopBtnIcon.title = 'Back to Top';
+    fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
+
+    fixedTopBtn.appendChild(fixedTopBtnLink);
+    fixedTopBtnLink.appendChild(fixedTopBtnIcon);
+    
     // topBtn hidden top
     window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
+    function scrollFunction()
+    {
         if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320)
         {
             document.getElementById("topBtnFixed").style.opacity = 1;
@@ -797,7 +792,6 @@
         }
     }
 })();
-
 
 
 //
