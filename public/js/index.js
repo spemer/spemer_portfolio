@@ -772,7 +772,6 @@
     let fixedTopBtnIcon = document.createElement("i");
     fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
     fixedTopBtnIcon.title = 'Back to Top';
-    fixedTopBtnIcon.setAttribute('aria-hidden', 'true');
 
     fixedTopBtn.appendChild(fixedTopBtnLink);
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);
@@ -784,11 +783,13 @@
     {
         if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320)
         {
-            document.getElementById("topBtnFixed").style.opacity = 1;
+            fixedTopBtn.style.opacity = 1;
+            fixedTopBtnIcon.setAttribute('style','visibility:visible');
         }
         else
         {
-            document.getElementById("topBtnFixed").style.opacity = 0;
+            fixedTopBtn.style.opacity = 0;
+            fixedTopBtnIcon.setAttribute('style','visibility:hidden');
         }
     }
 })();
