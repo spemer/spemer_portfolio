@@ -219,6 +219,7 @@
     headerLink.href = 'https://spemer.com/';
     let headerHeading = document.createElement('h1');
     let headerText = document.createTextNode('Hyouk Seo');
+    
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
@@ -507,95 +508,45 @@
     // set main lists
     const indexLists = document.querySelector('#indexList');
     const articleLists = document.querySelector('#articleList');
-
-    // index, article.html -> lists
+    // index.html
     if (indexLists)
     {
-        let indexDiv = document.createElement('div');
-        indexDiv.className = "artImgBoxEach grow";
-        indexLists.appendChild(indexDiv);
-
-        for (let i = 0; i < siteMapList.length; i++)
-        {
-            let indexLink = document.createElement('a');
-            let indexFigure = document.createElement('figure');
-            let figImg = document.createElement('img');
-            let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('h3');
-            let figTxt = document.createTextNode(siteMapList[i].name);
-
-            indexLink.href = "https://spemer.com/" + siteMapList[i].href + ".html";
-            figImg.src = "https://spemer.com/img/works/" + siteMapList[i].img;
-            figImg.alt = siteMapList[i].title;
-            figImg.title = siteMapList[i].title;
-
-            indexDiv.appendChild(indexLink);
-            indexLink.appendChild(indexFigure);
-            indexFigure.appendChild(figImg);
-            indexFigure.appendChild(figCap);
-            figCap.appendChild(figStr);
-            figStr.appendChild(figTxt);
-        }
+        setMainImgList(indexLists,siteMapList);
     }
-    // article.html -> lists
+    // article.html
     else if (articleLists)
     {
-        let articleDiv = document.createElement('div');
-        articleDiv.className = "artImgBoxEach grow";
-        articleLists.appendChild(articleDiv);
+        setMainImgList(articleLists,siteMapListArticle);
+    }
 
-        for (let i = 0; i < siteMapListArticle.length; i++)
+    function setMainImgList(setId,arrName)
+    {
+        let mainDiv = document.createElement('div');
+        mainDiv.className = "artImgBoxEach grow";
+        setId.appendChild(mainDiv);
+
+        for (let i = 0; i < arrName.length; i++)
         {
-            let articleLink = document.createElement('a');
-            let articleFigure = document.createElement('figure');
+            let aLink = document.createElement('a');
+            let aLinkFigure = document.createElement('figure');
             let figImg = document.createElement('img');
             let figCap = document.createElement('figcaption');
             let figStr = document.createElement('h3');
-            let figTxt = document.createTextNode(siteMapListArticle[i].name);
+            let figTxt = document.createTextNode(arrName[i].name);
 
-            articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
-            figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
-            figImg.alt = siteMapListArticle[i].title;
-            figImg.title = siteMapListArticle[i].title;
+            aLink.href = "https://spemer.com/" + arrName[i].href + ".html";
+            figImg.src = "https://spemer.com/img/works/" + arrName[i].img;
+            figImg.alt = arrName[i].title;
+            figImg.title = arrName[i].title;
             
-            articleDiv.appendChild(articleLink);
-            articleLink.appendChild(articleFigure);
-            articleFigure.appendChild(figImg);
-            articleFigure.appendChild(figCap);
+            mainDiv.appendChild(aLink);
+            aLink.appendChild(aLinkFigure);
+            aLinkFigure.appendChild(figImg);
+            aLinkFigure.appendChild(figCap);
             figCap.appendChild(figStr);
             figStr.appendChild(figTxt);
         }
     }
-
-    // function setImgList(){
-    //     let articleDiv = document.createElement('div');
-    //     articleDiv.className = "artImgBoxEach grow";
-    //     articleLists.appendChild(articleDiv);
-
-    //     for (let i = 0; i < siteMapListArticle.length; i++)
-    //     {
-    //         let articleLink = document.createElement('a');
-    //         let articleFigure = document.createElement('figure');
-    //         let figImg = document.createElement('img');
-    //         let figCap = document.createElement('figcaption');
-    //         let figStr = document.createElement('h3');
-    //         let figTxt = document.createTextNode(siteMapListArticle[i].name);
-
-    //         articleLink.href = "https://spemer.com/" + siteMapListArticle[i].href + ".html";
-    //         figImg.src = "https://spemer.com/img/works/" + siteMapListArticle[i].img;
-    //         figImg.alt = siteMapListArticle[i].title;
-    //         figImg.title = siteMapListArticle[i].title;
-            
-    //         articleDiv.appendChild(articleLink);
-    //         articleLink.appendChild(articleFigure);
-    //         articleFigure.appendChild(figImg);
-    //         articleFigure.appendChild(figCap);
-    //         figCap.appendChild(figStr);
-    //         figStr.appendChild(figTxt);
-    //     }
-    // }
-
-    // setImgList(siteUrl,arrName);
 })();
 
 //
@@ -790,7 +741,7 @@
     getBody.appendChild(fixedTopBtn);
 
     let fixedTopBtnLink = document.createElement('a');
-    fixedTopBtnLink.setAttribute('data-scroll', '');
+    fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
     fixedTopBtnLink.href = 'body';
     fixedTopBtnLink.className = 'prevNextTop2';
 

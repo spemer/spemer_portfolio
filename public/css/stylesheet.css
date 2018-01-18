@@ -316,12 +316,8 @@ h4{
 	min-width:200px}
 
 .musicEachBox p{margin:4px 0px -8px}
-
 .musicEachBox a{display:inline-block;font-size:0.85rem;}
-
-.musicEachBox a i{
-	opacity:.75;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75)}
+.musicEachBox a i{opacity:.75;filter:alpha(opacity=75)}
 
 .iframe iframe{
 	width:100%;
@@ -475,7 +471,7 @@ footer p{float:left;font-size:16px}
 	-moz-transition:background .3s;
 	transition:background .3s;
 	opacity:.5;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	filter:alpha(opacity=50);
 	-webkit-transition:opacity ease .5s;
 	-o-transition:opacity ease .5s;
 	-moz-transition:opacity ease .5s;
@@ -483,7 +479,7 @@ footer p{float:left;font-size:16px}
 
 .c-hamburger:hover{
 	opacity:1;
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	filter:alpha(opacity=100);
 	-webkit-transition:opacity ease .5s;
 	-o-transition:opacity ease .5s;
 	-moz-transition:opacity ease .5s;
