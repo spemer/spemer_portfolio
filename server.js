@@ -1,7 +1,3 @@
-/*
- * 2016 Webha
- * 
- * */
 (function() {
 	'use strict';
 	
