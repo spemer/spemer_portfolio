@@ -304,6 +304,7 @@ h4{
 .coverImg{width:100%}
 .coverImg img{width:100%;padding:25px 0}
 
+.musicHtml{padding-top:1rem}
 .musicEachBox{
 	width:100%;
 	margin:0 auto;
@@ -319,6 +320,7 @@ h4{
 @media screen and (max-width:433px){.musicEachBox p{margin:4px 0px 8px;line-height:1.6rem}}
 .pckIconBox .musicEachBox span,.musicEachBox a{display:inline-block;font-size:0.85rem;line-height:1.4rem}
 .pckIconBox .musicEachBox span{margin:0 8px;}
+@media screen and (max-width:380px){.pckIconBox .musicEachBox span{display:none}}
 .musicEachBox a i{opacity:.75;filter:alpha(opacity=75)}
 
 .iframe iframe{
