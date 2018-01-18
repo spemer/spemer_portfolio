@@ -315,8 +315,9 @@ h4{
 	max-width:750px;
 	min-width:200px}
 
-.musicEachBox p{margin:0px 0px -4px}
-.pckIconBox .musicEachBox span,.musicEachBox a{display:inline-block;font-size:0.85rem}
+.musicEachBox p{margin:4px 0px 0px}
+@media screen and (max-width:433px){.musicEachBox p{margin:4px 0px 8px;line-height:1.6rem}}
+.pckIconBox .musicEachBox span,.musicEachBox a{display:inline-block;font-size:0.85rem;line-height:1.4rem}
 .pckIconBox .musicEachBox span{margin:0 8px;}
 .musicEachBox a i{opacity:.75;filter:alpha(opacity=75)}
 
