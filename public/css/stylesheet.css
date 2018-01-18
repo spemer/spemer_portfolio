@@ -772,3 +772,4 @@ ol > li:before {
 	content:counter(item) "."}
 
 #codeBySpemer{line-height:26px !important}
+.pckIconBox{margin-top:2vw}
