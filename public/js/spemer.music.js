@@ -69,11 +69,10 @@
         let getMusicEachBoxes = document.querySelectorAll('.musicEachBox');
 
         // set iframe for SoundCloud
-        (function()
-        {
+        (function(){
             let setIframe = document.createElement('iframe');
             setIframe.width = '100%';
-            setIframe.height = 166;
+            setIframe.height = 160;
             setIframe.scrolling = 'no';
             setIframe.setAttribute('frameborder','no');
             setIframe.src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'
@@ -84,8 +83,7 @@
         })();
 
         // set title text in <p> tag
-        (function()
-        {
+        (function(){
             let setTitleP = document.createElement('p');
             let setTitlePText = document.createTextNode(urlLinkList[i].download);
             getMusicEachBoxes[i].appendChild(setTitleP);
@@ -128,8 +126,7 @@
         }
 
         // set download link and icon
-        (function()
-        {
+        (function(){
             let setDlLink = document.createElement('a');
             let setDlLinkText = document.createTextNode('Click here to download mp3(free) ');
             let setDlLinkIcon = document.createElement('i');

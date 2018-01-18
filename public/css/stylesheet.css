@@ -4,9 +4,8 @@
 @import "https://fonts.googleapis.com/css?family=Merriweather:400|Roboto+Slab";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
-body,p,h1,h2,h3,h4,h5,h6,li,ol,ul,embed,i,center,
-div,figure,figcaption,img,a,b,strong,span,blockquote,
-nav,article,header,footer,section,button,iframe{
+body,p,h1,h2,h3,h4,h5,h6,li,ol,ul,embed,i,center,div,figure,figcaption,img,
+a,b,strong,span,blockquote,nav,article,header,footer,section,button,iframe{
 	margin:0;
 	padding:0;
 	font-size:100%;
@@ -44,8 +43,7 @@ a,b,p,li,ol,ul,span,strong{
 	-o-transition:color .25s ease;
 	transition:color .25s ease}
 
-h1,h2,h3,h4,h5,h6,footer p,
-figcaption,figcaption strong{
+h1,h2,h3,h4,h5,h6,footer p,figcaption,figcaption strong{
 	outline:none;
 	color:#656c7a;
 	-webkit-font-family:'Roboto Slab',Arial,sans-serif;
@@ -209,6 +207,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	-o-transform:translateY(-5px);
 	transform:translateY(-5px);
 	-webkit-transform:translateY(-5px);
+	transition:transform .25s ease;
 	-webkit-transition:transform .25s ease}
 
 .topUp2,.nextRight2,.nextLeft2{
@@ -217,6 +216,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	-o-transform:translateY(0px);
 	transform:translateY(0px);
 	-webkit-transform:translateY(0px);
+	transition:transform .25s ease;
 	-webkit-transition:transform .25s ease}
 
 .nextRight{
@@ -225,6 +225,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	-o-transform:translateX(5px);
 	transform:translateX(5px);
 	-webkit-transform:translateX(5px);
+	transition:transform .25s ease;
 	-webkit-transition:transform .25s ease}
 
 .nextLeft{
@@ -233,6 +234,7 @@ a span:hover,a b:hover,a:hover,#headerLogo h1:hover{color:#2a2e2e}
 	-o-transform:translateX(-5px);
 	transform:translateX(-5px);
 	-webkit-transform:translateX(-5px);
+	transition:transform .25s ease;
 	-webkit-transition:transform .25s ease}
 
 .articleNoTopBorder{
@@ -255,12 +257,12 @@ h4{
 	width:70%;
 	float:left;
 	padding-right:10%;
-	display:inline-block}
+	display:block}
 
 .aboutIntroBox_20{
 	width:20%;
 	float:right;
-	display:inline-block}
+	display:block}
 
 @media screen and (max-width:768px){
 	.aboutIntroBox_OVERALL{
@@ -308,13 +310,13 @@ h4{
 .musicEachBox{
 	width:100%;
 	margin:0 auto;
-	margin-bottom:75px}
+	margin-bottom:80px}
 
 .musicEachBox:last-child{margin-bottom:50px}
 .musicEachBox iframe{
-	width:75%;
-	max-width:750px;
-	min-width:200px}
+	width:80%;
+	max-width:800px;
+	min-width:240px}
 
 .musicEachBox p{margin:4px 0px 0px}
 @media screen and (max-width:433px){.musicEachBox p{margin:4px 0px 8px;line-height:1.6rem}}
@@ -733,10 +735,10 @@ font-size:13px !important;line-height:18px !important}
 
 .whiteBgImg,.gist-file{border:1px solid #e5e5e5 !important;border-radius:4px !important}
 
-.prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,a:hover,#topBtnFixed,
-.prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,.topBtn:hover,.topBtn,
-.headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,#siteMap a,#siteMap a:hover,
-.artImgBoxEach img:hover,#headerNav li{
+.prevNextTop,.prevNextTop:hover,.prevNextTop2,.prevNextTop2:hover,a:hover,
+#topBtnFixed,.prevNext,.prevNext:hover,#headerLogo h1,#headerLogo h1:hover,
+.topBtn:hover,.topBtn,.headerNav,.headerNav:hover,#snsIcon i,#snsIcon i:hover,
+#siteMap a,#siteMap a:hover,.artImgBoxEach img:hover,#headerNav li{
 	-webkit-transition:all .25s ease;
 	-moz-transition:all .25s ease;
 	-o-transition:all .25s ease;
