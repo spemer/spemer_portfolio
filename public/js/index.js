@@ -822,43 +822,43 @@
             scLink: '303715697',
             href: 'Spemer%20-%20Autumn.mp3?alt=media&token=ec06227a-7411-429b-89ed-6c3773b1b3b7',
             download: 'Spemer - Autumn',
-            itunes: 'https://itunes.apple.com/us/album/autumn-single/id1180293069'
+            itunes: 'autumn-single/id1180293069'
         },
         {
             scLink: '243891238',
             href: 'Spemer%20-%20Moonlight.mp3?alt=media&token=15e59503-0c65-40d9-90fa-c5bdfb680be8',
             download: 'Spemer - Moonlight',
-            itunes: 'http://itunes.apple.com/us/album/moonlight-single/id1119568599'
+            itunes: 'moonlight-single/id1119568599'
         },
         {
             scLink: '249514143',
             href: 'Spemer%20-%20Voyage%202016.mp3?alt=media&token=18e03399-a91d-4449-94e2-2a3a6dfdf0ce',
             download: 'Spemer - Voyage 2016',
-            itunes: 'http://itunes.apple.com/us/album/voyage-2016-single/id1119571183'
+            itunes: 'voyage-2016-single/id1119571183'
         },
         {
             scLink: '242878687',
             href: 'Spemer%20-%20Leaves.mp3?alt=media&token=a8089d8c-bd12-4b3a-b386-cd17eefb8430',
             download: 'Spemer - Leaves',
-            itunes: 'http://itunes.apple.com/us/album/leaves-single/id1119085900'
+            itunes: 'leaves-single/id1119085900'
         },
         {
             scLink: '196121171',
             href: 'Spemer%20-%20Night.mp3?alt=media&token=60c2d1a3-0e13-4f97-be7e-af49ae36ee97',
             download: 'Spemer - Night',
-            melon: 'http://exit.sc/?url=http%3A%2F%2Fwww.melon.com%2Falbum%2Fdetail.htm%3FalbumId%3D2319681'
+            melon: '2319681'
         },
         {
             scLink: '184589593',
             href: 'Spemer%20-%20Voyage.mp3?alt=media&token=f4f299d6-113a-491f-afe6-d471a850389b',
             download: 'Spemer - Voyage',
-            melon: 'http://www.melon.com/album/detail.htm?albumId=2319681'
+            melon: '2319681'
         },
         {
             scLink: '115940942',
             href: 'Spemer%20-%20Yeouinaru%20of%20June.mp3?alt=media&token=59784bf8-7093-4633-abbf-b52cf487c62a',
             download: 'Spemer - Yeouinaru of June',
-            melon: 'http://www.melon.com/album/detail.htm?albumId=2217624'
+            melon: '2217624'
         },
         {
             scLink: '113970824',
@@ -895,8 +895,8 @@
             setIframe.scrolling = 'no';
             setIframe.setAttribute('frameborder','no');
             setIframe.src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/'
-            + urlLinkList[i].scLink
-            +'&amp;color=999&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=true';
+             + urlLinkList[i].scLink
+             +'&amp;color=999&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=true';
 
             getMusicEachBoxes[i].appendChild(setIframe);
         })();
@@ -921,7 +921,8 @@
                 let setItunesIcon = document.createElement('i');
                 setItunesIcon.className = 'fa fa-apple';
                 let setItunesText = document.createTextNode('Buy on iTunes ');
-                setAMLink.href = urlLinkList[i].itunes;
+                setAMLink.href = 'https://itunes.apple.com/us/album/'
+                 + urlLinkList[i].itunes;
                 setAMLink.target = '_blank';
                 setAMLink.title = 'via iTunes(new tab)';
 
@@ -932,7 +933,8 @@
             else if (urlLinkList[i].melon)
             {
                 let setMelonText = document.createTextNode('Buy on Melon');
-                setAMLink.href = urlLinkList[i].melon;
+                setAMLink.href = 'http://www.melon.com/album/detail.htm?albumId='
+                 + urlLinkList[i].melon;
                 setAMLink.target = '_blank';
                 setAMLink.title = 'via Melon(new tab)';
 
@@ -954,7 +956,7 @@
             getMusicEachBoxes.forEach(function()
             {
                 setDlLink.href = 'https://firebasestorage.googleapis.com/v0/b/spemer-bad39.appspot.com/o/'
-                + urlLinkList[i].href;
+                 + urlLinkList[i].href;
                 setDlLink.download = urlLinkList[i].download + '.mp3';
                 setDlLink.title = 'Download ' + urlLinkList[i].download + '.mp3';
 
@@ -964,6 +966,21 @@
             });
         })();
     }
+})();
+
+
+//
+// get <i> tag -> set 'aria-hidden' attr
+(function(){
+    let getIcons = document.querySelectorAll('.fa');
+    getIcons.forEach(function(iconEach)
+    {
+        let getIconAttr = iconEach.getAttribute('aria-hidden');
+        if (!getIconAttr)
+        {
+            iconEach.setAttribute('aria-hidden','true');
+        }
+    });
 })();
 
 
@@ -997,18 +1014,3 @@ function addTooltip() {
 function removeTooltip() {
     $('.copied').addClass('tooltip');
 }
-
-
-//
-// get <i> tag -> set 'aria-hidden' attr
-(function(){
-    let getIcons = document.querySelectorAll('.fa');
-    getIcons.forEach(function(iconEach)
-    {
-        let getIconAttr = iconEach.getAttribute('aria-hidden');
-        if (!getIconAttr)
-        {
-            iconEach.setAttribute('aria-hidden','true');
-        }
-    });
-})();
