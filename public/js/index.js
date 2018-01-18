@@ -98,7 +98,7 @@
         { name: 'Resource-Type', content: 'Document' },
         { name: 'classification', content: 'Design' },
         { name: 'HandheldFriendly', content: 'true' },
-        { name: 'referrer', content: 'origin-when-cross-origin' },
+        // { name: 'referrer', content: 'origin-when-cross-origin' },
         { name: 'google', content: 'notranslate' },
         { name: 'fb:admins', content: '100001935259349' },
         { name: 'fb:app_id', content: '116484055630441' },

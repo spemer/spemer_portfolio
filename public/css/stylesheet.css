@@ -696,7 +696,6 @@ footer p{float:left;font-size:16px}
 	background-color:#babac0}
 
 .lineImage{border: 2px solid #e5e5e5}
-@media screen and (max-width:420px){.xdiframe{display: none;}}
 
 .copy{cursor: url(../img/specialCopyCursor-2lv34.cur), pointer}
 .tooltip{
@@ -773,3 +772,5 @@ ol > li:before {
 
 #codeBySpemer{line-height:26px !important}
 .pckIconBox{margin-top:2vw}
+.triBoxMain iframe{margin:2vw 0 0}
+@media screen and (max-width:420px){.xdiframe{display: none;}}
