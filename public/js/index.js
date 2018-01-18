@@ -1,7 +1,7 @@
 //"use strict";
 
 //
-// set html prefix + manifest
+// set <html> prefix + manifest
 (function(){
     let getHtml = document.querySelector('html');
     getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
@@ -212,7 +212,7 @@
 
 
 //
-// headerLogo
+// '#headerLogo'
 (function(){
     let _headerLogo = document.querySelector('#headerLogo');
     let headerLink = document.createElement('a');
@@ -400,7 +400,6 @@
         nextLink.appendChild(nextBold);
         nextBold.appendChild(nextText);
         nextBold.appendChild(nextIcon);
-        nextIcon.setAttribute('aria-hidden', 'true');
     }
 
     //
@@ -455,7 +454,6 @@
         divClassName.appendChild(nextLink);
         nextLink.appendChild(nextBold);
         nextBold.appendChild(nextIcon);
-        nextIcon.setAttribute('aria-hidden', 'true');
         nextBold.appendChild(nextText);
     };
 
@@ -625,7 +623,6 @@
         let topBtnBold = document.createElement("b");
         let topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
-        topBtnIcon.setAttribute('aria-hidden', 'true');
         let topTextNode = document.createTextNode("Top");
 
         prevNextHome.appendChild(topBtnNode);
@@ -637,7 +634,7 @@
 
 
 //
-// Footer snsIcon
+// Footer '#snsIcon'
 (function(){
     let snsIconList = {
         Twitter: {
@@ -692,7 +689,6 @@
         let iconNode = document.createElement("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
-        iconNode.setAttribute('aria-hidden', 'true');
         snsIcon.appendChild(snsNode);
         snsNode.appendChild(iconNode);
     }    
@@ -705,12 +701,10 @@
     let codeBy = document.querySelector('#codeBySpemer');
     let codeIconNode = document.createElement("i");
     codeIconNode.className = "fa fa-code";
-    codeIconNode.setAttribute('aria-hidden', 'true');
 
     let topTextNode1 = document.createTextNode(" with ");
     let loveIconNode = document.createElement("i");
     loveIconNode.className = "fa fa-heart";
-    loveIconNode.setAttribute('aria-hidden', 'true');
     let topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
 
     codeBy.appendChild(codeIconNode);
@@ -762,45 +756,64 @@
 
 
 //
-// externalLink Icon
+// set '.externalLink' Icon
 (function(){
-    let externalLinks = document.getElementsByClassName("externalLink");
-    for (let i = 0; i < externalLinks.length; i++)
+    let externalLinks = document.querySelectorAll('.externalLink');
+    externalLinks.forEach(function(linkEach)
     {
-        let setExternalLinksIcon = document.createElement('i');
-        setExternalLinksIcon.className = "fa fa-external-link";
-        setExternalLinksIcon.setAttribute('aria-hidden','true');
-        externalLinks[i].appendChild(setExternalLinksIcon);
-    }
+        let setLinkIcon = document.createElement('i');
+        setLinkIcon.className = "fa fa-external-link";
+        linkEach.appendChild(setLinkIcon);
+    });
 })();
 
 
 //
-// head style -> strong font
+// get <i> tag -> set 'aria-hidden' attr
 (function(){
-    let getHeadClassStrng = document.querySelector('.strongFont');
+    let getIcons = document.querySelectorAll('i');
+    getIcons.forEach(function(iconEach)
+    {
+        let getIconAttr = iconEach.getAttribute('aria-hidden');
+        if (!getIconAttr)
+        {
+            iconEach.setAttribute('aria-hidden','true');
+        }
+    });
+})();
+
+
+//
+// set head <style> -> strong font
+(function(){
+    let getIndexListId = document.querySelector('#indexList');
+    let getArticleListId = document.querySelector('#articleList');
     let getHeadClassAtech = document.querySelector('.atechImgSt');
-    if(getHeadClassStrng)
+
+    if(getIndexListId || getArticleListId || getHeadClassAtech)
     {
+        let getHead = document.querySelector('head');
         let setHeadStyle = document.createElement('style');
         setHeadStyle.setAttribute('type', 'text/css');
-        let setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-12px 0 -8px;font-style:normal}');
-        getHeadClassStrng.appendChild(setHeadStyle);
-        setHeadStyle.appendChild(setStyleProp);
-    }
-    else if(getHeadClassAtech)
-    {
-        let setHeadStyle = document.createElement('style');
-        setHeadStyle.setAttribute('type', 'text/css');
-        let setStyleProp = document.createTextNode('.atechImg{width:100%;height:100%;margin:0px;padding:0px}');
-        getHeadClassAtech.appendChild(setHeadStyle);
+        getHead.appendChild(setHeadStyle);
+        let setStyleProp;
+
+        if(getIndexListId || getArticleListId)
+        {
+            setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-12px 0 -8px;font-style:normal}');
+        }
+        else if(getHeadClassAtech)
+        {
+            setStyleProp = document.createTextNode('.atechImg{width:100%;height:100%;margin:0px;padding:0px}');
+        }
+        
         setHeadStyle.appendChild(setStyleProp);
     }
 })();
 
 
 //
-// hrline -> medium style 3 dots
+// '.hrline' -> medium style 3 dots
 (function(){
     let gethrline = document.getElementsByClassName('hrline');
     for (let i = 0; i < gethrline.length; i++)
