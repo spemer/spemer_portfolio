@@ -715,7 +715,7 @@
 
 
 //
-// topBtnFixed
+// #topBtnFixed
 (function(){
     let getBody = document.querySelector('body');
     let fixedTopBtn = document.createElement('div');
