@@ -912,7 +912,7 @@
         
         let setAMLink = document.createElement('a');
         let setSepSpan = document.createElement('span');
-        let setSepText = document.createTextNode(' || ');
+        let setSepText = document.createTextNode('||');
 
         if (urlLinkList[i].itunes || urlLinkList[i].melon)
         {
