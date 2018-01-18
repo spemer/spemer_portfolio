@@ -509,16 +509,13 @@
     const indexLists = document.querySelector('#indexList');
     const articleLists = document.querySelector('#articleList');
     // index.html
-    if (indexLists)
-    {
+    if (indexLists) {
         setMainImgList(indexLists,siteMapList);
     }
     // article.html
-    else if (articleLists)
-    {
+    else if (articleLists) {
         setMainImgList(articleLists,siteMapListArticle);
     }
-
     function setMainImgList(setId,arrName)
     {
         let mainDiv = document.createElement('div');
@@ -645,49 +642,41 @@
     let snsIconList = {
         Twitter: {
             href : 'twitter.com/OfficialSpemer',
-            title : 'Twitter',
             iconID : 'twIcon',
             iconClass : 'twitter'
         },
         GitHub: {
             href : 'github.com/spemer',
-            title : 'GitHub',
             iconID : 'ghIcon',
             iconClass : 'github'
         },
         FaceBook: {
             href : 'facebook.com/ghsspower',
-            title : 'FaceBook',
             iconID : 'fbIcon',
             iconClass : 'facebook'
         },
         Instagram: {
             href : 'instagram.com/spemer/',
-            title : 'Instagram',
             iconID : 'inIcon',
             iconClass : 'instagram'
         },
         LinkedIn: {
             href : 'www.linkedin.com/in/hyouk-seo-0b6801122/',
-            title : 'LinkedIn',
             iconID : 'liIcon',
             iconClass : 'linkedin'
         },
         Dribbble: {
             href : 'dribbble.com/spemer',
-            title : 'Dribbble',
             iconID : 'drIcon',
             iconClass : 'dribbble'
         },
         Medium: {
             href : 'medium.com/@spemer',
-            title : 'Medium',
             iconID : 'medIcon',
             iconClass : 'medium'
         },
         Behance: {
             href : 'behance.net/spemer',
-            title : 'Behance',
             iconID : 'beIcon',
             iconClass : 'behance'
         }
@@ -696,7 +685,7 @@
     for (let key in snsIconList)
     {
         let snsNode = document.createElement("a");
-        snsNode.title = snsIconList[key].title + "(new tab)";
+        snsNode.title = key + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
 
@@ -753,8 +742,9 @@
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);
     
     // topBtn hidden top
-    window.onscroll = function(){scrollFunction(320)};
-
+    window.onscroll = function(){
+        scrollFunction(320)
+    };
     function scrollFunction(h)
     {
         if (document.body.scrollTop > h || document.documentElement.scrollTop > h)
