@@ -1,11 +1,11 @@
 {
-  "name": "Webha",
+  "name": "Hyouk Seo",
   "version": "0.0.1",
   "description": "app",
   "main": "server.js",
-  "author": "뺑이",
+  "author": "Hyouk Seo",
   "private": false,
-  "license": "Webha",
+  "license": "Hyouk Seo",
   "repository": {
     "type": null,
     "url": null
