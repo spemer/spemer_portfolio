@@ -94,36 +94,39 @@
         let setSepSpan = document.createElement('span');
         let setSepText = document.createTextNode('||');
 
-        if (urlLinkList[i].itunes || urlLinkList[i].melon)
-        {
-            if (urlLinkList[i].itunes)
+        (function(){
+            if (urlLinkList[i].itunes || urlLinkList[i].melon)
             {
-                let setItunesIcon = document.createElement('i');
-                setItunesIcon.className = 'fa fa-apple';
-                let setItunesText = document.createTextNode('Buy on iTunes ');
-                setAMLink.href = 'https://itunes.apple.com/us/album/'
-                 + urlLinkList[i].itunes;
-                setAMLink.target = '_blank';
-                setAMLink.title = 'via iTunes(new tab)';
+                if (urlLinkList[i].itunes)
+                {
+                    let setItunesIcon = document.createElement('i');
+                    setItunesIcon.className = 'fa fa-apple';
+                    let setItunesText = document.createTextNode('Buy on iTunes ');
+                    setAMLink.href = 'https://itunes.apple.com/us/album/'
+                     + urlLinkList[i].itunes;
+                    setAMLink.target = '_blank';
+                    setAMLink.title = 'via iTunes(new tab)';
 
-                getMusicEachBoxes[i].appendChild(setAMLink);
-                setAMLink.appendChild(setItunesText);
-                setAMLink.appendChild(setItunesIcon);
-            }
-            else if (urlLinkList[i].melon)
-            {
-                let setMelonText = document.createTextNode('Buy on Melon');
-                setAMLink.href = 'http://www.melon.com/album/detail.htm?albumId='
-                 + urlLinkList[i].melon;
-                setAMLink.target = '_blank';
-                setAMLink.title = 'via Melon(new tab)';
+                    getMusicEachBoxes[i].appendChild(setAMLink);
+                    setAMLink.appendChild(setItunesText);
+                    setAMLink.appendChild(setItunesIcon);
+                }
+                else if (urlLinkList[i].melon)
+                {
+                    let setMelonText = document.createTextNode('Buy on Melon');
+                    setAMLink.href = 'http://www.melon.com/album/detail.htm?albumId='
+                     + urlLinkList[i].melon;
+                    setAMLink.target = '_blank';
+                    setAMLink.title = 'via Melon(new tab)';
 
-                getMusicEachBoxes[i].appendChild(setAMLink);
-                setAMLink.appendChild(setMelonText);
+                    getMusicEachBoxes[i].appendChild(setAMLink);
+                    setAMLink.appendChild(setMelonText);
+                }
+                getMusicEachBoxes[i].appendChild(setSepSpan);
+                setSepSpan.appendChild(setSepText);
             }
-            getMusicEachBoxes[i].appendChild(setSepSpan);
-            setSepSpan.appendChild(setSepText);
-        }
+        })();
+        
 
         // set download link and icon
         (function(){
