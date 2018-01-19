@@ -61,14 +61,14 @@
 
     for (let i = 0; i < urlLinkList.length; i++)
     {
-        // set '.musicEachBox' div
+        // set '.musicEachBox' divs
         let setMusicEachBoxes = document.createElement('div');
         setMusicEachBoxes.className = 'musicEachBox';
         setCenter.appendChild(setMusicEachBoxes);
 
         let getMusicEachBoxes = document.querySelectorAll('.musicEachBox');
 
-        // set iframe for SoundCloud
+        // set <iframe> tags for SoundCloud
         (function(){
             let setIframe = document.createElement('iframe');
             setIframe.width = '100%';
@@ -90,11 +90,12 @@
             setTitleP.appendChild(setTitlePText);
         })();
         
-        let setAMLink = document.createElement('a');
-        let setSepSpan = document.createElement('span');
-        let setSepText = document.createTextNode('||');
-
+        // set 'buy' links and <span> tags
         (function(){
+            let setAMLink = document.createElement('a');
+            let setSepSpan = document.createElement('span');
+            let setSepText = document.createTextNode('||');
+
             if (urlLinkList[i].itunes || urlLinkList[i].melon)
             {
                 if (urlLinkList[i].itunes)
@@ -128,7 +129,7 @@
         })();
         
 
-        // set download link and icon
+        // set download links and icons
         (function(){
             let setDlLink = document.createElement('a');
             let setDlLinkText = document.createTextNode('Click here to download mp3(free) ');
