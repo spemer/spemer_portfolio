@@ -242,12 +242,16 @@
 	</div>
 </footer>
 
-<script async src="js/index.js"></script>
+<script src="js/index.js"></script>
 <script src="js/jquery.slim.min.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
+<script src="js/jquery.lazy.plugins.min.js"></script>
 <script src="js/clipboard.min.js"></script>
 <script src="js/smooth.scroll.js"></script>
 <script src="js/anchor.scroll.js"></script>
 <script type="text/javascript">
+$(function(){$('.lazy').lazy({effect:'fadeIn'});});
+
 var clipboard = new Clipboard('.btn');
 
 smoothScroll.init({speed:1000,easing:"easeOutQuad",offset:0,updateURL:false});

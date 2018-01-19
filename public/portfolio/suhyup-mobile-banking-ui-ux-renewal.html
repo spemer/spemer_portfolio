@@ -66,6 +66,7 @@
 				<img src="../img/works/suhyup/2.png" alt="User Interface" title="User Interface" class="atechImg"/>
 
 				<img src="../img/works/suhyup/3.jpg" alt="Kit" title="Kit" class="atechImg" />
+
 			</div>
 
 		<div class="everyTxtEndEnd">
@@ -124,9 +125,13 @@
 
 <script async src="../js/index.js"></script>
 <script src="../js/jquery.slim.min.js"></script>
+<script src="../js/jquery.lazy.min.js"></script>
+<script src="../js/jquery.lazy.plugins.min.js"></script>
 <script src="../js/smooth.scroll.js"></script>
 <script src="../js/anchor.scroll.js"></script>
 <script type="text/javascript">
+$(function(){$('.lazy').lazy({effect:'fadeIn'});});
+
 smoothScroll.init({speed:1000,easing:"easeOutQuad",offset:0,updateURL:false});
 
 $(".siteMapBtn").click(function(){$(".siteMapNav").toggle("display")}),function(){"use strict";function d(a){a.addEventListener("click",function(a){a.preventDefault(),this.classList.contains("is-active")===!0?this.classList.remove("is-active"):this.classList.add("is-active")})}for(var a=document.querySelectorAll(".c-hamburger"),b=a.length-1;b>=0;b--){var c=a[b];d(c)}}();

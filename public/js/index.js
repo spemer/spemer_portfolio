@@ -23,6 +23,8 @@
         { href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0', as: 'font' },
         { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.slim.min.js', as: 'script' },
+        { href: 'https://spemer.com/js/jquery.lazy.min.js', as: 'script' },
+        { href: 'https://spemer.com/js/jquery.lazy.plugins.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' }
@@ -41,6 +43,16 @@
         }
         headTitle.appendChild(setLinkProp);
     });
+})();
+
+//
+// preload spinner.svg
+(function(){
+    let getHead = document.querySelector('head');
+    let setLink = document.createElement('link');
+    setLink.setAttribute('rel','prefetch');
+    setLink.setAttribute('href','https://spemer.com/img/spinner.gif');
+    getHead.appendChild(setLink);
 })();
 
 
@@ -825,6 +837,20 @@
         {
             iconEach.setAttribute('aria-hidden','true');
         }
+    });
+})();
+
+
+//
+// add className '.lazy' for all images
+(function(){
+    let getEveryImg = document.querySelectorAll('img');
+    getEveryImg.forEach(function(images)
+    {
+        images.className += ' ' + 'lazy';
+        let getImgSrc = images.getAttribute('src');
+        images.src = 'https://spemer.com/img/spinner.gif';
+        images.setAttribute('data-src', getImgSrc);
     });
 })();
 

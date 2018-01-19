@@ -192,13 +192,17 @@
 	</div>
 </footer>
 
-<script async src="../js/index.js"></script>
+<script src="../js/index.js"></script>
 <script src="../js/jquery.slim.min.js"></script>
+<script src="../js/jquery.lazy.min.js"></script>
+<script src="../js/jquery.lazy.plugins.min.js"></script>
 <script src="../js/smooth.scroll.js"></script>
 <script src="../js/anchor.scroll.js"></script>
 <script src="../js/featherlight.js"></script>
 <script src="../js/featherlight.gallery.js"></script>
 <script type="text/javascript">
+$(function(){$('.lazy').lazy({effect:'fadeIn'});});
+
 smoothScroll.init({speed:1000,easing:"easeOutQuad",offset:0,updateURL:false});
 
 $("a.feather").featherlightGallery({closeIcon:null,openSpeed:300,closeSpeed:300,closeOnClick:"anywhere",previousIcon:"&#9664;",nextIcon:"&#9654;",galleryFadeIn:0,galleryFadeOut:0});
