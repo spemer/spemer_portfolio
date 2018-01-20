@@ -28,7 +28,8 @@
         { href: 'https://spemer.com/js/jquery.lazy.plugins.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
-        { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' }
+        { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' },
+        { href: 'https://spemer.com/js/after.jquery.js', as: 'script' },
     ];
     let headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){

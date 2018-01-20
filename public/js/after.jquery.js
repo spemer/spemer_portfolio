@@ -18,8 +18,6 @@ $(function() {
             openSpeed: 250,
             closeSpeed: 250,
             closeOnClick: "anywhere",
-            previousIcon: "&#9664;",
-            nextIcon: "&#9654;",
             galleryFadeIn: 250,
             galleryFadeOut: 250
         });
