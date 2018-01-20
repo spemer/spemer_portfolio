@@ -14,6 +14,7 @@
 (function(){
     let preloadLists = [
         { href: 'https://spemer.com/js/index.js', as: 'script' },
+        { href: 'https://spemer.com/js/set.class.atech.js', as: 'script' },
         { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.gallery.css', as: 'style' },

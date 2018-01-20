@@ -690,10 +690,10 @@ footer p{float:left;font-size:16px}
 	color:#babac0!important;
 	font-size:24px;
 	margin:64px 4px 72px;
-	margin:4rem .25rem 4.5rem;
 	font-weight:bolder;
 	display:inline-block}
 .hrline span:after{content:"ㆍ"}
+@media screen and (max-width:420px){.hrline span{margin:64px 4px}}
 
 .colorBox{
 	height:8px;
