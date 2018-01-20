@@ -8,6 +8,40 @@ $(function() {
 
 
 //
+// feather
+(function(){
+    let getFeatherClass = document.querySelectorAll('.feather');
+    if(getFeatherClass.length > 0)
+    {
+        $("a.feather").featherlightGallery({
+            closeIcon: null,
+            openSpeed: 250,
+            closeSpeed: 250,
+            closeOnClick: "anywhere",
+            previousIcon: "&#9664;",
+            nextIcon: "&#9654;",
+            galleryFadeIn: 250,
+            galleryFadeOut: 250
+        });
+    }
+})();
+
+
+//
+// clipboard
+(function(){
+    let getClipboard = document.querySelectorAll('a #foo');
+    if(getClipboard)
+    {
+        getClipboard.forEach(function(c)
+        {
+            let clipboard = new Clipboard('.btn');
+        });
+    }
+})();
+
+
+//
 // smooth scroll
 smoothScroll.init({
     speed: 1000,
@@ -16,18 +50,6 @@ smoothScroll.init({
     updateURL: false
 });
 
-//
-// feather
-$("a.feather").featherlightGallery({
-    closeIcon: null,
-    openSpeed: 250,
-    closeSpeed: 250,
-    closeOnClick: "anywhere",
-    previousIcon: "&#9664;",
-    nextIcon: "&#9654;",
-    galleryFadeIn: 250,
-    galleryFadeOut: 250
-});
 
 //
 // hamburger
@@ -35,15 +57,13 @@ $(".siteMapBtn").click(function() {
     $(".siteMapNav").toggle("display")
 }),
 function() {
-    "use strict";
-
     function d(a) {
         a.addEventListener("click", function(a) {
             a.preventDefault(), this.classList.contains("is-active") === !0 ? this.classList.remove("is-active") : this.classList.add("is-active")
         })
     }
-    for (var a = document.querySelectorAll(".c-hamburger"), b = a.length - 1; b >= 0; b--) {
-        var c = a[b];
+    for (let a = document.querySelectorAll(".c-hamburger"), b = a.length - 1; b >= 0; b--) {
+        let c = a[b];
         d(c)
     }
 }();
