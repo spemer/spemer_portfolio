@@ -783,3 +783,6 @@ ol > li:before {
 @media screen and (max-width:420px){.xdiframe{display:none}}
 
 img[data-src]{max-width:480px;display:block;margin:auto}
+
+figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
+.atechImg{width:100%;height:100%;margin:0px;padding:0px}

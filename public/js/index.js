@@ -782,35 +782,6 @@
 
 
 //
-// set head <style> -> strong font
-(function(){
-    let getIndexListId = document.querySelector('#indexList');
-    let getArticleListId = document.querySelector('#articleList');
-    let getHeadClassAtech = document.querySelector('.atechImgSt');
-
-    if(getIndexListId || getArticleListId || getHeadClassAtech)
-    {
-        let getHead = document.querySelector('head');
-        let setHeadStyle = document.createElement('style');
-        setHeadStyle.setAttribute('type', 'text/css');
-        getHead.appendChild(setHeadStyle);
-        let setStyleProp;
-
-        if(getIndexListId || getArticleListId)
-        {
-            setStyleProp = document.createTextNode('h3{font-weight:400;font-size:16px;margin:-12px 0 -8px;font-style:normal}');
-        }
-        else if(getHeadClassAtech)
-        {
-            setStyleProp = document.createTextNode('.atechImg{width:100%;height:100%;margin:0px;padding:0px}');
-        }
-        
-        setHeadStyle.appendChild(setStyleProp);
-    }
-})();
-
-
-//
 // '.hrline' -> medium style 3 dots
 (function(){
     let gethrline = document.getElementsByClassName('hrline');
