@@ -825,35 +825,3 @@
         images.setAttribute('data-src', getImgSrc);
     });
 })();
-
-
-function topUp() {
-    $('.fa-angle-up').addClass('topUp');
-    $('.fa-angle-up').removeClass('topUp2');
-}
-function topDn() {
-    $('.fa-angle-up').addClass('topUp2');
-    $('.fa-angle-up').removeClass('topUp');
-}
-function nextRight() {
-    $('.fa-angle-double-right').addClass('nextRight');
-    $('.fa-angle-double-right').removeClass('nextRight2');
-}
-function nextRightDel() {
-    $('.fa-angle-double-right').addClass('nextRight2');
-    $('.fa-angle-double-right').removeClass('nextRight');
-}
-function nextLeft() {
-    $('.fa-angle-double-left').addClass('nextLeft');
-    $('.fa-angle-double-left').removeClass('nextLeft2');
-}
-function nextLeftDel() {
-    $('.fa-angle-double-left').addClass('nextLeft2');
-    $('.fa-angle-double-left').removeClass('nextLeft');
-}
-function addTooltip() {
-    $('.copied').removeClass('tooltip');
-}
-function removeTooltip() {
-    $('.copied').addClass('tooltip');
-}
