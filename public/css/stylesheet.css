@@ -698,7 +698,6 @@ figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 @media screen and (max-width: 420px){
 	#headerLogo h1{font-size:36px;margin:15px 0 -15px}
 	.aboutHover a{border-bottom:2px solid transparent}
-	body{width:90%}
 	header div{clear:both}
 	header{width:100%;padding:0;text-align:center}
 	.textbox-colored{padding:8px 16px 8px 8px}
