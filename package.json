@@ -1,14 +1,14 @@
 {
-  "name": "Hyouk Seo",
+  "name": "hyoukseo",
   "version": "0.0.1",
-  "description": "app",
+  "description": "Spemer",
   "main": "server.js",
   "author": "Hyouk Seo",
   "private": false,
   "license": "Hyouk Seo",
   "repository": {
-    "type": null,
-    "url": null
+    "type": "Spemer",
+    "url": "https://github.com/spemer/spemer_portfolio"
   },
   "dependencies": {
     "express": "4.13.4",
@@ -17,5 +17,10 @@
     "body-parser": "1.15.1",
     "ejs": "2.5.5",
     "bcrypt-nodejs": "0.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-email-remove-unused-css": "^2.1.1"
   }
 }

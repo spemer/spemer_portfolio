@@ -1,0 +1,6 @@
+components
+build
+node_modules
+test
+component.json
+Makefile
