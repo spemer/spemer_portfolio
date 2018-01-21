@@ -4,7 +4,6 @@ const gulp = require('gulp');
 //
 // css auto prefix
 const autoprefixer = require('gulp-autoprefixer');
-
 gulp.task('prefixer', () =>
     gulp.src('public/css/*.css')
         .pipe(autoprefixer({
@@ -17,7 +16,6 @@ gulp.task('prefixer', () =>
 //
 // css sort media query
 const cmq = require('crlab-gulp-combine-media-queries');
- 
 gulp.task('cmq', function () {
     gulp.src('public/css/*.css')
         .pipe(cmq({
