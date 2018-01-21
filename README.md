@@ -2,6 +2,7 @@
 Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built this website with __HTML5, CSS3 and JavaScript__. Hope you enjoy and Thanks for watching this project you all!  
   
 Built with these __AWESOME stuffs__:
+* <a href="https://gulpjs.com/" target="_blank" title="Gulp">Gulp</a>
 * <a href="https://jquery.com/" target="_blank" title="JQuery">JQuery</a>
 * <a href="https://firebase.google.com/" target="_blank" title="Firebase">Firebase</a>
 * <a href="https://github.com/noelboss/featherlight" target="_blank" title="Featherlight">Featherlight</a>
