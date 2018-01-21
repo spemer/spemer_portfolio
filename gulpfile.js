@@ -19,9 +19,9 @@ gulp.task('prefixer', () =>
 const cmq = require('crlab-gulp-combine-media-queries');
  
 gulp.task('cmq', function () {
-  gulp.src('public/css/*.css')
-    .pipe(cmq({
-      log: true
-    }))
-    .pipe(gulp.dest('public/css'));
+    gulp.src('public/css/*.css')
+        .pipe(cmq({
+            log: true
+        }))
+        .pipe(gulp.dest('public/css'));
 });
