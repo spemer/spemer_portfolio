@@ -19,6 +19,7 @@
     "express-session": "1.13.0"
   },
   "devDependencies": {
+    "crlab-gulp-combine-media-queries": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0"
   }
