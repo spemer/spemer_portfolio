@@ -1,5 +1,4 @@
 //"use strict";
-
 //
 // set <html> prefix + manifest
 (function(){
@@ -7,7 +6,6 @@
     getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
     getHtml.setAttribute('lang', 'en');
 })();
-
 
 //
 // preload
@@ -57,7 +55,6 @@
     getHead.appendChild(setLink);
 })();
 
-
 //
 // meta Tags **meta [property, content]**
 (function(){
@@ -80,7 +77,6 @@
         headTitle.appendChild(setMetaProp);
     });
 })();
-
 
 //
 // meta Tags **meta [name, content]**
@@ -158,7 +154,6 @@
     headTitle.appendChild(setMeta);
 })();
 
-
 //
 // favicon & shortcut icons
 (function(){
@@ -224,7 +219,6 @@
     });
 })();
 
-
 //
 // '#headerLogo'
 (function(){
@@ -238,7 +232,6 @@
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
 })();
-
 
 //
 // siteMap links
@@ -485,7 +478,6 @@
         setPrevBtn(siteMapListArticle, articleLinks);
     }
     
-    
     //
     // bottom siteMap navigation
     const siteMapNav = document.querySelector('.siteMapNav');
@@ -514,7 +506,6 @@
     }
     bottomSiteNav(siteMapList);
     bottomSiteNav(siteMapListArticle);
-
 
     //
     // set main lists
@@ -618,7 +609,6 @@
     }
 })();
 
-
 //
 // TopBtn
 (function(){
@@ -645,7 +635,6 @@
         topBtnBold.appendChild(topTextNode);
     }
 })();
-
 
 //
 // Footer '#snsIcon'
@@ -708,7 +697,6 @@
     }    
 })();
 
-
 //
 // Code with Love by Hyouk Seo(Spemer)
 (function(){
@@ -726,7 +714,6 @@
     codeBy.appendChild(loveIconNode);
     codeBy.appendChild(topTextNode2);    
 })();
-
 
 //
 // #topBtnFixed
@@ -768,7 +755,6 @@
     }
 })();
 
-
 //
 // set '.externalLink' Icon
 (function(){
@@ -780,7 +766,6 @@
         linkEach.appendChild(setLinkIcon);
     });
 })();
-
 
 //
 // '.hrline' -> medium style 3 dots
@@ -798,7 +783,6 @@
     }
 })();
 
-
 //
 // get <i> tag -> set 'aria-hidden' attr
 (function(){
@@ -812,7 +796,6 @@
         }
     });
 })();
-
 
 //
 // add className '.lazy' for all images
