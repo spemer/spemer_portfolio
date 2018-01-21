@@ -1,17 +1,23 @@
 //
 // lazyloader
-$(function() {
-    $('.lazy').lazy({
+(function(){
+    let getEveryImg = document.querySelectorAll('img');
+    if (getEveryImg.length > 0)
+    {
+        $(function(){
+            $('.lazy').lazy({
 
-    });
-});
+            });
+        });
+    }
+})();
 
 
 //
 // feather
 (function(){
     let getFeatherClass = document.querySelectorAll('.feather');
-    if(getFeatherClass.length > 0)
+    if (getFeatherClass.length > 0)
     {
         $("a.feather").featherlightGallery({
             closeIcon: null,
@@ -29,12 +35,9 @@ $(function() {
 // clipboard
 (function(){
     let getClipboard = document.querySelectorAll('a #foo');
-    if(getClipboard)
+    if (getClipboard.length > 0)
     {
-        getClipboard.forEach(function(c)
-        {
-            let clipboard = new Clipboard('.btn');
-        });
+        let clipboard = new Clipboard('.btn');
     }
 })();
 
