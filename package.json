@@ -11,16 +11,15 @@
     "url": "https://github.com/spemer/spemer_portfolio"
   },
   "dependencies": {
-    "express": "4.13.4",
-    "express-session": "1.13.0",
-    "cookie-parser": "1.4.2",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.1",
+    "cookie-parser": "1.4.2",
     "ejs": "2.5.5",
-    "bcrypt-nodejs": "0.0.3"
+    "express": "4.13.4",
+    "express-session": "1.13.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-email-remove-unused-css": "^2.1.1"
+    "gulp-autoprefixer": "^4.1.0"
   }
 }
