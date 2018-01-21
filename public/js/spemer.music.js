@@ -128,7 +128,6 @@
             }
         })();
         
-
         // set download links and icons
         (function(){
             let setDlLink = document.createElement('a');

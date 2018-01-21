@@ -12,7 +12,6 @@
     }
 })();
 
-
 //
 // feather
 (function(){
@@ -30,7 +29,6 @@
     }
 })();
 
-
 //
 // clipboard
 (function(){
@@ -41,7 +39,6 @@
     }
 })();
 
-
 //
 // smooth scroll
 smoothScroll.init({
@@ -50,7 +47,6 @@ smoothScroll.init({
     offset: 0,
     updateURL: false
 });
-
 
 //
 // hamburger
@@ -68,7 +64,6 @@ function() {
         d(c)
     }
 }();
-
 
 //
 // other funcs
