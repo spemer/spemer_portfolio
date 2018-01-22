@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const minifyjs = require('gulp-js-minify');
 const autoprefixer = require('gulp-autoprefixer');
+const uncss = require('gulp-uncss');
 
 // js minify
 const paths = {
@@ -17,7 +18,6 @@ gulp.task('js', function(){
 });
 gulp.task('jsmin', ['js']);
 
-
 // css prefix
 gulp.task('prefix', () =>
     gulp.src('public/css/*.css')
@@ -28,7 +28,11 @@ gulp.task('prefix', () =>
     .pipe(gulp.dest('public/css'))
 );
 
-
-// gulp.task('taskname', function(){
-//     console.log('\nHello world!\n');
-// });
+// unused css
+gulp.task('default', function () {
+    return gulp.src('public/css/stylesheet.css')
+        .pipe(uncss({
+            html: ['pubic/*.html', 'public/**/*.html', 'https://spemer.com/*.html', 'https://spemer.com/**/*.html']
+        }))
+        .pipe(gulp.dest('public'));
+});
