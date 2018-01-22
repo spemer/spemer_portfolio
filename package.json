@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-js-minify": "0.0.3"
+    "gulp-js-minify": "0.0.3",
+    "postcss-minify-selectors": "^2.1.1"
   }
 }
