@@ -294,6 +294,12 @@
     ];
     let siteMapListArticle = [
         {
+            name:  'Gulp',
+            href:  'articles/auto-css-vendor-browser-prefix-javascript-gulp',
+            title: 'Auto CSS prefix with Gulp',
+            img: 'gulp/thumb.png'
+        },
+        {
             name:  'Favicon',
             href:  'articles/set-favicon-with-javascript',
             title: 'Set favicons with JavaScript',
