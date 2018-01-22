@@ -674,19 +674,51 @@ img[data-src]{max-width:480px;display:block;margin:auto}
 
 figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 .atechImg{width:100%;height:100%;margin:0px;padding:0px}
-
 @media screen and (max-width:768px){
-	.everyTxtEndArticle{max-width:560px}
-	.artImgBoxEach a{width:50%}
-	.flatIconBox div{width:49%}
-	.aboutIntroBox_OVERALL{width:100%;margin:0 auto;display:block}
-	.aboutIntroBox_80{width:100%;margin:0 auto;display:block}
-	.aboutIntroBox_20{width:50%;float:left;display:block;margin:0 auto}
-	.aboutIntroBox_20 img{margin:24px 0}
-	body{width:90%}
-	#headerNav nav{float:right;margin:25px 0;padding-top:50px}
-	.headerNavList{margin-left:15px;display:inline-block}
-	.headerNavList:first-child{margin-left:0}
+
+	.everyTxtEndArticle{
+		max-width:560px}
+
+	.artImgBoxEach a{
+		width:50%}
+
+	.flatIconBox div{
+		width:49%}
+
+	.aboutIntroBox_OVERALL{
+		width:100%;
+		margin:0 auto;
+		display:block}
+
+	.aboutIntroBox_80{
+		width:100%;
+		margin:0 auto;
+		display:block}
+
+	.aboutIntroBox_20{
+		width:50%;
+		float:left;
+		display:block;
+		margin:0 auto}
+
+	.aboutIntroBox_20 img{
+		margin:24px 0}
+
+	body{
+		width:90%}
+
+	#headerNav nav{
+		float:right;
+		margin:25px 0;
+		padding-top:50px}
+
+	.headerNavList{
+		margin-left:15px;
+		display:inline-block}
+
+	.headerNavList:first-child{
+		margin-left:0}
+
 	.iframe iframe{
 		width:100%;
 		height:50%;
@@ -694,40 +726,96 @@ figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 		min-height:250px;
 		padding:25px 0;
 		margin-bottom:25px}
-	#topBtnFixed{display:none}}
-	
-@media screen and (max-width: 420px){
-	#headerLogo h1{font-size:36px;margin:15px 0 -15px}
-	.aboutHover a{border-bottom:2px solid transparent}
-	header div{clear:both}
-	header{width:100%;padding:0;text-align:center}
-	.textbox-colored{padding:8px 16px 8px 8px}
-	.quote{margin:32px 0;font-size:20px;line-height:32px}}
 
-@media screen and (max-width:224px){.flatIconBox div{width:100%}}
+	#topBtnFixed{
+		display:none}}
+@media screen and (max-width: 420px){
+
+	#headerLogo h1{
+		font-size:36px;
+		margin:15px 0 -15px}
+
+	.aboutHover a{
+		border-bottom:2px solid transparent}
+
+	header div{
+		clear:both}
+
+	header{
+		width:100%;
+		padding:0;
+		text-align:center}
+
+	.textbox-colored{
+		padding:8px 16px 8px 8px}
+
+	.quote{
+		margin:32px 0;
+		font-size:20px;
+		line-height:32px}}
+@media screen and (max-width:224px){
+
+	.flatIconBox div{
+		width:100%}}
 @media screen and (max-width:420px){
+
 	.artImgBoxEach img,.flatIconBoxEach img{
 		margin-top:2vw;
 		margin-bottom:2vw;
 		-webkit-border-radius:4px;
 		-moz-border-radius:4px;
 		border-radius:4px}
-	.profile{width:75%;height:75%}
-	.artImgBoxEach figcaption,.flatIconBoxEach figcaption{display:none}
-	.aboutIntroBox_20{width:100%;margin:0 auto;display:block}
-	.aboutIntroBox_80{padding-right:5%}
-	#siteMap li{width:40%}
-	.articleImg35 img{width:100%}
-	.articleImg50-small img{width:100%}
-	.articleImg35-small img{width:60%}
-	.code{padding:8px 16px}
-	.hrline span{margin:64px 4px}
-	.xdiframe{display:none}}
 
-@media screen and (max-width:433px){.musicEachBox p{margin:4px 0px 8px;line-height:1.6rem}}
-@media screen and (max-width:380px){.pckIconBox .musicEachBox span{display:none}}
-@media screen and (min-width:701px){#snsIcon{margin-right:-8px}}
+	.profile{
+		width:75%;
+		height:75%}
+
+	.artImgBoxEach figcaption,.flatIconBoxEach figcaption{
+		display:none}
+
+	.aboutIntroBox_20{
+		width:100%;
+		margin:0 auto;
+		display:block}
+
+	.aboutIntroBox_80{
+		padding-right:5%}
+
+	#siteMap li{
+		width:40%}
+
+	.articleImg35 img{
+		width:100%}
+
+	.articleImg50-small img{
+		width:100%}
+
+	.articleImg35-small img{
+		width:60%}
+
+	.code{
+		padding:8px 16px}
+
+	.hrline span{
+		margin:64px 4px}
+
+	.xdiframe{
+		display:none}}
+@media screen and (max-width:433px){
+
+	.musicEachBox p{
+		margin:4px 0px 8px;
+		line-height:1.6rem}}
+@media screen and (max-width:380px){
+
+	.pckIconBox .musicEachBox span{
+		display:none}}
+@media screen and (min-width:701px){
+
+	#snsIcon{
+		margin-right:-8px}}
 @media screen and (max-width:600px){
+
 	#headerNav nav,#headerLogo{
 		left:50%;
 		right:50%;
@@ -739,10 +827,16 @@ figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 		-moz-transform:translate(-50%,-50%);
 		-o-transform:translate(-50%,-50%);
 		transform:translate(-50%,-50%)}
-	#headerLogo{margin-top:3rem !important}
-	#headerNav nav{width:100%;text-align:center;margin-top:-1rem !important}}
 
+	#headerLogo{
+		margin-top:3rem !important}
+
+	#headerNav nav{
+		width:100%;
+		text-align:center;
+		margin-top:-1rem !important}}
 @media screen and (max-width:700px){
+
 	#snsIcon{
 		display:-webkit-box;
 		display:-ms-flexbox;
@@ -761,9 +855,17 @@ figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 		-webkit-justify-content:center;
 		-moz-box-pack:center;
 		justify-content:center}
-	#snsIcon a{margin:4px .25vw -2rem}
-	footer{width:100%;margin:0 auto}
-	footer div{clear:both}
+
+	#snsIcon a{
+		margin:4px .25vw -2rem}
+
+	footer{
+		width:100%;
+		margin:0 auto}
+
+	footer div{
+		clear:both}
+
 	footer div p{
 		width:100%;
 		margin:auto;
@@ -771,13 +873,25 @@ figcaption h3{font-weight:400;font-size:16px;margin:-16px 0;font-style:normal}
 		position:relative;
 		text-align:center;
 		padding:0 0 10px}}
-
 @media screen and (max-width:767px){
-	.articleImg40 img,.articleImg75 img,.articleImg50 img{width:100%}
-	.articleImg35 img{width:60%}
-	.articleImg50-small img{width:60%}
-	.articleImg35-small img{width:45%}}
 
+	.articleImg40 img,.articleImg75 img,.articleImg50 img{
+		width:100%}
+
+	.articleImg35 img{
+		width:60%}
+
+	.articleImg50-small img{
+		width:60%}
+
+	.articleImg35-small img{
+		width:45%}}
 @media screen and (max-width: 768px){
-	.quote{margin:32px;font-size:22px;line-height:36px}
-	.prototype{display:none}}
+
+	.quote{
+		margin:32px;
+		font-size:22px;
+		line-height:36px}
+
+	.prototype{
+		display:none}}

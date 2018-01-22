@@ -1,11 +1,11 @@
 {
-  "name": "hyoukseo",
+  "name": "hyouk-seo",
   "version": "0.0.1",
   "description": "Spemer",
   "main": "server.js",
   "author": "Hyouk Seo",
   "private": false,
-  "license": "Hyouk Seo",
+  "license": "UNLICENSED",
   "repository": {
     "type": "Spemer",
     "url": "https://github.com/spemer/spemer_portfolio"
@@ -21,6 +21,8 @@
   "devDependencies": {
     "crlab-gulp-combine-media-queries": "^1.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0"
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-js-minify": "0.0.3"
   }
 }
