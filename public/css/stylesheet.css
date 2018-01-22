@@ -565,6 +565,7 @@ footer p{float:left;font-size:16px}
 .memoree-margin img{margin:50px 0}
 
 .quote{
+	text-align:center;
 	display:inline-block;
 	margin:32px 64px;
 	font-size:1.5rem;
