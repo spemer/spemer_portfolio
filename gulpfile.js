@@ -1,13 +1,12 @@
 "use strict";
 const gulp = require('gulp');
-const cleanCSS = require('gulp-clean-css');
 const minifyjs = require('gulp-js-minify');
+const autoprefixer = require('gulp-autoprefixer');
 
-// minify
+// js minify
 const paths = {
     src: 'public',
     srcJS: 'public/js/index/*.js',
-
     dist: 'public',
     distJS: 'public/js/dist'
 };
@@ -16,4 +15,15 @@ gulp.task('js', function(){
     .pipe(minifyjs())
     .pipe(gulp.dest(paths.distJS));
 });
-gulp.task('min', ['js']);
+gulp.task('jsmin', ['js']);
+
+
+// css prefix
+gulp.task('prefix', () =>
+    gulp.src('public/css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 99 versions'],
+            cascade: false
+    }))
+    .pipe(gulp.dest('public/css'))
+);
