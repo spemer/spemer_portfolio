@@ -11,7 +11,7 @@
 // preload
 (function(){
     let preloadLists = [
-        { href: 'https://spemer.com/js/index.js', as: 'script' },
+        { href: 'https://spemer.com/js/dist/index.js', as: 'script' },
         { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.css', as: 'style' },
         { href: 'https://spemer.com/css/featherlight.gallery.css', as: 'style' },
@@ -20,14 +20,14 @@
         { href: 'https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2', as: 'font' },
         { href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0', as: 'font' },
         { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', as: 'script' },
-        { href: 'https://spemer.com/js/set.class.atech.js', as: 'script' },
+        { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.slim.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.lazy.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.lazy.plugins.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.js', as: 'script' },
         { href: 'https://spemer.com/js/featherlight.gallery.js', as: 'script' },
-        { href: 'https://spemer.com/js/after.jquery.js', as: 'script' },
+        { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
     ];
     let headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
