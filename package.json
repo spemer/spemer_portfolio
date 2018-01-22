@@ -21,8 +21,6 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.2",
-    "gulp-htmlclean": "^2.7.16",
-    "gulp-inject": "^4.3.0",
     "gulp-js-minify": "0.0.3"
   }
 }
