@@ -513,7 +513,7 @@ footer p{float:left;font-size:16px}
 .code{
 	border:2px solid #e5e5e5;
 	letter-spacing:-.25px;
-	padding:16px 24px 12px;
+	padding:12px 24px 8px;
 	background-color:#f4f4f4;
 	margin:32px 0;
 	overflow:scroll;

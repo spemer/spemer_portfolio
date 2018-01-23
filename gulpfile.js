@@ -29,7 +29,7 @@ gulp.task('prefix', () =>
 );
 
 // unused css
-gulp.task('default', function () {
+gulp.task('uncss', function () {
     return gulp.src('public/css/stylesheet.css')
         .pipe(uncss({
             html: ['pubic/*.html', 'public/**/*.html', 'https://spemer.com/*.html', 'https://spemer.com/**/*.html']
