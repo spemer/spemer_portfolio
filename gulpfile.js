@@ -29,13 +29,13 @@ gulp.task('prefix', () =>
 );
 
 // unused css
-gulp.task('uncss', function () {
-    return gulp.src('public/css/stylesheet.css')
-        .pipe(uncss({
-            html: ['pubic/*.html', 'public/**/*.html', 'https://spemer.com/*.html', 'https://spemer.com/**/*.html']
-        }))
-        .pipe(gulp.dest('public'));
-});
+// gulp.task('uncss', function () {
+//     return gulp.src('public/css/stylesheet.css')
+//         .pipe(uncss({
+//             html: ['pubic/*.html', 'public/**/*.html', 'https://spemer.com/*.html', 'https://spemer.com/**/*.html']
+//         }))
+//         .pipe(gulp.dest('public'));
+// });
 
 // gulp.task('hello', function(){
 //     console.log('\nHello world!\n');
