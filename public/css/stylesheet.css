@@ -617,7 +617,7 @@ footer p{float:left;font-size:16px}
 
 /*Gist*/
 body .gist{margin:24px 0;}
-body .gist pre, body .gist td, body .gist tr,.blob-num,.blob-code,.gist-data,.pl-v,
+body .gist pre, body .gist td, body .gist tr,.blob-num,.blob-code,.gist-data,.pl-v,.pl-cce,
 .pl-c1,.pl-c,.pl-k,.pl-s,.pl-en,.pl-smi,.pl-e,.pl-ent,.pl-pds,.blob-wrapper,.t-body
 {font-family:"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 font-size:13px !important;line-height:18px !important}
