@@ -2,7 +2,8 @@
 const gulp = require('gulp');
 const minifyjs = require('gulp-js-minify');
 const autoprefixer = require('gulp-autoprefixer');
-const uncss = require('gulp-uncss');
+// const uncss = require('gulp-uncss');
+const cleanCSS = require('gulp-clean-css');
 
 // js minify
 const paths = {
@@ -27,6 +28,13 @@ gulp.task('prefix', () =>
     }))
     .pipe(gulp.dest('public/css'))
 );
+
+// mini css
+gulp.task('mincss', () => {
+    return gulp.src('public/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie6'}))
+        .pipe(gulp.dest('public/css/dist'));
+  });
 
 // unused css
 // gulp.task('uncss', function () {
