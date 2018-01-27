@@ -13,8 +13,8 @@
     let preloadLists = [
         { href: 'https://spemer.com/js/dist/index.js', as: 'script' },
         { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
-        { href: 'https://spemer.com/css/featherlight.css', as: 'style' },
-        { href: 'https://spemer.com/css/featherlight.gallery.css', as: 'style' },
+        { href: 'https://spemer.com/css/dist/featherlight.css', as: 'style' },
+        { href: 'https://spemer.com/css/dist/featherlight.gallery.css', as: 'style' },
         { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css', as: 'style' },
         { href: 'https://fonts.gstatic.com/s/robotoslab/v7/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2', as: 'font' },
         { href: 'https://fonts.gstatic.com/s/merriweather/v19/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2', as: 'font' },
