@@ -14,12 +14,12 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "1.15.1",
     "cookie-parser": "1.4.2",
-    "ejs": "2.5.5",
     "express": "4.13.4",
     "express-session": "1.13.0",
     "firebase": "^4.9.0"
   },
   "devDependencies": {
+    "ejs": "2.5.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-js-minify": "0.0.3",
