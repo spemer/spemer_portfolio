@@ -1,28 +1,28 @@
 {
-  "name": "hyouk-seo",
-  "version": "0.1.0",
-  "description": "Spemer",
-  "main": "server.js",
-  "author": "Hyouk Seo",
-  "private": false,
-  "license": "UNLICENSED",
-  "repository": {
-    "type": "Spemer",
-    "url": "https://github.com/spemer/spemer_portfolio"
-  },
-  "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "1.18.2",
-    "cookie-parser": "1.4.3",
-    "express": "4.16.2",
-    "express-session": "1.15.6",
-    "firebase": "^4.9.0"
-  },
-  "devDependencies": {
-    "ejs": "2.5.7",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-js-minify": "0.0.3",
-    "gulp-uncss": "^1.0.6"
-  }
+    "name": "hyouk-seo",
+    "version": "0.1.0",
+    "description": "Spemer",
+    "main": "server.js",
+    "author": "Hyouk Seo",
+    "private": false,
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "Spemer",
+        "url": "https://github.com/spemer/spemer_portfolio"
+    },
+    "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
+        "body-parser": "1.18.2",
+        "cookie-parser": "1.4.3",
+        "express": "4.16.2",
+        "express-session": "1.15.6",
+        "firebase": "^4.9.0"
+    },
+    "devDependencies": {
+        "ejs": "2.5.7",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.1.0",
+        "gulp-js-minify": "0.0.3",
+        "gulp-uncss": "^1.0.6"
+    }
 }
