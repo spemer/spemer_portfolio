@@ -21,7 +21,7 @@
         { href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0', as: 'font' },
         { href: 'https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js', as: 'script' },
         { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
-        { href: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js', as: 'script' },
+        { href: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.lazy.min.js', as: 'script' },
         { href: 'https://spemer.com/js/jquery.lazy.plugins.min.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
