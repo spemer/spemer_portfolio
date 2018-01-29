@@ -23,7 +23,9 @@
             closeSpeed: 250,
             closeOnClick: "anywhere",
             galleryFadeIn: 250,
-            galleryFadeOut: 250
+            galleryFadeOut: 250,
+            nextIcon: false,
+            previousIcon: false
         });
     }
 })();
