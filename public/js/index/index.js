@@ -14,6 +14,7 @@
         { href: 'https://spemer.com/js/dist/index.js', as: 'script' },
         { href: 'https://spemer.com/css/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/css/dist/featherlight.css', as: 'style' },
+        { href: 'https://spemer.com/css/dist/featherlight.gallery.css', as: 'style' },
         { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
         { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
