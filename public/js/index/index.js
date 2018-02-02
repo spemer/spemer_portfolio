@@ -16,7 +16,6 @@
         { href: 'https://spemer.com/css/dist/featherlight.css', as: 'style' },
         { href: 'https://spemer.com/css/dist/featherlight.gallery.css', as: 'style' },
         { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
-        { href: 'https://spemer.com/js/smooth.scroll.js', as: 'script' },
         { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
     ];
     let headTitle = document.querySelector('head');
@@ -606,6 +605,13 @@
 })();
 
 //
+// body gets idname body
+(function(){
+    const getBody = document.querySelector('body');
+    getBody.id = "body";
+})();
+
+//
 // TopBtn
 (function(){
     const prevNextHome = document.querySelector('#prevNext');
@@ -613,7 +619,7 @@
     {
         let topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
-        topBtnNode.href = "body";
+        topBtnNode.href = "#body";
         topBtnNode.title = "Back to Top";
         topBtnNode.className = "prevNextTop";
 
@@ -722,7 +728,7 @@
 
     let fixedTopBtnLink = document.createElement('a');
     fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
-    fixedTopBtnLink.href = 'body';
+    fixedTopBtnLink.href = '#body';
     fixedTopBtnLink.className = 'prevNextTop2';
 
     let fixedTopBtnIcon = document.createElement("i");

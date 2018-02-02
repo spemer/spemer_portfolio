@@ -41,13 +41,14 @@
 })();
 
 //
-// smooth scroll
-smoothScroll.init({
-    speed: 1000,
-    easing: "easeOutQuad",
-    offset: 0,
-    updateURL: false
-});
+// smooth anchor scroll
+(function(){
+    let scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        offset: 0,
+        easing: 'easeInOutCubic'
+    });
+})();
 
 //
 // hamburger
