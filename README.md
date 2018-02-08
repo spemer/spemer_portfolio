@@ -21,4 +21,4 @@ Visit __<a href="https://spemer.com" target="_blank" title="spemer.com">My Websi
 > * <a href="https://medium.com/@spemer" title="Medium">Medium</a>
 > * <a href="https://behance.net/spemer" title="Behance">Behance</a>
 > * <a href="https://www.facebook.com/ghsspower" title="Facebook">Facebook</a>
-> * Twitter: <a href="https://twitter.com/OfficialSpemer" title="Twitter">![Twitter](https://img.shields.io/badge/Twitter-%40OfficialSpemer-1da1f2.svg)</a>
+> * <a href="https://twitter.com/OfficialSpemer" title="Twitter">Twitter</a>
