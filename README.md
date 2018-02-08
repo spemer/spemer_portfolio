@@ -23,5 +23,4 @@ Visit __<a href="https://spemer.com" target="_blank" title="spemer.com">My Websi
 > * <a href="https://www.facebook.com/ghsspower" target="_blank" title="Facebook">Facebook</a>
 > * <a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">Twitter</a>
 
-@import "https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css"
-<i class="fa fa-address-book" aria-hidden="true"></i>
+:fa-address-book:
