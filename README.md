@@ -23,4 +23,4 @@ Visit __<a href="https://spemer.com" target="_blank" title="spemer.com">My Websi
 > * <a href="https://www.facebook.com/ghsspower" target="_blank" title="Facebook">Facebook</a>
 > * <a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">Twitter</a>
 
-:fa-address-book:
+i <3 :fa-coffee: and I <3 :fa-beer: and I'll buy wayland ten of both. 
