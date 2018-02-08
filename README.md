@@ -1,4 +1,4 @@
-# Portfolio website  
+# Portfolio website 🌐  
 Hi, I'm web & mobile __UI/UX designer__ based in South Korea🇰🇷 I Built this website with __HTML5, CSS3 and JavaScript__. Hope you enjoy and Thanks for watching this project you all!  
   
 Built with these __AWESOME stuffs__:
@@ -16,9 +16,12 @@ I am detail-oriented __Digital product designer__, graphic designer, web publish
   
 Visit __<a href="https://spemer.com" target="_blank" title="spemer.com">My Website</a>__ for more details!  
   
-## Hyouk Seo on  
+## I'm social  
 > * <a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">LinkedIn</a>
 > * <a href="https://medium.com/@spemer" target="_blank" title="Medium">Medium</a>
 > * <a href="https://behance.net/spemer" target="_blank" title="Behance">Behance</a>
 > * <a href="https://www.facebook.com/ghsspower" target="_blank" title="Facebook">Facebook</a>
 > * <a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">Twitter</a>
+
+@import "https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css"
+<i class="fa fa-address-book" aria-hidden="true"></i>
