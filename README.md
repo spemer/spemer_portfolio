@@ -17,8 +17,8 @@ I am detail-oriented __Digital product designer__, graphic designer, web publish
 Visit __<a href="https://spemer.com" target="_blank" title="spemer.com">My Website</a>__ for more details!  
   
 ## I'm social  
-> * <a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" target="_blank" title="LinkedIn">LinkedIn</a>
-> * <a href="https://medium.com/@spemer" target="_blank" title="Medium">Medium</a>
-> * <a href="https://behance.net/spemer" target="_blank" title="Behance">Behance</a>
-> * <a href="https://www.facebook.com/ghsspower" target="_blank" title="Facebook">Facebook</a>
-> * <a href="https://twitter.com/OfficialSpemer" target="_blank" title="Twitter">Twitter</a>
+> * <a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" title="LinkedIn">LinkedIn</a>
+> * <a href="https://medium.com/@spemer" title="Medium">Medium</a>
+> * <a href="https://behance.net/spemer" title="Behance">Behance</a>
+> * <a href="https://www.facebook.com/ghsspower" title="Facebook">Facebook</a>
+> * <a href="https://twitter.com/OfficialSpemer" title="Twitter">![Twitter](https://img.shields.io/badge/Twitter-%40OfficialSpemer-1da1f2.svg)</a>
