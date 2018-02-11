@@ -34,4 +34,4 @@ gulp.task('mincss', () => {
     return gulp.src('public/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie6'}))
         .pipe(gulp.dest('public/css/dist'));
-    });
+});
