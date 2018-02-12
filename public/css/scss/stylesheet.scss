@@ -9,6 +9,7 @@ $darkgrey: #656c7a;
 $grey: #babac0;
 $black: #2a2e2e;
 $lightgrey: #e7e9ee;
+$lightgrey2: #a0a0a5;
 $line: #e5e5e5;
 
 // mixin font-stack
@@ -38,15 +39,17 @@ $line: #e5e5e5;
   -o-border-radius: $radius;
   border-radius: $radius;
 }
-@mixin transform($v...){
+@mixin transform($v){
   -webkit-transform: $v;
+  -khtml-transform: $v;
   -moz-transform: $v;
   -ms-transform: $v;
   -o-transform: $v;
   transform: $v;
 }
-@mixin transition($v...){
+@mixin transition($v){
   -webkit-transition: $v;
+  -khtml-transition: $v;
   -moz-transition: $v;
   -ms-transition: $v;
   -o-transition: $v;
@@ -68,6 +71,25 @@ $line: #e5e5e5;
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie);
+}
+
+// hamburger transition
+@mixin transition-duration($f, $s) {
+  -webkit-transition-duration: $f, $s;
+  -khtml-transition-duration: $f, $s;
+  -moz-transition-duration: $f, $s;
+  -ms-transition-duration: $f, $s;
+  -o-transition-duration: $f, $s;
+  transition-duration: $f, $s;
+}
+
+@mixin transition-delay($f, $s) {
+  -webkit-transition-delay: $f, $s;
+  -khtml-transition-delay: $f, $s;
+  -moz-transition-delay: $f, $s;
+  -ms-transition-delay: $f, $s;
+  -o-transition-delay: $f, $s;
+  transition-delay: $f, $s;
 }
 
 body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figcaption, img, a, b, strong, span, blockquote, nav, article, header, footer, section, button, iframe {
@@ -147,7 +169,7 @@ body {
     @include border-radius(16px);
     border: 5px solid $white;
     &:hover {
-      background-color: #a0a0a5;
+      background-color: $lightgrey2;
     }
   }
 }
@@ -164,7 +186,7 @@ body {
     background-color: $grey;
     @include border-radius(4px);
     &:hover {
-      background-color: #a0a0a5;
+      background-color: $lightgrey2;
     }
   }
 }
@@ -377,68 +399,24 @@ a {
   }
 }
 
-.topUp, .topUp2, .nextRight, .nextRight2, .nextLeft {
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  -o-transition: -o-transform .25s ease;
-  -moz-transition: transform .25s ease, -moz-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease, -moz-transform .25s ease, -o-transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-  transition: transform .25s ease,-webkit-transform .25s ease;
+.topUp, .topUp2, .nextRight, .nextRight2, .nextLeft, .nextLeft2 {
+  @include transition(transform .25s ease);
 }
 
 .topUp {
   @include transform(translateY(-5px));
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  -o-transition: -o-transform .25s ease;
-  -moz-transition: transform .25s ease, -moz-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease, -moz-transform .25s ease, -o-transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-  -webkit-transition: transform .25s ease;
 }
 
 .topUp2, .nextRight2, .nextLeft2 {
   @include transform(translateY(0px));
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  -o-transition: -o-transform .25s ease;
-  -moz-transition: transform .25s ease, -moz-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease, -moz-transform .25s ease, -o-transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-  -webkit-transition: transform .25s ease;
 }
 
 .nextRight {
   @include transform(translateX(5px));
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  -o-transition: -o-transform .25s ease;
-  -moz-transition: transform .25s ease, -moz-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease, -moz-transform .25s ease, -o-transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-  -webkit-transition: transform .25s ease;
 }
 
 .nextLeft {
   @include transform(translateX(-5px));
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  -o-transition: -o-transform .25s ease;
-  -moz-transition: transform .25s ease, -moz-transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease, -moz-transform .25s ease, -o-transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
-  -webkit-transition: transform .25s ease;
 }
 
 .articleNoTopBorder {
@@ -685,16 +663,10 @@ footer {
 .c-hamburger--htx {
   background-color: transparent;
   span {
-    @include transition(background 0 .3s);
+    @include transition(background 0 .25s);
     &:before, &:after {
-      -webkit-transition-duration: 0.3s,.3s;
-      -o-transition-duration: 0.3s,.3s;
-      -moz-transition-duration: 0.3s,.3s;
-      transition-duration: 0.3s,.3s;
-      -webkit-transition-delay: 0.3s,0;
-      -o-transition-delay: 0.3s,0;
-      -moz-transition-delay: 0.3s,0;
-      transition-delay: 0.3s,0;
+      @include transition-duration(.25s, .25s);
+      @include transition-delay(0s, 0s);
     }
     &:before {
       -webkit-transition-property: top,-webkit-transform;
@@ -817,7 +789,7 @@ footer {
     background-color: $grey;
     @include border-radius(4px);
     &:hover {
-      background-color: #a0a0a5;
+      background-color: $lightgrey2;
     }
   }
 }

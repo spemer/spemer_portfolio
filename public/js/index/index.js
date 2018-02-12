@@ -788,7 +788,7 @@
 //
 // get <i> tag -> set 'aria-hidden' attr
 (function(){
-    let getIcons = document.querySelectorAll('.fa');
+    let getIcons = document.querySelectorAll('i.fa');
     getIcons.forEach(function(iconEach)
     {
         let getIconAttr = iconEach.getAttribute('aria-hidden');
