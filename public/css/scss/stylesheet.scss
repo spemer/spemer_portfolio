@@ -82,7 +82,6 @@ $line: #e5e5e5;
   -o-transition-duration: $f, $s;
   transition-duration: $f, $s;
 }
-
 @mixin transition-delay($f, $s) {
   -webkit-transition-delay: $f, $s;
   -khtml-transition-delay: $f, $s;
@@ -90,6 +89,27 @@ $line: #e5e5e5;
   -ms-transition-delay: $f, $s;
   -o-transition-delay: $f, $s;
   transition-delay: $f, $s;
+}
+@mixin transition-property($f, $s) {
+  -webkit-transition-property: $f, $s;
+  -khtml-transition-property: $f, $s;
+  -moz-transition-property: $f, $s;
+  -ms-transition-property: $f, $s;
+  -o-transition-property: $f, $s;
+  transition-property: $f, $s;
+}
+
+// set center
+@mixin setCenter($l, $r: $l) {
+  display: block;
+  left: $l;
+  right: $r;
+}
+
+// width height size
+@mixin setSize($width, $height: $width) {
+  width: $width;
+  height: $height;
 }
 
 body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figcaption, img, a, b, strong, span, blockquote, nav, article, header, footer, section, button, iframe {
@@ -218,9 +238,7 @@ img {
   }
 }
 
-.clearfix {
-  clear: both;
-}
+.clearfix {clear: both}
 
 .everyTxtEndArticle {
   max-width: 640px;
@@ -228,21 +246,10 @@ img {
   padding-bottom: 25px;
 }
 
-.everyTxtEnd {
-  padding: 25px 0 100px;
-}
-
-.everyTxtEnd2 {
-  padding: 50px 0 75px;
-}
-
-.everyTxtEnd3 {
-  padding: 10px 0 50px;
-}
-
-.everyTxtEndEnd {
-  padding: 50px 0 25px;
-}
+.everyTxtEnd {padding: 25px 0 100px}
+.everyTxtEnd2 {padding: 50px 0 75px}
+.everyTxtEnd3 {padding: 10px 0 50px}
+.everyTxtEndEnd {padding: 50px 0 25px}
 
 .everyTxtEnd h2, h3, .everyTxtEnd2 h2, h3, .everyTxtEnd3 h2, h3 {
   @include font-size(28px);
@@ -327,8 +334,7 @@ a {
 }
 
 .article {
-  width: 100%;
-  height: auto;
+  @include setSize(100%, auto);
   margin: 0 auto;
   padding: 2rem 0;
   display: inline-block;
@@ -357,8 +363,7 @@ a {
 }
 
 .profile {
-  width: 100%;
-  height: 100%;
+  @include setSize(100%);
   @include border-radius(6px);
 }
 
@@ -435,8 +440,7 @@ h4 {
 }
 
 .aboutIntroBox_100_bigbox {
-  width: 100%;
-  height: 80%;
+  @include setSize(100%, 80%);
   display: block;
 }
 
@@ -462,8 +466,7 @@ h4 {
 }
 
 .triBox {
-  width: 100%;
-  height: auto;
+  @include setSize(100%, auto);
 }
 
 .triBoxMain {
@@ -514,15 +517,13 @@ h4 {
 }
 
 .iframe iframe {
-  width: 100%;
-  height: 100%;
+  @include setSize(100%);
   min-height: 500px;
   padding: 20px 0 25px;
 }
 
 footer {
-  width: 100%;
-  height: auto;
+  @include setSize(100%, auto);
   vertical-align: middle;
   padding: 4rem 0 6rem;
   p {
@@ -581,8 +582,7 @@ footer {
 }
 
 #siteMap {
-  width: 100%;
-  height: auto;
+  @include setSize(100%, auto);
   text-align: center;
   padding: 50px 0 4rem;
   border-bottom: 2px solid $lightgrey;
@@ -608,8 +608,7 @@ footer {
 .c-hamburger {
   margin: 0;
   padding: 0;
-  width: 40px;
-  height: 40px;
+  @include setSize(40px);
   @include font-size(0px);
   border: none;
   display: block;
@@ -645,8 +644,7 @@ footer {
     &:before, &:after {
       left: 0;
       content: "";
-      width: 100%;
-      height: 2px;
+      @include setSize(100%, 2px);
       display: block;
       position: absolute;
       background-color: $grey;
@@ -669,24 +667,10 @@ footer {
       @include transition-delay(0s, 0s);
     }
     &:before {
-      -webkit-transition-property: top,-webkit-transform;
-      transition-property: top,-webkit-transform;
-      -o-transition-property: top,transform;
-      -o-transition-property: top,-o-transform;
-      -moz-transition-property: top,transform,-moz-transform;
-      transition-property: top,transform;
-      transition-property: top,transform,-webkit-transform,-moz-transform,-o-transform;
-      transition-property: top,transform,-webkit-transform;
+      @include transition-property(top, transform);
     }
     &:after {
-      -webkit-transition-property: bottom,-webkit-transform;
-      transition-property: bottom,-webkit-transform;
-      -o-transition-property: bottom,transform;
-      -o-transition-property: bottom,-o-transform;
-      -moz-transition-property: bottom,transform,-moz-transform;
-      transition-property: bottom,transform;
-      transition-property: bottom,transform,-webkit-transform,-moz-transform,-o-transform;
-      transition-property: bottom,transform,-webkit-transform;
+      @include transition-property(bottom, transform);
     }
   }
   &.is-active {
@@ -702,10 +686,7 @@ footer {
         @include transform(rotate(-45deg));
       }
       &:before, &:after {
-        -webkit-transition-delay: 0s,.3s;
-        -o-transition-delay: 0s,.3s;
-        -moz-transition-delay: 0s,.3s;
-        transition-delay: 0s,.3s;
+        @include transition-delay(0s, .25s);
       }
     }
   }
@@ -878,8 +859,7 @@ footer {
 }
 
 .colorBox {
-  height: 8px;
-  width: 32px;
+  @include setSize(32px, 8px);
   margin: -8px 0 12px;
   background-color: $grey;
 }
@@ -1057,8 +1037,7 @@ figcaption h3 {
 }
 
 .atechImg {
-  width: 100%;
-  height: 100%;
+  @include setSize(100%);
   margin: 0px;
   padding: 0px;
 }
@@ -1103,8 +1082,7 @@ figcaption h3 {
     }
   }
   .iframe iframe {
-    width: 100%;
-    height: 50%;
+    @include setSize(100%, 50%);
     max-height: 350px;
     min-height: 250px;
     padding: 25px 0;
@@ -1151,8 +1129,7 @@ figcaption h3 {
     @include border-radius(4px);
   }
   .profile {
-    width: 75%;
-    height: 75%;
+    @include setSize(75%);
   }
   .artImgBoxEach figcaption, .flatIconBoxEach figcaption {
     display: none;
@@ -1206,17 +1183,13 @@ figcaption h3 {
 
 @media screen and (max-width: 600px) {
   #headerNav nav {
-    left: 50%;
-    right: 50%;
-    display: block;
+    @include setCenter(50%);
     position: relative;
     margin: 0 auto !important;
     @include transform(translate(-50%, -50%));
   }
   #headerLogo {
-    left: 50%;
-    right: 50%;
-    display: block;
+    @include setCenter(50%);
     position: relative;
     margin: 0 auto !important;
     @include transform(translate(-50%, -50%));

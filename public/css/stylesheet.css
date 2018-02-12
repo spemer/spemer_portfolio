@@ -579,23 +579,19 @@ footer {
       -o-transition-delay: 0s, 0s;
       transition-delay: 0s, 0s; }
     .c-hamburger--htx span:before {
-      -webkit-transition-property: top,-webkit-transform;
-      transition-property: top,-webkit-transform;
-      -o-transition-property: top,transform;
-      -o-transition-property: top,-o-transform;
-      -moz-transition-property: top,transform,-moz-transform;
-      transition-property: top,transform;
-      transition-property: top,transform,-webkit-transform,-moz-transform,-o-transform;
-      transition-property: top,transform,-webkit-transform; }
+      -webkit-transition-property: top, transform;
+      -khtml-transition-property: top, transform;
+      -moz-transition-property: top, transform;
+      -ms-transition-property: top, transform;
+      -o-transition-property: top, transform;
+      transition-property: top, transform; }
     .c-hamburger--htx span:after {
-      -webkit-transition-property: bottom,-webkit-transform;
-      transition-property: bottom,-webkit-transform;
-      -o-transition-property: bottom,transform;
-      -o-transition-property: bottom,-o-transform;
-      -moz-transition-property: bottom,transform,-moz-transform;
-      transition-property: bottom,transform;
-      transition-property: bottom,transform,-webkit-transform,-moz-transform,-o-transform;
-      transition-property: bottom,transform,-webkit-transform; }
+      -webkit-transition-property: bottom, transform;
+      -khtml-transition-property: bottom, transform;
+      -moz-transition-property: bottom, transform;
+      -ms-transition-property: bottom, transform;
+      -o-transition-property: bottom, transform;
+      transition-property: bottom, transform; }
   .c-hamburger--htx.is-active {
     background-color: transparent; }
     .c-hamburger--htx.is-active span {
@@ -617,10 +613,12 @@ footer {
         -o-transform: rotate(-45deg);
         transform: rotate(-45deg); }
       .c-hamburger--htx.is-active span:before, .c-hamburger--htx.is-active span:after {
-        -webkit-transition-delay: 0s,.3s;
-        -o-transition-delay: 0s,.3s;
-        -moz-transition-delay: 0s,.3s;
-        transition-delay: 0s,.3s; }
+        -webkit-transition-delay: 0s, 0.25s;
+        -khtml-transition-delay: 0s, 0.25s;
+        -moz-transition-delay: 0s, 0.25s;
+        -ms-transition-delay: 0s, 0.25s;
+        -o-transition-delay: 0s, 0.25s;
+        transition-delay: 0s, 0.25s; }
 
 .articleImgSize {
   margin: 24px 0;
@@ -780,8 +778,8 @@ footer {
     content: "ㆍ"; }
 
 .colorBox {
-  height: 8px;
   width: 32px;
+  height: 8px;
   margin: -8px 0 12px;
   background-color: #babac0; }
 
@@ -1123,9 +1121,9 @@ figcaption h3 {
     margin-right: -8px; } }
 @media screen and (max-width: 600px) {
   #headerNav nav {
+    display: block;
     left: 50%;
     right: 50%;
-    display: block;
     position: relative;
     margin: 0 auto !important;
     -webkit-transform: translate(-50%, -50%);
@@ -1136,9 +1134,9 @@ figcaption h3 {
     transform: translate(-50%, -50%); }
 
   #headerLogo {
+    display: block;
     left: 50%;
     right: 50%;
-    display: block;
     position: relative;
     margin: 0 auto !important;
     -webkit-transform: translate(-50%, -50%);
