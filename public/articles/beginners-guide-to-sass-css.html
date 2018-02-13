@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96234376-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-96234376-1');
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+<title>Hyouk Seo(Spemer) - Beginner’s guide to Sass</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index,follow">
+
+<meta name="author" content="Hyouk Seo(Spemer)" />
+<meta name="description" content="Hyouk Seo(Spemer) - Beginner’s guide to Sass" />
+<meta name="abstract" content="Hyouk Seo(Spemer) - Beginner’s guide to Sass" />
+<meta name="keywords" content="design, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, article, website, seo, publisher, web publish, process, product designer, css, html, web, frontend, development, stylesheet, icon, gist, javascript, android, apple, ios, github, sass, webkit, website, browser, chrome, firefox, mozila, safari, edge, ie, prefix, scss" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hyouk Seo(Spemer)" />
+<meta property="og:url" content="https://spemer.com/articles/beginners-guide-to-sass-css.html" />
+<meta property="og:title" content="Hyouk Seo(Spemer) - Beginner’s guide to Sass" />
+<meta property="og:image" content="https://spemer.com/img/works/sass/thumb.png" />
+<meta property="og:description" content="Hyouk Seo(Spemer) - Beginner’s guide to Sass" />
+<meta property="article:author" content="Hyouk Seo(Spemer)">
+
+<meta itemprop="name" content="Hyouk Seo(Spemer)">
+<meta itemprop="description" content="Hyouk Seo(Spemer) - Beginner’s guide to Sass">
+<meta itemprop="image" content="https://spemer.com/img/works/sass/thumb.png">
+
+<link href="https://plus.google.com/114021748891431138237" rel="publisher">
+<link rel="canonical" href="https://www.spemer.com/articles/beginners-guide-to-sass-css.html">
+
+<link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+
+<body class="animated fadeInUp">
+<header>
+	<div>
+		<div id="headerLogo"></div>
+		<div id="headerNav">
+			<nav>
+				<ul></ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<article class="clearfix article animated fadeInUp">
+	<div class="triBox">
+		<div class="triBoxMain"><center>
+
+		<div class="everyTxtEnd everyTxtEndArticle">
+				
+			<h2>Beginner’s guide to Sass</h2>
+				<p>and why Sass?</p>
+
+			<br>
+			<figure class="articleImg articleFig articleImgSize">
+				<img src="../img/works/sass/sass.png" alt="Sass logo" title="Sass logo" />
+			</figure>
+			<br>
+
+				<p>
+					CSS is evolving steadily. One of the biggest milestone to prove it is ‘<a href="https://medium.com/spemer/using-variables-in-css-efdcb32d7127" title="Medium(new tab)" target="_blank"><b class="underline">variables</b></a>’ in CSS. But still, bothersome works to do are exist. Try to imagine you have to write some sets of different multiple styles in your stylesheet. Even if you created some special classes for specific styles, CSS still doesn’t offer the way to ‘<b>override</b>’ them. Moreover, what if you want to fix or replace some value in your stylesheet?
+                </p>
+                <br>
+                <p>
+                    With Sass, you can <b>override</b> style or value. Also, replacing just one value in one place can make change on entire stylesheet, which we can’t do with ‘variables’ in CSS.
+                </p>
+
+		<div class="hrline"></div>
+
+			<h3>Installation</h3>
+			<h4>Windows</h4>
+                <p>
+                    Before you start off, just make sure that you’ve installed Ruby on your computer. If you don’t have Ruby, and you’re using Windows, get <a href="https://rubyinstaller.org/" title="RubyInstaller(new tab)" target="_blank" class="externalLink"><b class="underline">RubyInstaller</b></a> before install Sass(Sass needs Ruby to be compiled).
+                </p>
+            <br>
+
+            <h4>Mac</h4>
+                <p>
+                    If you’re using Mac, you don’t need to install Ruby, because it comes <a href="https://stackoverflow.com/questions/3474875/why-does-mac-os-x-come-with-ruby-rails" title="Stackoverflow(new tab)" target="_blank"><b class="underline">pre-installed</b></a>.
+                </p>
+            <br>
+
+            <h4>Install Sass</h4>
+                <p>
+                    After you've installed Ruby on your computer, open your <b>Terminal</b>(Mac) or <b>cmd</b>(Windows) to install Sass with command line below.
+                </p>
+            <br>
+
+            <p><b>cmd</b>:</p>
+                <p class="code">
+                    gem install sass
+                </p>
+            <br>
+
+            <p><b>Terminal</b>:</p>
+                <p class="code">
+                    sudo gem install sass
+                </p>
+            <br>
+
+            <p><b>Double check</b>(will return current version of Sass):</p>
+                <p class="code">
+                    sass -v
+                </p>
+
+		<div class="hrline"></div>
+
+            <h3>Preprocessing</h3>
+            <h4>How to start with?</h4>
+				<p>
+                    Before we get started, we need 2 kinds of stylesheet for this tutorial — one is ‘<b>.css</b>’ and the other one is ‘<b>.scss</b>’. In this example, we’re going to name them as ‘<b>style.css</b>’ and ‘<b>style.scss</b>’. Each stylesheets are in folder named ‘<b>app</b>’. Write following command line in your Terminal or cmd.
+				</p>
+
+				<p class="code">
+                    sass --watch app/style.scss:app/style.css
+				</p>
+
+				<p>
+                    With <span class="codeInline">sass</span> command, we can <b>compile</b> Sass to CSS. With the command line above, <b>Input</b>(<span class="codeInline">app/style.scss</span>) will compiled to <b>output</b>(<span class="codeInline">app/style.css</span>). In this way, Sass will watch <span class="codeInline">app/style.scss</span> for the changes, and compile it automatically to <span class="codeInline">app/style.css</span>. Now we have everything to start off.
+				</p>
+
+        <div class="hrline"></div>
+        
+        <h3>Examples</h3>
+			<h4>Variables</h4>
+				<p>
+                    In Sass, we can store value in <b>variables</b>(<span class="codeInline">$</span>) and <b>reuse</b> it throughout your entire stylesheet. Following code snippet is some examples of <b>variables</b> in Sass.
+                </p>
+                
+            <script src="https://gist.github.com/spemer/06c31cb83394a23f06d2d36e79097588.js"></script>
+
+				<p>
+                    will be compiled like:
+				</p>
+
+            <script src="https://gist.github.com/spemer/bf345d3c1eb10467991c3b4e85c2b492.js"></script>
+
+        <div class="hrline"></div>
+        
+			<h4>Mixins</h4>
+				<p>
+                    <b>Mixin</b> is one of my favorites in Sass. Bothersome works like making vendor prefixes for each styles in need are quite tedious. With <span class="codeInline">@mixin</span>, we can make it easier and do it faster without writing each vendor prefixes one by one. I’ll show you how I used it with <span class="codeInline">opacity</span>.
+                </p>
+                
+            <script src="https://gist.github.com/spemer/1bb0753a04528e231537cac83bacb358.js"></script>
+
+                <p>
+                    Like the code snippet above, we can pass values with <span class="codeInline">$</span> to make it more <b>flexible</b>.
+                </p>
+                <br>
+				<p>
+                    will be compiled like:
+				</p>
+
+            <script src="https://gist.github.com/spemer/6eb28ec3939ae06c2dc7470daf489931.js"></script>
+
+		<div class="hrline"></div>
+        
+            <h4>Functions</h4>
+                <p>
+                    We can use <span class="codeInline">@function</span> in Sass. I used function to convert <span class="codeInline">px</span> to <span class="codeInline">rem</span>(or rem to px) on example below. When we’re using <span class="codeInline">rem</span>, we must prepare fallback option for it because <span class="codeInline">rem</span> is <a href="https://caniuse.com/#feat=rem" title="caniuse.com(new tab)" target="_blank" class="externalLink"><b class="underline">not supported in older IE browsers</b></a>. So I wrote code for both px and rem. When browser can execute rem units, it’ll use rem units, and if not, it will use px units as a fallback option. Moreover, We can use operators like <span class="codeInline">+</span>, <span class="codeInline">-</span>, <span class="codeInline">*</span>, <span class="codeInline">/</span> and <span class="codeInline">%</span> in Sass like below.
+                </p>
+                
+            <script src="https://gist.github.com/spemer/af84814bd838f7348367adb48ee96d1f.js"></script>
+            
+                <p>
+                    will be compiled like:
+                </p>
+
+            <script src="https://gist.github.com/spemer/0aeed39c21f96a398c43281cb13572ff.js"></script>
+
+        <div class="hrline"></div>
+        
+            <h4>Nesting</h4>
+                <p>
+                    With Sass, we can write CSS nested like HTML. In this way, we can make our CSS code to have more <b>clear visual hierarchy</b>. It’s more readable, organized and clear.
+                </p>
+                
+            <script src="https://gist.github.com/spemer/d486abd700eaad7c9a4ba4e49fa3644d.js"></script>
+            
+                <p>
+                    will be compiled like:
+                </p>
+
+            <script src="https://gist.github.com/spemer/7111f67e7f638e2855125ecc04b3f13b.js"></script>
+
+        <div class="hrline"></div>
+
+			<h3>Takeaway</h3>
+				<p>
+					I hope you enjoyed my short tutorial about <b>Sass</b>. Sass can make our CSS code easy to maintenance, more readable and reduce tedious works. You can check my <a href="https://github.com/spemer/spemer_portfolio" title="GitHub(new tab)" target="_blank"><b class="underline">GitHub repository</b></a> if you want to see how I used Gulp for my design portfolio website. If you want to contact me, visit my <a href="https://www.linkedin.com/in/hyouk-seo-0b6801122/" title="LinkedIn(new tab)" target="_blank"><b class="underline externalLink">LinkedIn</b></a> or just send me an Email to <span class="underline">ghsspower@gmail.com</span>. Thanks!
+				</p>
+
+			</div></center>
+
+		<div class="everyTxtEndEnd">
+			<p>
+				Hyouk Seo(Spemer) - Beginner’s guide to Sass<br>
+				<strong><a href="https://medium.com/@Spemer/beginners-guide-to-sass-9a3b1fc67fbf" target="_blank" title="Medium(new tab)">Click here to read this article on Medium <i class="fa fa-medium"></i></a></strong><br><br>
+
+				<strong>Title :</strong> <a href="https://medium.com/@Spemer/beginners-guide-to-sass-9a3b1fc67fbf" target="_blank" title="Medium(new tab)">Beginner’s guide to Sass</a><br>
+
+				<strong>Date :</strong> February 13, 2018<br>
+
+				<strong>Writer :</strong> Hyouk Seo (Spemer)<br><br><br>
+			</p>
+		</div>
+		</div>
+
+		<nav>
+			<div id="prevNext" class="articles"></div>
+		</nav>
+	</div>
+</article>
+
+<div id="siteMap">
+	<p class="siteMapBtn" title="Site Map">
+		<button class="c-hamburger c-hamburger--htx">
+			<span></span>
+		</button>
+	</p>
+	<nav>
+		<ul class="siteMapNav"></ul>
+	</nav>
+</div>
+
+<footer class="clearfix">
+	<div>
+		<p id="codeBySpemer"></p>
+		<nav>
+			<div id="snsIcon"></div>
+		</nav>
+	</div>
+</footer>
+
+<script src="../js/dist/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.gallery.min.js"></script>
+<script src="../js/dist/after.jquery.js"></script>
+</body>
+</html>

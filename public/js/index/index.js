@@ -283,6 +283,12 @@
     ];
     let siteMapListArticle = [
         {
+            name:  'Sass',
+            href:  'articles/beginners-guide-to-sass-css',
+            title: 'Beginner’s guide to Sass',
+            img: 'sass/thumb.png'
+        },
+        {
             name:  'Gulp',
             href:  'articles/auto-css-vendor-browser-prefix-javascript-gulp',
             title: 'Auto CSS prefix with Gulp',
