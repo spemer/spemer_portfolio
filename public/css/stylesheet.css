@@ -537,10 +537,10 @@ footer {
     outline: none; }
   .c-hamburger span {
     top: 25px;
+    display: block;
     left: 5px;
     right: 5px;
     height: 2px;
-    display: block;
     position: absolute;
     background-color: #babac0; }
     .c-hamburger span:before, .c-hamburger span:after {

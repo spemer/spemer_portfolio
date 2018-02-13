@@ -635,10 +635,8 @@ footer {
   }
   span {
     top: 25px;
-    left: 5px;
-    right: 5px;
+    @include setCenter(5px);
     height: 2px;
-    display: block;
     position: absolute;
     background-color: $grey;
     &:before, &:after {
