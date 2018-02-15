@@ -16,8 +16,7 @@
         "cookie-parser": "1.4.3",
         "express": "4.16.2",
         "express-session": "1.15.6",
-        "firebase": "^4.9.0",
-        "url-metadata": "^2.1.7"
+        "firebase": "^4.9.0"
     },
     "devDependencies": {
         "ejs": "2.5.7",

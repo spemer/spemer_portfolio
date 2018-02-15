@@ -1,9 +1,10 @@
 "use strict";
 const gulp = require('gulp');
-
 const minifyjs = require('gulp-js-minify');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const urlMetadata = require("url-metadata");
+
 
 // js minify
 const paths = {
@@ -19,6 +20,7 @@ gulp.task('js', function(){
 });
 gulp.task('jsmin', ['js']);
 
+
 // css prefix
 gulp.task('prefix', () =>
     gulp.src('public/css/*.css')
@@ -29,9 +31,16 @@ gulp.task('prefix', () =>
     .pipe(gulp.dest('public/css'))
 );
 
+
 // mini css
 gulp.task('mincss', () => {
     return gulp.src('public/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie6'}))
         .pipe(gulp.dest('public/css/dist'));
+});
+
+
+urlMetadata('https://spemer.com/').then(
+    function (metadata) { 
+        console.log(metadata.author);
 });
