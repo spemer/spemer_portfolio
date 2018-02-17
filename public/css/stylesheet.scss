@@ -753,7 +753,6 @@ footer {
   padding: 12px 24px 8px;
   background-color: #f4f4f4;
   margin: 32px 0;
-  overflow: scroll;
   color: #66799f !important;
   @include border-radius(4px);
   &::-webkit-scrollbar {
@@ -1261,8 +1260,4 @@ figcaption h3 {
   .prototype {
     display: none;
   }
-}
-
-.metaBase {
-  width: 100%;
 }

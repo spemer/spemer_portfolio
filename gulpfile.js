@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const minifyjs = require('gulp-js-minify');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const urlMetadata = require("url-metadata");
 
 
 // js minify
@@ -37,10 +36,4 @@ gulp.task('mincss', () => {
     return gulp.src('public/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie6'}))
         .pipe(gulp.dest('public/css/dist'));
-});
-
-
-urlMetadata('https://spemer.com/').then(
-    function (metadata) { 
-        console.log(metadata.author);
 });
