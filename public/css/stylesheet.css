@@ -100,20 +100,31 @@ body::-webkit-scrollbar-thumb {
   .blob-wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5; }
 
-img::-moz-selection, img::selection, img::-moz-selection {
+img::selection {
   visibility: hidden;
   background: transparent; }
 
-::-moz-selection, ::selection, ::-moz-selection {
-  color: #ffffff;
+img::-moz-selection {
+  visibility: hidden;
+  background: transparent; }
+
+::selection {
+  color: #fff;
   background: #babac0; }
 
-.hrline span::-moz-selection, .hrline span::selection, .hrline span::-moz-selection {
+::-moz-selection {
+  color: #fff;
+  background: #babac0; }
+
+.hrline span::selection {
   color: #babac0;
-  background: #ffffff; }
-.hrline span:hover {
-  cursor: default; }
-.hrline:hover {
+  background: #fff; }
+
+.hrline span::-moz-selection {
+  color: #babac0;
+  background: #fff; }
+
+.hrline span:hover, .hrline:hover {
   cursor: default; }
 
 .clearfix {

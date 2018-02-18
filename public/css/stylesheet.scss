@@ -211,32 +211,13 @@ body {
   }
 }
 
-img {
-  &::-moz-selection, &::selection, &::-moz-selection {
-    visibility: hidden;
-    background: transparent;
-  }
-}
-
-::-moz-selection, ::selection, ::-moz-selection {
-  color: $white;
-  background: $grey;
-}
-
-.hrline {
-  span {
-    &::-moz-selection, &::selection, &::-moz-selection {
-      color: $grey;
-      background: $white;
-    }
-    &:hover {
-      cursor: default;
-    }
-  }
-  &:hover {
-    cursor: default;
-  }
-}
+img::selection{visibility:hidden;background:transparent}
+img::-moz-selection{visibility:hidden;background:transparent}
+::selection{color:#fff;background:#babac0}
+::-moz-selection{color:#fff;background:#babac0}
+.hrline span::selection{color:#babac0;background:#fff}
+.hrline span::-moz-selection{color:#babac0;background:#fff}
+.hrline span:hover,.hrline:hover{cursor:default}
 
 .clearfix {clear: both}
 
