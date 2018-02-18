@@ -817,8 +817,3 @@
         images.setAttribute('data-src', getImgSrc);
     });
 })();
-
-// (function(){
-//     let getScrollbar = document.querySelector('scrollbar');
-//     console.log(getScrollbar.width);
-// })();
