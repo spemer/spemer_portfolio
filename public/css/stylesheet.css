@@ -9,6 +9,9 @@ body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figc
   font-size: 100%;
   text-decoration: none; }
 
+html {
+  width: 100vw; }
+
 .siteMapNav li {
   margin: 36px 0 0 !important; }
 
@@ -69,18 +72,18 @@ figcaption {
 
 body::-webkit-scrollbar {
   background-color: #ffffff;
-  width: 16px; }
+  width: 10px; }
 body::-webkit-scrollbar-track {
   background-color: #ffffff; }
 body::-webkit-scrollbar-thumb {
   background-color: #babac0;
-  -webkit-border-radius: 16px;
-  -khtml-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
-  border-radius: 16px;
-  border: 5px solid #ffffff; }
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #ffffff; }
   body::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5; }
 
