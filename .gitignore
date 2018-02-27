@@ -41,6 +41,3 @@ Thumbs.db
 .vscode/
 .sass-cache/
 node_modules/
-backup/
-resource/
-server/
