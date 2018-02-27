@@ -38,4 +38,4 @@ Thumbs.db
 
 .vscode/
 .sass-cache/
-nosde_modules/
+node_modules/
