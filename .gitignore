@@ -43,3 +43,4 @@ Thumbs.db
 node_modules/
 backup/
 resource/
+server/
