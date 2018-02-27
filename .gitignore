@@ -36,6 +36,10 @@
 ehthumbs.db
 Thumbs.db
 
+# CUSTOM #
+##########
 .vscode/
 .sass-cache/
 node_modules/
+backup/
+resource/
