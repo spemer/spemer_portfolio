@@ -67,6 +67,14 @@ function() {
     }
 }();
 
+// beusable.js
+(function(){
+    let getBody = document.querySelector('body');
+    let setScript = document.createElement('script');
+    setScript.setAttribute('src', 'https://spemer.com/js/dist/beusable.js');
+    getBody.appendChild(setScript);
+})();
+
 //
 // other funcs
 function topUp() {
