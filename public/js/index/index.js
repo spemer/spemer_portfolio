@@ -17,6 +17,7 @@
         { href: 'https://spemer.com/css/dist/featherlight.gallery.css', as: 'style' },
         { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
         { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
+        { href: 'https://spemer.com/js/dist/beusable.js', as: 'script' },
     ];
     let headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
