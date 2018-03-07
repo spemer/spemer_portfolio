@@ -833,6 +833,7 @@
     
 //     for (let i = 0; i < cdnUrl.length; i++){
 //         let setScript = document.createElement('script');
+//         setScript.setAttribute('async', '');
 //         setScript.setAttribute('src', cdnUrl[i]);
 //         getBody.appendChild(setScript);
 //     }
