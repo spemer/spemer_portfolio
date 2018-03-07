@@ -14,7 +14,7 @@
 
     let getBody = document.querySelector('body');
     let setBeusably = document.createElement('script');
-    setBeusably.setAttribute('async', '');
+    setBeusably.setAttribute('defer', '');
     setBeusably.setAttribute('type', 'text/javascript');
 
     snippets.forEach(function(list){
