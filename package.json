@@ -5,7 +5,7 @@
     "main": "server.js",
     "author": "Hyouk Seo",
     "private": false,
-    "license": "UNLICENSED",
+    "license": "wtfpl",
     "repository": {
         "type": "Spemer",
         "url": "https://github.com/spemer/spemer_portfolio"
