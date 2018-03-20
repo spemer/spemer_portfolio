@@ -23,7 +23,14 @@ gulp.task('callback-js', function () {
     });
 });
 
-gulp.task('watch', ['stream-css', 'callback-js'])
+// mini css
+gulp.task('mincss', () => {
+    return gulp.src('public/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie6'}))
+        .pipe(gulp.dest('public/css/dist'));
+});
+
+gulp.task('watch', ['stream-css', 'callback-js', 'mincss'])
 
 
 
@@ -50,11 +57,3 @@ gulp.task('prefix', () =>
     }))
     .pipe(gulp.dest('public/css/dist'))
 );
-
-
-// mini css
-gulp.task('mincss', () => {
-    return gulp.src('public/css/*.css')
-        .pipe(cleanCSS({compatibility: 'ie6'}))
-        .pipe(gulp.dest('public/css/dist'));
-});
