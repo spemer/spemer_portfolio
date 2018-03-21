@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 //
 // set <html> prefix + manifest
 (function(){
@@ -347,8 +347,8 @@
 
     //
     // home next prev(bottom)
-    const portfolioLinks = document.querySelector('.portfolio');
-    const articleLinks = document.querySelector('.articles');
+    let portfolioLinks = document.querySelector('.portfolio');
+    let articleLinks = document.querySelector('.articles');
 
     let nextLink;
     let nextBold;
@@ -482,7 +482,7 @@
     
     //
     // bottom siteMap navigation
-    const siteMapNav = document.querySelector('.siteMapNav');
+    let siteMapNav = document.querySelector('.siteMapNav');
     function bottomSiteNav(arrayName)
     {
         arrayName.forEach(function(arrLen)
@@ -511,8 +511,8 @@
 
     //
     // set main lists
-    const indexLists = document.querySelector('#indexList');
-    const articleLists = document.querySelector('#articleList');
+    let indexLists = document.querySelector('#indexList');
+    let articleLists = document.querySelector('#articleList');
     // index.html
     if (indexLists) {
         setMainImgList(indexLists,siteMapList);
@@ -614,14 +614,14 @@
 //
 // body gets idname body
 (function(){
-    const getBody = document.querySelector('body');
+    let getBody = document.querySelector('body');
     getBody.id = "body";
 })();
 
 //
 // TopBtn
 (function(){
-    const prevNextHome = document.querySelector('#prevNext');
+    let prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome)
     {
         let topBtnNode = document.createElement("a");
