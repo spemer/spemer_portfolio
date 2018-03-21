@@ -772,7 +772,7 @@ footer {
   border: 2px solid #e5e5e5; }
 
 .copy {
-  cursor: url(../img/specialCopyCursor-2lv34.cur), pointer; }
+  cursor: url(../../img/specialCopyCursor-2lv34.cur), pointer; }
 
 .tooltip {
   visibility: visible;
