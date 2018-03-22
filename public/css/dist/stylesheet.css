@@ -952,7 +952,7 @@ figcaption h3 {
   margin: 0px;
   padding: 0px; }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .everyTxtEndArticle {
     max-width: 560px; }
 
@@ -999,7 +999,7 @@ figcaption h3 {
 
   #topBtnFixed {
     display: none; } }
-@media screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
   #headerLogo h1 {
     font-size: 36px;
     font-size: 2.25rem;
@@ -1023,7 +1023,7 @@ figcaption h3 {
 @media screen and (max-width: 224px) {
   .flatIconBox div {
     width: 100%; } }
-@media screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) {
   .artImgBoxEach img, .flatIconBoxEach img {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -1073,7 +1073,7 @@ figcaption h3 {
 @media screen and (min-width: 701px) {
   #snsIcon {
     margin-right: -8px; } }
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   #headerNav nav {
     display: block;
     left: 50%;
@@ -1148,7 +1148,7 @@ figcaption h3 {
 
   .articleImg35-small img {
     width: 45%; } }
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .quote {
     margin: 32px;
     font-size: 22px;

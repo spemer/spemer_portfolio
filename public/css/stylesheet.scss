@@ -12,6 +12,12 @@ $lightgrey: #e7e9ee;
 $lightgrey2: #a0a0a5;
 $line: #e5e5e5;
 
+// media query breakpoints
+$tablet: "only screen and (max-width : 768px)";
+$landsc: "only screen and (max-width : 600px)";
+$middle: "only screen and (max-width : 520px)";
+$mobile: "only screen and (max-width : 420px)";
+
 // mixin font-stack
 @mixin font-stack-code() {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -1024,7 +1030,7 @@ figcaption h3 {
   padding: 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media #{$tablet} {
   .everyTxtEndArticle {
     max-width: 560px;
   }
@@ -1075,7 +1081,7 @@ figcaption h3 {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media #{$mobile} {
   #headerLogo h1 {
     @include font-size(36px);
     margin: 15px 0 -15px;
@@ -1104,7 +1110,7 @@ figcaption h3 {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media #{$mobile} {
   .artImgBoxEach img, .flatIconBoxEach img {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -1163,7 +1169,7 @@ figcaption h3 {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media #{$landsc} {
   #headerNav nav {
     @include setCenter(50%);
     position: relative;
@@ -1236,7 +1242,7 @@ figcaption h3 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media #{$tablet} {
   .quote {
     margin: 32px;
     @include font-size(22px);
