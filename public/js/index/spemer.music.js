@@ -1,9 +1,9 @@
 (function(){
-    let getMusicHtml = document.querySelector('.musicHtml');
+    var getMusicHtml = document.querySelector('.musicHtml');
     if(getMusicHtml)
     {
         (function(){
-            let urlLinkList = [
+            var urlLinkList = [
                 {
                     scLink: '303715697',
                     href: 'Spemer%20-%20Autumn.mp3?alt=media&token=ec06227a-7411-429b-89ed-6c3773b1b3b7',
@@ -59,22 +59,22 @@
             ];
 
             // set <center>
-            let getParentDiv = document.querySelector('.musicHtml');
-            let setCenter = document.createElement('center');
+            var getParentDiv = document.querySelector('.musicHtml');
+            var setCenter = document.createElement('center');
             getParentDiv.appendChild(setCenter);
 
-            for (let i = 0; i < urlLinkList.length; i++)
+            for (var i = 0; i < urlLinkList.length; i++)
             {
                 // set '.musicEachBox' divs
-                let setMusicEachBoxes = document.createElement('div');
+                var setMusicEachBoxes = document.createElement('div');
                 setMusicEachBoxes.className = 'musicEachBox';
                 setCenter.appendChild(setMusicEachBoxes);
 
-                let getMusicEachBoxes = document.querySelectorAll('.musicEachBox');
+                var getMusicEachBoxes = document.querySelectorAll('.musicEachBox');
 
                 // set <iframe> tags for SoundCloud
                 (function(){
-                    let setIframe = document.createElement('iframe');
+                    var setIframe = document.createElement('iframe');
                     setIframe.width = '100%';
                     setIframe.height = 160;
                     setIframe.scrolling = 'no';
@@ -88,25 +88,25 @@
 
                 // set title text in <p> tag
                 (function(){
-                    let setTitleP = document.createElement('p');
-                    let setTitlePText = document.createTextNode(urlLinkList[i].download);
+                    var setTitleP = document.createElement('p');
+                    var setTitlePText = document.createTextNode(urlLinkList[i].download);
                     getMusicEachBoxes[i].appendChild(setTitleP);
                     setTitleP.appendChild(setTitlePText);
                 })();
                 
                 // set 'buy' links and <span> tags
                 (function(){
-                    let setAMLink = document.createElement('a');
-                    let setSepSpan = document.createElement('span');
-                    let setSepText = document.createTextNode('||');
+                    var setAMLink = document.createElement('a');
+                    var setSepSpan = document.createElement('span');
+                    var setSepText = document.createTextNode('||');
 
                     if (urlLinkList[i].itunes || urlLinkList[i].melon)
                     {
                         if (urlLinkList[i].itunes)
                         {
-                            let setItunesIcon = document.createElement('i');
+                            var setItunesIcon = document.createElement('i');
                             setItunesIcon.className = 'fa fa-apple';
-                            let setItunesText = document.createTextNode('Buy on iTunes ');
+                            var setItunesText = document.createTextNode('Buy on iTunes ');
                             setAMLink.href = 'https://itunes.apple.com/us/album/'
                              + urlLinkList[i].itunes;
                             setAMLink.target = '_blank';
@@ -118,7 +118,7 @@
                         }
                         else if (urlLinkList[i].melon)
                         {
-                            let setMelonText = document.createTextNode('Buy on Melon');
+                            var setMelonText = document.createTextNode('Buy on Melon');
                             setAMLink.href = 'http://www.melon.com/album/detail.htm?albumId='
                              + urlLinkList[i].melon;
                             setAMLink.target = '_blank';
@@ -134,9 +134,9 @@
                 
                 // set download links and icons
                 (function(){
-                    let setDlLink = document.createElement('a');
-                    let setDlLinkText = document.createTextNode('Click here to download mp3(free) ');
-                    let setDlLinkIcon = document.createElement('i');
+                    var setDlLink = document.createElement('a');
+                    var setDlLinkText = document.createTextNode('Click here to download mp3(free) ');
+                    var setDlLinkIcon = document.createElement('i');
                     setDlLinkIcon.className = 'fa fa-download';
 
                     getMusicEachBoxes.forEach(function()

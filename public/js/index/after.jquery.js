@@ -1,7 +1,7 @@
 //
 // lazyloader
 (function(){
-    let getEveryImg = document.querySelectorAll('img');
+    var getEveryImg = document.querySelectorAll('img');
     if (getEveryImg.length > 0)
     {
         $(function(){
@@ -14,7 +14,7 @@
 //
 // feather
 (function(){
-    let getFeatherClass = document.querySelectorAll('.feather');
+    var getFeatherClass = document.querySelectorAll('.feather');
     if (getFeatherClass.length > 0)
     {
         $("a.feather").featherlightGallery({
@@ -33,17 +33,17 @@
 //
 // clipboard
 (function(){
-    let getClipboard = document.querySelectorAll('a #foo');
+    var getClipboard = document.querySelectorAll('a #foo');
     if (getClipboard.length > 0)
     {
-        let clipboard = new Clipboard('.btn');
+        var clipboard = new Clipboard('.btn');
     }
 })();
 
 //
 // smooth anchor scroll
 (function(){
-    let scroll = new SmoothScroll('a[href*="#"]', {
+    var scroll = new SmoothScroll('a[href*="#"]', {
         speed: 1000,
         offset: 0,
         easing: 'easeInOutCubic'
@@ -61,16 +61,16 @@ function() {
             a.preventDefault(), this.classList.contains("is-active") === !0 ? this.classList.remove("is-active") : this.classList.add("is-active")
         })
     }
-    for (let a = document.querySelectorAll(".c-hamburger"), b = a.length - 1; b >= 0; b--) {
-        let c = a[b];
+    for (var a = document.querySelectorAll(".c-hamburger"), b = a.length - 1; b >= 0; b--) {
+        var c = a[b];
         d(c)
     }
 }();
 
 // beusable.js
 (function(){
-    let getBody = document.querySelector('body');
-    let setScript = document.createElement('script');
+    var getBody = document.querySelector('body');
+    var setScript = document.createElement('script');
     setScript.setAttribute('defer', '');
     setScript.setAttribute('src', 'https://spemer.com/js/dist/beusable.js');
     getBody.appendChild(setScript);

@@ -2,7 +2,7 @@
 //
 // set <html> prefix + manifest
 (function(){
-    let getHtml = document.querySelector('html');
+    var getHtml = document.querySelector('html');
     getHtml.setAttribute('prefix', 'og: http://ogp.me/ns#');
     getHtml.setAttribute('lang', 'en');
 })();
@@ -10,7 +10,7 @@
 //
 // preload
 (function(){
-    let preloadLists = [
+    var preloadLists = [
         { href: 'https://spemer.com/js/dist/index.js', as: 'script' },
         { href: 'https://spemer.com/css/dist/stylesheet.css', as: 'style' },
         { href: 'https://spemer.com/css/dist/featherlight.css', as: 'style' },
@@ -19,9 +19,9 @@
         { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
         { href: 'https://spemer.com/js/dist/beusable.js', as: 'script' },
     ];
-    let headTitle = document.querySelector('head');
+    var headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
-        let setLinkProp = document.createElement('link');
+        var setLinkProp = document.createElement('link');
         setLinkProp.setAttribute('rel', 'preload');
         setLinkProp.setAttribute('href', preloadList.href);
         setLinkProp.setAttribute('as', preloadList.as);
@@ -38,8 +38,8 @@
 //
 // preload spinner.svg
 (function(){
-    let getHead = document.querySelector('head');
-    let setLink = document.createElement('link');
+    var getHead = document.querySelector('head');
+    var setLink = document.createElement('link');
     setLink.setAttribute('rel','prefetch');
     setLink.setAttribute('href','https://spemer.com/img/spinner.gif');
     getHead.appendChild(setLink);
@@ -48,10 +48,10 @@
 //
 // meta Tags **meta [property, content]**
 (function(){
-    let thisUrl = window.location.href;
-    let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
-    let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
-    let propLists = [
+    var thisUrl = window.location.href;
+    var thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
+    var thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
+    var propLists = [
         { property: 'og:img:alt', content: thisOGImg },
         { property: 'og:img:url', content: thisOGImg },
         { property: 'og:img:secure_url', content: thisOGImg },
@@ -59,9 +59,9 @@
         { property: 'article:tag', content: thisKeys },
         { property: 'al:web:url', content: thisUrl }
     ];
-    let headTitle = document.querySelector('head');
+    var headTitle = document.querySelector('head');
     propLists.forEach(function(propList){
-        let setMetaProp = document.createElement('meta');
+        var setMetaProp = document.createElement('meta');
         setMetaProp.setAttribute('property', propList.property);
         setMetaProp.setAttribute('content', propList.content);
         headTitle.appendChild(setMetaProp);
@@ -71,12 +71,12 @@
 //
 // meta Tags **meta [name, content]**
 (function(){
-    let thisUrl = window.location.href;
-    let thisTitle = document.title;
-    let thisDesc = document.querySelector("meta[name='description']").getAttribute("content");
-    let thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
-    let thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
-    let metaLists = [
+    var thisUrl = window.location.href;
+    var thisTitle = document.title;
+    var thisDesc = document.querySelector("meta[name='description']").getAttribute("content");
+    var thisKeys = document.querySelector("meta[name='keywords']").getAttribute("content");
+    var thisOGImg = document.querySelector("meta[property='og:image']").getAttribute("content");
+    var metaLists = [
         { name: 'theme-color', content: '#ffffff' },
         { name: 'subject', content: 'Design' },
         { name: 'copyright', content: 'Hyouk Seo(Spemer)' },
@@ -130,15 +130,15 @@
         { name: 'DC.keywords', content: thisKeys },
         { name: 'news_keywords', content: thisKeys }
     ];
-    let headTitle = document.querySelector('head');
+    var headTitle = document.querySelector('head');
     metaLists.forEach(function(metaList)
     {
-        let setMeta = document.createElement('meta');
+        var setMeta = document.createElement('meta');
         setMeta.setAttribute('name', metaList.name);
         setMeta.setAttribute('content', metaList.content);
         headTitle.appendChild(setMeta);
     });
-    let setMeta = document.createElement('meta');
+    var setMeta = document.createElement('meta');
     setMeta.setAttribute('property', 'og:img:alt');
     setMeta.setAttribute('content', thisTitle);
     headTitle.appendChild(setMeta);
@@ -147,9 +147,9 @@
 //
 // favicon & shortcut icons
 (function(){
-    let headTitle = document.querySelector('head');
+    var headTitle = document.querySelector('head');
     // basic icons
-    let etcIcons = [
+    var etcIcons = [
         { rel: 'home', href: '' },
         { rel: 'pingback', href: '' },
         { rel: 'standout', href: '' },
@@ -160,14 +160,14 @@
     ];
     etcIcons.forEach(function(etcIcon)
     {
-        let setFavicon = document.createElement('link');
+        var setFavicon = document.createElement('link');
         setFavicon.setAttribute('rel', etcIcon.rel);
         setFavicon.setAttribute('href', 'https://spemer.com/' + etcIcon.href);
         headTitle.appendChild(setFavicon);
     });
 
     // apple icons
-    let faviconLists = [
+    var faviconLists = [
         { sizes: '180x180', href: 'apple-touch-icon.png' },
         { sizes: '152x152', href: 'touch-icon-ipad.png' },
         { sizes: '180x180', href: 'touch-icon-iphone-retina.png' },
@@ -184,7 +184,7 @@
     ];
     faviconLists.forEach(function(faviconList)
     {
-        let setFvIcon = document.createElement('link');
+        var setFvIcon = document.createElement('link');
         setFvIcon.setAttribute('rel', 'apple-touch-icon');
         setFvIcon.setAttribute('sizes', faviconList.sizes);
         setFvIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + faviconList.href);
@@ -192,7 +192,7 @@
     });
 
     // web shorcut icons
-    let iconLists = [
+    var iconLists = [
         { sizes: '32x32', href: 'favicon-32x32.png' },
         { sizes: '194x194', href: 'favicon-194x194.png' },
         { sizes: '192x192', href: 'android-chrome-192x192.png' },
@@ -200,7 +200,7 @@
     ];
     iconLists.forEach(function(iconList)
     {
-        let setScIcon = document.createElement('link');
+        var setScIcon = document.createElement('link');
         setScIcon.setAttribute('rel', 'icon');
         setScIcon.setAttribute('type', 'image/png');
         setScIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + iconList.href);
@@ -212,11 +212,11 @@
 //
 // '#headerLogo'
 (function(){
-    let _headerLogo = document.querySelector('#headerLogo');
-    let headerLink = document.createElement('a');
+    var _headerLogo = document.querySelector('#headerLogo');
+    var headerLink = document.createElement('a');
     headerLink.href = 'https://spemer.com/';
-    let headerHeading = document.createElement('h1');
-    let headerText = document.createTextNode('Hyouk Seo');
+    var headerHeading = document.createElement('h1');
+    var headerText = document.createTextNode('Hyouk Seo');
     
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
@@ -226,7 +226,7 @@
 //
 // siteMap links
 (function(){
-    let siteMapList = [
+    var siteMapList = [
         {
             name:  'Insharior',
             href:  'portfolio/insharior-ux-case-study-user-experience-design',
@@ -282,7 +282,7 @@
             img: 'flaticon/house.jpg'
         }
     ];
-    let siteMapListArticle = [
+    var siteMapListArticle = [
         {
             name:  'Sass',
             href:  'articles/beginners-guide-to-sass-css',
@@ -347,15 +347,15 @@
 
     //
     // home next prev(bottom)
-    let portfolioLinks = document.querySelector('.portfolio');
-    let articleLinks = document.querySelector('.articles');
+    var portfolioLinks = document.querySelector('.portfolio');
+    var articleLinks = document.querySelector('.articles');
 
-    let nextLink;
-    let nextBold;
-    let nextText;
-    let nextIcon;
-    let thisUrl = window.location.href;
-    let headForMeta = document.querySelector('head');
+    var nextLink;
+    var nextBold;
+    var nextText;
+    var nextIcon;
+    var thisUrl = window.location.href;
+    var headForMeta = document.querySelector('head');
     // home next prev(bottom) -> NEXT
     function setNextBtn(arrayName, divClassName, listLength)
     {
@@ -363,15 +363,15 @@
         if (thisUrl.indexOf(arrayName[listLength].href) != -1)
         {
             // meta next
-            let metaNextAttr = document.createElement('link');
+            var metaNextAttr = document.createElement('link');
             metaNextAttr.setAttribute('rel', 'next');
             metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapListArticle[0].href + ".html");
             headForMeta.appendChild(metaNextAttr);
         }
 
-        for (let i = 0; i < arrayName.length; i++)
+        for (var i = 0; i < arrayName.length; i++)
         {
-            let substring = arrayName[i].href;
+            var substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[listLength].href) != -1)
             {
                 nextLink = document.createElement('a');
@@ -396,7 +396,7 @@
                 nextIcon.className = 'fa fa-angle-double-right';
 
                 // meta next
-                let metaNextAttr = document.createElement('link');
+                var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'next');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i + 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
@@ -418,15 +418,15 @@
         if (thisUrl.indexOf(arrayName[0].href) != -1)
         {
             // meta prev
-            let metaNextAttr = document.createElement('link');
+            var metaNextAttr = document.createElement('link');
             metaNextAttr.setAttribute('rel', 'prev');
             metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapList[siteMapList.length - 1].href + ".html");
             headForMeta.appendChild(metaNextAttr);
         }
         
-        for (let i = 0; i < arrayName.length; i++)
+        for (var i = 0; i < arrayName.length; i++)
         {
-            let substring = arrayName[i].href;
+            var substring = arrayName[i].href;
             if (thisUrl.indexOf(arrayName[0].href) != -1)
             {
                 nextLink = document.createElement('a');
@@ -451,7 +451,7 @@
                 nextIcon.className = 'fa fa-angle-double-left';
 
                 // meta prev
-                let metaNextAttr = document.createElement('link');
+                var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'prev');
                 metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i - 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
@@ -467,8 +467,8 @@
     };
 
     // excute portfolio or article
-    let siteMapListLength = Number(siteMapList.length - 1);
-    let siteMapListArticleLength = Number(siteMapListArticle.length - 1);
+    var siteMapListLength = Number(siteMapList.length - 1);
+    var siteMapListArticleLength = Number(siteMapListArticle.length - 1);
     if (portfolioLinks)
     {
         setNextBtn(siteMapList, portfolioLinks, siteMapListLength);
@@ -482,23 +482,23 @@
     
     //
     // bottom siteMap navigation
-    let siteMapNav = document.querySelector('.siteMapNav');
+    var siteMapNav = document.querySelector('.siteMapNav');
     function bottomSiteNav(arrayName)
     {
         arrayName.forEach(function(arrLen)
         {
-            let listNode = document.createElement("li");
-            let hrefNode = document.createElement("a");
+            var listNode = document.createElement("li");
+            var hrefNode = document.createElement("a");
             hrefNode.href = "https://spemer.com/" + arrLen.href + ".html";
             hrefNode.title = arrLen.title;
-            let textNode = document.createTextNode(arrLen.name);
+            var textNode = document.createTextNode(arrLen.name);
 
             siteMapNav.appendChild(listNode);
             listNode.appendChild(hrefNode);
             hrefNode.appendChild(textNode);
 
-            let thisUrl = window.location.href;
-            let substring = arrLen.href;
+            var thisUrl = window.location.href;
+            var substring = arrLen.href;
             if (thisUrl.indexOf(substring) != -1)
             {
                 hrefNode.className = 'underline';
@@ -511,8 +511,8 @@
 
     //
     // set main lists
-    let indexLists = document.querySelector('#indexList');
-    let articleLists = document.querySelector('#articleList');
+    var indexLists = document.querySelector('#indexList');
+    var articleLists = document.querySelector('#articleList');
     // index.html
     if (indexLists) {
         setMainImgList(indexLists,siteMapList);
@@ -523,18 +523,18 @@
     }
     function setMainImgList(setId,arrName)
     {
-        let mainDiv = document.createElement('div');
+        var mainDiv = document.createElement('div');
         mainDiv.className = "artImgBoxEach grow";
         setId.appendChild(mainDiv);
 
-        for (let i = 0; i < arrName.length; i++)
+        for (var i = 0; i < arrName.length; i++)
         {
-            let aLink = document.createElement('a');
-            let aLinkFigure = document.createElement('figure');
-            let figImg = document.createElement('img');
-            let figCap = document.createElement('figcaption');
-            let figStr = document.createElement('h3');
-            let figTxt = document.createTextNode(arrName[i].name);
+            var aLink = document.createElement('a');
+            var aLinkFigure = document.createElement('figure');
+            var figImg = document.createElement('img');
+            var figCap = document.createElement('figcaption');
+            var figStr = document.createElement('h3');
+            var figTxt = document.createTextNode(arrName[i].name);
 
             aLink.href = "https://spemer.com/" + arrName[i].href + ".html";
             figImg.src = "https://spemer.com/img/works/" + arrName[i].img;
@@ -554,7 +554,7 @@
 //
 // headerNav 3 ul > li
 (function(){
-    let topNavLists = [
+    var topNavLists = [
         {
             title: 'Portfolio',
             href: 'https://spemer.com/',
@@ -572,28 +572,28 @@
         }
     ];
 
-    let headerNavLists = document.querySelector('#headerNav > nav > ul');
+    var headerNavLists = document.querySelector('#headerNav > nav > ul');
 
     topNavLists.forEach(function(topNavList)
     {
-        let setHeaderLists = document.createElement('li');
+        var setHeaderLists = document.createElement('li');
         setHeaderLists.className = 'headerNavList';
 
-        let setHeaderAnchor = document.createElement('a');
+        var setHeaderAnchor = document.createElement('a');
         setHeaderAnchor.title = topNavList.title;
         setHeaderAnchor.href = topNavList.href;
         setHeaderAnchor.className = 'headerNav';
 
-        let headerTextBold = document.createElement('b');
-        let setHeaderNavText = document.createTextNode(topNavList.title);
+        var headerTextBold = document.createElement('b');
+        var setHeaderNavText = document.createTextNode(topNavList.title);
 
         headerNavLists.appendChild(setHeaderLists);
         setHeaderLists.appendChild(setHeaderAnchor);
         setHeaderAnchor.appendChild(headerTextBold);
         headerTextBold.appendChild(setHeaderNavText);
 
-        let thisUrl = window.location.href;
-        let substring = topNavList.hName;
+        var thisUrl = window.location.href;
+        var substring = topNavList.hName;
         if (thisUrl.indexOf(substring) != -1)
         {
             setHeaderLists.className = 'headerNavList aboutHover';
@@ -603,10 +603,10 @@
 //
 // index.html only
 (function(){
-    let getindexMain = document.querySelector('.indexMain');
+    var getindexMain = document.querySelector('.indexMain');
     if (getindexMain)
     {
-        let IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
+        var IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
         IndexHeaderLi.className = 'headerNavList aboutHover';
     }
 })();
@@ -614,17 +614,17 @@
 //
 // body gets idname body
 (function(){
-    let getBody = document.querySelector('body');
+    var getBody = document.querySelector('body');
     getBody.id = "body";
 })();
 
 //
 // TopBtn
 (function(){
-    let prevNextHome = document.querySelector('#prevNext');
+    var prevNextHome = document.querySelector('#prevNext');
     if(prevNextHome)
     {
-        let topBtnNode = document.createElement("a");
+        var topBtnNode = document.createElement("a");
         topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "#body";
         topBtnNode.title = "Back to Top";
@@ -633,10 +633,10 @@
         topBtnNode.setAttribute('onmouseover', 'topUp()');
         topBtnNode.setAttribute('onmouseleave', 'topDn()');
 
-        let topBtnBold = document.createElement("b");
-        let topBtnIcon = document.createElement("i");
+        var topBtnBold = document.createElement("b");
+        var topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
-        let topTextNode = document.createTextNode("Top");
+        var topTextNode = document.createTextNode("Top");
 
         prevNextHome.appendChild(topBtnNode);
         topBtnNode.appendChild(topBtnBold);
@@ -648,7 +648,7 @@
 //
 // Footer '#snsIcon'
 (function(){
-    let snsIconList = {
+    var snsIconList = {
         Twitter: {
             href : 'twitter.com/OfficialSpemer',
             iconID : 'twIcon',
@@ -690,15 +690,15 @@
             iconClass : 'behance'
         }
     };
-    let snsIcon = document.querySelector('#snsIcon');
-    for (let key in snsIconList)
+    var snsIcon = document.querySelector('#snsIcon');
+    for (var key in snsIconList)
     {
-        let snsNode = document.createElement("a");
+        var snsNode = document.createElement("a");
         snsNode.title = key + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
 
-        let iconNode = document.createElement("i");
+        var iconNode = document.createElement("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
         snsIcon.appendChild(snsNode);
@@ -709,14 +709,14 @@
 //
 // Code with Love by Hyouk Seo(Spemer)
 (function(){
-    let codeBy = document.querySelector('#codeBySpemer');
-    let codeIconNode = document.createElement("i");
+    var codeBy = document.querySelector('#codeBySpemer');
+    var codeIconNode = document.createElement("i");
     codeIconNode.className = "fa fa-code";
 
-    let topTextNode1 = document.createTextNode(" with ");
-    let loveIconNode = document.createElement("i");
+    var topTextNode1 = document.createTextNode(" with ");
+    var loveIconNode = document.createElement("i");
     loveIconNode.className = "fa fa-heart";
-    let topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+    var topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
 
     codeBy.appendChild(codeIconNode);
     codeBy.appendChild(topTextNode1);
@@ -727,18 +727,18 @@
 //
 // #topBtnFixed
 (function(){
-    let getBody = document.querySelector('body');
-    let fixedTopBtn = document.createElement('div');
+    var getBody = document.querySelector('body');
+    var fixedTopBtn = document.createElement('div');
     fixedTopBtn.id = "topBtnFixed";
 
     getBody.appendChild(fixedTopBtn);
 
-    let fixedTopBtnLink = document.createElement('a');
+    var fixedTopBtnLink = document.createElement('a');
     fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
     fixedTopBtnLink.href = '#body';
     fixedTopBtnLink.className = 'prevNextTop2';
 
-    let fixedTopBtnIcon = document.createElement("i");
+    var fixedTopBtnIcon = document.createElement("i");
     fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
     fixedTopBtnIcon.title = 'Back to Top';
 
@@ -767,10 +767,10 @@
 //
 // set '.externalLink' Icon
 (function(){
-    let externalLinks = document.querySelectorAll('.externalLink');
+    var externalLinks = document.querySelectorAll('.externalLink');
     externalLinks.forEach(function(linkEach)
     {
-        let setLinkIcon = document.createElement('i');
+        var setLinkIcon = document.createElement('i');
         setLinkIcon.className = "fa fa-external-link";
         linkEach.appendChild(setLinkIcon);
     });
@@ -779,14 +779,14 @@
 //
 // '.hrline' -> medium style 3 dots
 (function(){
-    let gethrline = document.getElementsByClassName('hrline');
-    for (let i = 0; i < gethrline.length; i++)
+    var gethrline = document.getElementsByClassName('hrline');
+    for (var i = 0; i < gethrline.length; i++)
     {
-        let setCenter = document.createElement('center');
+        var setCenter = document.createElement('center');
         gethrline[i].appendChild(setCenter);
-        for (let j = 0; j < 3; j++)
+        for (var j = 0; j < 3; j++)
         {
-            let setSpan = document.createElement('span');
+            var setSpan = document.createElement('span');
             setCenter.appendChild(setSpan);
         }
     }
@@ -795,10 +795,10 @@
 //
 // get <i> tag -> set 'aria-hidden' attr
 (function(){
-    let getIcons = document.querySelectorAll('i.fa');
+    var getIcons = document.querySelectorAll('i.fa');
     getIcons.forEach(function(iconEach)
     {
-        let getIconAttr = iconEach.getAttribute('aria-hidden');
+        var getIconAttr = iconEach.getAttribute('aria-hidden');
         if (!getIconAttr)
         {
             iconEach.setAttribute('aria-hidden','true');
@@ -809,11 +809,11 @@
 //
 // add className '.lazy' for all images
 (function(){
-    let getEveryImg = document.querySelectorAll('img');
+    var getEveryImg = document.querySelectorAll('img');
     getEveryImg.forEach(function(images)
     {
         images.className += ' ' + 'lazy';
-        let getImgSrc = images.getAttribute('src');
+        var getImgSrc = images.getAttribute('src');
         images.src = 'https://spemer.com/img/spinner.gif';
         images.setAttribute('data-src', getImgSrc);
     });
