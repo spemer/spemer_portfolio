@@ -1,6 +1,6 @@
 // beusably snippets
 (function(){
-    let snippets = [
+    var snippets = [
         '(function(w, d, a){',
         'w.__beusablerumclient__ = {',
         'load : function(src){',
@@ -12,13 +12,13 @@
         "})(window, document, '//rum.beusable.net/script/b180307e033029u30/f33cc9f572');"
     ];
 
-    let getBody = document.querySelector('body');
-    let setBeusably = document.createElement('script');
+    var getBody = document.querySelector('body');
+    var setBeusably = document.createElement('script');
     setBeusably.setAttribute('defer', '');
     setBeusably.setAttribute('type', 'text/javascript');
 
     snippets.forEach(function(list){
-        let setSnippets = document.createTextNode(list);
+        var setSnippets = document.createTextNode(list);
         setBeusably.appendChild(setSnippets);
     });
     
