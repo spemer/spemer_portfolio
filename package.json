@@ -19,7 +19,7 @@
         "firebase": "^4.9.0"
     },
     "devDependencies": {
-        "ejs": "2.5.7",
+        "ejs": "2.5.8",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.9.2",
