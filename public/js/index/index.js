@@ -770,6 +770,7 @@
     var externalLinks = document.querySelectorAll('.externalLink');
     externalLinks.forEach(function(linkEach)
     {
+        linkEach.setAttribute("target", "_blank");
         var setLinkIcon = document.createElement('i');
         setLinkIcon.className = "fa fa-external-link";
         linkEach.appendChild(setLinkIcon);
