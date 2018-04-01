@@ -43,13 +43,13 @@ gulp.task('mincss', () => {
     sass sync watch
 ============================== */
 gulp.task('sass', function () {
-    return gulp.src('css/stylesheet.scss')
+    return gulp.src('public/css/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('css/tmp'));
+        .pipe(gulp.dest('public/css/tmp'));
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('css/stylesheet.scss', ['sass']);
+    gulp.watch('public/css/*.scss', ['sass']);
 });
 
 

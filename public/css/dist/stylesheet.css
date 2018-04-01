@@ -71,8 +71,10 @@ figcaption {
 body::-webkit-scrollbar {
   background-color: #ffffff;
   width: 10px; }
+
 body::-webkit-scrollbar-track {
   background-color: #ffffff; }
+
 body::-webkit-scrollbar-thumb {
   background-color: #babac0;
   -webkit-border-radius: 10px;
@@ -85,8 +87,10 @@ body::-webkit-scrollbar-thumb {
 .blob-wrapper::-webkit-scrollbar {
   background-color: #ffffff;
   height: 4px; }
+
 .blob-wrapper::-webkit-scrollbar-track {
   background-color: #ffffff; }
+
 .blob-wrapper::-webkit-scrollbar-thumb {
   background-color: #babac0;
   -webkit-border-radius: 4px;
@@ -262,6 +266,7 @@ a span:hover, a b:hover, a:hover {
   -webkit-box-shadow: 0 8px 32px 4px #e7e9ee;
   -moz-box-shadow: 0 8px 24px 4px #e7e9ee;
   box-shadow: 0 8px 24px 4px #e7e9ee; }
+
 .artImgBoxEach figcaption {
   text-align: center;
   font-weight: lighter;
@@ -276,11 +281,13 @@ a span:hover, a b:hover, a:hover {
 
 .artImgBoxEach:hover .text {
   visibility: visible; }
+
 .artImgBoxEach .text {
   left: 0;
   bottom: 30px;
   position: relative;
   visibility: hidden; }
+
 .artImgBoxEach figure, .artImgBoxEach img, .artImgBoxEach figcaption {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -787,12 +794,16 @@ footer {
   font-size: 21px;
   font-size: 1.3125rem;
   font-style: italic; }
+
 .textbox-colored p {
   margin: 0px 8px; }
+
 .textbox-colored h6 {
   margin: 0px 16px 4px; }
+
 .textbox-colored p:first-child, .textbox-colored h6:first-child {
   margin-top: 8px; }
+
 .textbox-colored p:last-child, .textbox-colored h6:last-child {
   margin-bottom: 8px; }
 
@@ -955,18 +966,14 @@ figcaption h3 {
 @media only screen and (max-width: 768px) {
   .everyTxtEndArticle {
     max-width: 560px; }
-
   .artImgBoxEach a {
     width: 50%; }
-
   .flatIconBox div {
     width: 49%; }
-
   .aboutIntroBox_OVERALL, .aboutIntroBox_80 {
     width: 100%;
     margin: 0 auto;
     display: block; }
-
   .aboutIntroBox_20 {
     width: 50%;
     float: left;
@@ -974,21 +981,17 @@ figcaption h3 {
     margin: 0 auto; }
     .aboutIntroBox_20 img {
       margin: 24px 0; }
-
   body {
     width: 90%; }
-
   #headerNav nav {
     float: right;
     margin: 25px 0;
     padding-top: 50px; }
-
   .headerNavList {
     margin-left: 15px;
     display: inline-block; }
     .headerNavList:first-child {
       margin-left: 0; }
-
   .iframe iframe {
     width: 100%;
     height: 50%;
@@ -996,33 +999,32 @@ figcaption h3 {
     min-height: 250px;
     padding: 25px 0;
     margin-bottom: 25px; }
-
   #topBtnFixed {
     display: none; } }
+
 @media only screen and (max-width: 420px) {
   #headerLogo h1 {
     font-size: 36px;
     font-size: 2.25rem;
     margin: 15px 0 -15px; }
-
   header {
     width: 100%;
     padding: 0;
     text-align: center; }
     header div {
       clear: both; }
-
   .textbox-colored {
     padding: 8px 16px 8px 8px; }
-
   .quote {
     margin: 32px 0;
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 32px; } }
+
 @media screen and (max-width: 224px) {
   .flatIconBox div {
     width: 100%; } }
+
 @media only screen and (max-width: 420px) {
   .artImgBoxEach img, .flatIconBoxEach img {
     margin-top: 2vw;
@@ -1030,49 +1032,43 @@ figcaption h3 {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px; }
-
   .profile {
     width: 75%;
     height: 75%; }
-
   .artImgBoxEach figcaption, .flatIconBoxEach figcaption {
     display: none; }
-
   .aboutIntroBox_20 {
     width: 100%;
     margin: 0 auto;
     display: block; }
-
   .aboutIntroBox_80 {
     padding-right: 5%; }
-
   #siteMap li {
     width: 40%; }
-
   .articleImg35 img, .articleImg50-small img {
     width: 100%; }
-
   .articleImg35-small img {
     width: 60%; }
-
   .code {
     padding: 8px 16px; }
-
   .hrline span {
     margin: 64px 4px; }
-
   .xdiframe {
     display: none; } }
+
 @media screen and (max-width: 433px) {
   .musicEachBox p {
     margin: 4px 0px 8px;
     line-height: 1.6rem; } }
+
 @media screen and (max-width: 380px) {
   .pckIconBox .musicEachBox span {
     display: none; } }
+
 @media screen and (min-width: 701px) {
   #snsIcon {
     margin-right: -8px; } }
+
 @media only screen and (max-width: 600px) {
   #headerNav nav {
     display: block;
@@ -1086,7 +1082,6 @@ figcaption h3 {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-
   #headerLogo {
     display: block;
     left: 50%;
@@ -1100,11 +1095,11 @@ figcaption h3 {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     margin-top: 3rem !important; }
-
   #headerNav nav {
     width: 100%;
     text-align: center;
     margin-top: -1rem !important; } }
+
 @media screen and (max-width: 700px) {
   #snsIcon {
     display: -webkit-box;
@@ -1126,7 +1121,6 @@ figcaption h3 {
     justify-content: center; }
     #snsIcon a {
       margin: 4px .25vw -2rem; }
-
   footer {
     width: 100%;
     margin: 0 auto; }
@@ -1139,21 +1133,20 @@ figcaption h3 {
         position: relative;
         text-align: center;
         padding: 0 0 10px; } }
+
 @media screen and (max-width: 767px) {
   .articleImg40 img, .articleImg75 img, .articleImg50 img {
     width: 100%; }
-
   .articleImg35 img, .articleImg50-small img {
     width: 60%; }
-
   .articleImg35-small img {
     width: 45%; } }
+
 @media only screen and (max-width: 768px) {
   .quote {
     margin: 32px;
     font-size: 22px;
     font-size: 1.375rem;
     line-height: 36px; }
-
   .prototype {
     display: none; } }
