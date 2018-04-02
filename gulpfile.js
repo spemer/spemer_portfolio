@@ -1,13 +1,16 @@
 "use strict";
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const watch = require('gulp-watch');
-const minifyjs = require('gulp-js-minify');
-const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      watch = require('gulp-watch'),
+      minifyjs = require('gulp-js-minify'),
+      cleanCSS = require('gulp-clean-css'),
+      autoprefixer = require('gulp-autoprefixer'),
+      browserSync = require('browser-sync').create();
 
 
+/* ==============================
+    static server
+============================== */
 gulp.task('browser-sync', function() {
     browserSync.init(['public/*'], {
         server: {
