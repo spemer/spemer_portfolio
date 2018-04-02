@@ -5,6 +5,16 @@ const watch = require('gulp-watch');
 const minifyjs = require('gulp-js-minify');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+
+
+gulp.task('browser-sync', function() {
+    browserSync.init(['public/*'], {
+        server: {
+            baseDir: "./public"
+        }
+    });
+});
 
 
 /* ==============================
@@ -24,7 +34,8 @@ gulp.task('jsmin', function () {
     return watch('public/js/index/*.js', function () {
         gulp.src('public/js/index/*.js')
             .pipe(minifyjs())
-            .pipe(gulp.dest('public/js/dist'));
+            .pipe(gulp.dest('public/js/dist'))
+            .pipe(browserSync.reload({stream: true}));
     });
 });
 
@@ -35,7 +46,8 @@ gulp.task('jsmin', function () {
 gulp.task('mincss', () => {
     return gulp.src('public/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie6'}))
-        .pipe(gulp.dest('public/css/dist'));
+        .pipe(gulp.dest('public/css/dist'))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -45,7 +57,8 @@ gulp.task('mincss', () => {
 gulp.task('sass', function () {
     return gulp.src('public/css/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('public/css/tmp'));
+        .pipe(gulp.dest('public/css/tmp'))
+        .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('sass:watch', function () {
@@ -56,30 +69,4 @@ gulp.task('sass:watch', function () {
 /* ==============================
     watch tasks
 ============================== */
-gulp.task('watch', ['prefix-css', 'jsmin', 'mincss', 'sass:watch'])
-
-
-
-// js minify
-// const paths = {
-//     src: 'public',
-//     srcJS: 'public/js/index/*.js',
-//     tmp: 'public',
-//     tmpJS: 'public/js/tmp'
-// };
-// gulp.task('js', function(){
-//     return gulp.src(paths.srcJS)
-//     .pipe(minifyjs())
-//     .pipe(gulp.dest(paths.distJS));
-// });
-// gulp.task('jsmin', ['js']);
-
-
-// css prefix
-// gulp.task('prefix', () =>
-//     gulp.src('public/css/tmp/*.css')
-//         .pipe(autoprefixer({
-//             cascade: false
-//     }))
-//     .pipe(gulp.dest('public/css/dist'))
-// );
+gulp.task('watch', ['browser-sync', 'prefix-css', 'jsmin', 'mincss', 'sass:watch'])

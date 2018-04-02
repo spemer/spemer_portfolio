@@ -11,13 +11,13 @@
 // preload
 (function(){
     var preloadLists = [
-        { href: 'https://spemer.com/js/dist/index.js', as: 'script' },
-        { href: 'https://spemer.com/css/dist/stylesheet.css', as: 'style' },
-        { href: 'https://spemer.com/css/dist/featherlight.css', as: 'style' },
-        { href: 'https://spemer.com/css/dist/featherlight.gallery.css', as: 'style' },
-        { href: 'https://spemer.com/js/dist/set.class.atech.js', as: 'script' },
-        { href: 'https://spemer.com/js/dist/after.jquery.js', as: 'script' },
-        { href: 'https://spemer.com/js/dist/beusable.js', as: 'script' },
+        { href: '/js/dist/index.js', as: 'script' },
+        { href: '/css/dist/stylesheet.css', as: 'style' },
+        { href: '/css/dist/featherlight.css', as: 'style' },
+        { href: '/css/dist/featherlight.gallery.css', as: 'style' },
+        { href: '/js/dist/set.class.atech.js', as: 'script' },
+        { href: '/js/dist/after.jquery.js', as: 'script' },
+        { href: '/js/dist/beusable.js', as: 'script' },
     ];
     var headTitle = document.querySelector('head');
     preloadLists.forEach(function(preloadList){
@@ -41,7 +41,7 @@
     var getHead = document.querySelector('head');
     var setLink = document.createElement('link');
     setLink.setAttribute('rel','prefetch');
-    setLink.setAttribute('href','https://spemer.com/img/spinner.gif');
+    setLink.setAttribute('href','/img/spinner.gif');
     getHead.appendChild(setLink);
 })();
 
@@ -116,13 +116,13 @@
         { name: 'msapplication-TileColor', content: '#656c7a' },
         { name: 'msapplication-tooltip', content: thisTitle },
         { name: 'msapplication-starturl', content: thisUrl },
-        { name: 'msapplication-TileImage', content: 'https://spemer.com/img/favicons/mstile-144x144.png' },
+        { name: 'msapplication-TileImage', content: '/img/favicons/mstile-144x144.png' },
         { name: 'DC.subject', content: 'Design' },
         { name: 'DC.publisher', content: 'Hyouk Seo(Spemer)' },
         { name: 'DC.creator', content: 'Hyouk Seo(Spemer)' },
         { name: 'DC.contributor', content: 'Hyouk Seo(Spemer)' },
         { name: 'DC.source', content: thisUrl },
-        { name: 'DC.relation', content: 'https://spemer.com/' },
+        { name: 'DC.relation', content: '/' },
         { name: 'DC.title', content: thisTitle },
         { name: 'DC.language', content: 'en' },
         { name: 'DC.coverage', content: 'World' },
@@ -162,7 +162,7 @@
     {
         var setFavicon = document.createElement('link');
         setFavicon.setAttribute('rel', etcIcon.rel);
-        setFavicon.setAttribute('href', 'https://spemer.com/' + etcIcon.href);
+        setFavicon.setAttribute('href', '/' + etcIcon.href);
         headTitle.appendChild(setFavicon);
     });
 
@@ -187,7 +187,7 @@
         var setFvIcon = document.createElement('link');
         setFvIcon.setAttribute('rel', 'apple-touch-icon');
         setFvIcon.setAttribute('sizes', faviconList.sizes);
-        setFvIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + faviconList.href);
+        setFvIcon.setAttribute('href', '/img/favicons/' + faviconList.href);
         headTitle.appendChild(setFvIcon);
     });
 
@@ -203,7 +203,7 @@
         var setScIcon = document.createElement('link');
         setScIcon.setAttribute('rel', 'icon');
         setScIcon.setAttribute('type', 'image/png');
-        setScIcon.setAttribute('href', 'https://spemer.com/img/favicons/' + iconList.href);
+        setScIcon.setAttribute('href', '/img/favicons/' + iconList.href);
         setScIcon.setAttribute('sizes', iconList.sizes);
         headTitle.appendChild(setScIcon);
     });
@@ -214,7 +214,7 @@
 (function(){
     var _headerLogo = document.querySelector('#headerLogo');
     var headerLink = document.createElement('a');
-    headerLink.href = 'https://spemer.com/';
+    headerLink.href = '/';
     var headerHeading = document.createElement('h1');
     var headerText = document.createTextNode('Hyouk Seo');
     
@@ -365,7 +365,7 @@
             // meta next
             var metaNextAttr = document.createElement('link');
             metaNextAttr.setAttribute('rel', 'next');
-            metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapListArticle[0].href + ".html");
+            metaNextAttr.setAttribute('href', "/" + siteMapListArticle[0].href + ".html");
             headForMeta.appendChild(metaNextAttr);
         }
 
@@ -376,7 +376,7 @@
             {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
-                nextLink.href = "https://spemer.com/";
+                nextLink.href = "/";
                 nextLink.title = "Home";
                 
                 nextBold = document.createElement('b');
@@ -387,7 +387,7 @@
             {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
-                nextLink.href = "https://spemer.com/" + arrayName[i + 1].href + ".html";
+                nextLink.href = "/" + arrayName[i + 1].href + ".html";
                 nextLink.title = arrayName[i + 1].title;
 
                 nextBold = document.createElement('b');
@@ -398,7 +398,7 @@
                 // meta next
                 var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'next');
-                metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i + 1].href + ".html");
+                metaNextAttr.setAttribute('href', "/" + arrayName[i + 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
 
                 nextLink.setAttribute('onmouseover', 'nextRight()');
@@ -420,7 +420,7 @@
             // meta prev
             var metaNextAttr = document.createElement('link');
             metaNextAttr.setAttribute('rel', 'prev');
-            metaNextAttr.setAttribute('href', "https://spemer.com/" + siteMapList[siteMapList.length - 1].href + ".html");
+            metaNextAttr.setAttribute('href', "/" + siteMapList[siteMapList.length - 1].href + ".html");
             headForMeta.appendChild(metaNextAttr);
         }
         
@@ -431,7 +431,7 @@
             {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
-                nextLink.href = "https://spemer.com/";
+                nextLink.href = "/";
                 nextLink.title = "Home";
                 
                 nextBold = document.createElement('b');
@@ -442,7 +442,7 @@
             {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
-                nextLink.href = "https://spemer.com/" + arrayName[i - 1].href + ".html";
+                nextLink.href = "/" + arrayName[i - 1].href + ".html";
                 nextLink.title = arrayName[i - 1].title;
 
                 nextBold = document.createElement('b');
@@ -453,7 +453,7 @@
                 // meta prev
                 var metaNextAttr = document.createElement('link');
                 metaNextAttr.setAttribute('rel', 'prev');
-                metaNextAttr.setAttribute('href', "https://spemer.com/" + arrayName[i - 1].href + ".html");
+                metaNextAttr.setAttribute('href', "/" + arrayName[i - 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
 
                 nextLink.setAttribute('onmouseover', 'nextLeft()');
@@ -489,7 +489,7 @@
         {
             var listNode = document.createElement("li");
             var hrefNode = document.createElement("a");
-            hrefNode.href = "https://spemer.com/" + arrLen.href + ".html";
+            hrefNode.href = "/" + arrLen.href + ".html";
             hrefNode.title = arrLen.title;
             var textNode = document.createTextNode(arrLen.name);
 
@@ -536,8 +536,8 @@
             var figStr = document.createElement('h3');
             var figTxt = document.createTextNode(arrName[i].name);
 
-            aLink.href = "https://spemer.com/" + arrName[i].href + ".html";
-            figImg.src = "https://spemer.com/img/works/" + arrName[i].img;
+            aLink.href = "/" + arrName[i].href + ".html";
+            figImg.src = "/img/works/" + arrName[i].img;
             figImg.alt = arrName[i].title;
             figImg.title = arrName[i].title;
             
@@ -557,17 +557,17 @@
     var topNavLists = [
         {
             title: 'Portfolio',
-            href: 'https://spemer.com/',
+            href: '/',
             hName: '/portfolio/'
         },
         {
             title: 'Articles',
-            href: 'https://spemer.com/articles.html',
+            href: '/articles.html',
             hName: '/articles'
         },
         {
             title: 'About',
-            href: 'https://spemer.com/about-spemer.html',
+            href: '/about-spemer.html',
             hName: 'about-spemer.html'
         }
     ];
@@ -815,7 +815,7 @@
     {
         images.className += ' ' + 'lazy';
         var getImgSrc = images.getAttribute('src');
-        images.src = 'https://spemer.com/img/spinner.gif';
+        images.src = '/img/spinner.gif';
         images.setAttribute('data-src', getImgSrc);
     });
 })();

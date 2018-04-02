@@ -72,7 +72,7 @@ function() {
     var getBody = document.querySelector('body');
     var setScript = document.createElement('script');
     setScript.setAttribute('defer', '');
-    setScript.setAttribute('src', 'https://spemer.com/js/dist/beusable.js');
+    setScript.setAttribute('src', '/js/dist/beusable.js');
     getBody.appendChild(setScript);
 })();
 
