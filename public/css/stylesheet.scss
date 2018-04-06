@@ -148,7 +148,6 @@ body {
   -webkit-font-feature-settings: 'liga';
   -moz-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
-  text-decoration-skip: ink;
   -webkit-text-decoration-skip: ink;
   @include font-stack-article();
 }
@@ -613,7 +612,6 @@ footer {
   text-indent: -9999px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   -webkit-box-shadow: none;
   @include transition(background .3s);
   @include opacity(.5);

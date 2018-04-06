@@ -31,7 +31,6 @@ body {
   -webkit-font-feature-settings: 'liga';
   -moz-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
-  text-decoration-skip: ink;
   -webkit-text-decoration-skip: ink;
   font-family: 'Merriweather',serif;
   -webkit-font-family: 'Merriweather',serif; }
@@ -47,9 +46,7 @@ a, b, p, li, ol, ul, span, strong {
   color: #656c7a;
   line-height: 34px;
   -webkit-transition: color 0.25s ease;
-  -khtml-transition: color 0.25s ease;
   -moz-transition: color 0.25s ease;
-  -ms-transition: color 0.25s ease;
   -o-transition: color 0.25s ease;
   transition: color 0.25s ease; }
 
@@ -80,10 +77,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: #babac0;
   -webkit-border-radius: 10px;
-  -khtml-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   border-radius: 10px;
   border: 2px solid #ffffff; }
   body::-webkit-scrollbar-thumb:hover {
@@ -99,13 +93,14 @@ body::-webkit-scrollbar-thumb {
 .blob-wrapper::-webkit-scrollbar-thumb {
   background-color: #babac0;
   -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px; }
   .blob-wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5; }
+
+img::-moz-selection {
+  visibility: hidden;
+  background: transparent; }
 
 img::selection {
   visibility: hidden;
@@ -115,6 +110,10 @@ img::-moz-selection {
   visibility: hidden;
   background: transparent; }
 
+::-moz-selection {
+  color: #fff;
+  background: #babac0; }
+
 ::selection {
   color: #fff;
   background: #babac0; }
@@ -122,6 +121,10 @@ img::-moz-selection {
 ::-moz-selection {
   color: #fff;
   background: #babac0; }
+
+.hrline span::-moz-selection {
+  color: #babac0;
+  background: #fff; }
 
 .hrline span::selection {
   color: #babac0;
@@ -242,20 +245,14 @@ a span:hover, a b:hover, a:hover {
   width: 90%;
   margin: 0 5%;
   -webkit-border-radius: 8px;
-  -khtml-border-radius: 8px;
   -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   border-radius: 8px; }
 
 .profile {
   width: 100%;
   height: 100%;
   -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px; }
 
 .artImgBoxEach img:hover {
@@ -292,19 +289,20 @@ a span:hover, a b:hover, a:hover {
 
 .artImgBoxEach figure, .artImgBoxEach img, .artImgBoxEach figcaption {
   -webkit-transition: all 0.5s ease;
-  -khtml-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
 .topUp, .topUp2, .nextRight, .nextRight2, .nextLeft, .nextLeft2 {
   -webkit-transition: transform 0.25s ease;
-  -khtml-transition: transform 0.25s ease;
   -moz-transition: transform 0.25s ease;
-  -ms-transition: transform 0.25s ease;
   -o-transition: transform 0.25s ease;
-  transition: transform 0.25s ease; }
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  -o-transition: -o-transform 0.25s ease;
+  -moz-transition: transform 0.25s ease, -moz-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease, -moz-transform 0.25s ease, -o-transform 0.25s ease; }
 
 .topUp {
   -webkit-transform: translateY(-5px);
@@ -370,17 +368,13 @@ h4 {
 
 .aboutTxtBox p a {
   -webkit-transition: color 0.5s ease;
-  -khtml-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
-  -ms-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease; }
   .aboutTxtBox p a:hover {
     color: #2a2e2e;
     -webkit-transition: color 0.5s ease;
-    -khtml-transition: color 0.5s ease;
     -moz-transition: color 0.5s ease;
-    -ms-transition: color 0.5s ease;
     -o-transition: color 0.5s ease;
     transition: color 0.5s ease; }
 
@@ -521,37 +515,27 @@ footer {
   overflow: hidden;
   position: relative;
   -webkit-border-radius: none;
-  -khtml-border-radius: none;
   -moz-border-radius: none;
-  -ms-border-radius: none;
-  -o-border-radius: none;
   border-radius: none;
   text-indent: -9999px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   -webkit-box-shadow: none;
   -webkit-transition: background 0.3s;
-  -khtml-transition: background 0.3s;
   -moz-transition: background 0.3s;
-  -ms-transition: background 0.3s;
   -o-transition: background 0.3s;
   transition: background 0.3s;
   opacity: 0.5;
   filter: alpha(opacity=50);
   -webkit-transition: opacity ease 0.5s;
-  -khtml-transition: opacity ease 0.5s;
   -moz-transition: opacity ease 0.5s;
-  -ms-transition: opacity ease 0.5s;
   -o-transition: opacity ease 0.5s;
   transition: opacity ease 0.5s; }
   .c-hamburger:hover {
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transition: opacity ease 0.5s;
-    -khtml-transition: opacity ease 0.5s;
     -moz-transition: opacity ease 0.5s;
-    -ms-transition: opacity ease 0.5s;
     -o-transition: opacity ease 0.5s;
     transition: opacity ease 0.5s; }
   .c-hamburger:focus {
@@ -581,38 +565,38 @@ footer {
   background-color: transparent; }
   .c-hamburger--htx span {
     -webkit-transition: background 0 0.25s;
-    -khtml-transition: background 0 0.25s;
     -moz-transition: background 0 0.25s;
-    -ms-transition: background 0 0.25s;
     -o-transition: background 0 0.25s;
     transition: background 0 0.25s; }
     .c-hamburger--htx span:before, .c-hamburger--htx span:after {
       -webkit-transition-duration: 0.25s, 0.25s;
-      -khtml-transition-duration: 0.25s, 0.25s;
       -moz-transition-duration: 0.25s, 0.25s;
-      -ms-transition-duration: 0.25s, 0.25s;
       -o-transition-duration: 0.25s, 0.25s;
       transition-duration: 0.25s, 0.25s;
       -webkit-transition-delay: 0s, 0s;
-      -khtml-transition-delay: 0s, 0s;
       -moz-transition-delay: 0s, 0s;
-      -ms-transition-delay: 0s, 0s;
       -o-transition-delay: 0s, 0s;
       transition-delay: 0s, 0s; }
     .c-hamburger--htx span:before {
       -webkit-transition-property: top, transform;
-      -khtml-transition-property: top, transform;
       -moz-transition-property: top, transform;
-      -ms-transition-property: top, transform;
       -o-transition-property: top, transform;
-      transition-property: top, transform; }
+      -webkit-transition-property: top, -webkit-transform;
+      transition-property: top, -webkit-transform;
+      -o-transition-property: top, -o-transform;
+      -moz-transition-property: top, transform, -moz-transform;
+      transition-property: top, transform;
+      transition-property: top, transform, -webkit-transform, -moz-transform, -o-transform; }
     .c-hamburger--htx span:after {
       -webkit-transition-property: bottom, transform;
-      -khtml-transition-property: bottom, transform;
       -moz-transition-property: bottom, transform;
-      -ms-transition-property: bottom, transform;
       -o-transition-property: bottom, transform;
-      transition-property: bottom, transform; }
+      -webkit-transition-property: bottom, -webkit-transform;
+      transition-property: bottom, -webkit-transform;
+      -o-transition-property: bottom, -o-transform;
+      -moz-transition-property: bottom, transform, -moz-transform;
+      transition-property: bottom, transform;
+      transition-property: bottom, transform, -webkit-transform, -moz-transform, -o-transform; }
   .c-hamburger--htx.is-active {
     background-color: transparent; }
     .c-hamburger--htx.is-active span {
@@ -635,9 +619,7 @@ footer {
         transform: rotate(-45deg); }
       .c-hamburger--htx.is-active span:before, .c-hamburger--htx.is-active span:after {
         -webkit-transition-delay: 0s, 0.25s;
-        -khtml-transition-delay: 0s, 0.25s;
         -moz-transition-delay: 0s, 0.25s;
-        -ms-transition-delay: 0s, 0.25s;
         -o-transition-delay: 0s, 0.25s;
         transition-delay: 0s, 0.25s; }
 
@@ -695,10 +677,7 @@ footer {
   margin: 32px 0;
   color: #66799f !important;
   -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px; }
   .code::-webkit-scrollbar {
     background-color: transparent;
@@ -709,10 +688,7 @@ footer {
   .code::-webkit-scrollbar-thumb {
     background-color: #babac0;
     -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
     -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
     border-radius: 4px; }
     .code::-webkit-scrollbar-thumb:hover {
       background-color: #a0a0a5; }
@@ -722,10 +698,7 @@ footer {
   color: #66799f;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 2px;
-  -khtml-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   background-color: #f0f0f0; }
 
@@ -738,10 +711,7 @@ footer {
   background-color: #f4f4f4;
   margin: 24px 0 32px;
   -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
   border: 2px solid #e5e5e5; }
   .textbox-colored li {
@@ -814,9 +784,7 @@ footer {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 3s ease;
-  -khtml-transition: opacity 3s ease;
   -moz-transition: opacity 3s ease;
-  -ms-transition: opacity 3s ease;
   -o-transition: opacity 3s ease;
   transition: opacity 3s ease; }
 
@@ -863,10 +831,7 @@ body .gist {
 .gist-data, .gist {
   border-bottom: 0px solid transparent !important;
   -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px; }
 
 .everyTxtEnd, .everyTxtEndArticle {
@@ -875,85 +840,62 @@ body .gist {
 .whiteBgImg, .gist-file {
   border: 1px solid #e5e5e5 !important;
   -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px; }
 
 .prevNextTop, .prevNextTop2 {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
   .prevNextTop:hover, .prevNextTop2:hover {
     -webkit-transition: all 0.25s ease;
-    -khtml-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease; }
 
 a:hover, #topBtnFixed {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
 .prevNext, #headerLogo h1 {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
   .prevNext:hover, #headerLogo h1:hover {
     -webkit-transition: all 0.25s ease;
-    -khtml-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease; }
 
 .topBtn {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
   .topBtn:hover {
     -webkit-transition: all 0.25s ease;
-    -khtml-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease; }
 
 .headerNav, #snsIcon i, #siteMap a {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
   .headerNav:hover, #snsIcon i:hover, #siteMap a:hover {
     -webkit-transition: all 0.25s ease;
-    -khtml-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease; }
 
 .artImgBoxEach img:hover, #headerNav li {
   -webkit-transition: all 0.25s ease;
-  -khtml-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
@@ -1086,10 +1028,7 @@ figcaption h3 {
     margin-top: 2vw;
     margin-bottom: 2vw;
     -webkit-border-radius: 4px;
-    -khtml-border-radius: 4px;
     -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
     border-radius: 4px; }
   .profile {
     width: 75%;
