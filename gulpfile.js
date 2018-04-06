@@ -4,7 +4,6 @@ const gulp = require('gulp'),
       watch = require('gulp-watch'),
       minifyjs = require('gulp-js-minify'),
       cleanCSS = require('gulp-clean-css'),
-      
       autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create();
 
@@ -25,9 +24,9 @@ gulp.task('browser-sync', function() {
     css autoprefixer -> tmp to dist
 ============================== */
 gulp.task('prefix-css', function () {
-    return watch('public/css/tmp/stylesheet.css', { ignoreInitial: false })
+    return watch('public/css/src/*.css', { ignoreInitial: false })
         .pipe(autoprefixer())
-        .pipe(gulp.dest('public/css/dist'));
+        .pipe(gulp.dest('public/css/tmp'));
 });
 
 
@@ -48,7 +47,7 @@ gulp.task('jsmin', function () {
     css minify
 ============================== */
 gulp.task('mincss', () => {
-    return gulp.src('public/css/*.css')
+    return gulp.src('public/css/src/*.css')
         .pipe(cleanCSS({compatibility: 'ie6'}))
         .pipe(gulp.dest('public/css/dist'))
         .pipe(browserSync.reload({stream: true}));
@@ -61,7 +60,8 @@ gulp.task('mincss', () => {
 gulp.task('sass', function () {
     return gulp.src('public/css/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('public/css/tmp'))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('public/css/dist'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -73,4 +73,8 @@ gulp.task('sass:watch', function () {
 /* ==============================
     watch tasks
 ============================== */
-gulp.task('watch', ['browser-sync', 'prefix-css', 'jsmin', 'mincss', 'sass:watch'])
+gulp.task('watch', ['browser-sync',
+                    'prefix-css',
+                    'jsmin',
+                    'mincss',
+                    'sass:watch'])
