@@ -14,7 +14,7 @@ const gulp = require('gulp'),
 gulp.task('browser-sync', function() {
     browserSync.init(['public/*'], {
         server: {
-            baseDir: "./public"
+            baseDir: "public"
         }
     });
 });
