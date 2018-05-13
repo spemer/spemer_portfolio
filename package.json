@@ -13,19 +13,19 @@
     "dependencies": {
         "bcrypt-nodejs": "0.0.3",
         "body-parser": "1.18.2",
-        "browser-sync": "^2.23.7",
+        "browser-sync": "^2.24.4",
         "cookie-parser": "1.4.3",
         "express": "4.16.3",
         "express-session": "1.15.6",
-        "firebase": "^4.13.1",
+        "firebase": "^5.0.2",
         "firebase-tools": "^3.18.4",
         "gulp-sass": "^4.0.1"
     },
     "devDependencies": {
-        "ejs": "^2.5.9",
+        "ejs": "^2.6.1",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
-        "gulp-clean-css": "^3.9.3",
+        "gulp-clean-css": "^3.9.4",
         "gulp-js-minify": "0.0.3",
         "gulp-watch": "^5.0.0"
     },
