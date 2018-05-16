@@ -19,7 +19,8 @@
         "express-session": "^1.15.6",
         "firebase": "^5.0.2",
         "firebase-tools": "^3.18.4",
-        "gulp-sass": "^4.0.1"
+        "gulp-sass": "^4.0.1",
+        "hoek": "^4.2.1"
     },
     "devDependencies": {
         "ejs": "^2.6.1",
