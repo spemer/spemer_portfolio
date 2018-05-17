@@ -23,7 +23,7 @@
     },
     "devDependencies": {
         "ejs": "^2.6.1",
-        "gulp": "^3.9.1",
+        "gulp": "^4.0.0",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.9.4",
         "gulp-js-minify": "0.0.3",
