@@ -17,13 +17,13 @@
         "cookie-parser": "^1.4.3",
         "express": "^4.16.3",
         "express-session": "^1.15.6",
-        "firebase": "^5.0.2",
+        "firebase": "^5.0.3",
         "firebase-tools": "^3.18.4",
         "gulp-sass": "^4.0.1"
     },
     "devDependencies": {
         "ejs": "^2.6.1",
-        "gulp": "^4.0.0",
+        "gulp": "^3.9.1",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.9.4",
         "gulp-js-minify": "0.0.3",
