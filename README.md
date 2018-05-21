@@ -18,7 +18,6 @@ Built with these __AWESOME stuffs__:
 > * [JQuery](https://jquery.com/)
 > * [Firebase](https://firebase.google.com/)
 > * [Featherlight](https://github.com/noelboss/featherlight)
-> * [Google Fonts](https://fonts.google.com/)
 > * [Font Awesome](http://fontawesome.io/)
 
 ## Hyouk Seo
