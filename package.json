@@ -19,7 +19,9 @@
         "express-session": "^1.15.6",
         "firebase": "^5.0.3",
         "firebase-tools": "^3.18.4",
-        "gulp-sass": "^4.0.1"
+        "gulp-postcss": "^7.0.1",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4"
     },
     "devDependencies": {
         "ejs": "^2.6.1",
@@ -31,10 +33,7 @@
         "hoek": "^5.0.3"
     },
     "browserslist": [
-        "dead",
         "unreleased versions",
-        "Firefox ESR",
-        "> 0.5%",
         "cover 99.5%",
         "ie 6-8"
     ]

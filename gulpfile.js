@@ -2,8 +2,10 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       watch = require('gulp-watch'),
+      postcss = require('gulp-postcss'),
       minifyjs = require('gulp-js-minify'),
       cleanCSS = require('gulp-clean-css'),
+      sourcemaps = require('gulp-sourcemaps'),
       autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create();
 
@@ -25,7 +27,10 @@ gulp.task('browser-sync', function() {
 ============================== */
 gulp.task('prefix-css', function () {
     return watch('public/css/src/*.css', { ignoreInitial: false })
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+            browsers: ['cover 99.5%'],
+            cascade: false
+        }))
         .pipe(gulp.dest('public/css/tmp'));
 });
 
