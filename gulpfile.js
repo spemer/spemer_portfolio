@@ -14,11 +14,21 @@ const gulp = require('gulp'),
     static server
 ============================== */
 gulp.task('browser-sync', function() {
-    browserSync.init(['./public/*', './public/**/*', './public/**/**/*'], {
+    browserSync.init(['./public/*'], {
+        files: [
+            './*',
+            './**/*',
+            './**/**/*',
+            '/public/js/index/*',
+            '/public/articles/*',
+            '/public/portfolio/*',
+            '/public/css/stylesheet.scss'
+        ],
         server: {
             baseDir: "./public"
         }
     });
+    gulp.watch('*').on('change', browserSync.reload);
 });
 
 
