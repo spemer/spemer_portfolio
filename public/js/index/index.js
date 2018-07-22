@@ -1,9 +1,11 @@
 "use strict";
 
+
 //
 // add className '.lazy' for all images
 (function(){
     var getEveryImg = document.querySelectorAll('img');
+
     getEveryImg.forEach(function(images)
     {
         images.className += ' ' + 'lazy';
@@ -12,6 +14,7 @@
         images.setAttribute('data-src', getImgSrc);
     });
 })();
+
 
 //
 // '#headerLogo'
@@ -26,6 +29,7 @@
     headerLink.appendChild(headerHeading);
     headerHeading.appendChild(headerText);
 })();
+
 
 //
 // siteMap links
@@ -86,6 +90,7 @@
             img: 'flaticon/house.jpg'
         }
     ];
+
     var siteMapListArticle = [
         {
             name:  'Sass',
@@ -160,6 +165,7 @@
     var nextIcon;
     var thisUrl = window.location.href;
     var headForMeta = document.querySelector('head');
+
     // home next prev(bottom) -> NEXT
     function setNextBtn(arrayName, divClassName, listLength)
     {
@@ -168,6 +174,7 @@
         {
             // meta next
             var metaNextAttr = document.createElement('link');
+
             metaNextAttr.setAttribute('rel', 'next');
             metaNextAttr.setAttribute('href', "/" + siteMapListArticle[0].href + ".html");
             headForMeta.appendChild(metaNextAttr);
@@ -176,6 +183,7 @@
         for (var i = 0; i < arrayName.length; i++)
         {
             var substring = arrayName[i].href;
+
             if (thisUrl.indexOf(arrayName[listLength].href) != -1)
             {
                 nextLink = document.createElement('a');
@@ -209,6 +217,7 @@
                 nextLink.setAttribute('onmouseleave', 'nextRightDel()');
             }
         }
+
         divClassName.appendChild(nextLink);
         nextLink.appendChild(nextBold);
         nextBold.appendChild(nextText);
@@ -231,6 +240,7 @@
         for (var i = 0; i < arrayName.length; i++)
         {
             var substring = arrayName[i].href;
+
             if (thisUrl.indexOf(arrayName[0].href) != -1)
             {
                 nextLink = document.createElement('a');
@@ -256,6 +266,7 @@
 
                 // meta prev
                 var metaNextAttr = document.createElement('link');
+
                 metaNextAttr.setAttribute('rel', 'prev');
                 metaNextAttr.setAttribute('href', "/" + arrayName[i - 1].href + ".html");
                 headForMeta.appendChild(metaNextAttr);
@@ -273,6 +284,7 @@
     // excute portfolio or article
     var siteMapListLength = Number(siteMapList.length - 1);
     var siteMapListArticleLength = Number(siteMapListArticle.length - 1);
+
     if (portfolioLinks)
     {
         setNextBtn(siteMapList, portfolioLinks, siteMapListLength);
@@ -287,6 +299,7 @@
     //
     // bottom siteMap navigation
     var siteMapNav = document.querySelector('.siteMapNav');
+
     function bottomSiteNav(arrayName)
     {
         arrayName.forEach(function(arrLen)
@@ -303,6 +316,7 @@
 
             var thisUrl = window.location.href;
             var substring = arrLen.href;
+
             if (thisUrl.indexOf(substring) != -1)
             {
                 hrefNode.className = 'underline';
@@ -317,6 +331,7 @@
     // set main lists
     var indexLists = document.querySelector('#indexList');
     var articleLists = document.querySelector('#articleList');
+
     // index.html
     if (indexLists) {
         setMainImgList(indexLists,siteMapList);
@@ -354,6 +369,7 @@
         }
     }
 })();
+
 
 //
 // headerNav 3 ul > li
@@ -399,21 +415,22 @@
         var thisUrl = window.location.href;
         var substring = topNavList.hName;
         if (thisUrl.indexOf(substring) != -1)
-        {
             setHeaderLists.className = 'headerNavList aboutHover';
-        }
     });
 })();
+
 //
 // index.html only
 (function(){
     var getindexMain = document.querySelector('.indexMain');
+
     if (getindexMain)
     {
         var IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
         IndexHeaderLi.className = 'headerNavList aboutHover';
     }
 })();
+
 
 //
 // body gets idname body
@@ -422,10 +439,12 @@
     getBody.id = "body";
 })();
 
+
 //
 // TopBtn
 (function(){
     var prevNextHome = document.querySelector('#prevNext');
+
     if(prevNextHome)
     {
         var topBtnNode = document.createElement("a");
@@ -448,6 +467,7 @@
         topBtnBold.appendChild(topTextNode);
     }
 })();
+
 
 //
 // Footer '#snsIcon'
@@ -494,7 +514,9 @@
             iconClass : 'behance'
         }
     };
+
     var snsIcon = document.querySelector('#snsIcon');
+
     for (var key in snsIconList)
     {
         var snsNode = document.createElement("a");
@@ -509,6 +531,7 @@
         snsNode.appendChild(iconNode);
     }    
 })();
+
 
 //
 // Code with Love by Hyouk Seo(Spemer)
@@ -527,6 +550,7 @@
     codeBy.appendChild(loveIconNode);
     codeBy.appendChild(topTextNode2);    
 })();
+
 
 //
 // #topBtnFixed
@@ -553,6 +577,7 @@
     window.onscroll = function(){
         scrollFunction(320)
     };
+
     function scrollFunction(h)
     {
         if (document.body.scrollTop > h || document.documentElement.scrollTop > h)
@@ -568,10 +593,12 @@
     }
 })();
 
+
 //
 // set '.externalLink' Icon
 (function(){
     var externalLinks = document.querySelectorAll('.externalLink');
+
     externalLinks.forEach(function(linkEach)
     {
         linkEach.setAttribute("target", "_blank");
@@ -581,14 +608,17 @@
     });
 })();
 
+
 //
 // '.hrline' -> medium style 3 dots
 (function(){
     var gethrline = document.getElementsByClassName('hrline');
+
     for (var i = 0; i < gethrline.length; i++)
     {
         var setCenter = document.createElement('center');
         gethrline[i].appendChild(setCenter);
+
         for (var j = 0; j < 3; j++)
         {
             var setSpan = document.createElement('span');
@@ -597,16 +627,16 @@
     }
 })();
 
+
 //
 // get <i> tag -> set 'aria-hidden' attr
 (function(){
     var getIcons = document.querySelectorAll('i.fa');
+
     getIcons.forEach(function(iconEach)
     {
         var getIconAttr = iconEach.getAttribute('aria-hidden');
         if (!getIconAttr)
-        {
             iconEach.setAttribute('aria-hidden','true');
-        }
     });
 })();
