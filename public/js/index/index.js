@@ -93,6 +93,12 @@
 
     var siteMapListArticle = [
         {
+            name:  'Vue',
+            href:  'articles/using-axios-with-vue-js',
+            title: 'Using Axios with Vue.js',
+            img: 'vue/thumb.png'
+        },
+        {
             name:  'Sass',
             href:  'articles/beginners-guide-to-sass-css',
             title: 'Beginner’s guide to Sass',

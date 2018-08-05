@@ -888,17 +888,18 @@ footer {
 
 body .gist {
   margin: 24px 0;
-  pre, td, tr {
+  span, pre, td, tr, #file-app-vue-L2, #file-app-vue-LC2 {
     @include font-stack-code();
     @include font-size(13px);
-    line-height: 18px !important;
+    line-height: 21px !important;
   }
 }
 
-.blob-num, .blob-code, .gist-data, .pl-v, .pl-cce, .pl-c1, .pl-c, .pl-k, .pl-s, .pl-en, .pl-smi, .pl-e, .pl-ent, .pl-pds, .blob-wrapper, .t-body {
+.js-line-number, .blob-code-inner, .js-file-line, .blob-num, .blob-code, .gist-data, .pl-v, .pl-cce, .pl-c1, .pl-c, .pl-k, .pl-s, .pl-s1, .pl-en, .pl-smi, .pl-e, .pl-pds, .pl-ent, .pl-pds, .blob-wrapper, .t-body {
   @include font-stack-code();
   @include font-size(13px);
-  line-height: 18px !important;
+  line-height: 21px !important;
+  padding: none !important;
 }
 
 .gist-data {
