@@ -96,12 +96,30 @@
         <div class="hrline"></div>
         
 
-		<h3>Using Axios</h3>
+			<h3>Using Axios</h3>
 				<p>
 					Using a service called <b><a href="https://jsonplaceholder.typicode.com" target="_blank" title="JSONPlaceholder(new tab)">JSONPlaceholder</a></b>, I’ll test the Axios I just installed. You can copy and paste following code.
                 </p>
                 
             <script src="https://gist.github.com/spemer/296d81842856f5df236486b093f25ac7.js"></script>
+
+		<div class="hrline"></div>
+        
+
+			<h3>Internet Explorer</h3>
+				<p>
+					Basically, <b>IE</b> doesn’t support promise, so you may need <b>polyfill</b> of es6-promise to enable it. You can install it with command below.
+				</p>
+
+				<p class="code">
+					npm install --save es6-promise
+				</p>
+
+				<p>
+					Next, just add one line below in your <b>webpack config</b> file.
+				</p>
+                
+				<script src="https://gist.github.com/spemer/34dcc09658b1021970f54b6e31e74297.js"></script>
 
 		<div class="hrline"></div>
 
