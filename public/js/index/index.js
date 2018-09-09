@@ -454,8 +454,8 @@
     if(prevNextHome)
     {
         var topBtnNode = document.createElement("a");
-        topBtnNode.setAttribute('data-scroll', '');
-        topBtnNode.href = "#body";
+        // topBtnNode.setAttribute('data-scroll', '');
+        topBtnNode.href = "#top";
         topBtnNode.title = "Back to Top";
         topBtnNode.className = "prevNextTop";
 
