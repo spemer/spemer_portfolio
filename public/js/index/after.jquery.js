@@ -6,6 +6,7 @@
     getHtml.setAttribute('lang', 'en');
 })();
 
+
 //
 // preload
 (function(){
@@ -14,7 +15,7 @@
         { href: '/css/dist/stylesheet.css', as: 'style' },
         { href: '/css/dist/featherlight.css', as: 'style' },
         { href: '/css/dist/featherlight.gallery.css', as: 'style' },
-        { href: '/js/dist/set.class.atech.js', as: 'script' },
+        // { href: '/js/dist/set.class.atech.js', as: 'script' },
         { href: '/js/dist/after.jquery.js', as: 'script' },
         // { href: '/js/dist/beusable.js', as: 'script' },
     ];
@@ -34,6 +35,7 @@
     });
 })();
 
+
 //
 // preload spinner.svg
 (function(){
@@ -43,6 +45,7 @@
     setLink.setAttribute('href','/img/spinner.gif');
     getHead.appendChild(setLink);
 })();
+
 
 //
 // meta Tags **meta [property, content]**
@@ -66,6 +69,7 @@
         headTitle.appendChild(setMetaProp);
     });
 })();
+
 
 //
 // meta Tags **meta [name, content]**
@@ -143,6 +147,7 @@
     headTitle.appendChild(setMeta);
 })();
 
+
 //
 // favicon & shortcut icons
 (function(){
@@ -208,6 +213,7 @@
     });
 })();
 
+
 //
 // lazyloader
 (function(){
@@ -220,6 +226,7 @@
         });
     }
 })();
+
 
 //
 // feather
@@ -240,6 +247,7 @@
     }
 })();
 
+
 //
 // clipboard
 (function(){
@@ -250,15 +258,17 @@
     }
 })();
 
+
 //
 // smooth anchor scroll
-(function(){
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 1000,
-        offset: 0,
-        easing: 'easeInOutCubic'
-    });
-})();
+// (function(){
+//     var scroll = new SmoothScroll('a[href*="#"]', {
+//         speed: 1000,
+//         offset: 0,
+//         easing: 'easeInOutCubic'
+//     });
+// })();
+
 
 //
 // hamburger
@@ -278,13 +288,13 @@ function() {
 }();
 
 // beusable.js
-(function(){
-    var getBody = document.querySelector('body');
-    var setScript = document.createElement('script');
-    setScript.setAttribute('defer', '');
-    setScript.setAttribute('src', '/js/dist/beusable.js');
-    getBody.appendChild(setScript);
-})();
+// (function(){
+//     var getBody = document.querySelector('body');
+//     var setScript = document.createElement('script');
+//     setScript.setAttribute('defer', '');
+//     setScript.setAttribute('src', '/js/dist/beusable.js');
+//     getBody.appendChild(setScript);
+// })();
 
 //
 // other funcs
@@ -319,15 +329,10 @@ function removeTooltip() {
     $('.copied').addClass('tooltip');
 }
 
-(function(){
-    console.log(
-        "\n",
-        "███████╗██████╗ ███████╗███╗   ███╗███████╗██████╗\n",
-        "██╔════╝██╔══██╗██╔════╝████╗ ████║██╔════╝██╔══██╗\n",
-        "███████╗██████╔╝█████╗  ██╔████╔██║█████╗  ██████╔╝\n",
-        "╚════██║██╔═══╝ ██╔══╝  ██║╚██╔╝██║██╔══╝  ██╔══██╗\n",
-        "███████║██║     ███████╗██║ ╚═╝ ██║███████╗██║  ██║\n",
-        "╚══════╝╚═╝     ╚══════╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝\n",
-        ""
-    );
-})();
+
+//
+// to top
+$("a[href='#top']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});

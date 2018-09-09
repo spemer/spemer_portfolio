@@ -568,8 +568,9 @@
     getBody.appendChild(fixedTopBtn);
 
     var fixedTopBtnLink = document.createElement('a');
-    fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
-    fixedTopBtnLink.href = '#body';
+    // fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
+    // fixedTopBtnLink.setAttribute('onclick', 'window.scrollTo(0,0)');
+    fixedTopBtnLink.href = '#top';
     fixedTopBtnLink.className = 'prevNextTop2';
 
     var fixedTopBtnIcon = document.createElement("i");

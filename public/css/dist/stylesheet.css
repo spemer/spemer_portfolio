@@ -649,6 +649,7 @@ footer {
     color: #656c7a; }
 
 #topBtnFixed {
+  cursor: pointer;
   opacity: 0;
   filter: alpha(opacity=0); }
 

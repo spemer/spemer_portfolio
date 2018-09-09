@@ -732,6 +732,7 @@ footer {
 }
 
 #topBtnFixed {
+  cursor: pointer;
   @include opacity(0);
 }
 
