@@ -10,7 +10,9 @@ body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figc
   text-decoration: none; }
 
 html {
-  width: 100vw; }
+  -webkit-box-sizing: border-box !important;
+     -moz-box-sizing: border-box !important;
+          box-sizing: border-box !important; }
 
 .siteMapNav li {
   margin: 36px 0 0 !important; }
@@ -66,22 +68,6 @@ figcaption {
     color: #656c7a;
     font-family: 'Roboto Slab',Arial,sans-serif;
     -webkit-font-family: 'Roboto Slab',Arial,sans-serif; }
-
-body::-webkit-scrollbar {
-  background-color: #ffffff;
-  width: 10px; }
-
-body::-webkit-scrollbar-track {
-  background-color: #ffffff; }
-
-body::-webkit-scrollbar-thumb {
-  background-color: #babac0;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  border: 2px solid #ffffff; }
-  body::-webkit-scrollbar-thumb:hover {
-    background-color: #a0a0a5; }
 
 .blob-wrapper::-webkit-scrollbar {
   background-color: #ffffff;
