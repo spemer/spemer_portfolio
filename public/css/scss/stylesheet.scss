@@ -1,8 +1,8 @@
 @charset "UTF-8";
-@import "/css/dist/featherlight.css";
-@import "/css/dist/featherlight.gallery.css";
 @import "https://fonts.googleapis.com/css?family=Merriweather:400|Roboto+Slab";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "../dist/featherlight.css";
+@import "../dist/featherlight.gallery.css";
 
 $line: #e5e5e5;
 $grey: #babac0;
@@ -39,27 +39,15 @@ $mobile: "only screen and (max-width : 420px)";
 
 // mixin prefix
 @mixin border-radius($radius){
-  -webkit-border-radius: $radius;
-  -khtml-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
   border-radius: $radius;
 }
 @mixin transform($v){
   -webkit-transform: $v;
   -khtml-transform: $v;
-  -moz-transform: $v;
-  -ms-transform: $v;
-  -o-transform: $v;
   transform: $v;
 }
 @mixin transition($v){
   -webkit-transition: $v;
-  -khtml-transition: $v;
-  -moz-transition: $v;
-  -ms-transition: $v;
-  -o-transition: $v;
   transition: $v;
 }
 
@@ -83,26 +71,14 @@ $mobile: "only screen and (max-width : 420px)";
 // hamburger transition
 @mixin transition-duration($f, $s) {
   -webkit-transition-duration: $f, $s;
-  -khtml-transition-duration: $f, $s;
-  -moz-transition-duration: $f, $s;
-  -ms-transition-duration: $f, $s;
-  -o-transition-duration: $f, $s;
   transition-duration: $f, $s;
 }
 @mixin transition-delay($f, $s) {
   -webkit-transition-delay: $f, $s;
-  -khtml-transition-delay: $f, $s;
-  -moz-transition-delay: $f, $s;
-  -ms-transition-delay: $f, $s;
-  -o-transition-delay: $f, $s;
   transition-delay: $f, $s;
 }
 @mixin transition-property($f, $s) {
   -webkit-transition-property: $f, $s;
-  -khtml-transition-property: $f, $s;
-  -moz-transition-property: $f, $s;
-  -ms-transition-property: $f, $s;
-  -o-transition-property: $f, $s;
   transition-property: $f, $s;
 }
 
@@ -127,7 +103,8 @@ body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figc
 }
 
 html {
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 .siteMapNav li {
@@ -148,7 +125,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-font-feature-settings: 'liga';
-  -moz-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
   -webkit-text-decoration-skip: ink;
   @include font-stack-article();
@@ -222,10 +198,13 @@ figcaption {
 }
 
 // selection (css only)
+img::-moz-selection{visibility:hidden;background:transparent}
 img::selection{visibility:hidden;background:transparent}
 img::-moz-selection{visibility:hidden;background:transparent}
+::-moz-selection{color:#fff;background:#babac0}
 ::selection{color:#fff;background:#babac0}
 ::-moz-selection{color:#fff;background:#babac0}
+.hrline span::-moz-selection{color:#babac0;background:#fff}
 .hrline span::selection{color:#babac0;background:#fff}
 .hrline span::-moz-selection{color:#babac0;background:#fff}
 .hrline span:hover,.hrline:hover{cursor:default}
@@ -364,7 +343,6 @@ a {
   img:hover {
     @include transform(translateY(-10px));
     -webkit-box-shadow: 0 8px 32px 4px $lightgrey;
-    -moz-box-shadow: 0 8px 24px 4px $lightgrey;
     box-shadow: 0 8px 24px 4px $lightgrey;
   }
   figcaption {
@@ -606,7 +584,6 @@ footer {
   border: none;
   display: block;
   cursor: pointer;
-  -moz-box-shadow: none;
   box-shadow: none;
   overflow: hidden;
   position: relative;
@@ -804,7 +781,6 @@ footer {
     cursor: -webkit-zoom-in;
     cursor: -ms-zoom-in;
     cursor: -o-zoom-in;
-    cursor: -moz-zoom-in;
     cursor: zoom-in;
   }
 }
@@ -1197,20 +1173,13 @@ figcaption h3 {
   #snsIcon {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
-    display: -moz-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
-    -webkit-flex-direction: row-reverse;
-    -moz-box-orient: horizontal;
-    -moz-box-direction: reverse;
     flex-direction: row-reverse;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-box-pack: center;
     justify-content: center;
     a {
       margin: 4px .25vw -2rem;

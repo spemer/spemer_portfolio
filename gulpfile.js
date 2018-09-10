@@ -73,10 +73,10 @@ gulp.task('mincss', () => {
     sass sync watch
 ============================== */
 gulp.task('sass', function () {
-    return gulp.src('./public/css/*.scss')
+    return gulp.src('./public/scss/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('./public/css/dist'))
+        .pipe(gulp.dest('./public/css/src'))
         .pipe(browserSync.reload({stream: true}));
 });
 

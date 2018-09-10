@@ -260,17 +260,6 @@
 
 
 //
-// smooth anchor scroll
-// (function(){
-//     var scroll = new SmoothScroll('a[href*="#"]', {
-//         speed: 1000,
-//         offset: 0,
-//         easing: 'easeInOutCubic'
-//     });
-// })();
-
-
-//
 // hamburger
 $(".siteMapBtn").click(function() {
     $(".siteMapNav").toggle("display")
@@ -287,6 +276,7 @@ function() {
     }
 }();
 
+
 // beusable.js
 // (function(){
 //     var getBody = document.querySelector('body');
@@ -295,6 +285,7 @@ function() {
 //     setScript.setAttribute('src', '/js/dist/beusable.js');
 //     getBody.appendChild(setScript);
 // })();
+
 
 //
 // other funcs
