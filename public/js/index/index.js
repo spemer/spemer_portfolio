@@ -3,17 +3,17 @@
 
 //
 // add className '.lazy' for all images
-(function(){
-    var getEveryImg = document.querySelectorAll('img');
+// (function(){
+//     var getEveryImg = document.querySelectorAll('img');
 
-    getEveryImg.forEach(function(images)
-    {
-        images.className += ' ' + 'lazy';
-        var getImgSrc = images.getAttribute('src');
-        images.src = '/img/spinner.gif';
-        images.setAttribute('data-src', getImgSrc);
-    });
-})();
+//     getEveryImg.forEach(function(images)
+//     {
+//         images.className += ' ' + 'lazy';
+//         var getImgSrc = images.getAttribute('src');
+//         images.src = '/img/spinner.gif';
+//         images.setAttribute('data-src', getImgSrc);
+//     });
+// })();
 
 
 //

@@ -38,13 +38,13 @@
 
 //
 // preload spinner.svg
-(function(){
-    var getHead = document.querySelector('head');
-    var setLink = document.createElement('link');
-    setLink.setAttribute('rel','prefetch');
-    setLink.setAttribute('href','/img/spinner.gif');
-    getHead.appendChild(setLink);
-})();
+// (function(){
+//     var getHead = document.querySelector('head');
+//     var setLink = document.createElement('link');
+//     setLink.setAttribute('rel','prefetch');
+//     setLink.setAttribute('href','/img/spinner.gif');
+//     getHead.appendChild(setLink);
+// })();
 
 
 //
@@ -216,16 +216,16 @@
 
 //
 // lazyloader
-(function(){
-    var getEveryImg = document.querySelectorAll('img');
-    if (getEveryImg.length > 0)
-    {
-        $(function(){
-            $('.lazy').lazy({
-            });
-        });
-    }
-})();
+// (function(){
+//     var getEveryImg = document.querySelectorAll('img');
+//     if (getEveryImg.length > 0)
+//     {
+//         $(function(){
+//             $('.lazy').lazy({
+//             });
+//         });
+//     }
+// })();
 
 
 //
