@@ -2,10 +2,8 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       watch = require('gulp-watch'),
-      postcss = require('gulp-postcss'),
       minifyjs = require('gulp-js-minify'),
       cleanCSS = require('gulp-clean-css'),
-      sourcemaps = require('gulp-sourcemaps'),
       autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create();
 
@@ -22,7 +20,7 @@ gulp.task('browser-sync', function() {
             '/public/js/index/*',
             '/public/articles/*',
             '/public/portfolio/*',
-            '/public/css/stylesheet.scss'
+            '/public/css/scss/stylesheet.scss'
         ],
         server: {
             baseDir: "./public"
@@ -88,8 +86,10 @@ gulp.task('sass:watch', function () {
 /* ==============================
     watch tasks
 ============================== */
-gulp.task('watch', ['browser-sync',
-                    'prefix-css',
-                    'jsmin',
-                    'mincss',
-                    'sass:watch'])
+gulp.task('watch', [
+                        'browser-sync',
+                        'prefix-css',
+                        'jsmin',
+                        'sass:watch',
+                        'mincss',
+                    ])
