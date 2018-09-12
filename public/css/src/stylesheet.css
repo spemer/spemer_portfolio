@@ -3,6 +3,7 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url(../dist/featherlight.css);
 @import url(../dist/featherlight.gallery.css);
+@import url(../dist/balloon.css);
 body, p, h1, h2, h3, h4, h5, h6, li, ol, ul, embed, i, center, div, figure, figcaption, img, a, b, strong, span, blockquote, nav, article, header, footer, section, button, iframe {
   margin: 0;
   padding: 0;
@@ -79,10 +80,10 @@ figcaption {
     background-color: #a0a0a5; }
 
 ::-moz-selection {
-  background: transparent !important; }
+  background: transparent; }
 
 ::selection {
-  background: transparent !important; }
+  background: transparent; }
 
 .hrline span:hover, .hrline:hover {
   cursor: default; }
@@ -530,8 +531,8 @@ footer {
   display: inline-block; }
 
 .topBtn {
-  right: 12px;
-  bottom: 12px;
+  right: 16px;
+  bottom: 16px;
   color: #babac0;
   position: fixed;
   font-size: 26px;

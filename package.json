@@ -21,16 +21,20 @@
         "firebase-tools": "^4.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.1",
-        "gulp-sourcemaps": "^2.6.4"
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1",
+        "pump": "^3.0.0",
+        "uglify-js": "^3.4.9"
     },
     "devDependencies": {
         "ejs": "^2.6.1",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean-css": "^3.10.0",
-        "gulp-js-minify": "0.0.3",
         "gulp-watch": "^5.0.1",
-        "hoek": "^5.0.4"
+        "hoek": "^5.0.4",
+        "install": "^0.12.1",
+        "npm": "^6.4.1"
     },
     "browserslist": [
         "unreleased versions",

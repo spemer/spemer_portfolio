@@ -3,6 +3,7 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @import "../dist/featherlight.css";
 @import "../dist/featherlight.gallery.css";
+@import "../dist/balloon.css";
 
 $line: #e5e5e5;
 $grey: #babac0;
@@ -198,8 +199,8 @@ figcaption {
 }
 
 // selection (css only)
-::-moz-selection{background:transparent !important}
-::selection{background:transparent !important}
+::-moz-selection{background:transparent}
+::selection{background:transparent}
 .hrline span:hover,.hrline:hover{cursor:default}
 
 
@@ -691,8 +692,8 @@ footer {
 }
 
 .topBtn {
-  right: 12px;
-  bottom: 12px;
+  right: 16px;
+  bottom: 16px;
   color: $grey;
   position: fixed;
   @include font-size(26px);

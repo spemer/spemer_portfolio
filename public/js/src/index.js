@@ -1,6 +1,3 @@
-"use strict";
-
-
 //
 // add className '.lazy' for all images
 // (function(){
@@ -406,7 +403,7 @@
         setHeaderLists.className = 'headerNavList';
 
         var setHeaderAnchor = document.createElement('a');
-        setHeaderAnchor.title = topNavList.title;
+        setHeaderLists.title = topNavList.title;
         setHeaderAnchor.href = topNavList.href;
         setHeaderAnchor.className = 'headerNav';
 
@@ -454,7 +451,6 @@
     if(prevNextHome)
     {
         var topBtnNode = document.createElement("a");
-        // topBtnNode.setAttribute('data-scroll', '');
         topBtnNode.href = "#top";
         topBtnNode.title = "Back to Top";
         topBtnNode.className = "prevNextTop";
@@ -526,13 +522,14 @@
     for (var key in snsIconList)
     {
         var snsNode = document.createElement("a");
-        snsNode.title = key + "(new tab)";
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
+        snsNode.title = key + "(new tab)";
 
         var iconNode = document.createElement("i");
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
+        
         snsIcon.appendChild(snsNode);
         snsNode.appendChild(iconNode);
     }    
@@ -568,14 +565,14 @@
     getBody.appendChild(fixedTopBtn);
 
     var fixedTopBtnLink = document.createElement('a');
-    // fixedTopBtnLink.setAttribute('data-scroll', 'aria-hidden');
-    // fixedTopBtnLink.setAttribute('onclick', 'window.scrollTo(0,0)');
     fixedTopBtnLink.href = '#top';
     fixedTopBtnLink.className = 'prevNextTop2';
 
     var fixedTopBtnIcon = document.createElement("i");
     fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
     fixedTopBtnIcon.title = 'Back to Top';
+    // fixedTopBtnIcon.setAttribute('data-balloon', 'Back to Top');
+    // fixedTopBtnIcon.setAttribute('data-balloon-pos', 'left');
 
     fixedTopBtn.appendChild(fixedTopBtnLink);
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);

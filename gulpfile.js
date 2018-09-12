@@ -2,7 +2,13 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       watch = require('gulp-watch'),
-      minifyjs = require('gulp-js-minify'),
+
+      uglifyjs = require('uglify-js'),
+      uglify = require('gulp-uglify'),
+      composer = require('gulp-uglify/composer'),
+      pump = require('pump'),
+      minify = composer(uglifyjs, console),
+
       cleanCSS = require('gulp-clean-css'),
       autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create();
@@ -17,7 +23,7 @@ gulp.task('browser-sync', function() {
             './*',
             './**/*',
             './**/**/*',
-            '/public/js/index/*',
+            '/public/js/src/*',
             '/public/articles/*',
             '/public/portfolio/*',
             '/public/css/scss/stylesheet.scss'
@@ -31,15 +37,22 @@ gulp.task('browser-sync', function() {
 
 
 /* ==============================
-    min js
+    minify js
 ============================== */
-gulp.task('jsmin', function () {
-    return watch('./public/js/index/*.js', function () {
-        gulp.src('./public/js/index/*.js')
-            .pipe(minifyjs())
-            .pipe(gulp.dest('./public/js/dist'))
-            .pipe(browserSync.reload({stream: true}));
-    });
+gulp.task('compress', function (cb) {
+    return gulp.src('./public/js/src/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/js/dist'));
+
+    // var options = {};
+    //     pump([
+    //         gulp.src('./public/js/src/*.js'),
+    //         minify(options),
+    //         gulp.dest('./public/js/dist')
+    //     ],
+    //     cb
+    // );
+    
 });
 
 
@@ -86,7 +99,7 @@ gulp.task('mincss', () => {
 ============================== */
 gulp.task('watch', [
                         'browser-sync',
-                        'jsmin',
+                        'compress',
                         'sass:watch',
                         'prefix-css',
                         'mincss',
