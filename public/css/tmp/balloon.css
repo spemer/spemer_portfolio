@@ -26,7 +26,7 @@ button[data-balloon] {
     border-radius: 8px;
     color: #fff;
     content: attr(data-balloon);
-    padding: 0 12px !important;
+    padding: 4px 16px !important;
     position: absolute;
     white-space: nowrap;
     z-index: 10000 !important; }
