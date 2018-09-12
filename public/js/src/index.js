@@ -527,6 +527,8 @@
         snsNode.title = key + "(new tab)";
 
         var iconNode = document.createElement("i");
+        // iconNode.setAttribute('data-balloon', key);
+        // iconNode.setAttribute('data-balloon-pos', 'up');
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
         
@@ -571,8 +573,6 @@
     var fixedTopBtnIcon = document.createElement("i");
     fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
     fixedTopBtnIcon.title = 'Back to Top';
-    // fixedTopBtnIcon.setAttribute('data-balloon', 'Back to Top');
-    // fixedTopBtnIcon.setAttribute('data-balloon-pos', 'left');
 
     fixedTopBtn.appendChild(fixedTopBtnLink);
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);

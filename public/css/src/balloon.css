@@ -18,11 +18,11 @@ button[data-balloon] {
     font-style: normal !important;
     text-shadow: none !important;
     font-size: 14px !important;
-    background: rgba(17, 17, 17, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 8px;
     color: #fff;
     content: attr(data-balloon);
-    padding: 4px 16px !important;
+    padding: 0 12px !important;
     position: absolute;
     white-space: nowrap;
     z-index: 10000 !important; }
