@@ -198,17 +198,10 @@ figcaption {
 }
 
 // selection (css only)
-img::-moz-selection{visibility:hidden;background:transparent}
-img::selection{visibility:hidden;background:transparent}
-img::-moz-selection{visibility:hidden;background:transparent}
-::-moz-selection{color:#fff;background:#babac0}
-::selection{color:#fff;background:#babac0}
-::-moz-selection{color:#fff;background:#babac0}
-.hrline span::-moz-selection{color:#babac0;background:#fff}
-.hrline span::selection{color:#babac0;background:#fff}
-.hrline span::-moz-selection{color:#babac0;background:#fff}
+::-moz-selection{background:transparent !important}
+::selection{background:transparent !important}
 .hrline span:hover,.hrline:hover{cursor:default}
-// selection end
+
 
 .clearfix {clear: both}
 

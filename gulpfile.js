@@ -31,19 +31,6 @@ gulp.task('browser-sync', function() {
 
 
 /* ==============================
-    css autoprefixer -> tmp to dist
-============================== */
-gulp.task('prefix-css', function () {
-    return watch('./public/css/src/*.css', { ignoreInitial: false })
-        .pipe(autoprefixer({
-            browsers: ['cover 99.5%'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('./public/css/tmp'));
-});
-
-
-/* ==============================
     min js
 ============================== */
 gulp.task('jsmin', function () {
@@ -53,6 +40,33 @@ gulp.task('jsmin', function () {
             .pipe(gulp.dest('./public/js/dist'))
             .pipe(browserSync.reload({stream: true}));
     });
+});
+
+
+/* ==============================
+    sass sync watch
+============================== */
+gulp.task('sass', function () {
+    return gulp.src('./public/css/scss/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest('./public/css/src'))
+});
+
+gulp.task('sass:watch', function () {
+    gulp.watch('./public/css/scss/*.scss', ['sass']);
+});
+
+
+/* ==============================
+    css autoprefixer -> tmp to dist
+============================== */
+gulp.task('prefix-css', function () {
+    return watch('./public/css/src/*.css', { ignoreInitial: false })
+        .pipe(autoprefixer({
+            browsers: ['cover 99.5%'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./public/css/tmp'));
 });
 
 
@@ -68,28 +82,12 @@ gulp.task('mincss', () => {
 
 
 /* ==============================
-    sass sync watch
-============================== */
-gulp.task('sass', function () {
-    return gulp.src('./public/scss/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('./public/css/src'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-gulp.task('sass:watch', function () {
-    gulp.watch('./public/css/*.scss', ['sass']);
-});
-
-
-/* ==============================
     watch tasks
 ============================== */
 gulp.task('watch', [
                         'browser-sync',
-                        'prefix-css',
                         'jsmin',
                         'sass:watch',
+                        'prefix-css',
                         'mincss',
                     ])
