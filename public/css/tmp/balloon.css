@@ -15,7 +15,8 @@ button[data-balloon] {
     -o-transition: all .25s ease-out .25s;
     -moz-transition: all .25s ease-out .25s;
     transition: all .25s ease-out .25s;
-    font-family: sans-serif !important;
+    -webkit-font-family: 'Merriweather', sans-serif !important;
+    font-family: 'Merriweather', sans-serif !important;
     font-weight: normal !important;
     font-style: normal !important;
     text-shadow: none !important;
