@@ -17,7 +17,7 @@
         "cookie-parser": "^1.4.3",
         "express": "^4.16.3",
         "express-session": "^1.15.6",
-        "firebase": "^5.4.2",
+        "firebase": "^5.5.0",
         "firebase-tools": "^4.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.1",
