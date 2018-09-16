@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-npm install
+npm i
 
 # task runner
 gulp watch
