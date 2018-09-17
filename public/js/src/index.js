@@ -16,11 +16,13 @@
 //
 // '#headerLogo'
 (function(){
-    var _headerLogo = document.querySelector('#headerLogo');
-    var headerLink = document.createElement('a');
+    var _headerLogo, headerLink, headerHeading, headerText;
+
+    _headerLogo = document.querySelector('#headerLogo');
+    headerLink = document.createElement('a');
     headerLink.href = '/';
-    var headerHeading = document.createElement('h1');
-    var headerText = document.createTextNode('Hyouk Seo');
+    headerHeading = document.createElement('h1');
+    headerText = document.createTextNode('Hyouk Seo');
     
     _headerLogo.appendChild(headerLink);
     headerLink.appendChild(headerHeading);
@@ -162,19 +164,15 @@
     var portfolioLinks = document.querySelector('.portfolio');
     var articleLinks = document.querySelector('.articles');
 
-    var nextLink;
-    var nextBold;
-    var nextText;
-    var nextIcon;
-    var thisUrl = window.location.href;
-    var headForMeta = document.querySelector('head');
+    var nextLink, nextBold, nextText, nextIcon, thisUrl, headForMeta;
+
+    thisUrl = window.location.href;
+    headForMeta = document.querySelector('head');
 
     // home next prev(bottom) -> NEXT
-    function setNextBtn(arrayName, divClassName, listLength)
-    {
+    function setNextBtn(arrayName, divClassName, listLength) {
 
-        if (thisUrl.indexOf(arrayName[listLength].href) != -1)
-        {
+        if (thisUrl.indexOf(arrayName[listLength].href) != -1) {
             // meta next
             var metaNextAttr = document.createElement('link');
 
@@ -183,12 +181,10 @@
             headForMeta.appendChild(metaNextAttr);
         }
 
-        for (var i = 0; i < arrayName.length; i++)
-        {
+        for (var i = 0; i < arrayName.length; i++) {
             var substring = arrayName[i].href;
 
-            if (thisUrl.indexOf(arrayName[listLength].href) != -1)
-            {
+            if (thisUrl.indexOf(arrayName[listLength].href) != -1) {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "/";
@@ -198,8 +194,7 @@
                 nextText = document.createTextNode('Home');
                 nextIcon = document.createElement('i');
             }
-            else if (thisUrl.indexOf(substring) != -1)
-            {
+            else if (thisUrl.indexOf(substring) != -1) {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "/" + arrayName[i + 1].href + ".html";
@@ -229,10 +224,8 @@
 
     //
     // home next prev(bottom) -> PREV
-    function setPrevBtn(arrayName, divClassName)
-    {
-        if (thisUrl.indexOf(arrayName[0].href) != -1)
-        {
+    function setPrevBtn(arrayName, divClassName) {
+        if (thisUrl.indexOf(arrayName[0].href) != -1) {
             // meta prev
             var metaNextAttr = document.createElement('link');
             metaNextAttr.setAttribute('rel', 'prev');
@@ -240,12 +233,10 @@
             headForMeta.appendChild(metaNextAttr);
         }
         
-        for (var i = 0; i < arrayName.length; i++)
-        {
+        for (var i = 0; i < arrayName.length; i++) {
             var substring = arrayName[i].href;
 
-            if (thisUrl.indexOf(arrayName[0].href) != -1)
-            {
+            if (thisUrl.indexOf(arrayName[0].href) != -1) {
                 nextLink = document.createElement('a');
                 nextLink.className = 'prevNext prevNextText';
                 nextLink.href = "/";
@@ -288,13 +279,10 @@
     var siteMapListLength = Number(siteMapList.length - 1);
     var siteMapListArticleLength = Number(siteMapListArticle.length - 1);
 
-    if (portfolioLinks)
-    {
+    if (portfolioLinks) {
         setNextBtn(siteMapList, portfolioLinks, siteMapListLength);
         setPrevBtn(siteMapList, portfolioLinks);
-    }
-    else if (articleLinks)
-    {
+    } else if (articleLinks) {
         setNextBtn(siteMapListArticle, articleLinks, siteMapListArticleLength);
         setPrevBtn(siteMapListArticle, articleLinks);
     }
@@ -303,25 +291,24 @@
     // bottom siteMap navigation
     var siteMapNav = document.querySelector('.siteMapNav');
 
-    function bottomSiteNav(arrayName)
-    {
-        arrayName.forEach(function(arrLen)
-        {
-            var listNode = document.createElement("li");
-            var hrefNode = document.createElement("a");
+    function bottomSiteNav(arrayName) {
+        arrayName.forEach(function(arrLen) {
+            var listNode, hrefNode, textNode, thisUrl, substring;
+
+            listNode = document.createElement("li");
+            hrefNode = document.createElement("a");
             hrefNode.href = "/" + arrLen.href + ".html";
             hrefNode.title = arrLen.title;
-            var textNode = document.createTextNode(arrLen.name);
+            textNode = document.createTextNode(arrLen.name);
 
             siteMapNav.appendChild(listNode);
             listNode.appendChild(hrefNode);
             hrefNode.appendChild(textNode);
 
-            var thisUrl = window.location.href;
-            var substring = arrLen.href;
+            thisUrl = window.location.href;
+            substring = arrLen.href;
 
-            if (thisUrl.indexOf(substring) != -1)
-            {
+            if (thisUrl.indexOf(substring) != -1) {
                 hrefNode.className = 'underline';
                 hrefNode.setAttribute('style', 'font-weight: bold');
             }
@@ -343,20 +330,20 @@
     else if (articleLists) {
         setMainImgList(articleLists,siteMapListArticle);
     }
-    function setMainImgList(setId,arrName)
-    {
+    function setMainImgList(setId,arrName) {
         var mainDiv = document.createElement('div');
         mainDiv.className = "artImgBoxEach grow";
         setId.appendChild(mainDiv);
 
-        for (var i = 0; i < arrName.length; i++)
-        {
-            var aLink = document.createElement('a');
-            var aLinkFigure = document.createElement('figure');
-            var figImg = document.createElement('img');
-            var figCap = document.createElement('figcaption');
-            var figStr = document.createElement('h3');
-            var figTxt = document.createTextNode(arrName[i].name);
+        for (var i = 0; i < arrName.length; i++) {
+            var aLink, aLinkFigure, figImg, figCap, figStr, figTxt
+
+            aLink = document.createElement('a');
+            aLinkFigure = document.createElement('figure');
+            figImg = document.createElement('img');
+            figCap = document.createElement('figcaption');
+            figStr = document.createElement('h3');
+            figTxt = document.createTextNode(arrName[i].name);
 
             aLink.href = "/" + arrName[i].href + ".html";
             figImg.src = "/img/works/" + arrName[i].img;
@@ -397,8 +384,7 @@
 
     var headerNavLists = document.querySelector('#headerNav > nav > ul');
 
-    topNavLists.forEach(function(topNavList)
-    {
+    topNavLists.forEach(function(topNavList) {
         var setHeaderLists = document.createElement('li');
         setHeaderLists.className = 'headerNavList';
 
@@ -427,8 +413,7 @@
 (function(){
     var getindexMain = document.querySelector('.indexMain');
 
-    if (getindexMain)
-    {
+    if (getindexMain) {
         var IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
         IndexHeaderLi.className = 'headerNavList aboutHover';
     }
@@ -448,9 +433,10 @@
 (function(){
     var prevNextHome = document.querySelector('#prevNext');
 
-    if(prevNextHome)
-    {
-        var topBtnNode = document.createElement("a");
+    if(prevNextHome) {
+        var topBtnNode, topBtnBold, topBtnIcon, topTextNode;
+
+        topBtnNode = document.createElement("a");
         topBtnNode.href = "#top";
         topBtnNode.title = "Back to Top";
         topBtnNode.className = "prevNextTop";
@@ -458,10 +444,10 @@
         topBtnNode.setAttribute('onmouseover', 'topUp()');
         topBtnNode.setAttribute('onmouseleave', 'topDn()');
 
-        var topBtnBold = document.createElement("b");
-        var topBtnIcon = document.createElement("i");
+        topBtnBold = document.createElement("b");
+        topBtnIcon = document.createElement("i");
         topBtnIcon.className = "fa" + " " + "fa-angle-up";
-        var topTextNode = document.createTextNode("Top");
+        topTextNode = document.createTextNode("Top");
 
         prevNextHome.appendChild(topBtnNode);
         topBtnNode.appendChild(topBtnBold);
@@ -519,16 +505,13 @@
 
     var snsIcon = document.querySelector('#snsIcon');
 
-    for (var key in snsIconList)
-    {
+    for (var key in snsIconList) {
         var snsNode = document.createElement("a");
         snsNode.href = "https://" + snsIconList[key].href;
         snsNode.target = "_blank";
         snsNode.title = key + "(new tab)";
 
         var iconNode = document.createElement("i");
-        // iconNode.setAttribute('data-balloon', key);
-        // iconNode.setAttribute('data-balloon-pos', 'up');
         iconNode.id = snsIconList[key].iconID;
         iconNode.className = "fa fa-" + snsIconList[key].iconClass;
         
@@ -541,14 +524,16 @@
 //
 // Code with Love by Hyouk Seo(Spemer)
 (function(){
-    var codeBy = document.querySelector('#codeBySpemer');
-    var codeIconNode = document.createElement("i");
+    var codeBy, codeIconNode, topTextNode1, loveIconNode, topTextNode2;
+
+    codeBy = document.querySelector('#codeBySpemer');
+    codeIconNode = document.createElement("i");
     codeIconNode.className = "fa fa-code";
 
-    var topTextNode1 = document.createTextNode(" with ");
-    var loveIconNode = document.createElement("i");
+    topTextNode1 = document.createTextNode(" with ");
+    loveIconNode = document.createElement("i");
     loveIconNode.className = "fa fa-heart";
-    var topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+    topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
 
     codeBy.appendChild(codeIconNode);
     codeBy.appendChild(topTextNode1);
@@ -560,17 +545,19 @@
 //
 // #topBtnFixed
 (function(){
-    var getBody = document.querySelector('body');
-    var fixedTopBtn = document.createElement('div');
+    var getBody, fixedTopBtn, fixedTopBtnLink, fixedTopBtnIcon;
+
+    getBody = document.querySelector('body');
+    fixedTopBtn = document.createElement('div');
     fixedTopBtn.id = "topBtnFixed";
 
     getBody.appendChild(fixedTopBtn);
 
-    var fixedTopBtnLink = document.createElement('a');
+    fixedTopBtnLink = document.createElement('a');
     fixedTopBtnLink.href = '#top';
     fixedTopBtnLink.className = 'prevNextTop2';
 
-    var fixedTopBtnIcon = document.createElement("i");
+    fixedTopBtnIcon = document.createElement("i");
     fixedTopBtnIcon.className = 'fa fa-chevron-circle-up topBtn';
     fixedTopBtnIcon.title = 'Back to Top';
 
@@ -578,19 +565,16 @@
     fixedTopBtnLink.appendChild(fixedTopBtnIcon);
     
     // topBtn hidden top
-    window.onscroll = function(){
+    window.onscroll = function() {
         scrollFunction(320)
     };
 
     function scrollFunction(h)
     {
-        if (document.body.scrollTop > h || document.documentElement.scrollTop > h)
-        {
+        if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
             fixedTopBtn.style.opacity = 1;
             fixedTopBtnIcon.setAttribute('style','visibility:visible');
-        }
-        else
-        {
+        } else {
             fixedTopBtn.style.opacity = 0;
             fixedTopBtnIcon.setAttribute('style','visibility:hidden');
         }
@@ -601,12 +585,13 @@
 //
 // set '.externalLink' Icon
 (function(){
-    var externalLinks = document.querySelectorAll('.externalLink');
+    var externalLinks, setLinkIcon;
 
-    externalLinks.forEach(function(linkEach)
-    {
+    externalLinks = document.querySelectorAll('.externalLink');
+
+    externalLinks.forEach(function(linkEach) {
         linkEach.setAttribute("target", "_blank");
-        var setLinkIcon = document.createElement('i');
+        setLinkIcon = document.createElement('i');
         setLinkIcon.className = "fa fa-external-link";
         linkEach.appendChild(setLinkIcon);
     });
@@ -616,16 +601,16 @@
 //
 // '.hrline' -> medium style 3 dots
 (function(){
-    var gethrline = document.getElementsByClassName('hrline');
+    var i, j, gethrline, setCenter, setSpan;
 
-    for (var i = 0; i < gethrline.length; i++)
-    {
-        var setCenter = document.createElement('center');
+    gethrline = document.getElementsByClassName('hrline');
+
+    for (i = 0; i < gethrline.length; i++) {
+        setCenter = document.createElement('center');
         gethrline[i].appendChild(setCenter);
 
-        for (var j = 0; j < 3; j++)
-        {
-            var setSpan = document.createElement('span');
+        for (j = 0; j < 3; j++) {
+            setSpan = document.createElement('span');
             setCenter.appendChild(setSpan);
         }
     }
@@ -635,11 +620,11 @@
 //
 // get <i> tag -> set 'aria-hidden' attr
 (function(){
-    var getIcons = document.querySelectorAll('i.fa');
+    var getIcons, getIconAttr;
 
-    getIcons.forEach(function(iconEach)
-    {
-        var getIconAttr = iconEach.getAttribute('aria-hidden');
+    getIcons = document.querySelectorAll('i.fa');
+    getIcons.forEach(function(iconEach) {
+        getIconAttr = iconEach.getAttribute('aria-hidden');
         if (!getIconAttr)
             iconEach.setAttribute('aria-hidden','true');
     });
