@@ -42,8 +42,8 @@ gulp.task('browser-sync', function() {
 gulp.task('compress', function (cb) {
     return gulp.src('./public/js/src/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./public/js/dist'));
-
+        .pipe(gulp.dest('./public/js/dist'))
+        .pipe(browserSync.reload({stream: true}));
     // var options = {};
     //     pump([
     //         gulp.src('./public/js/src/*.js'),
@@ -51,8 +51,7 @@ gulp.task('compress', function (cb) {
     //         gulp.dest('./public/js/dist')
     //     ],
     //     cb
-    // );
-    
+    // );    
 });
 
 

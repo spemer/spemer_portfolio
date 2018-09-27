@@ -622,8 +622,7 @@
 (function(){
     var getIcons, getIconAttr;
 
-    getIcons = document.querySelectorAll('i.fa');
-    getIcons.forEach(function(iconEach) {
+    getIcons = document.querySelectorAll('i.fa').forEach(function(iconEach) {
         getIconAttr = iconEach.getAttribute('aria-hidden');
         if (!getIconAttr)
             iconEach.setAttribute('aria-hidden','true');
