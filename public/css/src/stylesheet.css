@@ -576,8 +576,8 @@ footer {
   background-color: #f0f0f0; }
 
 .code, .codeInline {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  -webkit-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  -webkit-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; }
 
 .textbox-colored {
   padding: 16px;
@@ -677,15 +677,15 @@ footer {
 body .gist {
   margin: 24px 0; }
   body .gist span, body .gist pre, body .gist td, body .gist tr, body .gist #file-app-vue-L2, body .gist #file-app-vue-LC2 {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    -webkit-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    -webkit-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 13px;
     font-size: 0.8125rem;
     line-height: 21px !important; }
 
 .js-line-number, .blob-code-inner, .js-file-line, .blob-num, .blob-code, .gist-data, .pl-v, .pl-cce, .pl-c1, .pl-c, .pl-k, .pl-s, .pl-s1, .pl-en, .pl-smi, .pl-e, .pl-pds, .pl-ent, .pl-pds, .blob-wrapper, .t-body {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  -webkit-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  -webkit-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 21px !important;

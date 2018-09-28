@@ -22,8 +22,8 @@ $mobile: "only screen and (max-width : 420px)";
 
 // mixin font-stack
 @mixin font-stack-code() {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  -webkit-font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  -webkit-font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 @mixin font-stack-article() {
   font-family: 'Merriweather',serif;
