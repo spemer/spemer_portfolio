@@ -5,19 +5,17 @@
     "main": "server.js",
     "author": "Hyouk Seo",
     "private": false,
-    "license": "mit",
+    "license": "MIT",
     "repository": {
-        "type": "Spemer",
-        "url": "https://github.com/spemer/spemer_portfolio"
+        "type": "git",
+        "url": "git+https://github.com/spemer/spemer_portfolio.git"
     },
     "dependencies": {
         "bcrypt-nodejs": "0.0.3",
         "body-parser": "^1.18.3",
         "browser-sync": "^2.24.7",
         "cookie-parser": "^1.4.3",
-        "express": "^4.16.3",
-        "express-session": "^1.15.6",
-        "firebase": "^5.5.1",
+        "firebase": "^5.5.2",
         "firebase-tools": "^4.2.1",
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.1",
@@ -31,12 +29,12 @@
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean-css": "^3.10.0",
-        "gulp-watch": "^5.0.1",
-        "npm": "^6.4.1"
+        "gulp-watch": "^5.0.1"
     },
     "browserslist": [
         "unreleased versions",
         "cover 99.5%",
         "ie 6-8"
-    ]
+    ],
+    "homepage": "https://spemer.com"
 }
