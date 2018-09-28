@@ -44,14 +44,6 @@ gulp.task('compress', function (cb) {
         .pipe(uglify())
         .pipe(gulp.dest('./public/js/dist'))
         .pipe(browserSync.reload({stream: true}));
-    // var options = {};
-    //     pump([
-    //         gulp.src('./public/js/src/*.js'),
-    //         minify(options),
-    //         gulp.dest('./public/js/dist')
-    //     ],
-    //     cb
-    // );    
 });
 
 
