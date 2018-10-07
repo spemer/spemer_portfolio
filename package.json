@@ -11,9 +11,8 @@
         "url": "git+https://github.com/spemer/spemer_portfolio.git"
     },
     "dependencies": {
-        "browser-sync": "^2.24.7",
-        "firebase": "^5.5.2",
-        "firebase-tools": "^4.2.1",
+        "browser-sync": "^2.26.0",
+        "firebase": "^5.5.3",
         "gulp-sass": "^4.0.1",
         "gulp-uglify": "^3.0.1",
         "npm-check": "^5.9.0",
