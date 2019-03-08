@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# run on a local server with gulpfile.js
+# sudo gulp watch
+
 # deploy with firebase cli
 firebase deploy
 
