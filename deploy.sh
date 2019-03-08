@@ -7,3 +7,6 @@ firebase deploy
 git add .
 git commit -m 'Deploy'
 git push
+
+
+exit
