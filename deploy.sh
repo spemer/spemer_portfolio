@@ -4,11 +4,14 @@
 # sudo gulp watch
 
 # deploy with firebase cli
-firebase deploy
+# firebase deploy
+
+# fullname="USER INPUT"
+read -p "Enter commit message: " commitmsg
 
 # commit
 git add .
-git commit -m 'Deploy'
+git commit -m $commitmsg
 git push
 
 
