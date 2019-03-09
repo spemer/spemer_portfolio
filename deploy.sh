@@ -6,7 +6,6 @@
 # deploy with firebase cli
 firebase deploy
 
-
 # get commit message
 read -p "Enter commit message: " commitmsg
 
@@ -14,6 +13,5 @@ read -p "Enter commit message: " commitmsg
 git add .
 git commit -m $commitmsg
 git push
-
 
 exit
