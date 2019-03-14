@@ -1,4 +1,9 @@
 #!/bin/bash
+prjname="spemer_portfolio"
+
+echo "=============================="
+echo ${prjname}
+echo "=============================="
 
 # run on a local server with gulpfile.js
 # sudo gulp watch
