@@ -17,7 +17,7 @@ read -p "Enter commit message: " commitmsg
 
 # commit
 git add .
-git commit -m $commitmsg
+git commit -m ${commitmsg}
 git push
 
 exit
