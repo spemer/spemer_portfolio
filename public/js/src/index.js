@@ -384,7 +384,7 @@
             target: '_self'
         },
         {
-            title: 'Resume',
+            title: 'CV',
             href: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
             hName: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
             target: '_blank'
