@@ -24,6 +24,7 @@ gulp.task('browser-sync', function() {
             './**/*',
             './**/**/*',
             '/public/js/src/*',
+            '/public/js/dist/*',
             '/public/articles/*',
             '/public/portfolio/*',
             '/public/css/scss/stylesheet.scss'

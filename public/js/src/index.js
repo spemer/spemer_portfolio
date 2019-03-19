@@ -368,17 +368,26 @@
         {
             title: 'Portfolio',
             href: '/',
-            hName: '/portfolio/'
+            hName: '/portfolio/',
+            target: '_self'
         },
         {
             title: 'Articles',
             href: '/articles.html',
-            hName: '/articles'
+            hName: '/articles',
+            target: '_self'
         },
         {
             title: 'About',
             href: '/about-spemer.html',
-            hName: 'about-spemer.html'
+            hName: 'about-spemer.html',
+            target: '_self'
+        },
+        {
+            title: 'Resume',
+            href: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
+            hName: 'https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing',
+            target: '_blank'
         }
     ];
 
@@ -391,7 +400,9 @@
         var setHeaderAnchor = document.createElement('a');
         setHeaderLists.title = topNavList.title;
         setHeaderAnchor.href = topNavList.href;
+        setHeaderAnchor.setAttribute("target", topNavList.target);
         setHeaderAnchor.className = 'headerNav';
+
 
         var headerTextBold = document.createElement('b');
         var setHeaderNavText = document.createTextNode(topNavList.title);
@@ -411,14 +422,13 @@
 //
 // index.html only
 (function(){
-    var getindexMain = document.querySelector('.indexMain');
-
-    if (getindexMain) {
+    var getIndexMain = document.querySelector('.indexMain');
+    
+    if (getIndexMain) {
         var IndexHeaderLi = document.querySelector('#headerNav > nav > ul > li');
         IndexHeaderLi.className = 'headerNavList aboutHover';
     }
 })();
-
 
 //
 // body gets idname body
