@@ -19,10 +19,10 @@ firebase deploy
 printf "\n"
 IFS= read -r -p "Enter commit message: " commitmsg
 
-# commit
+# if commitmsg empty
 if [ -z "$commitmsg" ]
 then
-    echo "commit message is empty"
+    echo "Commit message is empty"
     commitmsg="Add files via upload"
 fi
 
