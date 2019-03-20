@@ -12,7 +12,7 @@ echo "=============================="
 # trap SIGINT
 
 # deploy with firebase cli
-# printf "\n"
+printf "\n"
 # firebase deploy
 
 # enter commit message
