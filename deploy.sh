@@ -18,7 +18,6 @@ firebase deploy
 # enter commit message
 printf "\n"
 IFS= read -r -p "Enter commit message: " commitmsg
-git add .
 
 # commit
 if [ -z "$commitmsg" ]
@@ -27,6 +26,8 @@ then
     commitmsg="Add files via upload"
 fi
 
+printf "\n"
+git add .
 git commit -m "$commitmsg"
 git push
 
