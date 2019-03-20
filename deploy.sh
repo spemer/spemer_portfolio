@@ -6,14 +6,14 @@ echo ${prjname}
 echo "=============================="
 
 # run on a local server with gulpfile.js
-# trap 'echo Stop gulp-watch' SIGINT
-# npm update caniuse-lite browserslist
-# sudo gulp watch
-# trap SIGINT
+trap 'echo Stop gulp-watch' SIGINT
+npm update caniuse-lite browserslist
+sudo gulp watch
+trap SIGINT
 
 # deploy with firebase cli
 printf "\n"
-# firebase deploy
+firebase deploy
 
 # enter commit message
 printf "\n"
@@ -24,9 +24,8 @@ git add .
 if [ -z "$commitmsg" ]
 then
     echo "commit message is empty"
-    git commit -m "deploy"
+    git commit -m "Add files via upload"
 else
-    git add .
     git commit -m "$commitmsg"
 fi
 
