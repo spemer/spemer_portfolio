@@ -24,11 +24,10 @@ git add .
 if [ -z "$commitmsg" ]
 then
     echo "commit message is empty"
-    git commit -m "Add files via upload"
-else
-    git commit -m "$commitmsg"
+    commitmsg="Add files via upload"
 fi
 
+git commit -m "$commitmsg"
 git push
 
 exit
