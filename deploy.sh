@@ -6,7 +6,10 @@ echo ${prjname}
 echo "=============================="
 
 # run on a local server with gulpfile.js
-# sudo gulp watch
+trap 'echo Stop gulp-watch' SIGINT
+npm update caniuse-lite browserslist
+sudo gulp watch
+trap SIGINT
 
 # deploy with firebase cli
 firebase deploy
