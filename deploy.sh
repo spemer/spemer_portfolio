@@ -6,21 +6,30 @@ echo ${prjname}
 echo "=============================="
 
 # run on a local server with gulpfile.js
-trap 'echo Stop gulp-watch' SIGINT
-npm update caniuse-lite browserslist
-sudo gulp watch
-trap SIGINT
+# trap 'echo Stop gulp-watch' SIGINT
+# npm update caniuse-lite browserslist
+# sudo gulp watch
+# trap SIGINT
 
 # deploy with firebase cli
-firebase deploy
+# printf "\n"
+# firebase deploy
 
-# get commit message
+# enter commit message
 printf "\n"
 IFS= read -r -p "Enter commit message: " commitmsg
+git add .
 
 # commit
-git add .
-git commit -m "$commitmsg"
+if [ -z "$commitmsg" ]
+then
+    echo "commit message is empty"
+    git commit -m "deploy"
+else
+    git add .
+    git commit -m "$commitmsg"
+fi
+
 git push
 
 exit
