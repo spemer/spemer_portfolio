@@ -1,8 +1,6 @@
 #!/bin/bash
-prjname="spemer_portfolio"
-
 echo "=============================="
-echo ${prjname}
+echo "${PWD##*/}"
 echo "=============================="
 
 # run on a local server with gulpfile.js
