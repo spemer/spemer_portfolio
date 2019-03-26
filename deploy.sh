@@ -1,32 +1,99 @@
 #!/bin/bash
-echo "=============================="
-echo "${PWD##*/}"
-echo "=============================="
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
 
-# run on a local server with gulpfile.js
-trap 'echo Stop gulp-watch' SIGINT
-npm update caniuse-lite browserslist
-sudo gulp watch
-trap SIGINT
+echo "============================================================"
+echo "${BOLD}${PWD##*/}${RESET}"
+echo "============================================================"
 
+#============================================================
+# run gulpfile.js (localhost:3000)
+#============================================================
+run_gulpfile() {
+  while true; do
+    printf "\n"
+    read -p "${BOLD}Run gulpfile.js? (Y/n)${RESET}" yn
+    case ${yn} in
+      [Yy]* )
+        trap 'echo Stop gulp-watch' SIGINT
+        npm update caniuse-lite browserslist
+        sudo gulp watch
+        trap SIGINT
+        break;;
+
+      [Nn]* ) return 0;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
+#============================================================
 # deploy with firebase cli
-printf "\n"
-firebase deploy
+#============================================================
+firebase_deploy() {
+  while true; do
+    printf "\n"
+    read -p "${BOLD}firebase deploy? (Y/n)${RESET}" yn
+    case ${yn} in
+      [Yy]* ) firebase deploy; break;;
+      [Nn]* ) return 0;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
 
-# enter commit message
-printf "\n"
-IFS= read -r -p "Enter commit message: " commitmsg
+#============================================================
+# git commit
+#============================================================
+git_commit() {
+  while true; do
+    printf "\n"
+    read -p "${BOLD}git commit? (Y/n)${RESET}" yn
+    case ${yn} in
+      [Yy]* )
+        IFS= read -r -p "${BOLD}Enter commit message: ${RESET}" commitmsg
 
-# if commitmsg empty
-if [ -z "$commitmsg" ]
-then
-    echo "Commit message is empty"
-    commitmsg="Add files via upload"
-fi
+        # if commitmsg empty
+        if [ -z "$commitmsg" ]
+        then
+          echo "${BOLD}Commit message is empty${RESET}"
+          commitmsg="Add files via upload"
+        fi
 
-printf "\n"
-git add .
-git commit -m "$commitmsg"
-git push
+        printf "\n"
+        git add .
+        git commit -m "$commitmsg"
+        break;;
 
-exit
+      [Nn]* ) return 0;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
+#============================================================
+# git push
+#============================================================
+git_push() {
+  while true; do
+    printf "\n"
+    read -p "${BOLD}git push? (Y/n)${RESET}" yn
+    case ${yn} in
+      [Yy]* ) git push; break;;
+      [Nn]* ) return 0;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
+#============================================================
+# main
+#============================================================
+main() {
+  run_gulpfile
+  firebase_deploy
+  git_commit
+  git_push
+}
+
+main
