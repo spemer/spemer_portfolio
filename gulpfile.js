@@ -1,4 +1,6 @@
 "use strict";
+
+
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       watch = require('gulp-watch'),
@@ -14,10 +16,38 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync').create();
 
 
+const { src, dest, lastRun, series } = require("gulp");
+
+// const imagemin = require("gulp-imagemin");
+// const imageminGifsicle = require("imagemin-gifsicle");
+// const imageminJpegtran = require("imagemin-jpegtran");
+// const imageminOptipng = require("imagemin-optipng");
+// const imageminSvgo = require("imagemin-svgo");
+
+// const options = [
+//   imageminGifsicle({
+//     interlaced: true
+//   }),
+//   imageminJpegtran({
+//     progressive: true,
+//     arithmetic: true
+//   }),
+//   imageminOptipng({
+//     optimizationLevel: 7,
+//     bitDepthReduction: true,
+//     colorTypeReduction: true,
+//     paletteReduction: true
+//   }),
+//   imageminSvgo({
+//     plugins: [{ removeViewBox: true }, { cleanupIDs: true }]
+//   })
+// ];
+
+
 /* ==============================
     static server
 ============================== */
-gulp.task('browser-sync', function() {
+function browser_sync() {
     browserSync.init(['./public/*'], {
         files: [
             './*',
@@ -34,65 +64,63 @@ gulp.task('browser-sync', function() {
         }
     });
     gulp.watch('*').on('change', browserSync.reload);
-});
+}
 
 
 /* ==============================
     minify js
 ============================== */
-gulp.task('compress', function (cb) {
+function compress(cb) {
     return gulp.src('./public/js/src/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./public/js/dist'))
         .pipe(browserSync.reload({stream: true}));
-});
+}
 
 
 /* ==============================
     sass sync watch
 ============================== */
-gulp.task('sass', function () {
+function sass_before() {
     return gulp.src('./public/css/scss/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest('./public/css/src'))
-});
+}
 
-gulp.task('sass:watch', function () {
-    gulp.watch('./public/css/scss/*.scss', ['sass']);
-});
+function sass_watch() {
+    gulp.watch('./public/css/scss/*.scss', ['sass_before']);
+}
 
 
 /* ==============================
     css autoprefixer -> tmp to dist
 ============================== */
-gulp.task('prefix-css', function () {
+function prefix_css() {
     return watch('./public/css/src/*.css', { ignoreInitial: false })
         .pipe(autoprefixer({
             browsers: ['cover 99.5%'],
             cascade: false
         }))
         .pipe(gulp.dest('./public/css/tmp'));
-});
+}
 
 
 /* ==============================
     css minify
 ============================== */
-gulp.task('mincss', () => {
-    return gulp.src('./public/css/src/*.css')
+function mincss() {
+    return gulp.src(["./public/css/src/*.css"]
         .pipe(cleanCSS({compatibility: 'ie6'}))
         .pipe(gulp.dest('./public/css/dist'))
-        .pipe(browserSync.reload({stream: true}));
-});
-
-
-/* ==============================
-    watch tasks
-============================== */
-gulp.task('watch', [
-                        'browser-sync',
-                        'compress',
-                        'sass:watch',
-                        'prefix-css',
-                        'mincss',
-                    ])
+        .pipe(browserSync.reload({stream: true})));
+}
+  
+  
+// exports
+exports.default = series(
+    browser_sync,
+    compress,
+    sass_watch,
+    prefix_css,
+    mincss
+);
