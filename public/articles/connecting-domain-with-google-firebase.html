@@ -1,337 +1,663 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96234376-1"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-96234376-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-	gtag('config', 'UA-96234376-1');
-</script>
+      gtag("config", "UA-96234376-1");
+    </script>
 
-<title>Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)</title>
+    <title>
+      Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/
+      Node.js)
+    </title>
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
 
-<meta name="robots" content="index,follow">
-<meta name="googlebot" content="index,follow">
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
 
-<meta name="author" content="Hyouk Seo(Spemer)" />
-<meta name="description" content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)" />
-<meta name="abstract" content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)" />
-<meta name="keywords" content="firebase, google, domain, url, node, node.js, cpi, http, https, protocol, ssl, chrome, firebase, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, mobile, article, website, Certificate, seo, visual, visual design, artist, interface, interface design, experience, experience design, xd, product, product design, web publish, ui designer, ux designer, product designer, visual designer, graphic designer" />
+    <meta name="author" content="Hyouk Seo(Spemer)" />
+    <meta
+      name="description"
+      content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)"
+    />
+    <meta
+      name="abstract"
+      content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)"
+    />
+    <meta
+      name="keywords"
+      content="firebase, google, domain, url, node, node.js, cpi, http, https, protocol, ssl, chrome, firebase, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, mobile, article, website, Certificate, seo, visual, visual design, artist, interface, interface design, experience, experience design, xd, product, product design, web publish, ui designer, ux designer, product designer, visual designer, graphic designer"
+    />
 
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Hyouk Seo(Spemer)" />
-<meta property="og:url" content="https://spemer.com/articles/connecting-domain-with-google-firebase.html" />
-<meta property="og:title" content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)" />
-<meta property="og:image" content="https://spemer.com/img/works/firebase/firebase_logo.jpg" />
-<meta property="og:description" content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)" />
-<meta property="article:author" content="Hyouk Seo(Spemer)">
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hyouk Seo(Spemer)" />
+    <meta
+      property="og:url"
+      content="https://spemer.com/articles/connecting-domain-with-google-firebase.html"
+    />
+    <meta
+      property="og:title"
+      content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)"
+    />
+    <meta
+      property="og:image"
+      content="https://spemer.com/img/works/firebase/firebase_logo.jpg"
+    />
+    <meta
+      property="og:description"
+      content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)"
+    />
+    <meta property="article:author" content="Hyouk Seo(Spemer)" />
 
-<meta itemprop="name" content="Hyouk Seo(Spemer)">
-<meta itemprop="description" content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)">
-<meta itemprop="image" content="https://spemer.com/img/works/firebase/firebase_logo.jpg">
+    <meta itemprop="name" content="Hyouk Seo(Spemer)" />
+    <meta
+      itemprop="description"
+      content="Hyouk Seo(Spemer) - Connecting your domain by using Google Firebase(w/ Node.js)"
+    />
+    <meta
+      itemprop="image"
+      content="https://spemer.com/img/works/firebase/firebase_logo.jpg"
+    />
 
-<link href="https://plus.google.com/114021748891431138237" rel="publisher">
-<link rel="canonical" href="https://www.spemer.com/articles/connecting-domain-with-google-firebase.html">
+    <link
+      href="https://plus.google.com/114021748891431138237"
+      rel="publisher"
+    />
+    <link
+      rel="canonical"
+      href="https://www.spemer.com/articles/connecting-domain-with-google-firebase.html"
+    />
 
-<link rel="stylesheet" href="/css/dist/stylesheet.css">
-<style type="text/css">img{border:1px solid #e7e9ee;border-radius:4px}</style>
-</head>
+    <link rel="stylesheet" href="/css/dist/stylesheet.css" />
+    <style type="text/css">
+      img {
+        border: 1px solid #e7e9ee;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
 
-<body class="animated fadeInUp">
-<header>
-	<div>
-		<div id="headerLogo"></div>
-		<div id="headerNav">
-			<nav>
-				<ul></ul>
-			</nav>
-		</div>
-	</div>
-</header>
+  <body class="animated fadeInUp">
+    <header>
+      <div>
+        <div id="headerLogo"></div>
+        <div id="headerNav">
+          <nav>
+            <ul></ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-<article class="clearfix article animated fadeInUp">
-	<div class="triBox">
-		<div class="triBoxMain"><center>
+    <article class="clearfix article animated fadeInUp">
+      <div class="triBox">
+        <div class="triBoxMain">
+          <center>
+            <div class="everyTxtEnd everyTxtEndArticle">
+              <h2>Connecting your domain by using Google Firebase</h2>
+              <br />
+              <p>
+                Google Chrome announced that they are going to show “Not secure”
+                message on their address bar from this October, if Chrome trying
+                to enter URL with ‘HTTP’. Most of the major websites, such as
+                Google, Twitter, Facebook — were already move their protocol to
+                HTTPS.
+              </p>
+              <br />
+              <p>
+                However, with Firebase, you can get your own SSL certificate(for
+                free!), and you don’t need to worry about ‘Not secure’ message
+                even if you don’t have your own SSL certificate right now. With
+                your Google account, you can create a Firebase project at Google
+                Firebase.
+              </p>
 
-		<div class="everyTxtEnd everyTxtEndArticle">
-			<h2>Connecting your domain by using Google Firebase</h2>
-			<br>
-				<p>
-					Google Chrome announced that they are going to show “Not secure” message on their address bar from this October, if Chrome trying to enter URL with ‘HTTP’. Most of the major websites, such as Google, Twitter, Facebook — were already move their protocol to HTTPS.
-				</p>
-			<br>
-				<p>
-					However, with Firebase, you can get your own SSL certificate(for free!), and you don’t need to worry about ‘Not secure’ message even if you don’t have your own SSL certificate right now. With your Google account, you can create a Firebase project at Google Firebase.
-				</p>
+              <div class="hrline"></div>
 
-		<div class="hrline"></div>
+              <h3>Create a new project</h3>
 
-		<h3>Create a new project</h3>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/main.png">
+                    <img
+                      src="/img/works/firebase/main.png"
+                      alt="Main page of Google Firebase"
+                      data-balloon-pos="down"
+                      data-balloon="Main page of Google Firebase"
+                    />
+                    <figcaption>
+                      Main page of Firebase — You can add new project by
+                      clicking the”Add project(Red box)” button.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/main.png">
-					<img src="/img/works/firebase/main.png" alt="Main page of Google Firebase" data-balloon-pos="down" data-balloon="Main page of Google Firebase" />
-					<figcaption>Main page of Firebase — You can add new project by clicking the”Add project(Red box)” button.</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/newProject.JPG">
+                    <img
+                      src="/img/works/firebase/newProject.JPG"
+                      alt="Create a new project"
+                      data-balloon-pos="down"
+                      data-balloon="Create a new project"
+                    />
+                    <figcaption>Create a new project</figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/newProject.JPG">
-					<img src="/img/works/firebase/newProject.JPG" alt="Create a new project" data-balloon-pos="down" data-balloon="Create a new project" />
-					<figcaption>Create a new project</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <p>
+                Dialog shows up after you click “Add project” button. You can
+                name your new project and select your country here. I selected
+                “South Korea”, But I recommend you to select the country which
+                has the best CDN server located(and of course, the nearest
+                country!)
+              </p>
 
-				<p>
-					Dialog shows up after you click “Add project” button. You can name your new project and select your country here. I selected “South Korea”, But I recommend you to select the country which has the best CDN server located(and of course, the nearest country!)
-				</p>
+              <div class="hrline"></div>
 
-		<div class="hrline"></div>
+              <h3>Start Google Firebase</h3>
 
-		<h3>Start Google Firebase</h3>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/afterSignIn.png">
+                    <img
+                      src="/img/works/firebase/afterSignIn.png"
+                      alt="Go to Hosting tab"
+                      data-balloon-pos="down"
+                      data-balloon="Go to Hosting tab"
+                    />
+                  </a>
+                </section>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/afterSignIn.png">
-					<img src="/img/works/firebase/afterSignIn.png" alt="Go to Hosting tab" data-balloon-pos="down" data-balloon="Go to Hosting tab" />
-				</a>
-				</section>
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/hostingStart.png"
+                  >
+                    <img
+                      src="/img/works/firebase/hostingStart.png"
+                      alt="Hosting start"
+                      data-balloon-pos="down"
+                      data-balloon="Hosting start"
+                    />
+                    <figcaption>
+                      Go straight to “Hosting” tab on the left navigation bar
+                      and click “Start” button on the “Hosting” page.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/hostingStart.png">
-					<img src="/img/works/firebase/hostingStart.png" alt="Hosting start" data-balloon-pos="down" data-balloon="Hosting start" />
-					<figcaption>Go straight to “Hosting” tab on the left navigation bar and click “Start” button on the “Hosting” page.</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/hostingSetting.JPG"
+                  >
+                    <img
+                      src="/img/works/firebase/hostingSetting.JPG"
+                      alt="Hosting setting(1)"
+                      data-balloon-pos="down"
+                      data-balloon="Hosting setting(1)"
+                    />
+                  </a>
+                </section>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/hostingSetting.JPG">
-					<img src="/img/works/firebase/hostingSetting.JPG" alt="Hosting setting(1)" data-balloon-pos="down" data-balloon="Hosting setting(1)" />
-				</a>
-				</section>
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/hostingSetting2.JPG"
+                  >
+                    <img
+                      src="/img/works/firebase/hostingSetting2.JPG"
+                      alt="Hosting setting(2)"
+                      data-balloon-pos="down"
+                      data-balloon="Hosting setting(2)"
+                    />
+                    <figcaption>
+                      You have to setup your local directory first — and open
+                      Terminal by Hold down the Shift key while right-clicking
+                      in your directory. Just copy and paste the npm
+                      code — Install code, Google sign in, Start project and
+                      Publish website.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/hostingSetting2.JPG">
-					<img src="/img/works/firebase/hostingSetting2.JPG" alt="Hosting setting(2)" data-balloon-pos="down" data-balloon="Hosting setting(2)" />
-					<figcaption>You have to setup your local directory first — and open Terminal by Hold down the Shift key while right-clicking in your directory. Just copy and paste the npm code — Install code, Google sign in, Start project and Publish website.</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <p>
+                You must setup your local directory first, because it’s based on
+                Commend Line Interface of Node.js, not like a FTP server or Web
+                hosting manager. Just make sure you installed Node.js on your
+                computer!
+              </p>
+              <br />
 
-				<p>
-					You must setup your local directory first, because it’s based on Commend Line Interface of Node.js, not like a FTP server or Web hosting manager. Just make sure you installed Node.js on your computer!
-				</p><br>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/npm.JPG">
+                    <img
+                      src="/img/works/firebase/npm.JPG"
+                      alt="Login and initialize Firebase"
+                      data-balloon-pos="down"
+                      data-balloon="Login and initialize Firebase"
+                    />
+                    <figcaption>
+                      Open Terminal by Hold down the Shift key while
+                      right-clicking
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/npm.JPG">
-					<img src="/img/works/firebase/npm.JPG" alt="Login and initialize Firebase" data-balloon-pos="down" data-balloon="Login and initialize Firebase" />
-					<figcaption>Open Terminal by Hold down the Shift key while right-clicking</figcaption>
-				</a>
-				</section>
-			</figure>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/public.png">
+                    <img
+                      src="/img/works/firebase/public.png"
+                      alt="Set directory"
+                      data-balloon-pos="down"
+                      data-balloon="Set directory"
+                    />
+                    <figcaption>
+                      You may set your new directory for yoursef, or just leave
+                      it like this.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
+            </div>
 
+            <div class="everyTxtEnd everyTxtEndArticle">
+              <h3>Connect your domain</h3>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/public.png">
-					<img src="/img/works/firebase/public.png" alt="Set directory" data-balloon-pos="down" data-balloon="Set directory" />
-					<figcaption>You may set your new directory for yoursef, or just leave it like this.</figcaption>
-				</a>
-				</section>
-			</figure><br>
-			</div>
+              <p>
+                After this, click the “Connect domain” button to start
+                connecting your domain to Firebase. In this step, you need your
+                own domain, or domain to redirection.
+              </p>
+              <br />
 
-			<div class="everyTxtEnd everyTxtEndArticle">
-				<h3>Connect your domain</h3>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/connectingDomainBTN.png"
+                  >
+                    <img
+                      src="/img/works/firebase/connectingDomainBTN.png"
+                      alt="Connect domain"
+                      data-balloon-pos="down"
+                      data-balloon="Connect domain"
+                    />
+                    <figcaption>Click the “Connect domain” button</figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<p>
-					After this, click the “Connect domain” button to start connecting your domain to Firebase. In this step, you need your own domain, or domain to redirection.
-				</p><br>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/connectingDomain.png"
+                  >
+                    <img
+                      src="/img/works/firebase/connectingDomain.png"
+                      alt="Hosting setting(1)"
+                      data-balloon-pos="down"
+                      data-balloon="Hosting setting(1)"
+                    />
+                  </a>
+                </section>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/connectingDomainBTN.png">
-					<img src="/img/works/firebase/connectingDomainBTN.png" alt="Connect domain" data-balloon-pos="down" data-balloon="Connect domain" />
-					<figcaption>Click the “Connect domain” button</figcaption>
-				</a>
-				</section>
-			</figure><br>
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/firebase/confirmOwnership.png"
+                  >
+                    <img
+                      src="/img/works/firebase/confirmOwnership.png"
+                      alt="Hosting setting(2)"
+                      data-balloon-pos="down"
+                      data-balloon="Hosting setting(2)"
+                    />
+                    <figcaption>
+                      Type your domain, and confirm your domain’s ownership by
+                      adding TXT record to your DNS provider or service.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
+              <p>
+                In my case, my DNS provider is “GoDaddy”. So I added the TXT
+                record on my DNS provider’s DNS setting.
+              </p>
+              <br />
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/connectingDomain.png">
-					<img src="/img/works/firebase/connectingDomain.png" alt="Hosting setting(1)" data-balloon-pos="down" data-balloon="Hosting setting(1)" />
-				</a>
-				</section>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/addTXT.JPG">
+                    <img
+                      src="/img/works/firebase/addTXT.JPG"
+                      alt="Change TXT value"
+                      data-balloon-pos="down"
+                      data-balloon="Change TXT value"
+                    />
+                    <figcaption>
+                      Type is TXT, Host is your domain. And just copy and paste
+                      the TXT value on TXT field.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/confirmOwnership.png">
-					<img src="/img/works/firebase/confirmOwnership.png" alt="Hosting setting(2)" data-balloon-pos="down" data-balloon="Hosting setting(2)" />
-					<figcaption>Type your domain, and confirm your domain’s ownership by adding TXT record to your DNS provider or service.</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/key.JPG">
+                    <img
+                      src="/img/works/firebase/key.JPG"
+                      alt="Change A value"
+                      data-balloon-pos="down"
+                      data-balloon="Change A value"
+                    />
+                    <figcaption>
+                      Next, you’ll get some “A” values, add them to your service
+                      provider in the same way, just like you did for TXT value.
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<p>
-					In my case, my DNS provider is “GoDaddy”. So I added the TXT record on my DNS provider’s DNS setting.
-				</p><br>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/godaddy.JPG">
+                    <img
+                      src="/img/works/firebase/godaddy.JPG"
+                      alt="Changed A value"
+                      data-balloon-pos="down"
+                      data-balloon="Changed A value"
+                    />
+                    <figcaption>
+                      Changed “A” values on my service provider(GoDaddy)
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/addTXT.JPG">
-					<img src="/img/works/firebase/addTXT.JPG" alt="Change TXT value" data-balloon-pos="down" data-balloon="Change TXT value" />
-					<figcaption>Type is TXT, Host is your domain. And just copy and paste the TXT value on TXT field.</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <div class="hrline"></div>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/key.JPG">
-					<img src="/img/works/firebase/key.JPG" alt="Change A value" data-balloon-pos="down" data-balloon="Change A value" />
-					<figcaption>Next, you’ll get some “A” values, add them to your service provider in the same way, just like you did for TXT value.
-					</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <h3>Upload your files</h3>
+              <p>
+                Next thing to do is bringing your assets into your directory,
+                which you’ve setup on terminal. In my case, I set my public
+                directory as “public” folder(default). And then, on your
+                Terminal, type a line of commend below.
+              </p>
+              <br />
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/godaddy.JPG">
-					<img src="/img/works/firebase/godaddy.JPG" alt="Changed A value" data-balloon-pos="down" data-balloon="Changed A value" />
-					<figcaption>Changed “A” values on my service provider(GoDaddy)</figcaption>
-				</a>
-				</section>
-			</figure>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/deployOnly.JPG">
+                    <img
+                      src="/img/works/firebase/deployOnly.JPG"
+                      alt="Create a new project"
+                      data-balloon-pos="down"
+                      data-balloon="Create a new project"
+                    />
+                    <figcaption>Type this line…</figcaption>
+                  </a>
+                </section>
+              </figure>
 
-		<div class="hrline"></div>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/deploy.JPG">
+                    <img
+                      src="/img/works/firebase/deploy.JPG"
+                      alt="Create a new project"
+                      data-balloon-pos="down"
+                      data-balloon="Create a new project"
+                    />
+                    <figcaption>Files uploading… Done!</figcaption>
+                  </a>
+                </section>
+              </figure>
 
-			<h3>Upload your files</h3>
-				<p>
-					Next thing to do is bringing your assets into your directory, which you’ve setup on terminal. In my case, I set my public directory as “public” folder(default). And then, on your Terminal, type a line of commend below.
-				</p><br>
+              <div class="hrline"></div>
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/deployOnly.JPG">
-					<img src="/img/works/firebase/deployOnly.JPG" alt="Create a new project" data-balloon-pos="down" data-balloon="Create a new project" />
-					<figcaption>Type this line…</figcaption>
-				</a>
-				</section>
-			</figure>
+              <h3>Get 'https'</h3>
+              <p>
+                That’s it! Now you have to wait for 5 mins to 2 hours for
+                Firebase to applying your domain’s settings. Before that,
+                uncomfortable screen may come across to you — when you’re trying
+                to enter your domain, like
+              </p>
+              <br />
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/deploy.JPG">
-					<img src="/img/works/firebase/deploy.JPG" alt="Create a new project" data-balloon-pos="down" data-balloon="Create a new project" />
-					<figcaption>Files uploading… Done!</figcaption>
-				</a>
-				</section>
-			</figure>
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/warning.JPG">
+                    <img
+                      src="/img/works/firebase/warning.JPG"
+                      alt="Changed A value"
+                      data-balloon-pos="down"
+                      data-balloon="Changed A value"
+                    />
+                    <figcaption>This!</figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-		<div class="hrline"></div>
+              <p>
+                I did this for my design portfolio website, cause I don’t want
+                to make my visitors get scared by “Not Secure” message on
+                Chrome.(seriously...!)<br />
+                And after 30 mins...
+              </p>
+              <br />
 
-			<h3>Get 'https'</h3>
-				<p>
-					That’s it! Now you have to wait for 5 mins to 2 hours for Firebase to applying your domain’s settings. Before that, uncomfortable screen may come across to you — when you’re trying to enter your domain, like
-				</p><br/>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/spemer.JPG">
+                    <img
+                      src="/img/works/firebase/spemer.JPG"
+                      alt="'http' to 'https'"
+                      data-balloon-pos="down"
+                      data-balloon="'http' to 'https'"
+                    />
+                    <figcaption>Finally I got it!</figcaption>
+                  </a>
+                </section>
+              </figure>
 
-			<figure class="articleImg articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/warning.JPG">
-					<img src="/img/works/firebase/warning.JPG" alt="Changed A value" data-balloon-pos="down" data-balloon="Changed A value" />
-					<figcaption>This!</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <figure class="articleImg75 articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a class="feather" href="/img/works/firebase/certificate.JPG">
+                    <img
+                      src="/img/works/firebase/certificate.JPG"
+                      alt="Certificate"
+                      data-balloon-pos="down"
+                      data-balloon="Certificate"
+                    />
+                    <figcaption>
+                      Certificate for my website — Spemer.com
+                    </figcaption>
+                  </a>
+                </section>
+              </figure>
+              <br />
 
-				<p>
-					I did this for my design portfolio website, cause I don’t want to make my visitors get scared by “Not Secure” message on Chrome.(seriously...!)<br/>
-					And after 30 mins...
-				</p><br>
+              <p>
+                Hope this can help you, especially for people who are
+                ‘non-professional’ in programming fields like me. Thanks!<br />
+              </p>
+            </div>
+          </center>
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/spemer.JPG">
-					<img src="/img/works/firebase/spemer.JPG" alt="'http' to 'https'" data-balloon-pos="down" data-balloon="'http' to 'https'" />
-					<figcaption>Finally I got it!</figcaption>
-				</a>
-				</section>
-			</figure>
+          <div class="everyTxtEndEnd">
+            <p>
+              Connecting your domain by using Google Firebase(w/ Node.js)<br />
+              <strong
+                ><a
+                  href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e"
+                  target="_blank"
+                  data-balloon-pos="down"
+                  data-balloon="Medium(new Tab)"
+                  >Click here to read this article on Medium
+                  <i class="fa fa-medium"></i></a></strong
+              ><br /><br />
 
-			<figure class="articleImg75 articleFig articleImgSize">
-				<section data-featherlight-gallery data-featherlight-filter="a" data-featherlight="image">
-				<a class="feather" href="/img/works/firebase/certificate.JPG">
-					<img src="/img/works/firebase/certificate.JPG" alt="Certificate" data-balloon-pos="down" data-balloon="Certificate" />
-					<figcaption>Certificate for my website — Spemer.com</figcaption>
-				</a>
-				</section>
-			</figure><br>
+              <strong>Title :</strong>
+              <a
+                href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e"
+                target="_blank"
+                data-balloon-pos="down"
+                data-balloon="Behance(new Tab)"
+                >Connecting your domain by using Google Firebase(w/ Node.js)</a
+              ><br />
 
-				<p>
-					Hope this can help you, especially for people who are ‘non-professional’ in programming fields like me. Thanks!<br>
-				</p>
-			</div></center>
+              <strong>Date :</strong> May 19, 2017<br />
 
-		<div class="everyTxtEndEnd">
-			<p>
-				Connecting your domain by using Google Firebase(w/ Node.js)<br>
-				<strong><a href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e" target="_blank" data-balloon-pos="down" data-balloon="Medium(new Tab)">Click here to read this article on Medium <i class="fa fa-medium"></i></a></strong><br><br>
+              <strong>Writer :</strong> Hyouk Seo (Spemer)<br /><br /><br />
+            </p>
+          </div>
+        </div>
 
-				<strong>Title :</strong> <a href="https://medium.com/spemer/connecting-your-domain-by-using-google-firebase-w-node-js-f6a1b406975e" target="_blank" data-balloon-pos="down" data-balloon="Behance(new Tab)">Connecting your domain by using Google Firebase(w/ Node.js)</a><br>
+        <nav>
+          <div id="prevNext" class="articles"></div>
+        </nav>
+      </div>
+    </article>
 
-				<strong>Date :</strong> May 19, 2017<br>
+    <div id="siteMap">
+      <p class="siteMapBtn" title="Sitemap">
+        <button class="c-hamburger c-hamburger--htx">
+          <span></span>
+        </button>
+      </p>
+      <nav>
+        <ul class="siteMapNav"></ul>
+      </nav>
+    </div>
 
-				<strong>Writer :</strong> Hyouk Seo (Spemer)<br><br><br>
-			</p>
-		</div>
-		</div>
+    <footer class="clearfix">
+      <div>
+        <p id="codeBySpemer"></p>
+        <nav>
+          <div id="snsIcon"></div>
+        </nav>
+      </div>
+    </footer>
 
-		<nav>
-			<div id="prevNext" class="articles"></div>
-		</nav>
-	</div>
-</article>
-
-<div id="siteMap">
-	<p class="siteMapBtn" title="Sitemap">
-		<button class="c-hamburger c-hamburger--htx">
-			<span></span>
-		</button>
-	</p>
-	<nav>
-		<ul class="siteMapNav"></ul>
-	</nav>
-</div>
-
-<footer class="clearfix">
-	<div>
-		<p id="codeBySpemer"></p>
-		<nav>
-			<div id="snsIcon"></div>
-		</nav>
-	</div>
-</footer>
-
-<script src="/js/dist/index.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.gallery.min.js"></script>
-<script src="/js/dist/after.jquery.js"></script>
-</body>
+    <script src="/js/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.gallery.min.js"></script>
+    <script src="/js/dist/after.jquery.js"></script>
+  </body>
 </html>
