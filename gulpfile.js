@@ -52,11 +52,11 @@ function browser_sync() {
       "/public/js/dist/*",
       "/public/articles/*",
       "/public/portfolio/*",
-      "/public/css/scss/stylesheet.scss"
+      "/public/css/scss/stylesheet.scss",
     ],
     server: {
-      baseDir: "./public"
-    }
+      baseDir: "./public",
+    },
   });
   gulp.watch("*").on("change", browserSync.reload);
 }
@@ -94,7 +94,7 @@ function prefix_css() {
     .pipe(
       autoprefixer({
         browsers: ["cover 99.5%"],
-        cascade: false
+        cascade: false,
       })
     )
     .pipe(gulp.dest("./public/css/tmp"));

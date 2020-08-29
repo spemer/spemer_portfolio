@@ -1,6 +1,6 @@
 # Portfolio website 🌐
 
-> Hi, I'm web & mobile **UI/UX designer** based in South Korea🇰🇷 I Built this website with **HTML5, CSS3 and JavaScript**. Hope you enjoy and Thanks for watching this project you all!
+> Hi, I'm web & mobile **UX/UI designer** based in South Korea🇰🇷 I Built this website with **HTML5, CSS3 and JavaScript**. Hope you enjoy and Thanks for watching this project you all!
 
 ## Setup
 

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-96234376-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-96234376-1");
+    </script>
+
+    <title>Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+
+    <meta name="author" content="Hyouk Seo(Spemer)" />
+    <meta
+      name="description"
+      content="Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js"
+    />
+    <meta
+      name="abstract"
+      content="Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js"
+    />
+    <meta
+      name="keywords"
+      content="design, medium, github, Hyouk Seo, web, app, spemer, Hyouk Seo, Korea, article, website, seo, publisher, web publish, process, product designer, css, html, web, frontend, development, stylesheet, icon, gist, javascript, android, apple, ios, github, gulp, webkit, website, browser, chrome, firefox, mozila, safari, edge, ie, prefix"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hyouk Seo(Spemer)" />
+    <meta
+      property="og:url"
+      content="https://spemer.com/articles/auto-css-vendor-browser-prefix-javascript-gulp.html"
+    />
+    <meta
+      property="og:title"
+      content="Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js"
+    />
+    <meta
+      property="og:image"
+      content="https://spemer.com/img/works/gulp/thumb.png"
+    />
+    <meta
+      property="og:description"
+      content="Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js"
+    />
+    <meta property="article:author" content="Hyouk Seo(Spemer)" />
+
+    <meta itemprop="name" content="Hyouk Seo(Spemer)" />
+    <meta
+      itemprop="description"
+      content="Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js"
+    />
+    <meta
+      itemprop="image"
+      content="https://spemer.com/img/works/gulp/thumb.png"
+    />
+
+    <link
+      href="https://plus.google.com/114021748891431138237"
+      rel="publisher"
+    />
+    <link
+      rel="canonical"
+      href="https://www.spemer.com/articles/auto-css-vendor-browser-prefix-javascript-gulp.html"
+    />
+
+    <link rel="stylesheet" href="/css/dist/stylesheet.css" />
+  </head>
+
+  <body class="animated fadeInUp">
+    <header>
+      <div>
+        <div id="headerLogo"></div>
+        <div id="headerNav">
+          <nav>
+            <ul></ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <article class="clearfix article animated fadeInUp">
+      <div class="triBox">
+        <div class="triBoxMain">
+          <center>
+            <div class="everyTxtEnd everyTxtEndArticle">
+              <h2>Creating a sitemap generator for Next.js</h2>
+              <p>From sitemap creation to search engine index request</p>
+
+              <br />
+              <figure class="articleImg articleFig articleImgSize">
+                <img
+                  loading="lazy"
+                  src="/img/works/sitemap/logo.jpeg"
+                  alt="Next.js"
+                  data-balloon-pos="down"
+                  data-balloon="Next.js"
+                />
+              </figure>
+              <br />
+
+              <p>
+                In this story, I’d like to share the search engine optimization
+                — that was done while converting the
+                <b class="underline"
+                  ><a
+                    href="https://volla.live/"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="Volla Website(new tab)"
+                    >Volla</a
+                  ></b
+                >
+                bridge page which was written in
+                <b class="underline"
+                  ><a
+                    href="https://vuejs.org/"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="Vue.js Website(new tab)"
+                    >Vue.js</a
+                  ></b
+                >
+                into
+                <b class="underline"
+                  ><a
+                    href="https://nextjs.org/"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="Next.js Website(new tab)"
+                    >Next.js</a
+                  ></b
+                >
+                — and how I created a dynamic sitemap generator for Next.js.
+              </p>
+
+              <div class="hrline"></div>
+
+              <h4>
+                1. Create sitemap generator script following Next.js folder
+                structure
+              </h4>
+              <p>
+                <b>Next.js automatically creates URL</b> following folder and
+                file name in the
+                <span class="codeInline">pages</span> directory. So, I’m going
+                to write the XML generating script, that exclude the special
+                file names of Next.js (<span class="codeInline"
+                  >_document.js</span
+                >, <span class="codeInline">_app.js</span> etc.) among all the
+                folder and file names in the pages directory using
+                <b class="underline"
+                  ><a
+                    href="https://www.npmjs.com/package/globby"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="globby npm(new tab)"
+                    >globby</a
+                  ></b
+                >.
+              </p>
+              <br />
+              <p>
+                First, create a <span class="codeInline">scripts</span> folder
+                in the root directory, and write the following code named
+                <span class="codeInline">sitemap-common.js</span>.
+              </p>
+
+              <script src="https://gist.github.com/spemer/7f07e9adc25888f4af858d10c5818499.js"></script>
+
+              <p>
+                Executing the above script creates xml file as below(example).
+              </p>
+
+              <script src="https://gist.github.com/spemer/6405b137af50c0fc7fed59e26fa0aba7.js"></script>
+
+              <div class="hrline"></div>
+
+              <h4>2. Writing sitemap generator script for external API</h4>
+
+              <p>
+                As in the example code above, it’s relatively easy to create
+                sitemaps for static pages. However, for
+                <b>dynamic pages</b>(e.g. pages with
+                <span class="codeInline">userId</span>), we need to write a
+                script that creates a sitemap in a slightly different way (in
+                the example code, I used
+                <b class="underline"
+                  ><a
+                    href="https://jsonplaceholder.typicode.com/"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="JSONPlaceholder(new tab)"
+                    >JSONPlaceholder</a
+                  ></b
+                >’s API).
+              </p>
+              <br />
+              <p>
+                I wrote the following code — named
+                <span class="codeInline">sitemap-posts.js</span>.
+              </p>
+
+              <script src="https://gist.github.com/spemer/77e60f0847058e26048027e3f24f2e4b.js"></script>
+
+              <p>
+                Executing the above script creates xml file as below(example).
+              </p>
+
+              <script src="https://gist.github.com/spemer/204a2cd08768b8959d170d0ca51079fc.js"></script>
+
+              <div class="hrline"></div>
+
+              <h4>
+                3. Writing script that compresses all sitemap files created
+                above into gzip format
+              </h4>
+              <p>
+                Sitemaps that compressed in <b>gzip(.gz)</b> format can be used
+                in the same way as xml format sitemaps, but in a smaller size.
+                Using
+                <b class="underline"
+                  ><a
+                    href="https://nodejs.org/api/zlib.html#zlib_zlib"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="zlib - nodejs(new tab)"
+                    >zlib</a
+                  ></b
+                >, I’m going to compress all the xml files created above into a
+                gzip format.
+              </p>
+
+              <script src="https://gist.github.com/spemer/50839a077109860a08b9173fbf621cb6.js"></script>
+
+              <p>
+                The above script compresses all the xml files created in steps 1
+                and 2 into <span class="codeInline">.gz</span> format.
+              </p>
+
+              <div class="hrline"></div>
+
+              <h4>
+                4. Writing sitemap index generating script for the sitemap files
+                which created by the above methods
+              </h4>
+              <p>
+                Providing <b>multiple sitemaps</b> to search engines (Google
+                Search Console, Naver Search Advisor, etc.) requires
+                <b>sitemap index file</b>.
+              </p>
+              <br />
+              <p>
+                I created each sitemap separately for various dynamic URLs such
+                as <span class="codeInline">/seller/[_id]</span>,
+                <span class="codeInline">/product/[_id]</span>, and
+                <span class="codeInline">/video/[_id]</span>. To submitting a
+                sitemap to Google Search Console, etc., a
+                <b>single sitemap</b> must be submitted, so I wrote the
+                following script to create a <b>sitemap index file</b>.
+              </p>
+
+              <script src="https://gist.github.com/spemer/935bb996d7d4539ebe7d23b178ddc6bc.js"></script>
+
+              <p>
+                Executing the above script creates xml file as below(example).
+              </p>
+
+              <script src="https://gist.github.com/spemer/fdfb38852921e5d86fad819634744a1b.js"></script>
+
+              <div class="hrline"></div>
+
+              <h4>
+                5. Writing a bash script that creates a new sitemap for each
+                master deployments, and a script that pings the sitemap to
+                Google Search Console from GitHub Actions
+              </h4>
+              <p class="code">
+                # yarn sitemap<br />
+                $ cd public<br />
+                $ rm -rf sitemap<br />
+                $ mkdir sitemap<br />
+                $ cd ..<br />
+                $ cd scripts<br />
+                $ node ./sitemap-common.js<br />
+                $ node ./sitemap-posts.js<br />
+                $ node ./sitemap.js<br />
+              </p>
+              <p>
+                If you want to make Google Search Console
+                <b>reindex your pages</b>, just add one line below at the end of
+                the script.
+              </p>
+              <p class="code">
+                $ curl
+                http://google.com/ping?sitemap=http://website.com/sitemap.xml
+              </p>
+              <p>
+                I wrote a new bash script like below to create sitemaps in xml
+                format, compress those sitemaps into gzip format, and remove
+                unused xml files automatically.
+              </p>
+
+              <figure class="articleImg articleFig articleImgSize">
+                <section
+                  data-featherlight-gallery
+                  data-featherlight-filter="a"
+                  data-featherlight="image"
+                >
+                  <a
+                    class="feather"
+                    href="/img/works/sitemap/bash.png"
+                    alt="Bash Script"
+                    data-balloon-pos="down"
+                    data-balloon="Bash Script"
+                  >
+                    <img
+                      loading="lazy"
+                      src="/img/works/sitemap/bash.png"
+                      alt="Bash Script"
+                      data-balloon-pos="down"
+                      data-balloon="Bash Script"
+                      class="whiteBgImg"
+                    />
+                  </a>
+                </section>
+              </figure>
+
+              <p>
+                Afterwards, I modified the workflow file to run the above
+                scripts in
+                <b class="underline"
+                  ><a
+                    href="https://github.com/features/actions"
+                    target="_blank"
+                    data-balloon-pos="down"
+                    data-balloon="GitHub Actions(new tab)"
+                    >GitHub Actions</a
+                  ></b
+                >
+                on master deployment.
+              </p>
+              <p class="code">
+                # Create a sitemap and submit it to Google.<br />
+                - run: yarn sitemap<br />
+                &nbsp;&nbsp;name: ping sitemap
+              </p>
+
+              <div class="hrline"></div>
+
+              <h3>Takeaway</h3>
+              <p>
+                Hope you enjoyed my short tutorial about generating sitemaps for
+                Next.js. Please feel free to contact me — visit my
+                <a
+                  href="https://www.linkedin.com/in/hyouk-seo-0b6801122/"
+                  data-balloon-pos="down"
+                  data-balloon="LinkedIn(new tab)"
+                  target="_blank"
+                  ><b class="underline externalLink">LinkedIn</b></a
+                >
+                or just send me an Email to
+                <span class="underline">ghsspower@gmail.com</span>. Thanks!
+              </p>
+            </div>
+          </center>
+
+          <div class="everyTxtEndEnd">
+            <p>
+              Hyouk Seo(Spemer) - Creating a sitemap generator for Next.js<br />
+              <strong
+                ><a
+                  href="https://medium.com/spemer/creating-a-sitemap-generator-for-next-js-3102fb5a297e"
+                  target="_blank"
+                  data-balloon-pos="down"
+                  data-balloon="Medium(new tab)"
+                  >Click here to read this article on Medium
+                  <i class="fa fa-medium"></i></a></strong
+              ><br /><br />
+
+              <strong>Title :</strong>
+              <a
+                href="https://medium.com/spemer/creating-a-sitemap-generator-for-next-js-3102fb5a297e"
+                target="_blank"
+                data-balloon-pos="down"
+                data-balloon="Medium(new tab)"
+                >Creating a sitemap generator for Next.js</a
+              ><br />
+
+              <strong>Date :</strong> August 30, 2020<br />
+
+              <strong>Writer :</strong> Hyouk Seo (Spemer)<br /><br /><br />
+            </p>
+          </div>
+        </div>
+
+        <nav>
+          <div id="prevNext" class="articles"></div>
+        </nav>
+      </div>
+    </article>
+
+    <div id="siteMap">
+      <p class="siteMapBtn" title="Sitemap">
+        <button class="c-hamburger c-hamburger--htx">
+          <span></span>
+        </button>
+      </p>
+      <nav>
+        <ul class="siteMapNav"></ul>
+      </nav>
+    </div>
+
+    <footer class="clearfix">
+      <div>
+        <p id="codeBySpemer"></p>
+        <nav>
+          <div id="snsIcon"></div>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/js/dist/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.gallery.min.js"></script>
+    <script src="/js/dist/after.jquery.js"></script>
+    <!-- <script src="/js/dist/polyfill.js"></script> -->
+  </body>
+</html>

@@ -12,7 +12,7 @@
 
 //
 // '#headerLogo'
-(function() {
+(function () {
   var _headerLogo, headerLink, headerHeading, headerText;
 
   _headerLogo = document.querySelector("#headerLogo");
@@ -28,133 +28,139 @@
 
 //
 // siteMap links
-(function() {
+(function () {
   var siteMapList = [
     {
       name: "Insharior",
       href: "portfolio/insharior-ux-case-study-user-experience-design",
       title:
         "Insharior - UX Case study: Interior item sharing mobile application design",
-      img: "insharior/thumb.png"
+      img: "insharior/thumb.png",
     },
     {
       name: "IGTracker",
       href: "portfolio/instagram-tracker-application-igtracker-design",
       title:
         "IGTracker - UX Case study: Instagram Tracking Application UI Design",
-      img: "igtracker/thumb.png"
+      img: "igtracker/thumb.png",
     },
     {
       name: "AWeather",
       href: "portfolio/weather-push-notification-alarm-application",
       title: "AWeather - UX Case study: Weather notification application",
-      img: "weather/thumb.png"
+      img: "weather/thumb.png",
     },
     {
       name: "UnivCam",
       href: "portfolio/album-image-sort-application-univcam",
-      title: "UnivCam - UX Case study: Album sorting application UI/UX design",
-      img: "univcam/thumb.png"
+      title: "UnivCam - UX Case study: Album sorting application UX/UI design",
+      img: "univcam/thumb.png",
     },
     {
       name: "Neighbors",
       href: "portfolio/dream-drim-korea-apartment-application",
       title: "Neighbors - SNS application for neighborhood UI Design",
-      img: "dream/cover.png"
+      img: "dream/cover.png",
     },
     {
       name: "Memoree",
       href: "portfolio/memory-record-application-ui-design",
-      title: "Memoree - Minimal UI/UX design for iOS",
-      img: "memoree/thumb.png"
+      title: "Memoree - Minimal UX/UI design for iOS",
+      img: "memoree/thumb.png",
     },
     {
       name: "Sprinter",
       href: "portfolio/todo-task-list-manage-application-sprinter",
-      title: "Sprinter - ToDo list & task management application UI/UX design",
-      img: "sprinter/thumb.png"
+      title: "Sprinter - ToDo list & task management application UX/UI design",
+      img: "sprinter/thumb.png",
     },
     {
       name: "Suhyup",
       href: "portfolio/suhyup-mobile-banking-ui-ux-renewal",
-      title: "Suhyup - Mobile Banking Application UI/UX Renewal",
-      img: "suhyup/thumb.png"
+      title: "Suhyup - Mobile Banking Application UX/UI Renewal",
+      img: "suhyup/thumb.png",
     },
     {
       name: "Flat Icons",
       href: "portfolio/flaticon-vector-graphic-illustration-design",
       title: "Minimal vector flat icon design",
-      img: "flaticon/house.jpg"
-    }
+      img: "flaticon/house.jpg",
+    },
   ];
 
   var siteMapListArticle = [
     {
+      name: "Sitemap",
+      href: "articles/generate-sitemap-for-next-js",
+      title: "Creating a sitemap generator for Next.js",
+      img: "sitemap/thumb.png",
+    },
+    {
       name: "Vue",
       href: "articles/using-axios-with-vue-js",
       title: "Using Axios with Vue.js",
-      img: "vue/thumb.png"
+      img: "vue/thumb.png",
     },
     {
       name: "Sass",
       href: "articles/beginners-guide-to-sass-css",
       title: "Beginner’s guide to Sass",
-      img: "sass/thumb.png"
+      img: "sass/thumb.png",
     },
     {
       name: "Gulp",
       href: "articles/auto-css-vendor-browser-prefix-javascript-gulp",
       title: "Auto CSS prefix with Gulp",
-      img: "gulp/thumb.png"
+      img: "gulp/thumb.png",
     },
     {
       name: "Favicon",
       href: "articles/set-favicon-with-javascript",
       title: "Set favicons with JavaScript",
-      img: "favicon/favicon.png"
+      img: "favicon/favicon.png",
     },
     {
       name: "Scrollbar",
       href: "articles/customize-website-scrollbar-with-css-web-browser",
       title: "Customize website’s scrollbar with CSS",
-      img: "scroll/cover.png"
+      img: "scroll/cover.png",
     },
     {
       name: "CSS Variables",
       href: "articles/css-custom-properties-variables-usage",
       title: "Using variables(custom properties) in CSS3",
-      img: "css/thumb.png"
+      img: "css/thumb.png",
     },
     {
       name: "Bodymovin",
       href: "articles/bodymovin-airbnb-lottie-after-effects",
       title: "How to use Bodymovin for After Effects by Airbnb",
-      img: "bodymovin/cover.png"
+      img: "bodymovin/cover.png",
     },
     {
       name: "Jekyll",
       href: "articles/free-github-blog-and-hosting-with-jekyll",
       title: "Free GitHub blog and Hosting with Jekyll",
-      img: "jekyll/thumb.png"
+      img: "jekyll/thumb.png",
     },
     {
       name: "Material",
       href: "articles/creative-pros-cons-google-material-design",
       title: "Cons and Pros of Material design by Google",
-      img: "material/material.png"
+      img: "material/material.png",
     },
     {
       name: "Firebase",
       href: "articles/connecting-domain-with-google-firebase",
       title: "Using Firebase to host website for free!",
-      img: "firebase/firebase_logo.jpg"
+      img: "firebase/firebase_logo.jpg",
     },
     {
       name: "Musics",
       href: "articles/spemer-music",
       title: "Musics by Spemer",
-      img: "music/cover.jpg"
-    }
+      img: "music/cover.jpg",
+    },
   ];
 
   //
@@ -298,7 +304,7 @@
   var siteMapNav = document.querySelector(".siteMapNav");
 
   function bottomSiteNav(arrayName) {
-    arrayName.forEach(function(arrLen) {
+    arrayName.forEach(function (arrLen) {
       var listNode, hrefNode, textNode, thisUrl, substring;
 
       listNode = document.createElement("li");
@@ -368,25 +374,25 @@
 
 //
 // headerNav 3 ul > li
-(function() {
+(function () {
   var topNavLists = [
     {
       title: "Portfolio",
       href: "/",
       hName: "/portfolio/",
-      target: "_self"
+      target: "_self",
     },
     {
       title: "Articles",
       href: "/articles.html",
       hName: "/articles",
-      target: "_self"
+      target: "_self",
     },
     {
       title: "About",
       href: "/about-spemer.html",
       hName: "about-spemer.html",
-      target: "_self"
+      target: "_self",
     },
     {
       title: "CV",
@@ -394,13 +400,13 @@
         "https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing",
       hName:
         "https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing",
-      target: "_blank"
-    }
+      target: "_blank",
+    },
   ];
 
   var headerNavLists = document.querySelector("#headerNav > nav > ul");
 
-  topNavLists.forEach(function(topNavList) {
+  topNavLists.forEach(function (topNavList) {
     var setHeaderLists = document.createElement("li");
     setHeaderLists.className = "headerNavList";
 
@@ -427,7 +433,7 @@
 
 //
 // index.html only
-(function() {
+(function () {
   var getIndexMain = document.querySelector(".indexMain");
 
   if (getIndexMain) {
@@ -438,14 +444,14 @@
 
 //
 // body gets idname body
-(function() {
+(function () {
   var getBody = document.querySelector("body");
   getBody.id = "body";
 })();
 
 //
 // TopBtn
-(function() {
+(function () {
   var prevNextHome = document.querySelector("#prevNext");
 
   if (prevNextHome) {
@@ -473,48 +479,48 @@
 
 //
 // Footer '#snsIcon'
-(function() {
+(function () {
   var snsIconList = {
     Twitter: {
       href: "twitter.com/OfficialSpemer",
       iconID: "twIcon",
-      iconClass: "twitter"
+      iconClass: "twitter",
     },
     GitHub: {
       href: "github.com/spemer",
       iconID: "ghIcon",
-      iconClass: "github"
+      iconClass: "github",
     },
     FaceBook: {
       href: "facebook.com/ghsspower",
       iconID: "fbIcon",
-      iconClass: "facebook"
+      iconClass: "facebook",
     },
     Instagram: {
       href: "instagram.com/spemer/",
       iconID: "inIcon",
-      iconClass: "instagram"
+      iconClass: "instagram",
     },
     LinkedIn: {
       href: "www.linkedin.com/in/hyouk-seo-0b6801122/",
       iconID: "liIcon",
-      iconClass: "linkedin"
+      iconClass: "linkedin",
     },
     Dribbble: {
       href: "dribbble.com/spemer",
       iconID: "drIcon",
-      iconClass: "dribbble"
+      iconClass: "dribbble",
     },
     Medium: {
       href: "medium.com/@spemer",
       iconID: "medIcon",
-      iconClass: "medium"
+      iconClass: "medium",
     },
     Behance: {
       href: "behance.net/spemer",
       iconID: "beIcon",
-      iconClass: "behance"
-    }
+      iconClass: "behance",
+    },
   };
 
   var snsIcon = document.querySelector("#snsIcon");
@@ -536,7 +542,7 @@
 
 //
 // Code with Love by Hyouk Seo(Spemer)
-(function() {
+(function () {
   var codeBy, codeIconNode, topTextNode1, loveIconNode, topTextNode2;
 
   codeBy = document.querySelector("#codeBySpemer");
@@ -556,7 +562,7 @@
 
 //
 // #topBtnFixed
-(function() {
+(function () {
   var getBody, fixedTopBtn, fixedTopBtnLink, fixedTopBtnIcon;
 
   getBody = document.querySelector("body");
@@ -577,7 +583,7 @@
   fixedTopBtnLink.appendChild(fixedTopBtnIcon);
 
   // topBtn hidden top
-  window.onscroll = function() {
+  window.onscroll = function () {
     scrollFunction(320);
   };
 
@@ -594,12 +600,12 @@
 
 //
 // set '.externalLink' Icon
-(function() {
+(function () {
   var externalLinks, setLinkIcon;
 
   externalLinks = document.querySelectorAll(".externalLink");
 
-  externalLinks.forEach(function(linkEach) {
+  externalLinks.forEach(function (linkEach) {
     linkEach.setAttribute("target", "_blank");
     setLinkIcon = document.createElement("i");
     setLinkIcon.className = "fa fa-external-link";
@@ -609,7 +615,7 @@
 
 //
 // '.hrline' -> medium style 3 dots
-(function() {
+(function () {
   var i, j, gethrline, setCenter, setSpan;
 
   gethrline = document.getElementsByClassName("hrline");
@@ -627,10 +633,10 @@
 
 //
 // get <i> tag -> set 'aria-hidden' attr
-(function() {
+(function () {
   var getIcons, getIconAttr;
 
-  getIcons = document.querySelectorAll("i.fa").forEach(function(iconEach) {
+  getIcons = document.querySelectorAll("i.fa").forEach(function (iconEach) {
     getIconAttr = iconEach.getAttribute("aria-hidden");
     if (!getIconAttr) iconEach.setAttribute("aria-hidden", "true");
   });

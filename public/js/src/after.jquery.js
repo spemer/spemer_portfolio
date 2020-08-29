@@ -1,6 +1,6 @@
 //
 // set <html> prefix + manifest
-(function() {
+(function () {
   var getHtml = document.querySelector("html");
   getHtml.setAttribute("prefix", "og: http://ogp.me/ns#");
   getHtml.setAttribute("lang", "en");
@@ -8,18 +8,18 @@
 
 //
 // preload
-(function() {
+(function () {
   var preloadLists = [
     { href: "/js/dist/index.js", as: "script" },
     { href: "/css/dist/stylesheet.css", as: "style" },
     { href: "/css/dist/featherlight.css", as: "style" },
     { href: "/css/dist/featherlight.gallery.css", as: "style" },
     // { href: '/js/dist/set.class.atech.js', as: 'script' },
-    { href: "/js/dist/after.jquery.js", as: "script" }
+    { href: "/js/dist/after.jquery.js", as: "script" },
     // { href: '/js/dist/beusable.js', as: 'script' },
   ];
   var headTitle = document.querySelector("head");
-  preloadLists.forEach(function(preloadList) {
+  preloadLists.forEach(function (preloadList) {
     var setLinkProp = document.createElement("link");
     setLinkProp.setAttribute("rel", "preload");
     setLinkProp.setAttribute("href", preloadList.href);
@@ -45,7 +45,7 @@
 
 //
 // meta Tags **meta [property, content]**
-(function() {
+(function () {
   var thisUrl = window.location.href;
   var thisOGImg = document
     .querySelector("meta[property='og:image']")
@@ -59,10 +59,10 @@
     { property: "og:img:secure_url", content: thisOGImg },
     { property: "article:section", content: "Design" },
     { property: "article:tag", content: thisKeys },
-    { property: "al:web:url", content: thisUrl }
+    { property: "al:web:url", content: thisUrl },
   ];
   var headTitle = document.querySelector("head");
-  propLists.forEach(function(propList) {
+  propLists.forEach(function (propList) {
     var setMetaProp = document.createElement("meta");
     setMetaProp.setAttribute("property", propList.property);
     setMetaProp.setAttribute("content", propList.content);
@@ -72,7 +72,7 @@
 
 //
 // meta Tags **meta [name, content]**
-(function() {
+(function () {
   var thisUrl = window.location.href;
   var thisTitle = document.title;
   var thisDesc = document
@@ -126,7 +126,7 @@
     { name: "msapplication-starturl", content: thisUrl },
     {
       name: "msapplication-TileImage",
-      content: "/img/favicons/mstile-144x144.png"
+      content: "/img/favicons/mstile-144x144.png",
     },
     { name: "DC.subject", content: "Design" },
     { name: "DC.publisher", content: "Hyouk Seo(Spemer)" },
@@ -139,10 +139,10 @@
     { name: "DC.coverage", content: "World" },
     { name: "DC.description", content: thisDesc },
     { name: "DC.keywords", content: thisKeys },
-    { name: "news_keywords", content: thisKeys }
+    { name: "news_keywords", content: thisKeys },
   ];
   var headTitle = document.querySelector("head");
-  metaLists.forEach(function(metaList) {
+  metaLists.forEach(function (metaList) {
     var setMeta = document.createElement("meta");
     setMeta.setAttribute("name", metaList.name);
     setMeta.setAttribute("content", metaList.content);
@@ -156,7 +156,7 @@
 
 //
 // favicon & shortcut icons
-(function() {
+(function () {
   var headTitle = document.querySelector("head");
   // basic icons
   var etcIcons = [
@@ -166,9 +166,9 @@
     { rel: "alternate", href: "" },
     { rel: "author", href: "about-spemer.html" },
     { rel: "manifest", href: "img/favicons/manifest.json" },
-    { rel: "shortcut icon", href: "img/favicons/favicon.ico" }
+    { rel: "shortcut icon", href: "img/favicons/favicon.ico" },
   ];
-  etcIcons.forEach(function(etcIcon) {
+  etcIcons.forEach(function (etcIcon) {
     var setFavicon = document.createElement("link");
     setFavicon.setAttribute("rel", etcIcon.rel);
     setFavicon.setAttribute("href", "/" + etcIcon.href);
@@ -189,9 +189,9 @@
     { sizes: "120x120", href: "apple-touch-icon-120x120.png" },
     { sizes: "144x144", href: "apple-touch-icon-144x144.png" },
     { sizes: "152x152", href: "apple-touch-icon-152x152.png" },
-    { sizes: "180x180", href: "apple-touch-icon-180x180.png" }
+    { sizes: "180x180", href: "apple-touch-icon-180x180.png" },
   ];
-  faviconLists.forEach(function(faviconList) {
+  faviconLists.forEach(function (faviconList) {
     var setFvIcon = document.createElement("link");
     setFvIcon.setAttribute("rel", "apple-touch-icon");
     setFvIcon.setAttribute("sizes", faviconList.sizes);
@@ -204,9 +204,9 @@
     { sizes: "32x32", href: "favicon-32x32.png" },
     { sizes: "194x194", href: "favicon-194x194.png" },
     { sizes: "192x192", href: "android-chrome-192x192.png" },
-    { sizes: "16x16", href: "favicon-16x16.png" }
+    { sizes: "16x16", href: "favicon-16x16.png" },
   ];
-  iconLists.forEach(function(iconList) {
+  iconLists.forEach(function (iconList) {
     var setScIcon = document.createElement("link");
     setScIcon.setAttribute("rel", "icon");
     setScIcon.setAttribute("type", "image/png");
@@ -231,7 +231,7 @@
 
 //
 // feather
-(function() {
+(function () {
   var getFeatherClass = document.querySelectorAll(".feather");
   if (getFeatherClass.length > 0) {
     $("a.feather").featherlightGallery({
@@ -242,14 +242,14 @@
       galleryFadeIn: 250,
       galleryFadeOut: 250,
       nextIcon: false,
-      previousIcon: false
+      previousIcon: false,
     });
   }
 })();
 
 //
 // clipboard
-(function() {
+(function () {
   var getClipboard = document.querySelectorAll("a #foo");
   if (getClipboard.length > 0) {
     var clipboard = new Clipboard(".btn");
@@ -258,12 +258,12 @@
 
 //
 // hamburger
-$(".siteMapBtn").click(function() {
+$(".siteMapBtn").click(function () {
   $(".siteMapNav").toggle("display");
 }),
-  (function() {
+  (function () {
     function d(a) {
-      a.addEventListener("click", function(a) {
+      a.addEventListener("click", function (a) {
         a.preventDefault(),
           this.classList.contains("is-active") === !0
             ? this.classList.remove("is-active")
@@ -324,7 +324,7 @@ function removeTooltip() {
 
 //
 // to top
-$("a[href='#top']").click(function() {
+$("a[href='#top']").click(function () {
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });
