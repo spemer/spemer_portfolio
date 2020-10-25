@@ -106,7 +106,7 @@ function prefix_css() {
 function mincss() {
   return gulp.src(
     ["./public/css/src/*.css"]
-      .pipe(cleanCSS({ compatibility: "ie6" }))
+      .pipe(cleanCSS({ compatibility: "ie8" }))
       .pipe(gulp.dest("./public/css/dist"))
       .pipe(browserSync.reload({ stream: true }))
   );

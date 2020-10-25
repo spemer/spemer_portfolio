@@ -552,12 +552,29 @@
   topTextNode1 = document.createTextNode(" with ");
   loveIconNode = document.createElement("i");
   loveIconNode.className = "fa fa-heart";
-  topTextNode2 = document.createTextNode(" by Hyouk Seo(Spemer)");
+  topTextNode2 = document.createTextNode(" by Hyouk Seo\u00A0");
 
   codeBy.appendChild(codeIconNode);
   codeBy.appendChild(topTextNode1);
   codeBy.appendChild(loveIconNode);
   codeBy.appendChild(topTextNode2);
+})();
+
+//
+// Hit counter
+(function () {
+  var hitCounter, hitImgNode, whiteSpace;
+
+  hitCounter = document.querySelector("#hitCounter");
+
+  whiteSpace = document.createTextNode("\u00A0");
+
+  hitImgNode = document.createElement("img");
+  hitImgNode.className = "counter";
+  hitImgNode.setAttribute("src", "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fspemer.com&count_bg=%23E7E9EE&title_bg=%23656C7A&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false");
+
+  hitCounter.appendChild(whiteSpace);
+  hitCounter.appendChild(hitImgNode);
 })();
 
 //
