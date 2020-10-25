@@ -20,7 +20,7 @@ Built with these **AWESOME stuffs**:
 > - [Featherlight](https://github.com/noelboss/featherlight)
 > - [Font Awesome](http://fontawesome.io/)
 
-## Hyouk Seo
+## Hyouk Seo(Spemer)
 
 I am detail-oriented **Digital product designer**, graphic designer, web publisher with passion and also known as music producer(a.k.a Spemer). Based in Seoul, South Korea. Major in **Visual Design**, minor in **Computer Science** in Incheon National University. Deeply interested in mobile UX/UI Design, web publishing and web design. Always enjoy making an effort to enhance ability of design trends, technologies and skills with active researches. Currently seeking for an **internship opportunity** in 2018. **Let's design for people better!** 😎
 
@@ -37,3 +37,6 @@ Design & Development - **Hyouk Seo** (Spemer)
 > - [Dribbble](https://dribbble.com/spemer)
 > - [Twitter](https://twitter.com/OfficialSpemer)
 > - [Resume](https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing)
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fspemer%2Fspemer_portfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/spemer/spemer_portfolio)
+[![stargazers](https://img.shields.io/github/stars/spemer?style=social)](https://github.com/spemer)
