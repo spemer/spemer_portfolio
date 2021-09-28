@@ -27,29 +27,24 @@ function removeTooltip() {
   $(".copied").addClass("tooltip");
 }
 !(function () {
-  var e = document.querySelector("html");
-  e.setAttribute("prefix", "og: http://ogp.me/ns#"),
-    e.setAttribute("lang", "en");
+  var n = document.querySelector("head");
+  [
+    { href: "/js/dist/index.js", as: "script" },
+    { href: "/css/dist/stylesheet.css", as: "style" },
+    { href: "/css/dist/featherlight.css", as: "style" },
+    { href: "/css/dist/featherlight.gallery.css", as: "style" },
+    { href: "/js/dist/after.jquery.js", as: "script" },
+  ].forEach(function (e) {
+    var t = document.createElement("link");
+    t.setAttribute("rel", "preload"),
+      t.setAttribute("href", e.href),
+      t.setAttribute("as", e.as),
+      "font" == e.as &&
+        (t.setAttribute("type", "font/woff2"),
+        t.setAttribute("crossorigin", "")),
+      n.appendChild(t);
+  });
 })(),
-  (function () {
-    var n = document.querySelector("head");
-    [
-      { href: "/js/dist/index.js", as: "script" },
-      { href: "/css/dist/stylesheet.css", as: "style" },
-      { href: "/css/dist/featherlight.css", as: "style" },
-      { href: "/css/dist/featherlight.gallery.css", as: "style" },
-      { href: "/js/dist/after.jquery.js", as: "script" },
-    ].forEach(function (e) {
-      var t = document.createElement("link");
-      t.setAttribute("rel", "preload"),
-        t.setAttribute("href", e.href),
-        t.setAttribute("as", e.as),
-        "font" == e.as &&
-          (t.setAttribute("type", "font/woff2"),
-          t.setAttribute("crossorigin", "")),
-        n.appendChild(t);
-    });
-  })(),
   (function () {
     var e = window.location.href,
       t = document

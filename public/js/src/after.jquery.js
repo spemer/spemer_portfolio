@@ -1,12 +1,4 @@
 //
-// set <html> prefix + manifest
-(function () {
-  var getHtml = document.querySelector("html");
-  getHtml.setAttribute("prefix", "og: http://ogp.me/ns#");
-  getHtml.setAttribute("lang", "en");
-})();
-
-//
 // preload
 (function () {
   var preloadLists = [
