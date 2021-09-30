@@ -11,10 +11,10 @@
     "url": "git+https://github.com/spemer/spemer_portfolio.git"
   },
   "dependencies": {
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.27.5",
     "firebase": "^7.19.1",
     "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-jpegtran": "^6.0.0",
