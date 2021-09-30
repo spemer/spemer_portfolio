@@ -66,7 +66,7 @@ function browser_sync() {
 ============================== */
 function compress(cb) {
   return gulp
-    .src("./public/js/src/*.js")
+    .src("./public/js/src/*")
     .pipe(uglify())
     .pipe(gulp.dest("./public/js/dist"))
     .pipe(browserSync.reload({ stream: true }));

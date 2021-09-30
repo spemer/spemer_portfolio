@@ -8,7 +8,6 @@
     { href: "/css/dist/featherlight.gallery.css", as: "style" },
     // { href: '/js/dist/set.class.atech.js', as: 'script' },
     { href: "/js/dist/after.jquery.js", as: "script" },
-    // { href: '/js/dist/beusable.js', as: 'script' },
   ];
   var headTitle = document.querySelector("head");
   preloadLists.forEach(function (preloadList) {
@@ -24,16 +23,6 @@
     headTitle.appendChild(setLinkProp);
   });
 })();
-
-//
-// preload spinner.svg
-// (function(){
-//     var getHead = document.querySelector('head');
-//     var setLink = document.createElement('link');
-//     setLink.setAttribute('rel','prefetch');
-//     setLink.setAttribute('href','/img/spinner.gif');
-//     getHead.appendChild(setLink);
-// })();
 
 //
 // meta Tags **meta [property, content]**

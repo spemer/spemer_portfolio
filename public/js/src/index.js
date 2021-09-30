@@ -1,15 +1,3 @@
-// // add className '.lazy' for all images
-// (function() {
-//   var getEveryImg = document.querySelectorAll("img");
-
-//   getEveryImg.forEach(function(images) {
-//     images.className += " " + "lazy";
-//     var getImgSrc = images.getAttribute("src");
-//     images.src = "/img/spinner.gif";
-//     images.setAttribute("data-src", getImgSrc);
-//   });
-// })();
-
 //
 // '#headerLogo'
 (function () {
@@ -396,8 +384,7 @@
     },
     {
       title: "CV",
-      href:
-        "https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing",
+      href: "https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing",
       hName:
         "https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing",
       target: "_blank",
@@ -571,7 +558,10 @@
 
   hitImgNode = document.createElement("img");
   hitImgNode.className = "counter";
-  hitImgNode.setAttribute("src", "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fspemer.com&count_bg=%23E7E9EE&title_bg=%23656C7A&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false");
+  hitImgNode.setAttribute(
+    "src",
+    "https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fspemer.com&count_bg=%23E7E9EE&title_bg=%23656C7A&icon=&icon_color=%23FFFFFF&title=hits&edge_flat=false"
+  );
 
   hitCounter.appendChild(whiteSpace);
   hitCounter.appendChild(hitImgNode);
