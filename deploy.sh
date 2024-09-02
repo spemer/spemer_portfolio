@@ -19,7 +19,7 @@ run_gulpfile() {
       [Yy]* )
         trap 'echo Stop gulp-watch' SIGINT
         npm update caniuse-lite browserslist
-        sudo gulp watch
+        sudo gulp default
         trap SIGINT
         break;;
 
