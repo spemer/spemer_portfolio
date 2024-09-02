@@ -35,7 +35,6 @@ Design & Development - **Hyouk Seo** (Spemer)
 > - [Behance](https://behance.net/spemer)
 > - [Facebook](https://www.facebook.com/ghsspower)
 > - [Dribbble](https://dribbble.com/spemer)
-> - [Twitter](https://twitter.com/OfficialSpemer)
 > - [Resume](https://docs.google.com/document/d/19k4fNueOGIZrsyS3PaqAeYrAtQdCukjE4LN2vIprKqU/edit?usp=sharing)
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fspemer%2Fspemer_portfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/spemer/spemer_portfolio)

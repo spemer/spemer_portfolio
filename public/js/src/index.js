@@ -468,11 +468,6 @@
 // Footer '#snsIcon'
 (function () {
   var snsIconList = {
-    Twitter: {
-      href: "twitter.com/OfficialSpemer",
-      iconID: "twIcon",
-      iconClass: "twitter",
-    },
     GitHub: {
       href: "github.com/spemer",
       iconID: "ghIcon",
