@@ -1,3 +1,1 @@
-document.querySelectorAll("img").forEach(function (c) {
-  c.className += " atechImg";
-});
+document.querySelectorAll("img").forEach(function(c){c.className+=" atechImg"});
