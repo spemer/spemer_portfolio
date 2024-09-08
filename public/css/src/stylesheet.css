@@ -586,8 +586,6 @@ footer p {
   position: relative;
   border-radius: none;
   text-indent: -9999px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   -webkit-box-shadow: none;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;

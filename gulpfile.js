@@ -15,31 +15,6 @@ const browserSync = require("browser-sync").create();
 
 const { src, dest, lastRun, series, parallel } = require("gulp");
 
-// const imagemin = require("gulp-imagemin");
-// const imageminGifsicle = require("imagemin-gifsicle");
-// const imageminJpegtran = require("imagemin-jpegtran");
-// const imageminOptipng = require("imagemin-optipng");
-// const imageminSvgo = require("imagemin-svgo");
-
-// const options = [
-//   imageminGifsicle({
-//     interlaced: true
-//   }),
-//   imageminJpegtran({
-//     progressive: true,
-//     arithmetic: true
-//   }),
-//   imageminOptipng({
-//     optimizationLevel: 7,
-//     bitDepthReduction: true,
-//     colorTypeReduction: true,
-//     paletteReduction: true
-//   }),
-//   imageminSvgo({
-//     plugins: [{ removeViewBox: true }, { cleanupIDs: true }]
-//   })
-// ];
-
 /* ==============================
     static server
 ============================== */
