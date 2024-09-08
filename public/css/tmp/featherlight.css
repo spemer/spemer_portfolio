@@ -27,15 +27,15 @@
     cursor: zoom-out;
     -webkit-cursor: -webkit-zoom-out;
     background: #333;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
   }
 
   .featherlight:last-of-type {
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 1);
   }
 
   .featherlight:before {
-    content: '';
+    content: "";
     display: inline-block;
     height: 100%;
     vertical-align: middle;
@@ -78,9 +78,9 @@
     width: 25px;
     cursor: pointer;
     text-align: center;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
     background: #fff;
-    background: rgba(255,255,255,.3);
+    background: rgba(255, 255, 255, 0.3);
     color: #000;
     border: none;
     padding: 0;

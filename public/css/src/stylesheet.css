@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import "https://fonts.googleapis.com/css?family=Merriweather:400|Roboto+Slab";
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-@import url(../dist/featherlight.css);
-@import url(../dist/featherlight.gallery.css);
-@import url(../dist/balloon.css);
+@import "../dist/featherlight.css";
+@import "../dist/featherlight.gallery.css";
+@import "../dist/balloon.css";
 body,
 p,
 h1,
@@ -123,11 +123,9 @@ figcaption strong {
   background-color: #ffffff;
   height: 4px;
 }
-
 .blob-wrapper::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
-
 .blob-wrapper::-webkit-scrollbar-thumb {
   background-color: #babac0;
   border-radius: 4px;
@@ -224,8 +222,7 @@ h3 {
 }
 
 a span:hover,
-a b:hover,
-a:hover {
+a b:hover, a:hover {
   color: #2a2e2e;
 }
 
@@ -310,7 +307,6 @@ a:hover {
   -webkit-box-shadow: 0 8px 32px 4px #e7e9ee;
   box-shadow: 0 8px 24px 4px #e7e9ee;
 }
-
 .artImgBoxEach figcaption {
   text-align: center;
   font-weight: lighter;
@@ -328,14 +324,12 @@ a:hover {
 .artImgBoxEach:hover .text {
   visibility: visible;
 }
-
 .artImgBoxEach .text {
   left: 0;
   bottom: 30px;
   position: relative;
   visibility: hidden;
 }
-
 .artImgBoxEach figure,
 .artImgBoxEach img,
 .artImgBoxEach figcaption {
@@ -620,8 +614,7 @@ footer p {
   position: absolute;
   background-color: #babac0;
 }
-.c-hamburger span:before,
-.c-hamburger span:after {
+.c-hamburger span:before, .c-hamburger span:after {
   left: 0;
   content: "";
   width: 100%;
@@ -644,8 +637,7 @@ footer p {
   -webkit-transition: background 0 0.25s;
   transition: background 0 0.25s;
 }
-.c-hamburger--htx span:before,
-.c-hamburger--htx span:after {
+.c-hamburger--htx span:before, .c-hamburger--htx span:after {
   -webkit-transition-duration: 0.25s, 0.25s;
   transition-duration: 0.25s, 0.25s;
   -webkit-transition-delay: 0s, 0s;
@@ -677,8 +669,7 @@ footer p {
   -khtml-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.c-hamburger--htx.is-active span:before,
-.c-hamburger--htx.is-active span:after {
+.c-hamburger--htx.is-active span:before, .c-hamburger--htx.is-active span:after {
   -webkit-transition-delay: 0s, 0.25s;
   transition-delay: 0s, 0.25s;
 }
@@ -884,20 +875,16 @@ footer p {
   font-size: 1.3125rem;
   font-style: italic;
 }
-
 .textbox-colored p {
   margin: 0px 8px;
 }
-
 .textbox-colored h6 {
   margin: 0px 16px 4px;
 }
-
 .textbox-colored p:first-child,
 .textbox-colored h6:first-child {
   margin-top: 8px;
 }
-
 .textbox-colored p:last-child,
 .textbox-colored h6:last-child {
   margin-bottom: 8px;
@@ -1002,11 +989,11 @@ a:hover,
   transition: all 0.25s ease;
 }
 
-.topBtn {
+.topBtn:hover {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-.topBtn:hover {
+.topBtn {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -1104,7 +1091,7 @@ figcaption h3 {
   padding: 0px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width : 768px) {
   .everyTxtEndArticle {
     max-width: 560px;
   }
@@ -1156,20 +1143,19 @@ figcaption h3 {
     display: none;
   }
 }
-
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width : 420px) {
   #headerLogo h1 {
     font-size: 36px;
     font-size: 2.25rem;
     margin: 15px 0 -15px;
   }
+  header div {
+    clear: both;
+  }
   header {
     width: 100%;
     padding: 0;
     text-align: center;
-  }
-  header div {
-    clear: both;
   }
   .textbox-colored {
     padding: 8px 16px 8px 8px;
@@ -1181,14 +1167,12 @@ figcaption h3 {
     line-height: 32px;
   }
 }
-
 @media screen and (max-width: 224px) {
   .flatIconBox div {
     width: 100%;
   }
 }
-
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width : 420px) {
   .artImgBoxEach img,
   .flatIconBoxEach img {
     margin-top: 2vw;
@@ -1231,27 +1215,23 @@ figcaption h3 {
     display: none;
   }
 }
-
 @media screen and (max-width: 433px) {
   .musicEachBox p {
     margin: 4px 0px 8px;
     line-height: 1.6rem;
   }
 }
-
 @media screen and (max-width: 380px) {
   .pckIconBox .musicEachBox span {
     display: none;
   }
 }
-
 @media screen and (min-width: 701px) {
   #snsIcon {
     margin-right: -8px;
   }
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width : 600px) {
   #headerNav nav {
     display: block;
     left: 50%;
@@ -1279,7 +1259,6 @@ figcaption h3 {
     margin-top: -1rem !important;
   }
 }
-
 @media screen and (max-width: 700px) {
   #snsIcon {
     display: -webkit-box;
@@ -1312,7 +1291,6 @@ figcaption h3 {
     padding: 0 0 10px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .articleImg40 img,
   .articleImg75 img,
@@ -1327,8 +1305,7 @@ figcaption h3 {
     width: 45%;
   }
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width : 768px) {
   .quote {
     margin: 32px;
     font-size: 22px;

@@ -1,4 +1,4 @@
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .featherlight-next,
   .featherlight-previous {
     top: 10px;
@@ -33,7 +33,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
   }
 
   .featherlight-previous {
@@ -43,7 +43,7 @@
 
   .featherlight-next:hover,
   .featherlight-previous:hover {
-    background: rgba(255,255,255,.25);
+    background: rgba(255, 255, 255, 0.25);
   }
 
   .featherlight-next span,
@@ -80,7 +80,7 @@
   }
 }
 
-@media only screen and (max-device-width:1024px) {
+@media only screen and (max-device-width: 1024px) {
   .featherlight-next:hover,
   .featherlight-previous:hover {
     background: 0 0;

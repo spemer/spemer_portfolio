@@ -22,6 +22,7 @@
     "imagemin-svgo": "^7.0.0",
     "npm-check": "^5.9.2",
     "pump": "^3.0.0",
+    "sass": "^1.78.0",
     "uglify-js": "^3.14.2"
   },
   "devDependencies": {

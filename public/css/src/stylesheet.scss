@@ -54,7 +54,7 @@ $mobile: "only screen and (max-width : 420px)";
 
 // default font-size
 @function calculateRem($size) {
-  $remSize: calc($size / 16px);
+  $remSize: $size / 16px;
   @return $remSize * 1rem;
 }
 @mixin font-size($size) {
@@ -1039,9 +1039,7 @@ a:hover,
   &:hover {
     @include transition(all 0.25s ease);
   }
-  & {
-    @include transition(all 0.25s ease);
-  }
+  @include transition(all 0.25s ease);
 }
 
 .headerNav,
@@ -1189,11 +1187,9 @@ figcaption h3 {
     div {
       clear: both;
     }
-    & {
-      width: 100%;
-      padding: 0;
-      text-align: center;
-    }
+    width: 100%;
+    padding: 0;
+    text-align: center;
   }
   .textbox-colored {
     padding: 8px 16px 8px 8px;

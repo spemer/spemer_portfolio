@@ -1,18 +1,19 @@
 "use strict";
 
-const gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  watch = require("gulp-watch"),
-  uglifyjs = require("uglify-js"),
-  uglify = require("gulp-uglify"),
-  composer = require("gulp-uglify/composer"),
-  pump = require("pump"),
-  minify = composer(uglifyjs, console),
-  cleanCSS = require("gulp-clean-css"),
-  autoprefixer = require("gulp-autoprefixer"),
-  browserSync = require("browser-sync").create();
+const gulp = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
+  
+const watch = require("gulp-watch");
+const uglifyjs = require("uglify-js");
+const uglify = require("gulp-uglify");
+const composer = require("gulp-uglify/composer");
+const pump = require("pump");
+const minify = composer(uglifyjs, console);
+const cleanCSS = require("gulp-clean-css");
+const autoprefixer = require("gulp-autoprefixer");
+const browserSync = require("browser-sync").create();
 
-const { src, dest, lastRun, series } = require("gulp");
+const { src, dest, lastRun, series, parallel } = require("gulp");
 
 // const imagemin = require("gulp-imagemin");
 // const imageminGifsicle = require("imagemin-gifsicle");
@@ -64,7 +65,7 @@ function browser_sync() {
 /* ==============================
     minify js
 ============================== */
-function compress(cb) {
+function compress() {
   return gulp
     .src("./public/js/src/*")
     .pipe(uglify())
@@ -75,25 +76,29 @@ function compress(cb) {
 /* ==============================
     sass sync watch
 ============================== */
-function sass_before() {
+// function sass_before() {
+//   return gulp
+//     .src("./public/css/scss/*.scss")
+//     .pipe(sass.sync().on("error", sass.logError))
+//     .pipe(gulp.dest("./public/css/src"));
+// }
+
+function sass_watch() {
+  // gulp.src("./public/css/scss/*.scss", gulp.series["sass_before"]);
   return gulp
     .src("./public/css/scss/*.scss")
     .pipe(sass.sync().on("error", sass.logError))
     .pipe(gulp.dest("./public/css/src"));
 }
 
-function sass_watch() {
-  gulp.watch("./public/css/scss/*.scss", ["sass_before"]);
-}
-
 /* ==============================
     css autoprefixer -> tmp to dist
 ============================== */
 function prefix_css() {
-  return watch("./public/css/src/*.css", { ignoreInitial: false })
+  return gulp
+    .src("./public/css/src/*.css", { ignoreInitial: false })
     .pipe(
       autoprefixer({
-        browsers: ["cover 99.5%"],
         cascade: false,
       })
     )
@@ -104,19 +109,19 @@ function prefix_css() {
     css minify
 ============================== */
 function mincss() {
-  return gulp.src(
-    ["./public/css/src/*.css"]
-      .pipe(cleanCSS({ compatibility: "ie8" }))
-      .pipe(gulp.dest("./public/css/dist"))
-      .pipe(browserSync.reload({ stream: true }))
+  return gulp
+    .src("./public/css/src/*.css")
+    .pipe(cleanCSS({ compatibility: "ie8" })
+    .pipe(gulp.dest("./public/css/dist"))
+    .pipe(browserSync.reload({ stream: true }))
   );
 }
 
 // exports
-exports.default = series(
-  browser_sync,
+exports.default = series( 
   compress,
   sass_watch,
   prefix_css,
-  mincss
+  mincss,
+  browser_sync
 );
