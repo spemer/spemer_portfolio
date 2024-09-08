@@ -1318,16 +1318,19 @@ figcaption h3 {
 @media screen and (max-width: 700px) {
   #snsIcon {
     display: -webkit-box;
+    display: -ms-flexbox;
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     -webkit-flex-direction: row-reverse;
     -moz-box-orient: horizontal;
     -moz-box-direction: reverse;
     flex-direction: row-reverse;
     -webkit-box-pack: center;
+    -ms-flex-pack: center;
     -webkit-justify-content: center;
     -moz-box-pack: center;
     justify-content: center;
