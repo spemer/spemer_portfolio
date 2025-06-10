@@ -43,27 +43,19 @@ function browser_sync() {
 function compress() {
   return gulp
     .src("./public/js/src/*")
-    .pipe(uglify())
-    .pipe(gulp.dest("./public/js/dist"))
-    .pipe(browserSync.reload({ stream: true }));
+      .pipe(uglify())
+      .pipe(gulp.dest("./public/js/dist"))
+      .pipe(browserSync.reload({ stream: true }));
 }
 
 /* ==============================
     sass sync watch
 ============================== */
-// function sass_before() {
-//   return gulp
-//     .src("./public/css/scss/*.scss")
-//     .pipe(sass.sync().on("error", sass.logError))
-//     .pipe(gulp.dest("./public/css/src"));
-// }
-
 function sass_watch() {
-  // gulp.src("./public/css/scss/*.scss", gulp.series["sass_before"]);
   return gulp
     .src("./public/css/scss/*.scss")
-    .pipe(sass.sync().on("error", sass.logError))
-    .pipe(gulp.dest("./public/css/src"));
+      .pipe(sass.sync().on("error", sass.logError))
+      .pipe(gulp.dest("./public/css/src"));
 }
 
 /* ==============================
@@ -72,12 +64,8 @@ function sass_watch() {
 function prefix_css() {
   return gulp
     .src("./public/css/src/*.css", { ignoreInitial: false })
-    .pipe(
-      autoprefixer({
-        cascade: false,
-      })
-    )
-    .pipe(gulp.dest("./public/css/tmp"));
+      .pipe(autoprefixer({ cascade: false }))
+      .pipe(gulp.dest("./public/css/tmp"));
 }
 
 /* ==============================
@@ -86,10 +74,9 @@ function prefix_css() {
 function mincss() {
   return gulp
     .src("./public/css/src/*.css")
-    .pipe(cleanCSS({ compatibility: "ie8" })
-    .pipe(gulp.dest("./public/css/dist"))
-    .pipe(browserSync.reload({ stream: true }))
-  );
+      .pipe(cleanCSS({ compatibility: "ie8" }))
+      .pipe(gulp.dest("./public/css/dist"))
+      .pipe(browserSync.reload({ stream: true }));
 }
 
 // exports
