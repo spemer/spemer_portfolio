@@ -1,5 +1,16 @@
 {
   "projects": {
     "default": "spemer-bad39"
-  }
+  },
+  "targets": {
+    "spemer-bad39": {
+      "hosting": {
+        "default": [
+          "spemer-bad39"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

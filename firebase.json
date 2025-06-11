@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "default",
     "public": "public"
   }
 }
